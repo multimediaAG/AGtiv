@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EntryComponent } from './entry/entry.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RulesComponent } from './components/rules/rules.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    EntryComponent,
     NavbarComponent,
     RulesComponent,
   ],

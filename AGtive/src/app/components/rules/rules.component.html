@@ -1,7 +1,16 @@
 <div class="container">
-    <h2>Teilnahmebedingungen</h2>
-    <div>
-        <h3>Nutzernamen</h3>
-        <p>Verwende keinen anst&ouml;ßigen oder beleidigenden Nutzernamen.</p>
+
+    <div class="text-center">
+        <h2 class="mb-0">Teilnahmebedingungen</h2>
+        <p class="font-weight-light">Hier findest du alle Regeln zur Aktion.</p>
     </div>
+    
+
+    <div *ngFor="let rule of rules" class="row center-alignment mx-auto col-10 alert alert-primary rounded p-2 mb-3">
+        <div class="">
+            <h4>{{ rule.title }}</h4>
+            <p class="mb-0"> {{ rule.content }}</p>
+        </div>
+    </div>
+
 </div>

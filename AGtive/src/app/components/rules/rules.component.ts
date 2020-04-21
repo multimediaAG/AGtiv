@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RulesComponent implements OnInit {
 
+  rules: any[] = [
+    {
+      title: "Nutzername",
+      content: "Verwende keinen anstößigen, beleidigenden oder anderweitig unangebrachte Nutzernamen"
+    },
+    {
+      title: "Strecken eingeben",
+      content: "AGtive basiert auf der Ehrlichkeit und Kameradschaftlichkeit jedes einzelnen. Trage nur die Kilometer ein, die auch wirklich geradelt oder gelaufen bist.",
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

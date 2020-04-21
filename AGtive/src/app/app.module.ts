@@ -12,6 +12,8 @@ import { RulesComponent } from './components/rules/rules.component';
 import { HomeComponent } from './components/home/home.component';
 import { ScoresComponent } from './components/scores/scores.component';
 import { FooterComponent } from './footer/footer.component';
+import { AuthenticationService } from './service/authentication.service';
+import { AuthenticationGuard } from './guards/authentication.guard';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [AuthenticationGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

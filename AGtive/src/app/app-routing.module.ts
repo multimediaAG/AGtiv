@@ -7,6 +7,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { EntryComponent } from './components/entry/entry.component';
 import { ScoresComponent } from './components/scores/scores.component';
 
+import { AuthenticationGuard } from './guards/authentication.guard';
+
 
 const routes: Routes = [
   {
@@ -18,7 +20,7 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: "signin",
+    path: "login",
     component: SigninComponent,
   },
   {
@@ -28,6 +30,7 @@ const routes: Routes = [
   {
     path: "entry",
     component: EntryComponent,
+    canActivate: [AuthenticationGuard],
   },
   {
     path: "scores",
@@ -36,11 +39,7 @@ const routes: Routes = [
   {
     path: "**",
     redirectTo: "/home",
-  },
-  {
-    path: "entry",
-    component: EntryComponent,
-  },
+  }
 ];
 
 @NgModule({

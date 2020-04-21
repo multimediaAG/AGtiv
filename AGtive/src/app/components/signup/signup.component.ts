@@ -31,6 +31,10 @@ export class SignupComponent implements OnInit {
     this.usernameAlreadyTaken = false; // TODO
 
     this.passwordsDifferent = (this.password != this.passwordVerify);
+
+    if (!this.usernameInvalid && !this.usernameAlreadyTaken && !this.passwordsDifferent) {
+      // Signup
+    }
   }
 
 }

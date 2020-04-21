@@ -36,7 +36,11 @@ const routes: Routes = [
   {
     path: "**",
     redirectTo: "/home",
-  }
+  },
+  {
+    path: "entry",
+    component: EntryComponent,
+  },
 ];
 
 @NgModule({

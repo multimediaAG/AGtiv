@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SigninComponent } from './components/signin/signin.component';
@@ -14,6 +12,7 @@ import { ScoresComponent } from './components/scores/scores.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthenticationService } from './service/authentication.service';
 import { AuthenticationGuard } from './guards/authentication.guard';
+import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +30,7 @@ import { AuthenticationGuard } from './guards/authentication.guard';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [AuthenticationGuard],
   bootstrap: [AppComponent]

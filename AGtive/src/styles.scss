@@ -1,3 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+$blue: #B4CDED;
+$white: #B4CDED;
+$light: #F4F4F9;
+//$primary: #343a40;
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.text-darkblue {
+    color: #344966 !important;
+}
+
+.text-light {
+    color: #F4F4F9 !important;
+}

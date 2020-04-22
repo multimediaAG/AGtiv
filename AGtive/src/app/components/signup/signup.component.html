@@ -13,7 +13,7 @@
                 Die Passwörter stimmen nicht überein
             </div>
             
-            <form [formGroup]="signupForm" (ngSubmit)="signup(signupForm.value)">
+            <form [formGroup]="signupForm" (ngSubmit)="signup()">
                 <h3>Benutzername:</h3>
                 <div class="form-group">
                     <input class="form-control mb-2" placeholder="Benutzername" formControlName="username">

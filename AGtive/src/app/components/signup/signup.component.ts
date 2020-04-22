@@ -12,6 +12,7 @@ export class SignupComponent implements OnInit {
 
   public readonly maxUsernameLength: number = 20;
   public readonly minUsernameLength: number = 2;
+  public readonly minPasswordLength: number = 8;
 
   public usernameInvalid: boolean = false;
   public usernameAlreadyTaken: boolean = false;
@@ -21,18 +22,17 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {
     this.signupForm = this.formBuilder.group({
-      username: new FormControl("", [Validators.minLength(this.minUsernameLength), Validators.maxLength(this.maxUsernameLength)]),
-      password: "",
-      passwordVerify: ""
+      username: new FormControl("", [Validators.minLength(this.minUsernameLength), Validators.maxLength(this.maxUsernameLength), Validators.required]),
+      password: new FormControl("", [Validators.minLength(this.minPasswordLength), Validators.required]),
+      passwordVerify: new FormControl("")
     });
   }
 
-  public signup(signUpData: any) {
-    console.log(signUpData);
-    this.usernameInvalid = signUpData.get("username").status !== "VALID";
+  public signup() {
+    this.usernameInvalid = this.signupForm.controls.username.status !== "VALID";
     this.usernameAlreadyTaken = false; // TODO
 
-    this.passwordsDifferent = (signUpData.get("password").value != signUpData.get("passwordVerify").value);
+    this.passwordsDifferent = (this.signupForm.controls.password.value != this.signupForm.controls.passwordVerify.value);
 
     if (!this.usernameInvalid && !this.usernameAlreadyTaken && !this.passwordsDifferent) {
       // Signup

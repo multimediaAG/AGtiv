@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-signup',
@@ -7,30 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
+  public signupForm: FormGroup;
+
   public readonly maxUsernameLength: number = 20;
   public readonly minUsernameLength: number = 2;
-
-  public username: string = "";
-  public password: string = "";
-  public passwordVerify: string = "";
 
   public usernameInvalid: boolean = false;
   public usernameAlreadyTaken: boolean = false;
   public passwordsDifferent: boolean = false;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit() { }
-
-  public checkUserName(): boolean {
-    return (this.username.length >= this.minUsernameLength && this.username.length <= this.maxUsernameLength)
+  ngOnInit() {
+    this.signupForm = this.formBuilder.group({
+      username: new FormControl("", [Validators.minLength(this.minUsernameLength), Validators.maxLength(this.maxUsernameLength)]),
+      password: "",
+      passwordVerify: ""
+    });
   }
 
-  public signup() {
-    this.usernameInvalid = !this.checkUserName();
+  public signup(signUpData: any) {
+    console.log(signUpData);
+    this.usernameInvalid = signUpData.get("username").status !== "VALID";
     this.usernameAlreadyTaken = false; // TODO
 
-    this.passwordsDifferent = (this.password != this.passwordVerify);
+    this.passwordsDifferent = (signUpData.get("password").value != signUpData.get("passwordVerify").value);
 
     if (!this.usernameInvalid && !this.usernameAlreadyTaken && !this.passwordsDifferent) {
       // Signup

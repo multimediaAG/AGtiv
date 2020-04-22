@@ -1,6 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-5">
+
             <div class="alert alert-danger" *ngIf="usernameInvalid">
                 Der Benutzername ist ungültig.<br>
                 Er muss zwichen {{minUsernameLength}} und {{maxUsernameLength}} Zeichen enthalten.
@@ -11,16 +12,22 @@
             <div class="alert alert-danger" *ngIf="passwordsDifferent">
                 Die Passwörter stimmen nicht überein
             </div>
-            <h3>Benutzername:</h3>
-            <div class="form-group">
-                <input class="form-control mb-2" placeholder="Benutzername" [(ngModel)]="username">
-            </div>
-            <h3>Passwort:</h3>
-            <input type="password" class="form-control mb-1" placeholder="Passwort" [(ngModel)]="password">
-            <h3>Passwort wiederholen:</h3>
-            <input type="password" class="form-control mb-1" placeholder="Passwort wiederholen" [(ngModel)]="passwordVerify">
+            
+            <form [formGroup]="signupForm" (ngSubmit)="signup(signupForm.value)">
+                <h3>Benutzername:</h3>
+                <div class="form-group">
+                    <input class="form-control mb-2" placeholder="Benutzername" formControlName="username">
+                </div>
+                <h3>Passwort:</h3>
+                <input type="password" class="form-control mb-1" placeholder="Passwort" formControlName="password">
+                <h3>Passwort wiederholen:</h3>
+                <input type="password" class="form-control mb-1" placeholder="Passwort wiederholen" formControlName="passwordVerify">
 
-            <button class="btn btn-outline-success" (click)="signup()">Registrieren</button>
+                <button class="btn btn-outline-success" type="submit">Registrieren</button>
+            </form>
+
+            <br><br><br>
+            
         </div>
     </div>
 </div>

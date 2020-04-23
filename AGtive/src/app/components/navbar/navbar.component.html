@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg background-darker text-light border-bottom border-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light pb-0 fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#">AGtive</a>
         <button class="navbar-toggler" type="button">
@@ -8,9 +8,6 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" routerLink="/home">Startseite</a>
-                </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/login">Anmelden</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active" *ngIf="authenticationService.loggedIn">
                     <a class="nav-link" routerLink="/entry">Eintragen</a>
@@ -22,8 +19,19 @@
                     <a class="nav-link" routerLink="/rules">Regeln</a>
                 </li>
             </ul>
-            <!--*ngIf="authenticationService.loggedIn"-->
-            <a class="nav-link" routerLink="/signout">Logout</a>
+            <ul class="navbar-nav">
+                <li class="nav-item" routerLinkActive="active" *ngIf="authenticationService.loggedIn">
+                    <a class="nav-link" routerLink="/signout"><i class="fas fa-sign-out-alt"></i> Ausloggen</a>
+                </li>
+
+                <li class="nav-item" routerLinkActive="active" *ngIf="!authenticationService.loggedIn">
+                    <a class="nav-link" routerLink="/login">Einloggen</a>
+                </li>
+
+                <li class="nav-item" routerLinkActive="active" *ngIf="!authenticationService.loggedIn">
+                    <a class="nav-link" routerLink="/signup">Registrieren</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

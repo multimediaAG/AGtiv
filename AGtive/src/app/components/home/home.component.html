@@ -1,21 +1,21 @@
 <div class="container">
-    <div class="text-center text-light mb-5">
+    <div class="text-center text-dark mb-5">
         <h1 class="mb-3 display-1 font-weight-bold ">AGtive</h1>
         <h2 class="">Die interaktiven Radel- und Lauf-Aktion des Allg&auml;u Gymnasiums</h2>
     </div>
 
-    <div *ngIf="!authenticationService.loggedIn">
-        <div class="card p-3 mb-3">
+    <div class="text-light" *ngIf="!authenticationService.loggedIn">
+        <div class="card bg-dark p-3 mb-3">
             <h3 class="text-center">Wie funktionierts?</h3>
             <div class="d-flex justify-space-between">
-                <i class="fa fa-running fa-7x text-secondary pt-5"></i>
+                <i class="fa fa-running fa-7x text-cyan pt-5"></i>
                 <span class="p-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
                         Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</span>
-                <i class="fa fa-bicycle fa-7x text-secondary pt-5"></i>
+                <i class="fa fa-bicycle fa-7x text-cyan pt-5"></i>
             </div>
         </div>
 
-        <div class="card p-3 mb-4">
+        <div class="card bg-dark p-3 mb-4">
             <h3 class="text-center">Jetzt mitmachen!</h3>
             <div class="row">
                 <a class="btn btn-outline-success col-4 mr-2 offset-2" routerLink="/signup"><i class="fas fa-user-plus"></i> Registrieren</a>
@@ -28,10 +28,10 @@
         <div class="card p-3 mb-3">
             <h3 class="text-center">Hallo {{authenticationService.currentUser.realName}}!</h3>
             <div class="d-flex justify-space-between">
-                <i class="fa fa-running fa-7x text-secondary pt-5"></i>
+                <i class="fa fa-running fa-7x text-cyan pt-5"></i>
                 <span class="p-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
                         Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</span>
-                <i class="fa fa-bicycle fa-7x text-secondary pt-5"></i>
+                <i class="fa fa-bicycle fa-7x text-cyan pt-5"></i>
 
             </div>
         </div>

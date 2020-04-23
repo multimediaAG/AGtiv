@@ -1,33 +1,50 @@
-<div class="container">
+<div class="container pt-5">
     <div class="row">
-        <div class="col-5">
-
-            <div class="alert alert-danger" *ngIf="usernameInvalid">
-                Der Benutzername ist ungültig.<br>
-                Er muss zwichen {{minUsernameLength}} und {{maxUsernameLength}} Zeichen enthalten.
-            </div>
-            <div class="alert alert-danger" *ngIf="usernameAlreadyTaken">
-                Der Benutzername ist schon vergeben
-            </div>
-            <div class="alert alert-danger" *ngIf="passwordsDifferent">
-                Die Passwörter stimmen nicht überein
-            </div>
-            
+        <div class="col-8 m-auto">
             <form [formGroup]="signupForm" (ngSubmit)="signup()">
-                <h3>Benutzername:</h3>
                 <div class="form-group">
-                    <input class="form-control mb-2" placeholder="Benutzername" formControlName="username">
+                    <label for="name">Vor- und Nachname:</label>
+                    <input class="form-control mb-2" placeholder="Vor- und Nachname" formControlName="name" [class.is-invalid]="submitted && f.name.errors" [class.is-valid]="submitted && !f.name.errors">
+                    <div class="valid-feedback">
+                        Name gültig!
+                    </div>
+                    <div class="invalid-feedback">
+                        Der Name muss mindestens 6 Zeichen lang sein!
+                    </div>
                 </div>
-                <h3>Passwort:</h3>
-                <input type="password" class="form-control mb-1" placeholder="Passwort" formControlName="password">
-                <h3>Passwort wiederholen:</h3>
-                <input type="password" class="form-control mb-1" placeholder="Passwort wiederholen" formControlName="passwordVerify">
+                <div class="form-group">
+                    <label for="username">Benutzername:</label>
+                    <input class="form-control mb-2" placeholder="Benutzername" formControlName="username" [class.is-invalid]="submitted && f.username.errors" [class.is-valid]="submitted && !f.username.errors">
+                    <div class="valid-feedback">
+                        Benutzername gültig!
+                    </div>
+                    <div class="invalid-feedback">
+                        Der Benutzername muss zwischen 2 und 20 Zeichen lang sein!
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort:</label>
+                    <input type="password" class="form-control mb-1" id="password" placeholder="Passwort" formControlName="password" [class.is-invalid]="submitted && f.password.errors">
+                    <div class="valid-feedback">
+                        Passwort gültig!
+                    </div>
+                    <div class="invalid-feedback">
+                        Das Passwort muss mindestens 6 Zeichen lang sein!
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="passwordVerify">Passwort wiederholen:</label>
+                    <input type="password" class="form-control mb-1" id="passwordVerify" placeholder="Passwort wiederholen" formControlName="passwordVerify" [class.is-invalid]="submitted && f.passwordVerify.value != f.password.value">
+                    <div class="valid-feedback">
+                        Passwort bestätigt!
+                    </div>
+                    <div class="invalid-feedback">
+                        Die beiden Passwörter müssen übereinstimmen!
+                    </div>
+                </div>
 
-                <button class="btn btn-outline-success" type="submit">Registrieren</button>
+                <button class="btn btn-outline-success" type="submit" [disabled]="loading">Registrieren <i *ngIf="loading" class="fa fa-spinner fa-spin"></i></button>
             </form>
-
-            <br><br><br>
-            
         </div>
     </div>
 </div>

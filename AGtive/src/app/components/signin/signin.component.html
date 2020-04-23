@@ -1,32 +1,36 @@
-
 <div class="container">
     <div class="text-center">
         <h1>Welcome to AGtive</h1>
-        
+
     </div>
     <div class="row">
         <div class="col-5 mx-auto">
             <div class="text-center">
-            <h3>Login</h3>
+                <h3>Login</h3>
+            </div>
+            <div class="alert alert-success" *ngIf="route.snapshot.queryParams.signupSuccessfull">
+                Du hast dich erfolgreich angemeldet! Logge dich nun ein:
+            </div>
+            <form [formGroup]="signinForm">
+                <div class="form-group">
+                    <label for="inputUsername">Benutzername:</label>
+                    <input type="text" class="form-control" id="inputUsername" formControlName="username" placeholder="Benutzername eingeben" [class.is-invalid]="submitted && f.username.errors" [class.is-valid]="submitted && !f.username.errors">
+                    <div class="invalid-feedback">
+                        Der Benutzername ist ungültig!
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort:</label>
+                    <input type="password" id="password" class="form-control" formControlName="password" placeholder="Passwort eingeben" [class.is-invalid]="submitted && f.username.errors" [class.is-valid]="submitted && !f.username.errors">
+                    <div class="invalid-feedback">
+                        Das Passwort ist ungültig!
+                    </div>
+                </div>
+            </form>
+
+
+            <button class="btn btn-outline-primary" (click)="login()" [disabled]="loading">Login <i *ngIf="loading" class="fa fa-spinner fa-spin"></i></button>
+
         </div>
-            <div class="alert alert-danger" *ngIf=formInvalid>
-                Ungültig
-            </div>
-            <div class="alert alert-danger" *ngIf=usernameOrpasswordWrong>
-                Ungültig
-            </div>
-                <div class="form-group">
-                  <label for="inputUsername">Benutzername</label>
-                  <input type="text" class="form-control" id="inputUsername"[(ngModel)]="username"placeholder="Benutzername eingeben">
-                 
-                </div>
-                <div class="form-group">
-                  <label for="inputPW">Passwort</label>
-                  <input type="password"id="inputPW" class="form-control"[(ngModel)]="password" placeholder="Passwort eingeben" >
-                </div>
-         
-                <button  class="btn btn-outline-primary"(click)="login">Anmelden</button>
-              
-              </div>
     </div>
 </div>

@@ -7,10 +7,19 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+
+  //Indicates if the navbar is collapsed -> not visible
+  public navbarCollapsed = true;
+
   constructor(public authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
     //
+  }
+
+
+  public toggleNavbar(): void{
+    this.navbarCollapsed = !this.navbarCollapsed;
   }
 
 }

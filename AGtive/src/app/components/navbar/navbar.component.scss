@@ -1,0 +1,9 @@
+@import "../../../variables.scss";
+.nav-item {
+    &.active {
+        border-bottom: 5px solid $blue;
+    }
+    &:not(.active) {
+        border-bottom: 5px solid transparent;
+    }
+}

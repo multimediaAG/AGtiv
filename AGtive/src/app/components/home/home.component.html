@@ -4,8 +4,8 @@
         <h2 class="">Die interaktiven Radel- und Lauf-Aktion des Allg&auml;u Gymnasiums</h2>
     </div>
 
-    <div class="text-light" *ngIf="!authenticationService.loggedIn">
-        <div class="card bg-dark p-3 mb-3">
+    <div *ngIf="!authenticationService.loggedIn">
+        <div class="card p-3 mb-3">
             <h3 class="text-center">Wie funktionierts?</h3>
             <div class="d-flex justify-space-between">
                 <i class="fa fa-running fa-7x text-cyan pt-5"></i>
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="card bg-dark p-3 mb-4">
+        <div class="card p-3 mb-4">
             <h3 class="text-center">Jetzt mitmachen!</h3>
             <div class="row">
                 <a class="btn btn-outline-success col-4 mr-2 offset-2" routerLink="/signup"><i class="fas fa-user-plus"></i> Registrieren</a>

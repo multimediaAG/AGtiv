@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-grey">
+<nav class="navbar navbar-expand-lg background-darker text-light border-bottom border-dark">
     <div class="container">
         <a class="navbar-brand" href="#">AGtive</a>
         <button class="navbar-toggler" type="button">
@@ -9,27 +9,21 @@
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" routerLink="/home">Startseite</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/login">Anmelden</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active" *ngIf="authService.loggedIn">
                     <a class="nav-link" routerLink="/entry">Eintragen</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" routerLink="/scores">Bestenliste</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" routerLink="/rules">Regeln</a>
                 </li>
             </ul>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/signin" *ngIf="!authenticationService.loggedIn">Login</a>
-                </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/signout" *ngIf="authenticationService.loggedIn">Logout</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/signup" *ngIf="!authenticationService.loggedIn">Registrieren</a>
-                </li>
-            </ul>
+            <!--*ngIf="authenticationService.loggedIn"-->
+            <a class="nav-link" routerLink="/signout">Logout</a>
         </div>
     </div>
 </nav>

@@ -1,3 +1,23 @@
 <h1>Agtive</h1>
-<div *ngIf="!authenticationService.loggedIn">Macht jetzt mit!</div>
-<div *ngIf="authenticationService.loggedIn">Hallo, {{authenticationService.currentUser.realName}}!</div>
+<div class="container">
+
+    <div class="text-center">
+        <h2 class="mb-3">
+            Willkommen zu <span class="text-primary">AGtive</span>
+        </h2>
+        <p class="font-weight-light">Der interaktiven Radel- und Lauf-Aktion des Allg&auml;u Gymnasiums.</p>
+    </div>
+
+
+    <div *ngIf="!authenticationService.loggedIn">Macht jetzt mit!</div>
+    <div *ngIf="authenticationService.loggedIn">Hallo, {{authenticationService.currentUser.realName}}!</div>
+
+
+    <div *ngFor="let rule of rules" class="row center-alignment mx-auto col-10 alert alert-primary rounded p-2 mb-3">
+        <div class="">
+            <h4 class="text-dark">{{ rule.title }}</h4>
+            <p class=" mb-0 text-darkblue"> {{ rule.content }}</p>
+        </div>
+    </div>
+
+</div>

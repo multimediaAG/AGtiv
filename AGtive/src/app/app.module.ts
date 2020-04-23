@@ -10,8 +10,6 @@ import { RulesComponent } from './components/rules/rules.component';
 import { HomeComponent } from './components/home/home.component';
 import { ScoresComponent } from './components/scores/scores.component';
 import { FooterComponent } from './footer/footer.component';
-import { AuthenticationService } from './service/authentication.service';
-import { AuthenticationGuard } from './guards/authentication.guard';
 import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptor } from './interceptors/error.interceptor';

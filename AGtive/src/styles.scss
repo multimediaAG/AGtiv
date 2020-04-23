@@ -1,20 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-$blue: #B4CDED;
-$white: #B4CDED;
-$light: #F4F4F9;
+@import "./variables.scss";
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~ngx-toastr/toastr";
 @import "~@fortawesome/fontawesome-free/css/all.css";
-//$primary: #343a40;
-.text-darkblue {
-    color: #344966 !important;
-}
-
-.text-light {
-    color: #F4F4F9 !important;
-}
-
-.background-darker {
-    background-color: #2d3136 !important;
-}

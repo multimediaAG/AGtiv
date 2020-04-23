@@ -1,1 +1,3 @@
-<p>home works!</p>
+<h1>Agtive</h1>
+<div *ngIf="!authenticationService.loggedIn">Macht jetzt mit!</div>
+<div *ngIf="authenticationService.loggedIn">Hallo, {{authenticationService.currentUser.realName}}!</div>

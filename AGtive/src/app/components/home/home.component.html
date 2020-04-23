@@ -1,17 +1,50 @@
-<h1>Agtive</h1>
 <div class="container">
-
-    <div class="text-center">
-        <h2 class="mb-3">
-            Willkommen zu <span class="text-primary">AGtive</span>
-        </h2>
-        <p class="font-weight-light">Der interaktiven Radel- und Lauf-Aktion des Allg&auml;u Gymnasiums.</p>
+    <div class="text-center text-light mb-5">
+        <h1 class="mb-3 display-1 font-weight-bold ">AGtive</h1>
+        <h2 class="">Die interaktiven Radel- und Lauf-Aktion des Allg&auml;u Gymnasiums</h2>
     </div>
 
+    <div *ngIf="!authenticationService.loggedIn">
+        <div class="card p-3 mb-3">
+            <h3 class="text-center">Wie funktionierts?</h3>
+            <div class="d-flex justify-space-between">
+                <i class="fa fa-bicycle fa-7x text-secondary pt-5"></i>
+                <span class="p-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+                        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</span>
+                <i class="fa fa-running fa-7x text-secondary pt-5"></i>
 
-    <div *ngIf="!authenticationService.loggedIn">Macht jetzt mit!</div>
-    <div *ngIf="authenticationService.loggedIn">Hallo, {{authenticationService.currentUser.realName}}!</div>
+            </div>
+        </div>
 
+        <div class="card p-3 mb-4">
+            <h3 class="text-center">Jetzt mitmachen!</h3>
+            <div class="row">
+                <a class="btn btn-outline-success col-4 mr-2 offset-2" routerLink="/signup"><i class="fas fa-user-plus"></i> Registrieren</a>
+                <a class="btn btn-outline-primary col-4 ml-2" routerLink="/login"><i class="fas fa-sign-in-alt"></i> Anmelden</a>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="authenticationService.loggedIn">
+        <div class="card p-3 mb-3">
+            <h3 class="text-center">Hallo {{authenticationService.currentUser.realName}}!</h3>
+            <div class="d-flex justify-space-between">
+                <i class="fa fa-bicycle fa-7x text-secondary pt-5"></i>
+                <span class="p-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+                        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</span>
+                <i class="fa fa-running fa-7x text-secondary pt-5"></i>
+
+            </div>
+        </div>
+
+        <div class="card p-3 mb-4">
+            <h3 class="text-center">Los gehts:</h3>
+            <div class="row">
+                <a class="btn btn-outline-success col-4 mr-2 offset-2" routerLink="/entry">Km eintragen</a>
+                <a class="btn btn-outline-primary col-4 ml-2" routerLink="/scores">Bestenliste</a>
+            </div>
+        </div>
+    </div>
 
     <div *ngFor="let rule of rules" class="row center-alignment mx-auto col-10 alert alert-primary rounded p-2 mb-3">
         <div class="">

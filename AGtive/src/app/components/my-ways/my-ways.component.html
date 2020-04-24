@@ -4,7 +4,16 @@
             <div class="text-center mb-3">
                 <h3>Meine Wege</h3>
             </div>
-            <table class="table table-striped">
+            <div class="alert alert-success my-3" *ngIf="route.snapshot.queryParams.savedSuccessfully">
+                Der Weg wurde erfolgreich gespeichert!
+            </div>
+            <div>
+                <a class="btn btn-outline-success d-inline" routerLink="/my-way"><i class="fas fa-plus"></i> Neuer Weg</a>
+            </div>
+            <div class="alert alert-info my-3" *ngIf="!waysLoaded">
+                <i class="fas fa-spinner fa-spin"></i> Laden
+            </div>
+            <table class="table table-striped mt-3" *ngIf="waysLoaded">
                 <thead>
                     <tr>
                         <th>Datum</th>
@@ -19,7 +28,7 @@
                         <td>{{myWay.distance}} km</td>
                         <td>
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: {{ myWay.distance / maxDistance * 100}}%;"></div>
+                                <div class="progress-bar" role="progressbar" [style.width]="myWay.distance / maxDistance * 100 + '%'"></div>
                             </div>
                         </td>
                         <td class="text-center"><button class="btn btn-outline-primary" (click)="editMyWay(myWay)"><i class="fas fa-pen"></i></button></td>

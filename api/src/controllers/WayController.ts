@@ -1,25 +1,29 @@
 import { Request, Response } from "express";
 import { getRepository } from "typeorm";
-import { isArray } from "util";
 import { Way } from "../entity/Way";
+import { User } from "../entity/User";
 
 class WayController {
   public static listAll = async (req: Request, res: Response) => {
     const wayRepository = getRepository(Way);
-    const ways = await wayRepository.find();
+    const ways = await wayRepository.find({
+      where: {
+      user: await getRepository(User).findOne(res.locals.jwtPayload.userId),
+    }});
     res.send(ways);
   }
 
   public static editWay = async (req: Request, res: Response) => {
     const wayRepository = getRepository(Way);
-    const {name} = req.body;
-    if (name == undefined) {
+    const {distance, date} = req.body;
+    if (!(distance && date)) {
       res.status(400).send("Nicht alle Felder wurden ausgefüllt!");
       return;
     }
     try {
-      const way = await wayRepository.findOne({where: {guid: req.params.guid}});
-      way.length = length;
+      const way = await wayRepository.findOne({where: {guid: req.params.way}});
+      way.distance = distance;
+      way.date = date;
       wayRepository.save(way);
     } catch (err) {
       res.status(500).send({message: err});
@@ -28,23 +32,21 @@ class WayController {
     res.send({status: true});
   }
 
-  public static newWays = async (req: Request, res: Response) => {
+  public static newWay = async (req: Request, res: Response) => {
     const wayRepository = getRepository(Way);
-    let { ways } = req.body;
-    if (!(ways && isArray(ways) && ways.length > 0)) {
-      res.status(400).send({message: "Nicht alle "});
+    const { distance, date } = req.body;
+    if (!(date && distance)) {
+      res.status(400).send({message: "Nicht alle Felder ausgefüllt!"});
       return;
     }
-    ways = ways.map((t) => {
-      return {
-        activated: false,
-        guid: t.guid,
-        name: t.name,
-      };
-    });
+
+    const way = new Way();
+    way.distance = distance;
+    way.date = date;
+    way.user = await getRepository(User).findOne(res.locals.jwtPayload.userId);
 
     try {
-      await wayRepository.save(ways);
+      await wayRepository.save(way);
     } catch (e) {
       res.status(500).send({message: `Fehler: ${e.toString()}`});
       return;
@@ -54,7 +56,7 @@ class WayController {
   }
 
   public static deleteWay = async (req: Request, res: Response) => {
-    const id = req.params.id as any;
+    const id = req.params.way as any;
     const wayRepository = getRepository(Way);
     try {
       await wayRepository.delete({id});

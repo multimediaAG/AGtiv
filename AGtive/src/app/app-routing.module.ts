@@ -4,7 +4,7 @@ import { RulesComponent } from './components/rules/rules.component';
 import { HomeComponent } from './components/home/home.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { EntryComponent } from './components/entry/entry.component';
+import { MyWayComponent } from './components/my-way/my-way.component';
 import { ScoresComponent } from './components/scores/scores.component';
 
 import { AuthenticationGuard } from './guards/authentication.guard';
@@ -29,8 +29,13 @@ const routes: Routes = [
     component: SignupComponent,
   },
   {
-    path: "entry",
-    component: EntryComponent,
+    path: "my-way",
+    component: MyWayComponent,
+    canActivate: [AuthenticationGuard],
+  },
+  {
+    path: "my-way/edit/:id",
+    component: MyWayComponent,
     canActivate: [AuthenticationGuard],
   },
   {

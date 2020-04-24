@@ -13,10 +13,10 @@ import { User } from "./User";
     public id: number;
 
     @Column()
-    public time: Date;
+    public date: Date;
 
     @Column()
-    public length: number;
+    public distance: number;
 
     @Column()
     @CreateDateColumn()

@@ -10,7 +10,6 @@ export class createAdminUser1574018391679 implements MigrationInterface {
         user.password = "admin";
         user.isAdmin = true;
         user.hashPassword();
-        user.email = "admin@agtickets.github.io";
         const userRepository = getRepository(User);
         await userRepository.save(user);
     }

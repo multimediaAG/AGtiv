@@ -11,7 +11,14 @@ export class AuthenticationService {
     public isLoggedIn: boolean = false;
     public currentUser: any;
 
-    constructor (private remoteService: RemoteService) {}
+    constructor(private remoteService: RemoteService) {
+        const token = sessionStorage.getItem("jwt_token");
+        const user = sessionStorage.getItem("currentUser");
+        if (token && user) {
+            this.isLoggedIn = true;
+            this.currentUser = JSON.parse(user);
+        }
+    }
 
     public login(username: string, password: string): Observable<any> {
         return this.remoteService.post("auth/login",
@@ -23,10 +30,6 @@ export class AuthenticationService {
     }
     public get loggedIn() {
         return this.isLoggedIn;
-    }
-
-    public saveJwtToken(token) {
-        sessionStorage.setItem("jwt_token", token);
     }
 
     public logout() {

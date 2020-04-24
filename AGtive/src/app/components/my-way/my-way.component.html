@@ -11,8 +11,8 @@
             <div class="mt-3">
                 <form [formGroup]="wayForm">
                     <div class="form-group">
-                        <label for="date">Datum:</label>
-                        <input type="date" class="form-control" id="inputdateDate" formControlName="date" placeholder="Datum eingeben" [class.is-invalid]="submitted && f.date.errors" [class.is-valid]="submitted && !f.date.errors">
+                        <label for="date">Datum (als TT.MM.JJJJ):</label>
+                        <input type="date" class="form-control" id="inputdateDate" formControlName="date" placeholder="TT.MMM.JJJJ" [class.is-invalid]="submitted && f.date.errors" [class.is-valid]="submitted && !f.date.errors">
                         <div class="invalid-feedback">
                             Das Datum ist ungültig!
                         </div>

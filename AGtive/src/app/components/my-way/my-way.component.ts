@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { RemoteService } from 'src/app/services/remote.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-my-way',
@@ -17,12 +17,23 @@ export class MyWayComponent {
     private formBuilder: FormBuilder,
     private remoteService: RemoteService,
     private router: Router,
+    private route: ActivatedRoute,
   ) { }
 
   public ngOnInit() {
+    let defaultDate = "";
+    let defaultDistance = "";
+    if (this.route.snapshot.url.toString().indexOf("edit") != -1 && this.route.snapshot.queryParams.distance && this.route.snapshot.params.id && this.route.snapshot.queryParams.date) {
+      this.editing = true;
+      const d = new Date(this.route.snapshot.queryParams.date);
+      console.log(d);
+      defaultDate = d.toISOString().split('T')[0]
+      console.log(defaultDate);
+      defaultDistance = this.route.snapshot.queryParams.distance;
+    }
     this.wayForm = this.formBuilder.group({
-      date: new FormControl("", [Validators.required]),
-      distance: new FormControl("", [Validators.required]),
+      date: new FormControl(defaultDate, [Validators.required]),
+      distance: new FormControl(defaultDistance, [Validators.required]),
     });
   }
 
@@ -34,7 +45,7 @@ export class MyWayComponent {
     this.submitted = true;
     if (!this.wayForm.invalid) {
       this.loading = true;
-      this.remoteService.post("ways", {
+      this.remoteService.post(this.editing ? `ways/${this.route.snapshot.params.id}`: "ways", {
         distance: this.f.distance.value,
         date: this.f.date.value,
       }).subscribe((data) => {

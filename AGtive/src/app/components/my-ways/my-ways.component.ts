@@ -15,7 +15,7 @@ export class MyWaysComponent implements OnInit {
   public constructor(public route: ActivatedRoute, private remoteService: RemoteService) {}
 
   ngOnInit(): void {
-    this.remoteService.get("/ways").subscribe((ways) => {
+    this.remoteService.get("ways").subscribe((ways) => {
       this.myWays = ways;
       this.waysLoaded = true;
       this.maxDistance = this.myWays.reduce((p, c) => p.distance > c.distance ? p : c).distance;

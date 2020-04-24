@@ -21,10 +21,11 @@ class WayController {
       return;
     }
     try {
-      const way = await wayRepository.findOne({where: {guid: req.params.way}});
+      const way = await wayRepository.findOne({where: {id: req.params.way, user: await getRepository(User).findOne(res.locals.jwtPayload.userId)}});
       way.distance = distance;
       way.date = date;
-      wayRepository.save(way);
+      await wayRepository.save(way);
+      console.log(way);
     } catch (err) {
       res.status(500).send({message: err});
       return;

@@ -31,7 +31,7 @@
                                 <div class="progress-bar" role="progressbar" [style.width]="myWay.distance / maxDistance * 100 + '%'"></div>
                             </div>
                         </td>
-                        <td class="text-center"><button class="btn btn-outline-primary" (click)="editMyWay(myWay)"><i class="fas fa-pen"></i></button></td>
+                        <td class="text-center"><a class="btn btn-outline-primary" [routerLink]="['/', 'my-way', 'edit', myWay.id]" [queryParams]="{distance: myWay.distance, date: myWay.date}"><i class="fas fa-pen"></i></a></td>
                         <td class="text-center"><button class="btn btn-outline-danger" (click)="removeMyWay(myWay)"><i class="fas fa-trash"></i></button></td>
                     </tr>
                 </tbody>

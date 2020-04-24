@@ -16,6 +16,7 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MyWaysComponent } from './components/my-ways/my-ways.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     HomeComponent,
     ScoresComponent,
     FooterComponent,
+    MyWaysComponent,
   ],
   imports: [
     BrowserModule,

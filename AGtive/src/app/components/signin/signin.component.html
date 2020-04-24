@@ -7,6 +7,9 @@
             <div class="alert alert-success" *ngIf="route.snapshot.queryParams.signupSuccessfull">
                 Du hast dich erfolgreich angemeldet! Logge dich nun ein:
             </div>
+            <div class="alert alert-info" *ngIf="lostPassword">
+                Bitte melde dich via Teams bei NAMETODO.
+            </div>
             <form [formGroup]="signinForm">
                 <div class="form-group">
                     <label for="inputUsername">Benutzername:</label>
@@ -26,6 +29,7 @@
 
 
             <button class="btn btn-outline-primary" (click)="login()" [disabled]="loading">Login <i *ngIf="loading" class="fa fa-spinner fa-spin"></i></button>
+            <button class="btn btn-link" (click)="lostPassword = true">Passwort vergessen?</button>
 
         </div>
     </div>

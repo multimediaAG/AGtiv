@@ -39,9 +39,6 @@ jobs:
     - name: Install dependencies
       working-directory: AGtive
       run: npm i
-    - name: Run create environment script
-      working-directory: AGtive
-      run: npm run createFilesWithApiKeys
     - name: Build
       working-directory: AGtive
       run: npm run build

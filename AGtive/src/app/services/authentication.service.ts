@@ -33,6 +33,6 @@ export class AuthenticationService {
     }
 
     public logout() {
-        //
+        sessionStorage.clear();
     }
 }

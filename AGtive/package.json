@@ -7,7 +7,7 @@
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
-        "createFilesWithApiKeys": "node ../createFilesWithApiKeys.js"
+        "createFilesWithApiKeys": "node ../../createFilesWithApiKeys.js"
     },
     "private": true,
     "dependencies": {

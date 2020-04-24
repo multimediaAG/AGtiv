@@ -14,8 +14,7 @@ export class AlertService {
     }
 
     public async success(message: string) {
-        // this.config();
-        console.log("Success!");
+        this.config();
         this.toastr.success(message, `Erfolg!`, { timeOut: this.timeouts.success });
     }
 

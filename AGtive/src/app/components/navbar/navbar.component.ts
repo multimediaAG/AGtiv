@@ -8,7 +8,7 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class NavbarComponent implements OnInit {
 
-  //Indicates if the navbar is collapsed -> not visible
+  // Indicates if the navbar is collapsed -> not visible
   public navbarCollapsed = true;
 
   constructor(public authenticationService: AuthenticationService) { }

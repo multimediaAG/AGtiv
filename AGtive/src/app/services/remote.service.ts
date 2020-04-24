@@ -40,15 +40,14 @@ export class RemoteService {
 
     private handleError<T>(operation = "operation", result?: T): any {
         return (error: any): Observable<T> => {
-            // eslint-disable-next-line no-console
+            // tslint:disable-next-line: no-console
             console.error("Error occured in remote.service.ts:", error);
 
             this.log(`${operation} failed: ${error.message}`);
-            // eslint-disable-next-line no-console
+            // tslint:disable-next-line: no-console
             console.log(result);
 
             this.alertService.error(error);
-            console.warn("alerted!");
 
             return of(result as T);
         };
@@ -77,7 +76,7 @@ export class RemoteService {
     }
 
     private log(message: string): void {
-        // eslint-disable-next-line no-console
+        // tslint:disable-next-line: no-console
         console.log(`RemoteService Log: ${message}`);
     }
 

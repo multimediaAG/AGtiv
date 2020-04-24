@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './rules.component.html',
   styleUrls: ['./rules.component.scss']
 })
-export class RulesComponent implements OnInit {
+export class RulesComponent {
 
   rules: any[] = [
     {
@@ -19,10 +19,4 @@ export class RulesComponent implements OnInit {
       icon: "fa-file-signature",
     }
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

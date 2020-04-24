@@ -24,8 +24,7 @@ export class MyWaysComponent implements OnInit {
       distance: 4,
       date: new Date(),
     }
-  ]
-  constructor() { }
+  ];
 
   ngOnInit(): void {
     this.maxDistance = this.myWays.reduce((p, c) => p.distance > c.distance ? p : c).distance;

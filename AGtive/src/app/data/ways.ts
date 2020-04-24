@@ -158,37 +158,37 @@ const ways = [
         city: "Awassa",
         country: "ET",
         distance: "1273"
-    },	
+    },
     {
         city: "Dschibouti",
         country: "DJ",
         distance: "998"
-    },	
+    },
     {
         city: "Salala",
         country: "OM",
         distance: "1549"
-    },	
+    },
     {
         city: "Dubai",
         country: "AE",
         distance: "1281"
-    },	
+    },
     {
         city: "Tschahbahar",
         country: "IR",
         distance: "667"
-    },	
+    },
     {
         city: "Karatschi",
         country: "PK",
         distance: "980"
-    },	
+    },
     {
         city: "Ahmedabad",
         country: "IN",
         distance: "851"
-    },	
+    },
     {
         city: "Mumbai",
         country: "IN",

@@ -17,9 +17,6 @@ export class AuthenticationGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-
-      console.log("Logged in: " +this.authenticationService.loggedIn);
-
       if(this.authenticationService.loggedIn) {
         return true;
       }
@@ -27,5 +24,4 @@ export class AuthenticationGuard implements CanActivate {
 
     return false;
   }
-  
 }

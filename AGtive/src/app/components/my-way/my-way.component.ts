@@ -26,9 +26,7 @@ export class MyWayComponent {
     if (this.route.snapshot.url.toString().indexOf("edit") != -1 && this.route.snapshot.queryParams.distance && this.route.snapshot.params.id && this.route.snapshot.queryParams.date) {
       this.editing = true;
       const d = new Date(this.route.snapshot.queryParams.date);
-      console.log(d);
-      defaultDate = d.toISOString().split('T')[0]
-      console.log(defaultDate);
+      defaultDate = d.toISOString().split('T')[0];
       defaultDistance = this.route.snapshot.queryParams.distance;
     }
     this.wayForm = this.formBuilder.group({

@@ -25,7 +25,6 @@ class WayController {
       way.distance = distance;
       way.date = date;
       await wayRepository.save(way);
-      console.log(way);
     } catch (err) {
       res.status(500).send({message: err});
       return;

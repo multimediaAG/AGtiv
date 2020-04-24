@@ -8,6 +8,7 @@ import { EntryComponent } from './components/entry/entry.component';
 import { ScoresComponent } from './components/scores/scores.component';
 
 import { AuthenticationGuard } from './guards/authentication.guard';
+import { MyWaysComponent } from './components/my-ways/my-ways.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,11 @@ const routes: Routes = [
   {
     path: "entry",
     component: EntryComponent,
+    canActivate: [AuthenticationGuard],
+  },
+  {
+    path: "my-ways",
+    component: MyWaysComponent,
     canActivate: [AuthenticationGuard],
   },
   {

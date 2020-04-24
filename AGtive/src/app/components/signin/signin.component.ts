@@ -45,6 +45,7 @@ export class SigninComponent implements OnInit {
           // store user details and jwt token in local storage to
           // keep user logged in between page refreshes
           sessionStorage.setItem("jwt_token", user.token);
+          sessionStorage.setItem("currentUser", JSON.stringify(user));
           this.authenticationService.currentUser = user;
           this.authenticationService.isLoggedIn = true;
           this.router.navigate(["/home"]);

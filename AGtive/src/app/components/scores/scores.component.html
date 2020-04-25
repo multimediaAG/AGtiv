@@ -9,15 +9,20 @@
                     <thead>
                         <tr>
                             <th>Platz</th>
-                            <th>Nickname</th>
-                            <th>Gefahrene Kilometer</th>
+                            <th>Benutzer</th>
+                            <th colspan="2">Gefahrene Kilometer</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr *ngFor="let user of users">
+                            <td>{{user.place}}</td>
+                            <td>{{user.username}}</td>
+                            <td>{{user.distance}}</td>
+                            <td>
+                                <div class="progress distanceIndicator">
+                                    <div class="progress-bar" role="progressbar" [style.width]="user.distance / maxDistance * 100 + '%'"></div>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

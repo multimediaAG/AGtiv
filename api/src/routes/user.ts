@@ -5,8 +5,8 @@ import { checkForAdmin } from "../middlewares/checkForAdmin";
 
 const router = Router();
 
-router.get("/", [checkJwt], UserController.listAll);
-router.post("/", [], UserController.newUser);
+router.get("/", UserController.listAll);
+router.post("/", UserController.newUser);
 router.delete("/:id([0-9]+)", [checkJwt, checkForAdmin()], UserController.deleteUser);
 
 export default router;

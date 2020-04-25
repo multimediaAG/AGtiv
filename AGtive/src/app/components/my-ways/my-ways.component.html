@@ -13,31 +13,33 @@
             <div class="alert alert-info my-3" *ngIf="!waysLoaded">
                 <i class="fas fa-spinner fa-spin"></i> Laden
             </div>
-            <div class="table-responsive">
-
-                <table class="table table-striped mt-3" *ngIf="waysLoaded">
-                    <thead>
-                        <tr>
-                            <th>Datum</th>
-                            <th colspan="2">Gefahrene Kilometer</th>
-                            <th class="text-center">Bearbeiten</th>
-                            <th class="text-center">Löschen</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let myWay of myWays">
-                            <td>{{myWay.date | date}}</td>
-                            <td>{{myWay.distance}} km</td>
-                            <td>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" [style.width]="myWay.distance / maxDistance * 100 + '%'"></div>
-                                </div>
-                            </td>
-                            <td class="text-center"><a class="btn btn-outline-primary" [routerLink]="['/', 'my-way', 'edit', myWay.id]" [queryParams]="{distance: myWay.distance, date: myWay.date}"><i class="fas fa-pen"></i></a></td>
-                            <td class="text-center"><button class="btn btn-outline-danger" (click)="removeMyWay(myWay)"><i class="fas fa-trash"></i></button></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div *ngIf="waysLoaded">
+                <div class="alert alert-success mt-3">Du hast insgesamt <b>{{myTotalDistance}} km</b> beigetragen!</div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Datum</th>
+                                <th colspan="2">Gefahrene Kilometer</th>
+                                <th class="text-center">Bearbeiten</th>
+                                <th class="text-center">Löschen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let myWay of myWays">
+                                <td>{{myWay.date | date}}</td>
+                                <td>{{myWay.distance}} km</td>
+                                <td>
+                                    <div class="progress distanceIndicator">
+                                        <div class="progress-bar" role="progressbar" [style.width]="myWay.distance / maxDistance * 100 + '%'"></div>
+                                    </div>
+                                </td>
+                                <td class="text-center"><a class="btn btn-outline-primary" [routerLink]="['/', 'my-way', 'edit', myWay.id]" [queryParams]="{distance: myWay.distance, date: myWay.date}"><i class="fas fa-pen"></i></a></td>
+                                <td class="text-center"><button class="btn btn-outline-danger" (click)="removeMyWay(myWay)"><i class="fas fa-trash"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

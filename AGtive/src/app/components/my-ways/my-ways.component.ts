@@ -11,6 +11,7 @@ import { AlertService } from 'src/app/services/alert.service';
 export class MyWaysComponent implements OnInit {
   public maxDistance: number = 10000;
   public waysLoaded: boolean = false;
+  public myTotalDistance: number = 0;
   public myWays = [];
 
   public constructor(public route: ActivatedRoute, private remoteService: RemoteService, private alertService: AlertService) {}
@@ -20,7 +21,7 @@ export class MyWaysComponent implements OnInit {
       this.myWays = ways;
       this.waysLoaded = true;
       setTimeout(() => {
-        this.updateMaxDistance();
+        this.update();
       }, 20);
     })
   }
@@ -31,14 +32,15 @@ export class MyWaysComponent implements OnInit {
         if (data && data.status) {
           this.alertService.success("Der Weg wurde erfolgreich gelöscht!");
           this.myWays = this.myWays.filter((w) => w.id != myWay.id);
-          this.updateMaxDistance();
+          this.update();
         }
       });
     }
   }
 
-  private updateMaxDistance() {
+  private update() {
     this.maxDistance = this.myWays.reduce((p, c) => p.distance > c.distance ? p : c).distance;
+    this.myTotalDistance = this.myWays.reduce((a, b) => a + (b.distance || 0), 0);
   }
 
 }

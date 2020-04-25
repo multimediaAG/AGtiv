@@ -34,5 +34,6 @@ export class AuthenticationService {
 
     public logout() {
         sessionStorage.clear();
+        this.isLoggedIn = false;
     }
 }

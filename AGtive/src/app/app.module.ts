@@ -17,6 +17,7 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MyWaysComponent } from './components/my-ways/my-ways.component';
+import { NgxFlagIconCssModule } from "ngx-flag-icon-css";
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MyWaysComponent } from './components/my-ways/my-ways.component';
     ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    NgxFlagIconCssModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

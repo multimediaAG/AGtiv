@@ -61,7 +61,6 @@ export class SignupComponent implements OnInit {
         if (data.usernameAvailable) {
           return resolve(null);
         } else {
-          console.log("NOT AVAILABLE!!!")
           resolve({
             usernameTaken: true,
           });

@@ -1,4 +1,8 @@
 export const grades: string[] = [
+    "Lehrerin / Lehrer",
+    "Studienseminar 18 / 20",
+    "Studienseminar 19 / 21",
+    "Studienseminar 20 / 22",
     "5a",
     "5b",
     "5c",
@@ -36,9 +40,5 @@ export const grades: string[] = [
     "10e",
     "10f",
     "Q11",
-    "Q12",
-    "Lehrerin / Lehrer",
-    "Studienseminar 18 / 20",
-    "Studienseminar 19 / 21",
-    "Studienseminar 20 / 22"
+    "Q12"
 ];

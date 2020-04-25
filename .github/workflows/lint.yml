@@ -13,10 +13,10 @@ jobs:
       with:
         node-version: 12
     - name: Install dependencies
-      working-directory: AGtive
+      working-directory: AGtiv
       run: npm i
     - name: Lint
-      working-directory: AGtive
+      working-directory: AGtiv
       run: npm run lint
   lint_api:
     name: Lint API

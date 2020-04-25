@@ -15,7 +15,7 @@ export class RulesComponent {
     },
     {
       title: "Strecken eingeben",
-      content: "AGtive basiert auf der Ehrlichkeit und Kameradschaftlichkeit jedes einzelnen. Trage nur die Kilometer ein, die auch wirklich geradelt oder gelaufen bist.",
+      content: "AGtiv basiert auf der Ehrlichkeit und Kameradschaftlichkeit jedes einzelnen. Trage nur die Kilometer ein, die auch wirklich geradelt oder gelaufen bist.",
       icon: "fa-file-signature",
     }
   ];

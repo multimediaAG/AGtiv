@@ -37,8 +37,8 @@ jobs:
       with:
         node-version: 12
     - name: Install dependencies
-      working-directory: AGtive
+      working-directory: AGtiv
       run: npm i
     - name: Build
-      working-directory: AGtive
+      working-directory: AGtiv
       run: npm run build

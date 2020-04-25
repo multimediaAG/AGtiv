@@ -1,12 +1,12 @@
 <div class="container">
     <div class="row">
-        <div class="col-8 mx-auto card p-3 mt-5">
+        <div class="col-11 col-md-8 mx-auto card p-3 mt-5">
             <div class="text-center mb-3">
                 <h3>{{editing ? "Web bearbeiten" : "Neuen Weg erstellen"}}</h3>
             </div>
             <div>
                 <button class="btn btn-outline-success d-inline mr-3" [disabled]="loading" (click)="save()"><i [class]="'fas fa-' + (loading ? 'spinner fa-spin' : 'save')"></i> Speichern</button>
-                <a class="btn btn-outline-danger d-inline" routerLink="/my-ways" [disabled]="loading"><i class="fas fa-times"></i> Abbrechen</a>
+                <a class="btn btn-outline-danger d-inline py-2" routerLink="/my-ways" [disabled]="loading"><i class="fas fa-times"></i> Abbrechen</a>
             </div>
             <div class="mt-3">
                 <form [formGroup]="wayForm">

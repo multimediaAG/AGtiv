@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, FormControl, Validators, AbstractControl } from
 import { HttpClient } from "@angular/common/http";
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
+import { RemoteService } from 'src/app/services/remote.service';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-signup',
@@ -19,11 +21,11 @@ export class SignupComponent implements OnInit {
   public readonly minPasswordLength: number = 6;
   public readonly minNameLength: number = 6;
 
-  constructor(private formBuilder: FormBuilder, private httpClient: HttpClient, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private httpClient: HttpClient, private router: Router, private remoteService: RemoteService) { }
 
   ngOnInit() {
     this.signupForm = this.formBuilder.group({
-      username: new FormControl("", [Validators.minLength(this.minUsernameLength), Validators.maxLength(this.maxUsernameLength), Validators.required]),
+      username: new FormControl("", [Validators.minLength(this.minUsernameLength), Validators.maxLength(this.maxUsernameLength), Validators.required], this.usernameAvailable.bind(this)),
       name: new FormControl("", [Validators.minLength(this.minNameLength), , Validators.required]),
       password: new FormControl("", [Validators.minLength(this.minPasswordLength), Validators.required]),
       passwordVerify: new FormControl("")
@@ -47,10 +49,25 @@ export class SignupComponent implements OnInit {
       }).subscribe((data: any) => {
         if (data && data.status) {
           this.loading = false;
-          this.router.navigate(["/signin"], {queryParams: {signupSuccessfull: true}})
+          this.router.navigate(["/signin"], { queryParams: { signupSuccessfull: true } })
         }
       });
     }
+  }
+
+  private usernameAvailable(control: AbstractControl) {
+    return from(new Promise((resolve, reject) => {
+      this.remoteService.get(`users/usernameAvailable/${control.value}`).subscribe((data) => {
+        if (data.usernameAvailable) {
+          return resolve(null);
+        } else {
+          console.log("NOT AVAILABLE!!!")
+          resolve({
+            usernameTaken: true,
+          });
+        }
+      })
+    }));
   }
 
 }

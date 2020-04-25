@@ -16,6 +16,12 @@ class UserController {
     res.send(users);
   }
 
+  public static usernameAvailable = async (req: Request, res: Response) => {
+    const userRepository = getRepository(User);
+    const result = await userRepository.findOne({ username: req.params.username });
+    res.send({usernameAvailable: result ? false : true});
+  }
+
   public static newUser = async (req: Request, res: Response) => {
     const { username, password, passwordVerify, realName } = req.body;
     if (!(username && realName && password && passwordVerify)) {

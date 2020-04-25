@@ -7,7 +7,7 @@
             <form [formGroup]="signupForm" (ngSubmit)="signup()">
                 <div class="form-group">
                     <label for="name">Vor- und Nachname:</label>
-                    <input class="form-control mb-2" placeholder="Vor- und Nachname" formControlName="name" [class.is-invalid]="submitted && f.name.errors" [class.is-valid]="submitted && !f.name.errors">
+                    <input class="form-control mb-2" placeholder="Vor- und Nachname" formControlName="name" [class.is-invalid]="submitted && f.name.errors" [class.is-valid]="!f.name.errors">
                     <div class="valid-feedback">
                         Name gültig!
                     </div>
@@ -17,17 +17,17 @@
                 </div>
                 <div class="form-group">
                     <label for="username">Benutzername:</label>
-                    <input class="form-control mb-2" placeholder="Benutzername" formControlName="username" [class.is-invalid]="submitted && f.username.errors" [class.is-valid]="submitted && !f.username.errors">
+                    <input class="form-control mb-2" placeholder="Benutzername" formControlName="username" [class.is-invalid]="submitted && f.username.errors || f.username.errors?.usernameTaken" [class.is-valid]="!f.username.errors">
                     <div class="valid-feedback">
                         Benutzername gültig!
                     </div>
                     <div class="invalid-feedback">
-                        Der Benutzername muss zwischen 2 und 20 Zeichen lang sein!
+                        {{ f.username.errors?.usernameTaken ? "Der Benutzername existiert schon!" : "Der Benutzername muss zwischen 2 und 20 Zeichen lang sein!" }}
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="password">Passwort:</label>
-                    <input type="password" class="form-control mb-1" id="password" placeholder="Passwort" formControlName="password" [class.is-invalid]="submitted && f.password.errors">
+                    <input type="password" class="form-control mb-1" id="password" placeholder="Passwort" formControlName="password" [class.is-invalid]="submitted && f.password.errors" [class.is-valid]="!f.password.errors">
                     <div class="valid-feedback">
                         Passwort gültig!
                     </div>

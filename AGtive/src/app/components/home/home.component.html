@@ -4,44 +4,30 @@
         <h2 class="headline">Die interaktiven Radel- und Lauf-Aktion des Allg&auml;u Gymnasiums</h2>
     </div>
 
-    <div *ngIf="!authenticationService.loggedIn">
-        <div class="card p-3 mb-3">
-            <h3 class="text-center">Wie funktionierts?</h3>
-            <div class="d-flex justify-space-between">
-                <i class="fa fa-running fa-7x text-secondary pt-5"></i>
-                <span class="p-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+    <div class="card p-3 mb-3">
+        <h3 class="text-center" *ngIf="authenticationService.loggedIn">Hallo {{authenticationService.currentUser.username}}!
+        </h3>
+        <h3 class="text-center" *ngIf="!authenticationService.loggedIn">
+            <i class="fa fa-running text-secondary pt-5 d-inline d-md-none mr-2"></i>Wie funktionierts?
+            <i class="fa fa-bicycle text-secondary pt-5 d-inline d-md-none ml-2"></i>
+        </h3>
+        <div class="d-flex justify-space-between">
+            <i class="fa fa-running fa-7x text-secondary pt-5 d-none d-md-block"></i>
+            <span class="p-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
                         Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</span>
-                <i class="fa fa-bicycle fa-7x text-secondary pt-5"></i>
-            </div>
-        </div>
-
-        <div class="card p-3 mb-4">
-            <h3 class="text-center">Jetzt mitmachen!</h3>
-            <div class="row">
-                <a class="btn btn-outline-success col-4 mr-2 offset-2" routerLink="/signup"><i class="fas fa-user-plus"></i> Registrieren</a>
-                <a class="btn btn-outline-primary col-4 ml-2" routerLink="/login"><i class="fas fa-sign-in-alt"></i> Anmelden</a>
-            </div>
+            <i class="fa fa-bicycle fa-7x text-secondary pt-5 d-none d-md-block"></i>
         </div>
     </div>
 
-    <div *ngIf="authenticationService.loggedIn">
-        <div class="card p-3 mb-3">
-            <h3 class="text-center">Hallo {{authenticationService.currentUser.realName}}!</h3>
-            <div class="d-flex justify-space-between">
-                <i class="fa fa-running fa-7x text-secondary pt-5"></i>
-                <span class="p-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
-                        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</span>
-                <i class="fa fa-bicycle fa-7x text-secondary pt-5"></i>
-
-            </div>
+    <div class="card p-3 mb-4">
+        <h3 class="text-center">Jetzt mitmachen!</h3>
+        <div class="row" *ngIf="!authenticationService.loggedIn">
+            <a class="btn btn-outline-success col-4 mr-2 offset-2" routerLink="/signup"><i class="fas fa-user-plus"></i> Registrieren</a>
+            <a class="btn btn-outline-primary col-4 ml-2" routerLink="/login"><i class="fas fa-sign-in-alt"></i> Anmelden</a>
         </div>
-
-        <div class="card p-3 mb-4">
-            <h3 class="text-center">Los gehts:</h3>
-            <div class="row">
-                <a class="btn btn-outline-success col-4 mr-2 offset-2" routerLink="/my-ways">Meine Wege</a>
-                <a class="btn btn-outline-primary col-4 ml-2" routerLink="/scores">Bestenliste</a>
-            </div>
+        <div class="row" *ngIf="authenticationService.loggedIn">
+            <a class="btn btn-outline-success col-4 mr-2 offset-2" routerLink="/my-ways">Meine Wege</a>
+            <a class="btn btn-outline-primary col-4 ml-2" routerLink="/scores">Bestenliste</a>
         </div>
     </div>
 </div>

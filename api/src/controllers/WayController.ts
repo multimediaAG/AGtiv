@@ -59,7 +59,7 @@ class WayController {
     const id = req.params.way as any;
     const wayRepository = getRepository(Way);
     try {
-      await wayRepository.delete({id});
+      await wayRepository.delete({user: await getRepository(User).findOne(res.locals.jwtPayload.userId), id});
     } catch (error) {
       res.status(404).send({message: "Dieser Weg wurde nicht gefunden!"});
       return;

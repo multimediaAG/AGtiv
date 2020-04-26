@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 import { RemoteService } from 'src/app/services/remote.service';
 import { from } from 'rxjs';
+import { grades } from "../../data/grades";
 
 @Component({
   selector: 'app-signup',
@@ -15,6 +16,7 @@ export class SignupComponent implements OnInit {
   public signupForm: FormGroup;
   public submitted: boolean = false;
   public loading: boolean = false;
+  public grades: string[] = grades;
 
   public readonly maxUsernameLength: number = 20;
   public readonly minUsernameLength: number = 2;
@@ -26,7 +28,8 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
     this.signupForm = this.formBuilder.group({
       username: new FormControl("", [Validators.minLength(this.minUsernameLength), Validators.maxLength(this.maxUsernameLength), Validators.required], this.usernameAvailable.bind(this)),
-      name: new FormControl("", [Validators.minLength(this.minNameLength), , Validators.required]),
+      grade: new FormControl("", [Validators.required]),
+      name: new FormControl("", [Validators.minLength(this.minNameLength), Validators.required]),
       password: new FormControl("", [Validators.minLength(this.minPasswordLength), Validators.required]),
       passwordVerify: new FormControl("")
     });
@@ -45,7 +48,7 @@ export class SignupComponent implements OnInit {
         realName: this.f.name.value,
         password: this.f.password.value,
         passwordVerify: this.f.passwordVerify.value,
-        grade: this.f.grade,
+        grade: this.f.grade.value,
       }).subscribe((data: any) => {
         if (data && data.status) {
           this.loading = false;

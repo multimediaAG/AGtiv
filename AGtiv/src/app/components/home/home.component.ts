@@ -21,7 +21,10 @@ export class HomeComponent {
   public ngOnInit() {
     this.currentDistanceLoaded = false;
     this.remoteService.get("statistics/currentDistance").subscribe((d) => {
-      if (d && d.currentDistance) {
+      if (d && (d.currentDistance || d.currentDistance === null)) {
+        if (d.currentDistance === null) {
+          d.currentDistance = 0;
+        }
         this.currentDistanceLoaded = true;
         this.currentDistance = d.currentDistance;
         let distanceCounter: number = 0;

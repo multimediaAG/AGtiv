@@ -16,7 +16,7 @@ export class HomeComponent {
   public currentStepTotalDistance: number;
   public currentStepDistance: number;
 
-  constructor(private authenticationService: AuthenticationService, private remoteService: RemoteService) { }
+  constructor(public authenticationService: AuthenticationService, private remoteService: RemoteService) { }
 
   public ngOnInit() {
     this.currentDistanceLoaded = false;

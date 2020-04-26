@@ -108,11 +108,6 @@ export module data {
             distance: 390
         },
         {
-            name: "Kinshasa",
-            country: "cd",
-            distance: 390
-        },
-        {
             name: "Luanda",
             country: "ao",
             distance: 818

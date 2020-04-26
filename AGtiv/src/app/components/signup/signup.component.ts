@@ -41,7 +41,7 @@ export class SignupComponent implements OnInit {
 
   public signup() {
     this.submitted = true;
-    if (!this.signupForm.invalid) {
+    if (!this.signupForm.invalid  && this.f.password.value == this.f.passwordVerify.value) {
       this.loading = true;
       this.httpClient.post(`${environment.apiUrl}users`, {
         username: this.f.username.value,

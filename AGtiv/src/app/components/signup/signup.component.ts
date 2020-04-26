@@ -52,7 +52,7 @@ export class SignupComponent implements OnInit {
       }).subscribe((data: any) => {
         if (data && data.status) {
           this.loading = false;
-          this.router.navigate(["/signin"], { queryParams: { signupSuccessfull: true } })
+          this.router.navigate(["/login"], { queryParams: { signupSuccessfull: true } })
         }
       });
     }

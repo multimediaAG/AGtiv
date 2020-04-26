@@ -31,7 +31,7 @@ export class MyWayComponent {
     }
     this.wayForm = this.formBuilder.group({
       date: new FormControl(defaultDate, [Validators.required]),
-      distance: new FormControl(defaultDistance, [Validators.required]),
+      distance: new FormControl(defaultDistance, [Validators.required, Validators.min(0.01), Validators.max(500)]),
     });
   }
 

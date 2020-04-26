@@ -14,6 +14,7 @@ export class SigninComponent implements OnInit {
   public signinForm: FormGroup;
   public submitted: boolean = false;
   public loading: boolean = false;
+  public lostPassword: boolean = false;
 
   constructor(
     private authenticationService: AuthenticationService,

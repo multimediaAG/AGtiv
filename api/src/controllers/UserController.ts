@@ -2,6 +2,7 @@ import { validate } from "class-validator";
 import { Request, Response } from "express";
 import { getRepository } from "typeorm";
 import { User } from "../entity/User";
+import { log } from "../utils/utils";
 class UserController {
   public static listAll = async (req: Request, res: Response) => {
     const userRepository = getRepository(User);
@@ -38,7 +39,7 @@ class UserController {
       return;
     }
 
-    const user = new User();
+    let user = new User();
     user.username = username;
     user.realName = realName;
     user.password = password;
@@ -49,11 +50,12 @@ class UserController {
 
     const userRepository = getRepository(User);
     try {
-      await userRepository.save(user);
+      user = await userRepository.save(user);
     } catch (e) {
       res.status(409).send({message: "Der Benutzername ist schon vorhanden!", errorField: "username"});
       return;
     }
+    log("user created", { user });
     res.status(200).send({status: true});
   }
 
@@ -68,7 +70,7 @@ class UserController {
       res.status(500).send({message: "Konnte den Benutzer nicht löschen!"});
       return;
     }
-
+    log("user deleted", { id });
     res.status(200).send({status: true});
   }
 }

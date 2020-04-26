@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { getRepository } from "typeorm";
 import { Way } from "../entity/Way";
 import { User } from "../entity/User";
+import { log } from "../utils/utils";
 
 class WayController {
   public static listAll = async (req: Request, res: Response) => {
@@ -25,6 +26,7 @@ class WayController {
       way.distance = distance;
       way.date = date;
       await wayRepository.save(way);
+      log("way edited", { way, userId: res.locals.jwtPayload.userId });
     } catch (err) {
       res.status(500).send({message: err});
       return;
@@ -40,13 +42,14 @@ class WayController {
       return;
     }
 
-    const way = new Way();
+    let way = new Way();
     way.distance = distance;
     way.date = date;
     way.user = await getRepository(User).findOne(res.locals.jwtPayload.userId);
 
     try {
-      await wayRepository.save(way);
+      way = await wayRepository.save(way);
+      log("way created", { way, userId: res.locals.jwtPayload.userId });
     } catch (e) {
       res.status(500).send({message: `Fehler: ${e.toString()}`});
       return;
@@ -60,6 +63,7 @@ class WayController {
     const wayRepository = getRepository(Way);
     try {
       await wayRepository.delete({user: await getRepository(User).findOne(res.locals.jwtPayload.userId), id});
+      log("way deleted", { id, userId: res.locals.jwtPayload.userId });
     } catch (error) {
       res.status(404).send({message: "Dieser Weg wurde nicht gefunden!"});
       return;

@@ -4,6 +4,7 @@ import * as jwt from "jsonwebtoken";
 import { getRepository } from "typeorm";
 import { config } from "../config/config";
 import { User } from "../entity/User";
+import { log } from "../utils/utils";
 
 class AuthController {
 
@@ -46,6 +47,7 @@ class AuthController {
     response.password = undefined;
 
     // Send the jwt in the response
+    log("login", { id: user.id });
     res.send(response);
   }
 

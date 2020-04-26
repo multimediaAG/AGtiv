@@ -34,7 +34,7 @@
 
     <div class="card p-3 mb-3">
         <div class="row text-center" *ngIf="currentDistanceLoaded">
-            <div class="col-4">
+            <div class="col-12 col-sm-4">
                 <div class="info mx-auto d-flex justify-content-center">
                     <i class="fas fa-map-marker-alt fa-3x text-secondary mr-2 mt-1"></i>
                     <div>
@@ -46,7 +46,7 @@
                 <img [src]="getImg(lastCity)" class="city" alt="Letzte Stadt">
 
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-4 status">
                 <h4 class="text-center">
                     <i class="fa fa-sign text-secondary pt-5 d-inline  mr-2"></i>
                     <span>Aktuelle Distanz{{currentDistanceLoaded ? ': ' + currentDistance + " km" : ""}}</span>
@@ -68,7 +68,7 @@
                     <a class="btn btn-outline-primary col-4 ml-2" routerLink="/scores">Bestenliste</a>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-4">
                 <div class="info mx-auto d-flex justify-content-center">
                     <i class="fas fa-location-arrow fa-3x text-secondary mr-2 mt-1"></i>
                     <div>

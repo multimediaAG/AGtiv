@@ -45,7 +45,7 @@ export class HomeComponent {
     });
   }
 
-  public getImg(t) {
-    return "https://cdn.pixabay.com/photo/2017/01/29/14/14/skyline-2018079_960_720.jpg";
+  public getImg(c) {
+    return `/assets/cities/${c.country}_${c.name.toLowerCase().replace(" ", "_")}.jpg`;
   }
 }

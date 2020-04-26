@@ -6,7 +6,7 @@
             </div>
             <div>
                 <button class="btn btn-outline-success d-inline mr-3" [disabled]="loading" (click)="save()"><i [class]="'fas fa-' + (loading ? 'spinner fa-spin' : 'save')"></i> Speichern</button>
-                <a class="btn btn-outline-danger d-inline py-2" routerLink="/my-ways" [disabled]="loading"><i class="fas fa-times"></i> Abbrechen</a>
+                <a class="btn btn-outline-danger d-inline py-2" routerLink="/my-ways" [class.disabled]="loading"><i class="fas fa-times"></i> Abbrechen</a>
             </div>
             <div class="mt-3">
                 <form [formGroup]="wayForm">

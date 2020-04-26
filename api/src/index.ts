@@ -61,6 +61,7 @@ createConnection({
 
     // Set routes for static built frontend
     app.use("/", express.static(path.join(__dirname, "../../frontend_build")));
+    app.use("*", express.static(path.join(__dirname, "../../frontend_build/index.html")));
 
     // That starts the server on the given port
     app.listen(config.port, () => {

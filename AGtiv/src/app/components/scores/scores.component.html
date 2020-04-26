@@ -9,6 +9,7 @@
                     <thead>
                         <tr>
                             <th>Platz</th>
+                            <th>Klasse</th>
                             <th>Benutzer</th>
                             <th colspan="2">Gefahrene Kilometer</th>
                         </tr>
@@ -16,6 +17,7 @@
                     <tbody>
                         <tr *ngFor="let user of users">
                             <td>{{user.place}}</td>
+                            <td>{{user.grade}}</td>
                             <td>{{user.username}}</td>
                             <td>{{user.distance}}</td>
                             <td>

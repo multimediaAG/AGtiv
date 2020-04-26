@@ -6,7 +6,7 @@ class UserController {
   public static listAll = async (req: Request, res: Response) => {
     const userRepository = getRepository(User);
     const users = await userRepository.query(`
-      SELECT user.username, Sum(way.distance) AS distance
+      SELECT user.username, user.grade, Sum(way.distance) AS distance
       FROM user
       LEFT JOIN way
       ON user.id = way.userId

@@ -1,15 +1,31 @@
-<div class="container">
+<div class="container pt-5">
+    <div class="card p-4">
+        <h2 class="text-center">Teilnahmebedingungen</h2>
+        <p>Jeder Teilnehmer trägt täglich seine geradelten, gerollerten oder gelaufenen Kilometer ein. Beim Kilometerzählen hilft euch evtl. die App Runtastic. Selbstverständlich ist es ein Gebot der Fairness, hier nicht zu mogeln, denn damit wäre unser
+            gesamtes Ergebnis verfälscht.</p>
 
-    <div class="text-center">
-        <h2 class="mb-0">Teilnahmebedingungen</h2>
-        <p class="font-weight-light">Hier findest du alle Regeln zur Aktion.</p>
+        <p>Statt der geradelten Kilometer können auch die gelaufenen, gerollerten Kilometer beim Button Laufen/Rollen angegeben werden. Das Programm rechnet die Strecke auf Grundlage der durchschnittlichen Energieleistung in geradelte Kilometer um. Auch
+            Skirollern ist möglich!</p>
+
+        <p>Die zurückgelegte Strecke führt unsere Schulfamilie über das reale Straßennetz zuerst über Marseille nach Gibraltar, dann weiter über die Westküste Afrikas Richtung Kap der Guten Hoffnung, im Osten Afrikas wieder Richtung Norden und dann weiter
+            der Küste entlang nach Osten. Vielleicht schaffen wir es so über die Beringstraße auch bis Amerika und wieder zurück ins Allgäu! Fähren nutzen wir nur möglichst selten.</p>
+
+        <p>Jederzeit könnt ihr einsehen, wo wir uns gerade befinden und wie weit es noch zum nächsten Zwischenziel ist.</p>
+
+        <p>Am Ende gibt es eine Siegerklasse aus jeder Jahrgangsstufe und einen einzelnen Gesamtsieger.</p>
+
     </div>
-    
-    <div *ngFor="let rule of rules" class="card p-3 mb-3">
-        <h3 class="text-center">{{ rule.title }}</h3>
-        <div class="d-flex justify-space-between">
-            <i class="fa fa-3x text-secondary pt-3" [ngClass]="rule.icon"></i>
-            <span class="p-3">{{ rule.content }}</span>
+
+    <div class="card p-3 mt-5">
+        <h2 class="text-center">Nochmal zusammengefasst:</h2>
+        <div *ngFor="let rule of rules" class="mb-3">
+            <div class="d-flex justify-space-between">
+                <i class="fa fa-3x text-secondary pt-3" [ngClass]="rule.icon"></i>
+                <div>
+                    <h3 class="ml-3 mb-0">{{ rule.title }}</h3>
+                    <p class="mt-0 pt-0 px-3 ">{{ rule.content }}</p>
+                </div>
+            </div>
         </div>
     </div>
 

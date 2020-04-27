@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-11 col-md-12 mx-auto card p-3 mt-5">
+            <div class="text-center mb-3">
+                <h3>Benutzer</h3>
+            </div>
+            <div class="table-responsive mt-1">
+                <table class="table table-striped border-top-0">
+                    <thead>
+                        <tr>
+                            <th>Klasse</th>
+                            <th>Benutzer</th>
+                            <th>Nickname</th>
+                            <th colspan="2">Strecke</th>
+                            <th>Admin</th>
+                            <th>Aktionen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users">
+                            <td>{{user.grade}}</td>
+                            <td>{{user.realName}}</td>
+                            <td>{{user.username}}</td>
+                            <td>{{user.distance}} km</td>
+                            <td>
+                                <div class="progress distanceIndicator">
+                                    <div class="progress-bar" role="progressbar" [style.width]="user.distance / maxDistance * 100 + '%'"></div>
+                                </div>
+                            </td>
+                            <td><i class="fas fa-user-shield" *ngIf="user.isAdmin"></i></td>
+                            <td>
+                                <button class="btn btn-outline-primary" (click)="resetUserPassword(user)"><i class="fas fa-key"></i></button>
+                                <button class="btn btn-outline-warning mx-2" (click)="changeAdminStatus(user, !user.isAdmin)"><i [class]="'fas fa-user' + (user.isAdmin ? '' : '-shield')"></i></button>
+                                <button class="btn btn-outline-danger" (click)="deleteUser(user)"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

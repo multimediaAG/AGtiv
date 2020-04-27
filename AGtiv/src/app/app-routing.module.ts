@@ -6,9 +6,10 @@ import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { MyWayComponent } from './components/my-way/my-way.component';
 import { ScoresComponent } from './components/scores/scores.component';
-
 import { AuthenticationGuard } from './guards/authentication.guard';
 import { MyWaysComponent } from './components/my-ways/my-ways.component';
+import { UsersComponent } from './components/users/users.component';
+import { AdminGuard } from './guards/admin.guard';
 
 
 const routes: Routes = [
@@ -42,6 +43,11 @@ const routes: Routes = [
     path: "my-ways",
     component: MyWaysComponent,
     canActivate: [AuthenticationGuard],
+  },
+  {
+    path: "users",
+    component: UsersComponent,
+    canActivate: [AuthenticationGuard, AdminGuard]
   },
   {
     path: "scores",

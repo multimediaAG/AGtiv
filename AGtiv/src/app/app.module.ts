@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MyWaysComponent } from './components/my-ways/my-ways.component';
 import { NgxFlagIconCssModule } from "ngx-flag-icon-css";
 import { InfoBikeDistanceComponent } from './components/_helpers/info-bike-distance/info-bike-distance.component';
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { InfoBikeDistanceComponent } from './components/_helpers/info-bike-dista
     FooterComponent,
     MyWaysComponent,
     InfoBikeDistanceComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,

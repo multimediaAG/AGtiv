@@ -5,16 +5,11 @@ import { User } from "../entity/User";
 import { log } from "../utils/utils";
 class UserController {
   public static listAll = async (req: Request, res: Response) => {
-    const userRepository = getRepository(User);
-    const users = await userRepository.query(`
-      SELECT user.username, user.grade, Sum(way.distance) AS distance
-      FROM user
-      LEFT JOIN way
-      ON user.id = way.userId
-      GROUP BY user.id
-      ORDER BY distance DESC
-    `);
-    res.send(users);
+    await UserController.plistAll(res);
+  }
+
+  public static listAllAdmin = async (req: Request, res: Response) => {
+    await UserController.plistAll(res, true)
   }
 
   public static usernameAvailable = async (req: Request, res: Response) => {
@@ -72,6 +67,58 @@ class UserController {
     }
     log("user deleted", { id });
     res.status(200).send({status: true});
+  }
+
+  public static changePassword = async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const { password } = req.body;
+    if (!password) {
+      res.status(400).send({message: "Nicht alle Felder ausgefüllt!"});
+      return;
+    }
+
+    const userRepository = getRepository(User);
+    try {
+      const user = await userRepository.findOne(id);
+      user.password = password;
+      user.hashPassword();
+      await userRepository.save(user);
+    } catch (e) {
+      res.status(500).send({message: "Konnte den das Passwort nicht ändern!"});
+      return;
+    }
+    log("userpassword changed", { id });
+    res.status(200).send({status: true});
+  }
+
+  public static changeAdminStatus = async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const { admin } = req.body;
+
+    const userRepository = getRepository(User);
+    try {
+      const user = await userRepository.findOne(id);
+      user.isAdmin = admin;
+      await userRepository.save(user);
+    } catch (e) {
+      res.status(500).send({message: "Konnte den Adminstatus nicht ändern!"});
+      return;
+    }
+    log("useradminstatus changed", { id, admin });
+    res.status(200).send({status: true});
+  }
+
+  private static async plistAll(res: Response, isAdmin=false) {
+    const userRepository = getRepository(User);
+    const users = await userRepository.query(`
+      SELECT user.username, user.grade, Sum(way.distance) AS distance${isAdmin ? ', user.realName, user.id, user.isAdmin' : ''}
+      FROM user
+      LEFT JOIN way
+      ON user.id = way.userId
+      GROUP BY user.id
+      ORDER BY distance DESC
+    `);
+    res.send(users);
   }
 }
 

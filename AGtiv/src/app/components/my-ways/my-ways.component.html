@@ -19,6 +19,7 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
+                                <th>Typ</th>
                                 <th>Datum</th>
                                 <th colspan="2">Strecke</th>
                                 <th class="text-center">Bearbeiten</th>
@@ -27,6 +28,7 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let myWay of myWays">
+                                <td><i [class]="'fas fa-' + (myWay.type == 'bike' ? 'biking' : myWay.type == 'walk' ? 'walking' : 'skating')"></i></td>
                                 <td>{{myWay.date | date}}</td>
                                 <td>{{myWay.distance}} km</td>
                                 <td>
@@ -34,11 +36,12 @@
                                         <div class="progress-bar" role="progressbar" [style.width]="myWay.distance / maxDistance * 100 + '%'"></div>
                                     </div>
                                 </td>
-                                <td class="text-center"><a class="btn btn-outline-primary" [routerLink]="['/', 'my-way', 'edit', myWay.id]" [queryParams]="{distance: myWay.distance, date: myWay.date}"><i class="fas fa-pen"></i></a></td>
+                                <td class="text-center"><a class="btn btn-outline-primary" [routerLink]="['/', 'my-way', 'edit', myWay.id]" [queryParams]="{distance: myWay.distance, date: myWay.date, type: myWay.type}"><i class="fas fa-pen"></i></a></td>
                                 <td class="text-center"><button class="btn btn-outline-danger" (click)="removeMyWay(myWay)"><i class="fas fa-trash"></i></button></td>
                             </tr>
                         </tbody>
                     </table>
+                    <info-bike-distance></info-bike-distance>
                 </div>
             </div>
         </div>

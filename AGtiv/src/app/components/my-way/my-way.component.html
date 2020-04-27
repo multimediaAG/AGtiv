@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-11 col-md-8 mx-auto card p-3 mt-5">
             <div class="text-center mb-3">
-                <h3>{{editing ? "Web bearbeiten" : "Neuen Weg erstellen"}}</h3>
+                <h3>{{editing ?"Web bearbeiten" :"Neuen Weg erstellen"}}</h3>
             </div>
             <div>
                 <button class="btn btn-outline-success d-inline mr-3" [disabled]="loading" (click)="save()"><i [class]="'fas fa-' + (loading ? 'spinner fa-spin' : 'save')"></i> Speichern</button>
@@ -17,12 +17,29 @@
                             Das Datum ist ungültig!
                         </div>
                     </div>
+                    <div class="my-3">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="type-bike" formControlName="type" value="bike" class="custom-control-input" [class.is-invalid]="submitted && f.type.errors" [class.is-valid]="submitted && !f.type.errors">
+                            <label class="custom-control-label" for="type-bike"><i class="fas fa-biking"></i> Ich bin mit dem <b>Fahrrad gefahren.</b></label>
+                        </div>
+                        <div class=" custom-control custom-radio">
+                            <input type="radio" id="type-walk" formControlName="type" value="walk" class="custom-control-input" [class.is-invalid]="submitted && f.type.errors" [class.is-valid]="submitted && !f.type.errors">
+                            <label class="custom-control-label" for="type-walk"><i class="fas fa-walking"></i> Ich bin <b>gelaufen.</b></label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="type-skiroller" formControlName="type" value="skiroller" class="custom-control-input" [class.is-invalid]="submitted && f.type.errors" [class.is-valid]="submitted && !f.type.errors">
+                            <label class="custom-control-label" for="type-skiroller"><i class="fas fa-skating"></i> Ich bin mit dem <b>Skiroller gefahren.</b></label>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="distance">Distanz in km:</label>
                         <input type="number" id="distance" class="form-control" formControlName="distance" placeholder="Distanz in km eingeben" [class.is-invalid]="submitted && f.distance.errors" [class.is-valid]="submitted && !f.distance.errors">
                         <div class="invalid-feedback">
                             Die Distanz ist muss zwischen 0 und 500 km liegen!
                         </div>
+                    </div>
+                    <div class="alert alert-success" *ngIf="f.type.value && f.distance.value && f.type.value != 'bike'">
+                        Das entspricht <b>{{getBikeDistance()}} Fahrradkilometern</b>.
                     </div>
                 </form>
             </div>

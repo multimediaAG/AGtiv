@@ -16,7 +16,7 @@ class WayController {
 
   public static editWay = async (req: Request, res: Response) => {
     const wayRepository = getRepository(Way);
-    const {distance, date} = req.body;
+    const {distance, date, type} = req.body;
     if (!(distance && date)) {
       res.status(400).send("Nicht alle Felder wurden ausgefüllt!");
       return;
@@ -25,6 +25,7 @@ class WayController {
       const way = await wayRepository.findOne({where: {id: req.params.way, user: await getRepository(User).findOne(res.locals.jwtPayload.userId)}});
       way.distance = distance;
       way.date = date;
+      way.type = type;
       await wayRepository.save(way);
       log("way edited", { way, userId: res.locals.jwtPayload.userId });
     } catch (err) {
@@ -36,8 +37,8 @@ class WayController {
 
   public static newWay = async (req: Request, res: Response) => {
     const wayRepository = getRepository(Way);
-    const { distance, date } = req.body;
-    if (!(date && distance)) {
+    const { distance, date, type } = req.body;
+    if (!(date && distance && type)) {
       res.status(400).send({message: "Nicht alle Felder ausgefüllt!"});
       return;
     }
@@ -45,6 +46,7 @@ class WayController {
     let way = new Way();
     way.distance = distance;
     way.date = date;
+    way.type = type;
     way.user = await getRepository(User).findOne(res.locals.jwtPayload.userId);
 
     try {

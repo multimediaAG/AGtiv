@@ -18,6 +18,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MyWaysComponent } from './components/my-ways/my-ways.component';
 import { NgxFlagIconCssModule } from "ngx-flag-icon-css";
+import { InfoBikeDistanceComponent } from './components/_helpers/info-bike-distance/info-bike-distance.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NgxFlagIconCssModule } from "ngx-flag-icon-css";
     ScoresComponent,
     FooterComponent,
     MyWaysComponent,
+    InfoBikeDistanceComponent,
   ],
   imports: [
     BrowserModule,

@@ -79,6 +79,9 @@
                 </div>
                 <img [src]="getImg(nextCity)" class="city" alt="Nächste Stadt">
             </div>
+            <div class="text-left px-5 mt-4">
+                <info-bike-distance></info-bike-distance>
+            </div>
         </div>
         <div class="alert alert-primary" *ngIf="!currentDistanceLoaded">
             <i class="fas fa-spinner fa-spin"></i> Laden...

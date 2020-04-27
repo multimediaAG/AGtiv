@@ -18,6 +18,9 @@ import { User } from "./User";
     @Column()
     public distance: number;
 
+    @Column({default: "bike"})
+    public type: string;
+
     @Column()
     @CreateDateColumn()
     public createdAt: string;

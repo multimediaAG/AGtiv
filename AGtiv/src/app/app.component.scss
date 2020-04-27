@@ -3,4 +3,8 @@ main {
     margin-top: 3.3rem;
     background-image: url("~/assets/01.jpg");
     background-size: cover;
+    transition: background-image 1s linear;
+    &.communityImage {
+        background-image: url("~/assets/02.jpg");
+    }
 }

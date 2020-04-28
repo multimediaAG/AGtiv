@@ -14,16 +14,16 @@
                     <thead>
                         <tr>
                             <th class="border-top-0">Platz</th>
-                            <th class="border-top-0">Klasse</th>
                             <th class="border-top-0" *ngIf="currentView != 'grades'">Benutzer</th>
+                            <th class="border-top-0">Klasse</th>
                             <th class="border-top-0" colspan="2">Strecke</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let user of users">
                             <td>{{user.place}}</td>
-                            <td>{{user.grade}}</td>
                             <td *ngIf="currentView != 'grades'">{{user.username}}</td>
+                            <td>{{user.grade}}</td>
                             <td>{{user.distance}} km</td>
                             <td>
                                 <div class="progress distanceIndicator">

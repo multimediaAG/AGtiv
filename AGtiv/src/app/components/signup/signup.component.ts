@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
     this.signupForm = this.formBuilder.group({
       username: new FormControl("", [Validators.minLength(this.minUsernameLength), Validators.maxLength(this.maxUsernameLength), Validators.required], this.usernameAvailable.bind(this)),
       grade: new FormControl("", [Validators.required]),
-      name: new FormControl("", [Validators.minLength(this.minNameLength), Validators.pattern('[a-zA-Z ]*'), Validators.required]),
+      name: new FormControl("", [Validators.minLength(this.minNameLength), Validators.pattern(/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u), Validators.required]),
       password: new FormControl("", [Validators.minLength(this.minPasswordLength), Validators.required]),
       passwordVerify: new FormControl("")
     });

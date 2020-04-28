@@ -22,7 +22,7 @@ export class RulesComponent {
     {
       title: "Strecken eingeben",
       content: "AGtiv basiert auf der Ehrlichkeit und Kameradschaftlichkeit jeder und jedes Einzelnen.\
-      Trage nur die Kilometer ein, die Du auch wirklich geradelt, gelaufen oder skigerollert bist.",
+      Trage nur die Kilometer ein, die Du auch wirklich geradelt, gelaufen oder gerollert bist.",
       icon: "fa-file-signature",
     },
     {

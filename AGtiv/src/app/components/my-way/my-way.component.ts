@@ -42,6 +42,7 @@ export class MyWayComponent {
       } else if (defaultType == "walk") {
         defaultDistance /= 4;
       }
+      defaultDistance = Math.round(defaultDistance);
 
     }
     this.wayForm = this.formBuilder.group({
@@ -72,6 +73,6 @@ export class MyWayComponent {
   }
 
   public getBikeDistance() {
-    return this.f.distance.value * (this.f.type.value == "walk" ? 4 : this.f.type.value == "skiroller" ? 2.5 : 1);
+    return Math.round(this.f.distance.value * (this.f.type.value == "walk" ? 4 : this.f.type.value == "skiroller" ? 2.5 : 1));
   }
 }

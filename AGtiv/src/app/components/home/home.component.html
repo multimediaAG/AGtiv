@@ -9,23 +9,20 @@
         <h3 class="text-center" *ngIf="authenticationService.loggedIn">Hallo {{authenticationService.currentUser.username}}!
         </h3>
         <h3 class="text-center" *ngIf="!authenticationService.loggedIn">
-            <i class="fa fa-running text-secondary pt-5 d-inline d-md-none mr-2"></i>Wie funktionierts?
+            <i class="fa fa-running text-secondary pt-5 d-inline d-md-none mr-2"></i>Liebe Mitglieder der Schulgemeinschaft!
             <i class="fa fa-bicycle text-secondary pt-5 d-inline d-md-none ml-2"></i>
         </h3>
-        <div class="d-flex justify-space-between">
+        <div class="d-flex justify-space-between text-center">
             <i class="fa fa-running fa-7x text-secondary pt-5 d-none d-md-block"></i>
-            <span class="p-3">
-                <p>Ziel unseres Projekts ist es, <b>einmal um die Welt zu radeln</b>.</p>
+            <span class="px-3 pt-3 ">
+                <p>Ziel unseres Projekts <i>AG</i>tiv ist es, mit einer sportlichen <b>Gemeinschaftsleistung</b> der gesamten Schulfamilie <b>einmal virtuell um die Welt zu radeln</b>.</p>
             
-                <p>Ihr könnt Strecken eingeben, die Ihr <b>gelaufen</b>, mit dem <b>Fahrrad gefahren</b> oder mit dem <b>Skiroller</b> zurückgelegt habt.
-                    Lauf- und Skirollerstrecken werden umgerechnet, mehr dazu in den <a routerLink="/rules">Regeln</a>.</p>
+                <p>Dazu könnt Ihr Strecken eingeben, die Ihr <b>zu Fuß</b>, mit dem <b>Fahrrad</b> oder mit dem <b>Skiroller</b> zurückgelegt habt.
+                    Lauf- und Skirollerstrecken werden in "Fahrrad-Kilometer" umgerechnet. Mehr dazu erfahrt Ihr in den <a routerLink="/rules">Regeln</a>. In den Jahrgansstufen 5 bis 9 gibt es jeweils eine <b>goldene Ananas</b> für die Klasse mit den meisten Kilometern zu gewinnen, die Klassen der Jahrgangsstufe 10 treten gegen die Q11 um eine <b>goldene Ananas</b> an.</p>
                 
-                <p>In den Jahrgansstufen 5 - 9 gibt es jeweils eine <b>goldene Ananas</b> für die Klasse mit den meisten Kilometern zu gewinnen, die Klassen der Jahrgangsstufe 10 treten gegen die Q11 um eine <b>goldene Ananas</b> an.</p>
-                
-                <p>Mitmachen können alle Schüler*innen, Eltern und Lehrkräfte am Allgäu-Gymnasium.</p>
+                <p>Mitmachen können alle Schüler*innen, deren Eltern und sowie alle Lehrkräfte am Allgäu-Gymnasium.</p>
                 
                 <p>Viel Spaß beim Trainieren!</p>
-                <br>
                 <p>Eure Fachschaft Sport</p>
             </span>
             <i class="fa fa-bicycle fa-7x text-secondary pt-5 d-none d-md-block"></i>

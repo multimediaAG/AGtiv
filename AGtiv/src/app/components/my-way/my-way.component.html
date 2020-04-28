@@ -11,10 +11,13 @@
             <div class="mt-3">
                 <form [formGroup]="wayForm">
                     <div class="form-group">
-                        <label for="date">Datum (als TT.MM.JJJJ):</label>
-                        <input type="date" class="form-control" id="inputdateDate" formControlName="date" placeholder="TT.MMM.JJJJ" [class.is-invalid]="submitted && f.date.errors" [class.is-valid]="submitted && !f.date.errors">
+                        <label for="date" class="d-block">Datum:</label>
+                        <ngb-datepicker formControlName="date" #d [minDate]="minDate" [maxDate]="maxDate" [class.is-invalid]="submitted && f.date.errors" [class.is-valid]="submitted && !f.date.errors"></ngb-datepicker>
                         <div class="invalid-feedback">
                             Das Datum ist ungültig!
+                        </div>
+                        <div class="valid-feedback">
+                            Das Datum ist gültig!
                         </div>
                     </div>
                     <div class="my-3">

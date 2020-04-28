@@ -10,7 +10,7 @@ export class ScoresComponent {
   public users: any[] = [];
   public allUsers: any[] = [];
   public maxDistance: number = 1000000000;
-  public currentView: "all" | "students" | "teachers" | "grades" = "all";
+  public currentView: "all" | "students" | "teachers" | "grades" | "parents" = "all";
   public views = [
     {
       id: "all",
@@ -19,6 +19,10 @@ export class ScoresComponent {
     {
       id: "students",
       name: "Schüler"
+    },
+    {
+      id: "parents",
+      name: "Eltern"
     },
     {
       id: "teachers",
@@ -50,7 +54,9 @@ export class ScoresComponent {
     } else if (this.currentView == "students") {
       this.users = this.allUsers.filter((u) => u.grade.length < 4);
     } else if (this.currentView == "teachers") {
-      this.users = this.allUsers.filter((u) => u.grade.length > 4);
+      this.users = this.allUsers.filter((u) => u.grade.length > 4 && u.grade != "Eltern");
+    } else if (this.currentView == "parents") {
+      this.users = this.allUsers.filter((u) => u.grade == "Eltern");
     } else if (this.currentView == "grades") {
       const grades = {};
       for (const user of this.allUsers) {

@@ -10,12 +10,14 @@ import { AlertService } from 'src/app/services/alert.service';
 export class UsersComponent implements OnInit {
   public users: any[] = [];
   public maxDistance: number = 1000000000;
+  public userCount: number = 0;
   constructor(private remoteService: RemoteService, private alertService: AlertService) { }
 
   public ngOnInit() {
     this.remoteService.get("users/admin").subscribe((data) => {
       if (data) {
         this.users = data;
+        this.userCount = data.length;
         for (const user of this.users) {
           // tslint:disable-next-line: no-bitwise
           user.distance = parseInt(user.distance, undefined) | 0;

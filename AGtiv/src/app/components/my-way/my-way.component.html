@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="distance">Distanz in km:</label>
+                        <label for="distance">Distanz in km (<b>nicht schummeln!</b>):</label>
                         <input type="number" id="distance" class="form-control" formControlName="distance" placeholder="Distanz in km eingeben" [class.is-invalid]="submitted && f.distance.errors" [class.is-valid]="submitted && !f.distance.errors">
                         <div class="invalid-feedback">
                             Die Distanz ist muss zwischen 0 und 500 km liegen!

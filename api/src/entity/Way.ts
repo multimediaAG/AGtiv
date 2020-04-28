@@ -25,6 +25,6 @@ import { User } from "./User";
     @CreateDateColumn()
     public createdAt: string;
 
-    @ManyToOne(() => User, (user) => user.ways)
+    @ManyToOne(() => User, (user) => user.ways, {onDelete: "CASCADE"})
     public user: User;
   }

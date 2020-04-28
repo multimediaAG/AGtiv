@@ -15,21 +15,21 @@ export class RulesComponent {
     },
     {
       title: "Passwort",
-      content: "Verwende ein sicheres Passwort und gib es niemals weiter! Das Passwort muss mindestens 6 zeichen lang sein.\
+      content: "Verwende ein sicheres Passwort und gib es niemals weiter! Das Passwort muss mindestens 6 Zeichen lang sein.\
       Merke Dir Deine Zugangsdaten (Benutzername und Passwort) genau.",
       icon: "fa-lock",
     },
     {
       title: "Strecken eingeben",
       content: "AGtiv basiert auf der Ehrlichkeit und Kameradschaftlichkeit jeder und jedes Einzelnen.\
-      Trage nur die Kilometer ein, die auch wirklich geradelt, gelaufen oder skigerollert bist.",
+      Trage nur die Kilometer ein, die Du auch wirklich geradelt, gelaufen oder skigerollert bist.",
       icon: "fa-file-signature",
     },
     {
       title: "Was zählt?",
-      content: "Es zählen Strecken, die mit dem Fahrrad oder dem Skiroller zurückgelegt oder die gelaufen wurden.\
-      Alle eingetragenen Strecken werden in \"Fahrrad-Kilometer\" umgerechnet, um sie vergleichen zu können.\
-      Gemäß des größeren Energieaufwands werden Laufstrecken mit dem Faktor 4 und Skirollerstrecken mit dem Faktor 2.5 automatisch multipliziert.\
+      content: "Du kannst alle Strecken-Kilometer eintragen, die Du mit dem Fahrrad oder dem Roller (Inliner/Skiroller) zurückgelegt hast oder die Du gelaufen bist.\
+      Alle eingetragenen Strecken werden in \"Fahrrad-Kilometer\" umgerechnet, um die Leistungen vergleichen zu können.\
+      Gemäß des größeren Energieaufwands werden Laufstrecken mit dem Faktor 4 und Rollerstrecken mit dem Faktor 2.5 automatisch multipliziert.\
       Die sich daraus ergebenden Streckenlängen werden mathematisch auf ganze Kilometer gerundet.",
       icon: "fa-question",
     }

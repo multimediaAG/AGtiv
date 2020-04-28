@@ -3,6 +3,7 @@ export const grades: string[] = [
     "Studienseminar 18 / 20",
     "Studienseminar 19 / 21",
     "Studienseminar 20 / 22",
+    "Eltern",
     "5a",
     "5b",
     "5c",

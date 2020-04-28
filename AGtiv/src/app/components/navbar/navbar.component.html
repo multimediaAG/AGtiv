@@ -24,13 +24,11 @@
                 <li class="nav-item" routerLinkActive="active" *ngIf="authenticationService.loggedIn">
                     <a class="nav-link" href (click)="authenticationService.logout()" (click)="navbarCollapsed = true"><i class="fas fa-sign-out-alt"></i> Ausloggen</a>
                 </li>
-
-                <li class="nav-item" routerLinkActive="active" *ngIf="!authenticationService.loggedIn">
-                    <a class="nav-link" routerLink="/login" (click)="navbarCollapsed = true">Einloggen</a>
-                </li>
-
                 <li class="nav-item" routerLinkActive="active" *ngIf="!authenticationService.loggedIn">
                     <a class="nav-link" routerLink="/signup" (click)="navbarCollapsed = true">Registrieren</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active" *ngIf="!authenticationService.loggedIn">
+                    <a class="nav-link" routerLink="/login" (click)="navbarCollapsed = true">Anmelden</a>
                 </li>
             </ul>
         </div>

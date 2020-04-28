@@ -59,11 +59,11 @@
             <div class="col-12 col-sm-4 status">
                 <h4 class="text-center">
                     <i class="fa fa-sign text-secondary pt-5 d-inline  mr-2"></i>
-                    <span>Zusammen haben wir erreicht{{currentDistanceLoaded ? ': ' + currentDistance + " km" : ""}}</span>
+                    <span>Zusammen haben wir erreicht:<br><b>{{currentDistance}} km</b></span>
                 </h4>
                 <h4 class="text-center" *ngIf="currentDistanceLoaded">
                     <i class="fa fa-map-signs text-secondary pt-5 d-inline  mr-2"></i>
-                    <span>Unser nächstes Ziel in {{ nextCity.distance - currentStepDistance }} km!</span>
+                    <span>Unser nächstes Ziel erreichen wir in:<br><b>{{ nextCity.distance - currentStepDistance }} km</b></span>
                 </h4>
 
 

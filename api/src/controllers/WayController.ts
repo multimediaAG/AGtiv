@@ -67,7 +67,7 @@ class WayController {
       await wayRepository.delete({user: await getRepository(User).findOne(res.locals.jwtPayload.userId), id});
       log("way deleted", { id, userId: res.locals.jwtPayload.userId });
     } catch (error) {
-      res.status(404).send({message: "Dieser Weg wurde nicht gefunden!"});
+      res.status(404).send({message: "Diese Strecke wurde nicht gefunden!"});
       return;
     }
     res.status(200).send({status: true});

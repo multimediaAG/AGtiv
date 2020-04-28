@@ -27,10 +27,10 @@ export class MyWaysComponent implements OnInit {
   }
 
   public removeMyWay(myWay) {
-    if (confirm(`Soll der Weg vom ${myWay.date} mit einer Strecke von ${myWay.distance} km wirlich gelöscht werden?`)) {
+    if (confirm(`Soll die Strecke vom ${myWay.date} mit einer Strecke von ${myWay.distance} km wirlich gelöscht werden?`)) {
       this.remoteService.delete(`ways/${myWay.id}`).subscribe((data) => {
         if (data && data.status) {
-          this.alertService.success("Der Weg wurde erfolgreich gelöscht!");
+          this.alertService.success("Die Strecke wurde erfolgreich gelöscht!");
           this.myWays = this.myWays.filter((w) => w.id != myWay.id);
           this.update();
         }

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-11 col-md-8 mx-auto card p-3 mt-5">
             <div class="text-center mb-3">
-                <h3>{{editing ?"Strecke bearbeiten" :"Neue Strecke erstellen"}}</h3>
+                <h3>{{editing ?"Strecke bearbeiten" :"Neue Strecke eintragen"}}</h3>
             </div>
             <div>
                 <button class="btn btn-outline-success d-inline mr-3" [disabled]="loading" (click)="save()"><i [class]="'fas fa-' + (loading ? 'spinner fa-spin' : 'save')"></i> Speichern</button>

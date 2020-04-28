@@ -52,7 +52,7 @@
                     <i class="fas fa-map-marker-alt fa-3x text-secondary mr-2 mt-1"></i>
                     <div>
                         <h3>{{ lastCity.name }}</h3>
-                        in <a [href]="'https://de.wikipedia.org/wiki/' + nextCity.countryName" target="_blank">{{ lastCity.countryName }}</a>
+                        in <a [href]="'https://de.wikipedia.org/wiki/' + lastCity.countryName" target="_blank">{{ lastCity.countryName }}</a>
                         <flag-icon [country]="lastCity.country" squared></flag-icon>
                     </div>
                 </div>

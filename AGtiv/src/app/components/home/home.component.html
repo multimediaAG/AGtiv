@@ -48,15 +48,15 @@
     <div class="card p-3 mb-3">
         <div class="row text-center" *ngIf="currentDistanceLoaded">
             <div class="col-12 col-sm-4">
-                <div class="info mx-auto d-flex justify-content-center">
-                    <i class="fas fa-map-marker-alt fa-3x text-secondary mr-2 mt-1"></i>
-                    <div>
-                        <h3>{{ lastCity.name }}</h3>
-                        in <a [href]="'https://de.wikipedia.org/wiki/' + lastCity.countryName" target="_blank">{{ lastCity.countryName }}</a>
-                        <flag-icon class="ml-1" [country]="lastCity.country" squared></flag-icon>
-                    </div>
+                <div class="info mx-auto">
+                    <i class="fas fa-map-marker-alt fa-3x text-secondary mr-2 mt-1 mb-2"></i>
                 </div>
                 <img [src]="getImg(lastCity)" class="city" alt="Letzte Stadt">
+                <div>
+                    <h3>{{ lastCity.name }}</h3>
+                    in <a [href]="'https://de.wikipedia.org/wiki/' + lastCity.countryName" target="_blank">{{ lastCity.countryName }}</a>
+                    <flag-icon class="ml-1" [country]="lastCity.country" squared></flag-icon>
+                </div>
 
             </div>
             <div class="col-12 col-sm-4 status">
@@ -82,15 +82,16 @@
                 </div>
             </div>
             <div class="col-12 col-sm-4">
-                <div class="info mx-auto d-flex justify-content-center">
-                    <i class="fas fa-location-arrow fa-3x text-secondary mr-2 mt-1"></i>
-                    <div>
-                        <h3>{{ nextCity.name }}</h3>
-                        in <a [href]="'https://de.wikipedia.org/wiki/' + nextCity.countryName" target="_blank">{{ nextCity.countryName }}</a>
-                        <flag-icon class="ml-1" [country]="nextCity.country" squared></flag-icon>
-                    </div>
+                <div class="info mx-auto">
+                    <i class="fas fa-location-arrow fa-3x text-secondary mr-2 mt-1 mb-2"></i>
+
                 </div>
                 <img [src]="getImg(nextCity)" class="city" alt="Nächste Stadt">
+                <div>
+                    <h3>{{ nextCity.name }}</h3>
+                    in <a [href]="'https://de.wikipedia.org/wiki/' + nextCity.countryName" target="_blank">{{ nextCity.countryName }}</a>
+                    <flag-icon class="ml-1" [country]="nextCity.country" squared></flag-icon>
+                </div>
             </div>
             <div class="text-left px-5 mt-4">
                 <info-bike-distance></info-bike-distance>

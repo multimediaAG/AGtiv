@@ -36,7 +36,7 @@ export class ScoresComponent {
     },
   ];
   public currentView = this.views[0];
-  constructor(private remoteService: RemoteService, private authenticationService: AuthenticationService) { }
+  constructor(private remoteService: RemoteService, public authenticationService: AuthenticationService) { }
 
   public ngOnInit() {
     this.remoteService.get("users").subscribe((data) => {

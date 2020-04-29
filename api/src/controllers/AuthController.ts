@@ -5,6 +5,7 @@ import { getRepository } from "typeorm";
 import { config } from "../config/config";
 import { User } from "../entity/User";
 import { log } from "../utils/utils";
+import { Way } from "../entity/Way";
 
 class AuthController {
 
@@ -40,11 +41,15 @@ class AuthController {
       { expiresIn: "1h" },
     );
 
-    const response = {
+    const response: any = {
       ...user,
       token,
     };
     response.password = undefined;
+
+
+    const hiddenWays = await getRepository(Way).count({ where: { user, hidden: true } });
+    response.hasHiddenWays = hiddenWays > 0;
 
     // Send the jwt in the response
     log("login", { id: user.id });

@@ -21,6 +21,9 @@ import { User } from "./User";
     @Column({default: "bike"})
     public type: string;
 
+    @Column({default: false})
+    public hidden: boolean;
+
     @Column()
     @CreateDateColumn()
     public createdAt: string;

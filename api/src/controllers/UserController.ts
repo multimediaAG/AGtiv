@@ -3,13 +3,30 @@ import { Request, Response } from "express";
 import { getRepository } from "typeorm";
 import { User } from "../entity/User";
 import { log } from "../utils/utils";
+import { Way } from "../entity/Way";
 class UserController {
   public static listAll = async (req: Request, res: Response) => {
-    await UserController.plistAll(res);
+    const userRepository = getRepository(User);
+    const users = await userRepository.query(`
+      SELECT user.username, user.grade, Sum(way.distance) AS distance
+      FROM user
+      LEFT JOIN way
+      ON user.id = way.userId AND way.hidden = false
+      GROUP BY user.id
+      ORDER BY distance DESC
+    `);
+    res.send(users);
   }
 
   public static listAllAdmin = async (req: Request, res: Response) => {
-    await UserController.plistAll(res, true)
+    const userRepository = getRepository(User);
+    let users = await userRepository.find({ relations: ["ways"] });
+    for (const user of users as any[]) {
+      user.distance = user.ways.reduce((a, b) => a + b.distance, 0);
+      user.ways = user.ways.sort((a, b) => b.date - a.date);
+    }
+    users = (users as any[]).sort((a, b) => b.distance - a.distance);
+    res.send(users);
   }
 
   public static usernameAvailable = async (req: Request, res: Response) => {
@@ -108,17 +125,21 @@ class UserController {
     res.status(200).send({status: true});
   }
 
-  private static async plistAll(res: Response, isAdmin=false) {
-    const userRepository = getRepository(User);
-    const users = await userRepository.query(`
-      SELECT user.username, user.grade, Sum(way.distance) AS distance${isAdmin ? ', user.realName, user.id, user.isAdmin' : ''}
-      FROM user
-      LEFT JOIN way
-      ON user.id = way.userId
-      GROUP BY user.id
-      ORDER BY distance DESC
-    `);
-    res.send(users);
+  public static changeVisibility = async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const { hidden } = req.body;
+
+    const wayRepository = getRepository(Way);
+    try {
+      const user = await wayRepository.findOne(id);
+      user.hidden = hidden;
+      await wayRepository.save(user);
+    } catch (e) {
+      res.status(500).send({message: "Konnte die Sichtbarkeit nicht ändern!"});
+      return;
+    }
+    log("way visibility changed", { id, hidden });
+    res.status(200).send({status: true});
   }
 }
 

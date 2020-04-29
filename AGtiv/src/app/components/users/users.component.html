@@ -15,6 +15,7 @@
                             <th>Benutzer</th>
                             <th>Nickname</th>
                             <th colspan="2">Strecke</th>
+                            <th>Versteckte Strecken</th>
                             <th>Admin</th>
                             <th>Aktionen</th>
                         </tr>
@@ -30,10 +31,12 @@
                                     <div class="progress-bar" role="progressbar" [style.width]="user.distance / maxDistance * 100 + '%'"></div>
                                 </div>
                             </td>
+                            <td><i class="fas fa-eye-slash" *ngIf="user.hasHiddenWays"></i></td>
                             <td><i class="fas fa-user-shield" *ngIf="user.isAdmin"></i></td>
                             <td>
-                                <button class="btn btn-outline-primary" (click)="resetUserPassword(user)"><i class="fas fa-key"></i></button>
-                                <button class="btn btn-outline-warning mx-2" (click)="changeAdminStatus(user, !user.isAdmin)"><i [class]="'fas fa-user' + (user.isAdmin ? '' : '-shield')"></i></button>
+                                <button class="btn btn-outline-success" (click)="inspect(user, content)"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-outline-primary mx-2" (click)="resetUserPassword(user)"><i class="fas fa-key"></i></button>
+                                <button class="btn btn-outline-warning mr-2" (click)="changeAdminStatus(user, !user.isAdmin)"><i [class]="'fas fa-user' + (user.isAdmin ? '' : '-shield')"></i></button>
                                 <button class="btn btn-outline-danger" (click)="deleteUser(user)"><i class="fas fa-trash"></i></button>
                             </td>
                         </tr>
@@ -43,3 +46,45 @@
         </div>
     </div>
 </div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title"><i>Strecken von {{currentUser.username}}</i> ({{currentUser.realName}})</h4>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+            <span>&times;</span>
+        </button>
+    </div>
+    <div class="modal-body" ngbAutofocus>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Typ</th>
+                        <th>Datum</th>
+                        <th colspan="2">Strecke</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let way of currentUser.ways">
+                        <td><i [class]="'fas fa-' + (way.type == 'bike' ? 'biking' : way.type == 'walk' ? 'walking' : 'skating')"></i></td>
+                        <td>{{way.date | date}}</td>
+                        <td>{{way.distance}} km</td>
+                        <td>
+                            <div class="progress distanceIndicator">
+                                <div class="progress-bar" role="progressbar" [style.width]="way.distance / currentUser.maxDistance * 100 + '%'"></div>
+                            </div>
+                        </td>
+                        <td><i class="fas fa-eye-slash" *ngIf="way.hidden"></i></td>
+                        <td class="text-center">
+                            <button class="btn btn-outline-warning" (click)="changeVisibility(way, !way.hidden)">
+                                <i [class]="'fas fa-eye' + (way.hidden ? '' : '-slash')"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-template>

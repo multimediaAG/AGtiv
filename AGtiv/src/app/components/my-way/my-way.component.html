@@ -9,6 +9,9 @@
                 <a class="btn btn-outline-danger d-inline py-2" routerLink="/my-ways" [class.disabled]="loading"><i class="fas fa-times"></i> Abbrechen</a>
             </div>
             <div class="mt-3">
+                <div class="alert alert-danger">
+                    <b>Achtung:</b><br>Es zählen <b>nur</b> die Strecken, die <b>seit dem 28.04.2020</b> zurückgelegt wurden!
+                </div>
                 <form [formGroup]="wayForm">
                     <div class="form-group">
                         <label for="date" class="d-block">Datum:</label>

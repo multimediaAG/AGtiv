@@ -10,7 +10,12 @@
             </div>
             <div class="mt-3">
                 <div class="alert alert-danger">
-                    <b>Achtung:</b><br>Es zählen <b>nur</b> die Strecken, die <b>seit dem 28.04.2020</b> zurückgelegt wurden!
+                    <b>Beachte:</b>
+                    <ul>
+                        <li>Trage <b>nur</b> Strecken ein, die Du <b>seit dem 28.04.2020</b> zurückgelegt hast.</li>
+                        <li>Trage <b>keine addierten Distanzen</b> ein. (Trage jede einzelne Leistung separat unter dem jeweiligen Datum ein.)</li>
+                        <li>Trage deine Strecke ein, <b>ohne sie</b> mit dem entsprechenden Faktor <b>zu multiplizieren</b>. Das erledigt das Programm automatisch.</li>
+                    </ul>
                 </div>
                 <form [formGroup]="wayForm">
                     <div class="form-group">
@@ -37,10 +42,6 @@
                             <label class="custom-control-label" for="type-skiroller"><i class="fas fa-skating"></i> Ich bin mit dem <b>Skiroller gefahren.</b></label>
                         </div>
                     </div>
-                    <p>Ich habe <b>an diesem Tag</b> die folgende Distanz zurückgelegt.
-                        <b>(Bitte keine über mehrere Tage addierte Distanzen eintragen! Mehrere Tagesleistungen müssen jeweils einzeln unter dem jeweiligen Datum eingetragen werden.)</b>
-                    </p>
-                    <p>Die eingebenene Strecke <b>nicht</b> mit einem Faktor multiplizieren! Das geschieht durch die Auswahl oben automatisch.</p>
                     <div class="form-group">
                         <label for="distance">Distanz in km (<b>nicht schummeln!</b>):</label>
                         <input type="number" id="distance" class="form-control" formControlName="distance" placeholder="Distanz in km eingeben" [class.is-invalid]="submitted && f.distance.errors" [class.is-valid]="submitted && !f.distance.errors">

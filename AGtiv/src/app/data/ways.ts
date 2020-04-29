@@ -234,7 +234,7 @@ export module data {
         },
         {
             name: "Phnom Penh",
-            country: "kd",
+            country: "kh",
             distance: 719
         },
         {

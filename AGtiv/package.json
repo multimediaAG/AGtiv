@@ -1,6 +1,19 @@
 {
     "name": "agtiv",
-    "version": "0.0.1",
+    "version": "1.0.0",
+    "description": "The frontend for AGtiv",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/multimediaAG/AGtiv.git"
+    },
+    "keywords": [
+        "api"
+    ],
+    "author": "H. Rueger",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/multimediaAG/AGtiv/issues"
+    },
     "scripts": {
         "ng": "ng",
         "start": "ng serve",

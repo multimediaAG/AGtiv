@@ -4,6 +4,7 @@ main {
     background-image: url("~/assets/01.jpg");
     background-size: cover;
     transition: background-image 1s linear;
+    background-attachment: fixed;
     &.communityImage {
         background-image: url("~/assets/02.jpg");
     }

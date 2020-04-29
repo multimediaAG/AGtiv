@@ -20,6 +20,7 @@ export class MyWaysComponent implements OnInit {
   ngOnInit(): void {
     this.remoteService.get("ways").subscribe((ways) => {
       this.myWays = ways;
+      this.authenticationService.currentUser.hasHiddenWays = this.myWays.filter((w) => w.hidden).length > 0;
       this.waysLoaded = true;
       setTimeout(() => {
         this.update();

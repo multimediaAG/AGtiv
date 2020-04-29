@@ -26,6 +26,7 @@ class WayController {
       way.distance = distance;
       way.date = date;
       way.type = type;
+      way.hidden = false;
       await wayRepository.save(way);
       log("way edited", { way, userId: res.locals.jwtPayload.userId });
     } catch (err) {

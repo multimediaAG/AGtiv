@@ -72,6 +72,7 @@ export class ScoresComponent {
           distance,
         });
       }
+      this.users.sort((a, b) => b.distance - a.distance);
     }
     this.maxDistance = 1000000000;
     let place = 1;

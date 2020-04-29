@@ -38,7 +38,9 @@
                         </div>
                     </div>
                     <p>Ich habe <b>an diesem Tag</b> die folgende Distanz zurückgelegt.
-                        <b>(Bitte keine über mehrere Tage addierte Distanzen eintragen! Mehrere Tagesleistungen müssen jeweils einzeln unter dem jeweiligen Datum eingetragen werden.)</b></p>
+                        <b>(Bitte keine über mehrere Tage addierte Distanzen eintragen! Mehrere Tagesleistungen müssen jeweils einzeln unter dem jeweiligen Datum eingetragen werden.)</b>
+                    </p>
+                    <p>Die eingebenene Strecke <b>nicht</b> mit einem Faktor multiplizieren! Das geschieht durch die Auswahl oben automatisch.</p>
                     <div class="form-group">
                         <label for="distance">Distanz in km (<b>nicht schummeln!</b>):</label>
                         <input type="number" id="distance" class="form-control" formControlName="distance" placeholder="Distanz in km eingeben" [class.is-invalid]="submitted && f.distance.errors" [class.is-valid]="submitted && !f.distance.errors">

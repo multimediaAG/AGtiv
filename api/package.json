@@ -16,6 +16,7 @@
     },
     "homepage": "https://github.com/multimediaAG/AGtiv#readme",
     "devDependencies": {
+        "@types/fabric": "^3.6.2",
         "@types/node": "^13.9.3",
         "@types/request": "^2.48.4",
         "npx": "^10.2.2",
@@ -34,10 +35,10 @@
         "class-validator": "^0.11.1",
         "cors": "^2.8.5",
         "express": "^4.17.1",
+        "fabric": "^3.6.3",
         "helmet": "^3.22.0",
         "jsonwebtoken": "^8.5.1",
         "mysql": "^2.18.1",
-        "pureimage": "^0.2.1",
         "reflect-metadata": "^0.1.13",
         "ts-node-dev": "^1.0.0-pre.44",
         "typeorm": "0.2.24"

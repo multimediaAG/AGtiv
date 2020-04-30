@@ -181,7 +181,7 @@ export module data {
             distance: 817
         },
         {
-            name: "Dodome",
+            name: "Dodoma",
             country: "tz",
             distance: 1312
         },
@@ -320,7 +320,7 @@ export module data {
         },
         {
             code: "ci",
-            name: "Elfenbeinküste"
+            name: "Cote d`Ivoir"
         },
         {
             code: "gh",

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { RemoteService } from 'src/app/services/remote.service';
 import { data } from 'src/app/data/ways';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ export class HomeComponent {
   public lastCity: any;
   public currentStepTotalDistance: number;
   public currentStepDistance: number;
+  public mapSrc: string = `${environment.apiUrl}statistics/currentMap.png`
 
   constructor(public authenticationService: AuthenticationService, private remoteService: RemoteService) { }
 

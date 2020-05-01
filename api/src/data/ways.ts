@@ -4,8 +4,10 @@ export module data {
         name: string;
         country: string;
         distance: number;
-        x?: number;
-        y?: number;
+        x: number;
+        y: number;
+        angleCCW?: boolean;
+        left?: boolean;
     }
 
     export interface Country {
@@ -18,262 +20,347 @@ export module data {
             name: "Kempten",
             country: "de",
             distance: 0,
-            x: 500,
-            y: 172,
+            x: 1183,
+            y: 426,
         },
         {
             name: "Marseille",
             country: "fr",
             distance: 964,
-            x: 500,
-            y: 191,
+            x: 1159,
+            y: 462,
         },
         {
             name: "Barcelona",
             country: "es",
             distance: 508,
-            x: 490,
-            y: 200,
+            x: 1136,
+            y: 481,
         },
         {
             name: "Gibraltar",
             country: "gi",
             distance: 1108,
-            x: 468,
-            y: 217,
+            x: 1104,
+            y: 513,
         },
         {
             name: "Marrakesch",
             country: "ma",
             distance: 653,
-            x: 465,
-            y: 234,
+            x: 1077,
+            y: 548,
         },
         {
             name: "Ad Dakhla",
             country: "eh",
             distance: 1406,
-            x: 442,
-            y: 261,
+            x: 1034,
+            y: 585,
         },
         {
             name: "Dakar",
             country: "sn",
             distance: 1367,
-            x: 432,
-            y: 297,
+            x: 1008,
+            y: 657,
         },
         {
             name: "Conakry",
             country: "gn",
             distance: 1199,
-            x: 446,
-            y: 314,
+            x: 1027,
+            y: 682,
+            angleCCW: true,
         },
         {
             name: "Makeni",
             country: "sl",
             distance: 271,
-            x: 452,
-            y: 316,
+            x: 1051,
+            y: 690,
+            angleCCW: true,
         },
         {
             name: "Nzerekore",
             country: "gn",
             distance: 516,
-            x: 460,
-            y: 319
+            x: 1077,
+            y: 699,
+            angleCCW: true,
         },
         {
             name: "Yamoussoukro",
             country: "ci",
             distance: 519,
-            x: 471,
-            y: 322,
+            x: 1089,
+            y: 703,
+            angleCCW: true,
         },
         {
             name: "Kumasi",
             country: "gh",
             distance: 516,
-            x: 481,
-            y: 321
+            x: 1118,
+            y: 706,
+            angleCCW: true,
         },
         {
-            name: "Proto-Novo",
+            name: "Porto-Novo",
             country: "bj",
             distance: 648,
-            x: 490,
-            y: 323,
+            x: 1139,
+            y: 708,
+            angleCCW: true,
         },
         {
             name: "Onitsha",
             country: "ng",
-            distance: 543
+            distance: 543,
+            x: 1163,
+            y: 710,
+            angleCCW: true,
         },
         {
             name: "Douala",
             country: "cm",
-            distance: 666
+            distance: 666,
+            x: 1180,
+            y: 723,
         },
         {
             name: "Oyem",
             country: "ga",
-            distance: 546
+            distance: 546,
+            x: 1195,
+            y: 740,
         },
         {
             name: "Mandilou",
             country: "ga",
-            distance: 602
+            distance: 602,
+            x: 1181,
+            y: 756,
         },
         {
             name: "Dolisie",
             country: "cg",
-            distance: 445
+            distance: 445,
+            x: 1190,
+            y: 770,
+            left: true,
         },
         {
             name: "Kinshasa",
             country: "cd",
-            distance: 390
+            distance: 390,
+            x: 1214,
+            y: 773,
         },
         {
             name: "Luanda",
             country: "ao",
-            distance: 818
+            distance: 818,
+            x: 1205,
+            y: 795,
         },
         {
             name: "Lubango",
             country: "ao",
-            distance: 898
+            distance: 898,
+            x: 1208,
+            y: 844,
         },
         {
             name: "Windhuk",
             country: "na",
-            distance: 1158
+            distance: 1158,
+            x: 1221,
+            y: 890,
         },
         {
             name: "Kapstadt",
             country: "za",
-            distance: 1479
+            distance: 1479,
+            x: 1230,
+            y: 966,
+            left: true,
         },
         {
             name: "Port Elizabeth",
             country: "za",
-            distance: 749
+            distance: 749,
+            x: 1285,
+            y: 969,
         },
         {
             name: "Durban",
             country: "za",
-            distance: 910
+            distance: 910,
+            x: 1313,
+            y: 949,
         },
         {
             name: "Maputo",
             country: "mz",
-            distance: 542
+            distance: 542,
+            x: 1323,
+            y: 922,
         },
         {
             name: "Harare",
             country: "zw",
-            distance: 1163
+            distance: 1163,
+            x: 1307,
+            y: 847,
         },
         {
             name: "Lilongwe",
             country: "mw",
-            distance: 817
+            distance: 817,
+            x: 1324,
+            y: 821,
         },
         {
             name: "Dodoma",
             country: "tz",
-            distance: 1312
+            distance: 1312,
+            x: 1345,
+            y: 778,
         },
         {
             name: "Nairobi",
             country: "ke",
-            distance: 689
+            distance: 689,
+            x: 1352,
+            y: 750,
         },
         {
             name: "Awassa",
             country: "et",
-            distance: 1273
+            distance: 1273,
+            x: 1368,
+            y: 708,
         },
         {
-            name: "Dschibouti",
+            name: "Dschibuti",
             country: "dj",
-            distance: 998
+            distance: 998,
+            x: 1389,
+            y: 676,
         },
         {
             name: "Salala",
             country: "om",
-            distance: 1549
+            distance: 1549,
+            x: 1469,
+            y: 641,
         },
         {
             name: "Dubai",
             country: "ae",
-            distance: 1281
+            distance: 1281,
+            x: 1480,
+            y: 590,
+            left: true,
         },
         {
             name: "Tschahbahar",
             country: "ir",
-            distance: 667
+            distance: 667,
+            x: 1516,
+            y: 587,
+            angleCCW: false,
         },
         {
             name: "Karatschi",
             country: "pk",
-            distance: 980
+            distance: 980,
+            x: 1550,
+            y: 590,
+            angleCCW: false,
         },
         {
             name: "Ahmedabad",
             country: "in",
-            distance: 851
+            distance: 851,
+            x: 1588,
+            y: 602,
         },
         {
             name: "Mumbai",
             country: "in",
-            distance: 525
+            distance: 525,
+            x: 1592,
+            y: 628,
         },
         {
             name: "Madurai",
             country: "in",
-            distance: 1427
+            distance: 1427,
+            x: 1626,
+            y: 686,
         },
         {
             name: "Kakinada",
             country: "in",
-            distance: 1123
+            distance: 1123,
+            x: 1660,
+            y: 632,
         },
         {
             name: "Kalkutta",
             country: "in",
-            distance: 1025
+            distance: 1025,
+            x: 1688,
+            y: 607,
+            angleCCW: false,
         },
         {
             name: "Mandalay",
             country: "mm",
-            distance: 1399
+            distance: 1399,
+            x: 1744,
+            y: 612,
+            angleCCW: false,
         },
         {
             name: "Rangun",
             country: "mm",
-            distance: 628
+            distance: 628,
+            x: 1741,
+            y: 638,
         },
         {
             name: "Bangkok",
             country: "th",
-            distance: 837
+            distance: 837,
+            x: 1770,
+            y: 657,
+            angleCCW: true,
         },
         {
             name: "Phnom Penh",
             country: "kh",
-            distance: 719
+            distance: 719,
+            x: 1793,
+            y: 659,
+            angleCCW: true,
         },
         {
             name: "Pleiku",
             country: "vn",
-            distance: 627
+            distance: 627,
+            x: 1816,
+            y: 659,
+            angleCCW: true,
         },
         {
             name: "Hanoi",
             country: "vn",
-            distance: 1102
+            distance: 1102,
+            x: 1794,
+            y: 618,
         },
     ];
 

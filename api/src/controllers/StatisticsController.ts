@@ -16,7 +16,7 @@ class StatisticsController {
     const GREY = "#474747";
 
     const canvas = new fabric.StaticCanvas(undefined);
-    fabric.Image.fromURL("file:///" + path.join(__dirname, "../../assets/worldmap.jpg"), async (img) => {
+    fabric.Image.fromURL("file:///" + path.join(__dirname, "../../assets/worldmap.png"), async (img) => {
       canvas.setHeight(img.height);
       canvas.setWidth(img.width);
       canvas.add(img);

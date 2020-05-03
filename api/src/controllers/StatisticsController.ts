@@ -12,8 +12,8 @@ class StatisticsController {
   }
 
   public static currentMap = async (req: Request, res: Response) => {
-    const BLUE = "#3785c4";
-    const GREY = "#474747";
+    const PRIMARY = "#f1c40f";
+    const SECONDARY = "#474747";
 
     const canvas = new fabric.StaticCanvas(undefined);
     fabric.Image.fromURL("file:///" + path.join(__dirname, "../../assets/worldmap.png"), async (img) => {
@@ -42,8 +42,8 @@ class StatisticsController {
         canvas.add(new fabric.Circle({
           left: city.x,
           top: city.y,
-          fill: GREY,
-          stroke: BLUE,
+          fill: SECONDARY,
+          stroke: PRIMARY,
           radius: 5,
           strokeWidth: 2,
           originX: "center",
@@ -109,7 +109,7 @@ class StatisticsController {
         first = false;
       }
       canvas.add(new fabric.Path(pathString, {
-        stroke: GREY,
+        stroke: SECONDARY,
         strokeWidth: 4,
         fill: undefined,
       }));

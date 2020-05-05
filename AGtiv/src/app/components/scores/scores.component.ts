@@ -31,12 +31,12 @@ export class ScoresComponent {
       name: "Lehrer"
     },
     {
-      id: "grades-relative",
-      name: "Klassen (relativ)"
-    },
-    {
       id: "grades-absolute",
       name: "Klassen (absolut)"
+    },
+    {
+      id: "grades-relative",
+      name: "Klassen (relativ)"
     },
   ];
   public currentView = this.views[0];

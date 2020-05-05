@@ -32,7 +32,7 @@ export class ScoresComponent {
     },
     {
       id: "grades-relative",
-      name: "Klassen"
+      name: "Klassen (relativ)"
     },
     {
       id: "grades-absolute",

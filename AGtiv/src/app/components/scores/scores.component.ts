@@ -31,15 +31,19 @@ export class ScoresComponent {
       name: "Lehrer"
     },
     {
-      id: "grades",
+      id: "grades-average",
       name: "Klassen"
+    },
+    {
+      id: "grades-absolute",
+      name: "Klassen (absolut)"
     },
   ];
   public currentView = this.views[0];
   constructor(private remoteService: RemoteService, public authenticationService: AuthenticationService) { }
 
   public ngOnInit() {
-    this.remoteService.get("users").subscribe((data) => {
+   this.remoteService.get("users").subscribe((data) => {
       if (data) {
         this.allUsers = data;
         for (const user of this.allUsers) {
@@ -60,19 +64,23 @@ export class ScoresComponent {
       this.users = this.allUsers.filter((u) => u.grade.length > 4 && u.grade != "Eltern");
     } else if (this.currentView.id == "parents") {
       this.users = this.allUsers.filter((u) => u.grade == "Eltern");
-    } else if (this.currentView.id == "grades") {
+    } else if (this.currentView.id == "grades-average" || this.currentView.id == "grades-absolute") {
       const grades = {};
       for (const user of this.allUsers) {
         if (!grades[user.grade]) {
-          grades[user.grade] = 0;
+          grades[user.grade] = {
+            distance: 0,
+            users: 0,
+          };
         }
-        grades[user.grade] += user.distance;
+        grades[user.grade].distance += user.distance;
+        grades[user.grade].users++;
       }
       this.users = [];
-      for (const [grade, distance] of Object.entries(grades)) {
+      for (const [grade, d] of Object.entries(grades) as any) {
         this.users.push({
           grade,
-          distance,
+          distance: this.currentView.id == "grades-absolute" ? d.distance : Math.round(d.distance / d.users),
         });
       }
       this.users.sort((a, b) => b.distance - a.distance);

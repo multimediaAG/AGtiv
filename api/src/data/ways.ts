@@ -8,6 +8,8 @@ export module data {
         y: number;
         angleCCW?: boolean;
         left?: boolean;
+        isEasternEndpoint?: boolean;
+        isWesternStartpoint?: boolean;
     }
 
     export interface Country {
@@ -361,6 +363,164 @@ export module data {
             distance: 1102,
             x: 1794,
             y: 618,
+            angleCCW: false,
+        },
+        {
+            name: "Hongkong",
+            country: "hk",
+            distance: 1078,
+            x: 1853,
+            y: 605,
+        },
+        {
+            name: "Zhangzhou",
+            country: "cn",
+            distance: 713,
+            x: 1873,
+            y: 587,
+        },
+        {
+            name: "Fuzhou",
+            country: "cn",
+            distance: 834,
+            x: 1853,
+            y: 562,
+            angleCCW: false,
+        },
+        {
+            name: "Shanghai",
+            country: "cn",
+            distance: 771,
+            x: 1900,
+            y: 545,
+        },
+        {
+            name: "Peking",
+            country: "cn",
+            distance: 1191,
+            x: 1859,
+            y: 481,
+            angleCCW: false,
+        },
+        {
+            name: "Shengyang",
+            country: "cn",
+            distance: 685,
+            x: 1916,
+            y: 459,
+            angleCCW: false,
+        },
+        {
+            name: "Wladiwostok",
+            country: "ru",
+            distance: 1095,
+            x: 1967,
+            y: 456,
+        },
+        {
+            name: "Chabarowsk",
+            country: "ru",
+            distance: 795,
+            x: 1984,
+            y: 412,
+        },
+        {
+            name: "Swobodny",
+            country: "ru",
+            distance: 764,
+            x: 1941,
+            y: 385,
+        },
+        {
+            name: "Nerjungri",
+            country: "ru",
+            distance: 851,
+            x: 1913,
+            y: 340,
+        },
+        {
+            name: "Jakutsk",
+            country: "ru",
+            distance: 861,
+            x: 1951,
+            y: 293,
+            angleCCW: false,
+        },
+        {
+            name: "Sussuman",
+            country: "ru",
+            distance: 1228,
+            x: 2071,
+            y: 285,
+        },
+        {
+            name: "Magadan",
+            country: "ru",
+            distance: 626,
+            x: 2089,
+            y: 317,
+            angleCCW: true,
+            isEasternEndpoint: true,
+        },
+        {
+            name: "Anchorage",
+            country: "us",
+            distance: 2832,
+            x: 95,
+            y: 346,
+            isWesternStartpoint: true,
+            angleCCW: true,
+        },
+        {
+            name: "Watson Lake",
+            country: "ca",
+            distance: 1569,
+            x: 272,
+            y: 352,
+        },
+        {
+            name: "Prince George",
+            country: "ca",
+            distance: 1323,
+            x: 327,
+            y: 391,
+        },
+        {
+            name: "Vancouver",
+            country: "ca",
+            distance: 783,
+            x: 339,
+            y: 427,
+        },
+        {
+            name: "Portland",
+            country: "us",
+            distance: 509,
+            x: 339,
+            y: 459,
+        },
+        {
+            name: "Sacramento",
+            country: "us",
+            distance: 930,
+            x: 346,
+            y: 512,
+        },
+        {
+            name: "Los Angeles",
+            country: "us",
+            distance: 617,
+            x: 369,
+            y: 543,
+            angleCCW: true,
+        },
+        {
+            name: "Phoenix",
+            country: "us",
+            distance: 600,
+            x: 413,
+            y: 548,
+            angleCCW: true,
         },
     ];
 
@@ -512,6 +672,26 @@ export module data {
         {
             code: "ke",
             name: "Kenia"
+        },
+        {
+            code: "hk",
+            name: "Hongkong"
+        },
+        {
+            code: "cn",
+            name: "China"
+        },
+        {
+            code: "ru",
+            name: "Russland"
+        },
+        {
+            code: "us",
+            name: "USA"
+        },
+        {
+            code: "ca",
+            name: "Kanada"
         },
     ];
 }

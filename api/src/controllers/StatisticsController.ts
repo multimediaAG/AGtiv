@@ -22,7 +22,7 @@ class StatisticsController {
       canvas.add(img);
 
       const currentDistance = await StatisticsController.getCurrentDistance();
-      const citiesVisited = [];
+      const citiesVisited: data.City[] = [];
 
       let distanceCounter: number = 0;
         for (const city of data.cities) {
@@ -105,14 +105,20 @@ class StatisticsController {
       let pathString = "";
       for (const city of citiesVisited) {
         if (!city.x) continue;
-        pathString += ` ${first ? "M" : "L"} ${city.x} ${city.y}`
+        if (city.isWesternStartpoint) {
+          pathString += ` M 0 ${city.y}`
+          pathString += ` L ${city.x} ${city.y}`
+        } else {
+          pathString += ` ${first ? "M" : "L"} ${city.x} ${city.y}`
+        }
+        if (city.isEasternEndpoint) {
+          pathString += ` L ${img.width} ${city.y}`
+          drawPath(canvas, pathString, SECONDARY);
+          pathString = "";
+        }
         first = false;
       }
-      canvas.add(new fabric.Path(pathString, {
-        stroke: SECONDARY,
-        strokeWidth: 4,
-        fill: undefined,
-      }));
+      drawPath(canvas, pathString, SECONDARY);
 
 
       canvas.renderAll();
@@ -137,3 +143,11 @@ class StatisticsController {
 }
 
 export default StatisticsController;
+function drawPath(canvas: fabric.StaticCanvas, pathString: string, SECONDARY: string) {
+  canvas.add(new fabric.Path(pathString, {
+    stroke: SECONDARY,
+    strokeWidth: 4,
+    fill: undefined,
+  }));
+}
+

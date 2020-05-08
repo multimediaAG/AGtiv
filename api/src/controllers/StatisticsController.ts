@@ -13,7 +13,7 @@ class StatisticsController {
 
   public static currentMap = async (req: Request, res: Response) => {
     const PRIMARY = "#f1c40f";
-    const SECONDARY = "#474747";
+    const SECONDARY = "#c0392b";
 
     const canvas = new fabric.StaticCanvas(undefined);
     fabric.Image.fromURL("file:///" + path.join(__dirname, "../../assets/worldmap.png"), async (img) => {

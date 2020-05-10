@@ -1,0 +1,7 @@
+{
+    "version": 1,
+    "files": [{
+        "src": "AGtiv/src/app/data/ways.ts",
+        "dest": "api/src/data/ways.ts"
+    }]
+}

@@ -16,6 +16,8 @@ export class HomeComponent {
   public lastCity: any;
   public currentStepTotalDistance: number;
   public currentStepDistance: number;
+  public userCount: number;
+  public bestUser: any = {};
   public mapSrc: string = `${environment.apiUrl}statistics/currentMap.png`
 
   constructor(public authenticationService: AuthenticationService, private remoteService: RemoteService) { }
@@ -27,6 +29,8 @@ export class HomeComponent {
         if (d.currentDistance === null) {
           d.currentDistance = 0;
         }
+        this.userCount = d.userCount;
+        this.bestUser = d.bestUser;
         this.currentDistanceLoaded = true;
         this.currentDistance = d.currentDistance;
         let distanceCounter: number = 0;

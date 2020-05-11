@@ -4,11 +4,26 @@ import { Way } from "../entity/Way";
 import * as path from "path";
 import { data } from "../data/ways";
 import { fabric } from "fabric";
+import { User } from "../entity/User";
 
 class StatisticsController {
   public static currentDistance = async (req: Request, res: Response) => {
     const sum = await StatisticsController.getCurrentDistance();
-    res.send({ currentDistance: sum });
+    const userRepository = getRepository(User);
+    const userCount = await userRepository.count();
+    let bestUser = await userRepository.query(`
+      SELECT user.username, user.grade, Sum(way.distance) AS distance
+      FROM user
+      LEFT JOIN way
+      ON user.id = way.userId AND way.hidden = false
+      GROUP BY user.id
+      ORDER BY distance DESC
+      LIMIT 1;
+    `);
+    if (bestUser && bestUser[0]) {
+      bestUser = bestUser[0];
+    }
+    res.send({ currentDistance: sum, userCount, bestUser });
   }
 
   public static currentMap = async (req: Request, res: Response) => {

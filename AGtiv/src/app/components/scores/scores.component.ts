@@ -109,7 +109,9 @@ export class ScoresComponent {
       this.placesCount = this.users[this.users.length - 1].place;
     }
     setTimeout(() => {
-      this.maxDistance = this.users.reduce((p, c) => p.distance > c.distance ? p : c).distance;
+      if (this.users.length) {
+        this.maxDistance = this.users.reduce((p, c) => p.distance > c.distance ? p : c).distance;
+      }
     }, 20);
   }
 

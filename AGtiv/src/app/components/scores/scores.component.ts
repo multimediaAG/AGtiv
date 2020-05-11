@@ -96,7 +96,7 @@ export class ScoresComponent {
       lastUser = user;
     }
     if (this.authenticationService.loggedIn) {
-      if (this.currentView.id == "grades") {
+      if (this.currentView.id == "grades-absolute" || this.currentView.id == "grades-relative") {
         this.myPlace = this.users.filter((u) => u.grade == this.authenticationService.currentUser.grade)[0].place;
       } else {
         const user = this.users.filter((u) => u.username == this.authenticationService.currentUser.username);

@@ -25,7 +25,7 @@
                     <tbody>
                         <tr *ngFor="let user of users">
                             <td>{{user.place}}</td>
-                            <td *ngIf="currentView.id != 'grades'">{{user.username}}</td>
+                            <td *ngIf="currentView.id != 'grades-absolute' && currentView.id != 'grades-relative'">{{user.username}}</td>
                             <td>{{user.grade}}</td>
                             <td>{{user.distance}} km</td>
                             <td>

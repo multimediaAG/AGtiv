@@ -558,6 +558,7 @@
 /* do not edit */             distance: 462,
 /* do not edit */             x: 500,
 /* do not edit */             y: 648,
+/* do not edit */             angleCCW: true,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Guatemala Stadt",
@@ -565,6 +566,7 @@
 /* do not edit */             distance: 986,
 /* do not edit */             x: 535,
 /* do not edit */             y: 660,
+/* do not edit */             angleCCW: true,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Tegucigalpa",
@@ -579,6 +581,7 @@
 /* do not edit */             distance: 366,
 /* do not edit */             x: 568,
 /* do not edit */             y: 678,
+/* do not edit */             angleCCW: true,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "San José",
@@ -586,6 +589,7 @@
 /* do not edit */             distance: 424,
 /* do not edit */             x: 578,
 /* do not edit */             y: 693,
+/* do not edit */             angleCCW: true,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Panama City",
@@ -593,6 +597,7 @@
 /* do not edit */             distance: 851,
 /* do not edit */             x: 609,
 /* do not edit */             y: 703,
+/* do not edit */             angleCCW: true,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Medellin",
@@ -628,6 +633,7 @@
 /* do not edit */             distance: 1019,
 /* do not edit */             x: 623,
 /* do not edit */             y: 827,
+/* do not edit */             angleCCW: true,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "La Paz",
@@ -669,7 +675,7 @@
 /* do not edit */             country: "ar",
 /* do not edit */             distance: 779,
 /* do not edit */             x: 692,
-/* do not edit */             y: 692,
+/* do not edit */             y: 1058,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Bahia Blanca",
@@ -684,6 +690,7 @@
 /* do not edit */             distance: 635,
 /* do not edit */             x: 752,
 /* do not edit */             y: 987,
+/* do not edit */             left: true,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Montevideo",
@@ -747,6 +754,7 @@
 /* do not edit */             distance: 759,
 /* do not edit */             x: 868,
 /* do not edit */             y: 772,
+/* do not edit */             angleCCW: true,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Sao Luis",
@@ -754,6 +762,7 @@
 /* do not edit */             distance: 900,
 /* do not edit */             x: 831,
 /* do not edit */             y: 772,
+/* do not edit */             angleCCW: true,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Belèm",
@@ -782,6 +791,7 @@
 /* do not edit */             distance: 333,
 /* do not edit */             x: 762,
 /* do not edit */             y: 711,
+/* do not edit */             angleCCW: true,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Georgetown",
@@ -789,6 +799,7 @@
 /* do not edit */             distance: 444,
 /* do not edit */             x: 737,
 /* do not edit */             y: 706,
+/* do not edit */             angleCCW: false,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Caracas",
@@ -796,6 +807,7 @@
 /* do not edit */             distance: 1044,
 /* do not edit */             x: 681,
 /* do not edit */             y: 688,
+/* do not edit */             left: true,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Port au Prince",
@@ -822,8 +834,8 @@
 /* do not edit */             name: "Atlanta",
 /* do not edit */             country: "us",
 /* do not edit */             distance: 711,
-/* do not edit */             x: 600,
-/* do not edit */             y: 520,
+/* do not edit */             x: 573,
+/* do not edit */             y: 538,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Charlotte",
@@ -873,6 +885,7 @@
 /* do not edit */             distance: 720,
 /* do not edit */             x: 876,
 /* do not edit */             y: 270,
+/* do not edit */             angleCCW: false,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Reykjavík",
@@ -880,6 +893,7 @@
 /* do not edit */             distance: 757,
 /* do not edit */             x: 963,
 /* do not edit */             y: 282,
+/* do not edit */             angleCCW: false,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Neskaupstaður",
@@ -887,6 +901,7 @@
 /* do not edit */             distance: 703,
 /* do not edit */             x: 1024,
 /* do not edit */             y: 271,
+/* do not edit */             angleCCW: false,
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             name: "Bodø",

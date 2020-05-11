@@ -550,6 +550,7 @@ export module data {
             distance: 462,
             x: 500,
             y: 648,
+            angleCCW: true,
         },
         {
             name: "Guatemala Stadt",
@@ -557,6 +558,7 @@ export module data {
             distance: 986,
             x: 535,
             y: 660,
+            angleCCW: true,
         },
         {
             name: "Tegucigalpa",
@@ -571,6 +573,7 @@ export module data {
             distance: 366,
             x: 568,
             y: 678,
+            angleCCW: true,
         },
         {
             name: "San José",
@@ -578,6 +581,7 @@ export module data {
             distance: 424,
             x: 578,
             y: 693,
+            angleCCW: true,
         },
         {
             name: "Panama City",
@@ -585,6 +589,7 @@ export module data {
             distance: 851,
             x: 609,
             y: 703,
+            angleCCW: true,
         },
         {
             name: "Medellin",
@@ -620,6 +625,7 @@ export module data {
             distance: 1019,
             x: 623,
             y: 827,
+            angleCCW: true,
         },
         {
             name: "La Paz",
@@ -661,7 +667,7 @@ export module data {
             country: "ar",
             distance: 779,
             x: 692,
-            y: 692,
+            y: 1058,
         },
         {
             name: "Bahia Blanca",
@@ -676,6 +682,7 @@ export module data {
             distance: 635,
             x: 752,
             y: 987,
+            left: true,
         },
         {
             name: "Montevideo",
@@ -739,6 +746,7 @@ export module data {
             distance: 759,
             x: 868,
             y: 772,
+            angleCCW: true,
         },
         {
             name: "Sao Luis",
@@ -746,6 +754,7 @@ export module data {
             distance: 900,
             x: 831,
             y: 772,
+            angleCCW: true,
         },
         {
             name: "Belèm",
@@ -774,6 +783,7 @@ export module data {
             distance: 333,
             x: 762,
             y: 711,
+            angleCCW: true,
         },
         {
             name: "Georgetown",
@@ -781,6 +791,7 @@ export module data {
             distance: 444,
             x: 737,
             y: 706,
+            angleCCW: false,
         },
         {
             name: "Caracas",
@@ -788,6 +799,7 @@ export module data {
             distance: 1044,
             x: 681,
             y: 688,
+            left: true,
         },
         {
             name: "Port au Prince",
@@ -814,8 +826,8 @@ export module data {
             name: "Atlanta",
             country: "us",
             distance: 711,
-            x: 600,
-            y: 520,
+            x: 573,
+            y: 538,
         },
         {
             name: "Charlotte",
@@ -865,6 +877,7 @@ export module data {
             distance: 720,
             x: 876,
             y: 270,
+            angleCCW: false,
         },
         {
             name: "Reykjavík",
@@ -872,6 +885,7 @@ export module data {
             distance: 757,
             x: 963,
             y: 282,
+            angleCCW: false,
         },
         {
             name: "Neskaupstaður",
@@ -879,6 +893,7 @@ export module data {
             distance: 703,
             x: 1024,
             y: 271,
+            angleCCW: false,
         },
         {
             name: "Bodø",

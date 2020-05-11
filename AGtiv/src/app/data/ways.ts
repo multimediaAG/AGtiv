@@ -10,6 +10,7 @@ export module data {
         left?: boolean;
         isEasternEndpoint?: boolean;
         isWesternStartpoint?: boolean;
+        image?: string;
     }
 
     export interface Country {
@@ -522,6 +523,427 @@ export module data {
             y: 548,
             angleCCW: true,
         },
+        {
+            name: "Hermosillo",
+            country: "mx",
+            distance: 861,
+            x: 423,
+            y: 569,
+        },
+        {
+            name: "Guadalajara",
+            country: "mx",
+            distance: 1355,
+            x: 461,
+            y: 621,
+        },
+        {
+            name: "Mexiko Stadt",
+            country: "mx",
+            distance: 553,
+            x: 484,
+            y: 635,
+        },
+        {
+            name: "Oaxaca",
+            country: "mx",
+            distance: 462,
+            x: 500,
+            y: 648,
+        },
+        {
+            name: "Guatemala Stadt",
+            country: "gt",
+            distance: 986,
+            x: 535,
+            y: 660,
+        },
+        {
+            name: "Tegucigalpa",
+            country: "hn",
+            distance: 651,
+            x: 559,
+            y: 668,
+        },
+        {
+            name: "Managua",
+            country: "ni",
+            distance: 366,
+            x: 568,
+            y: 678,
+        },
+        {
+            name: "San José",
+            country: "cr",
+            distance: 424,
+            x: 578,
+            y: 693,
+        },
+        {
+            name: "Panama City",
+            country: "pa",
+            distance: 851,
+            x: 609,
+            y: 703,
+        },
+        {
+            name: "Medellin",
+            country: "co",
+            distance: 494,
+            x: 637,
+            y: 718,
+        },
+        {
+            name: "Quito",
+            country: "ec",
+            distance: 1183,
+            x: 614,
+            y: 757,
+        },
+        {
+            name: "Guayaquil",
+            country: "ec",
+            distance: 421,
+            x: 607,
+            y: 769,
+        },
+        {
+            name: "Sullana",
+            country: "pe",
+            distance: 451,
+            x: 600,
+            y: 785,
+        },
+        {
+            name: "Lima",
+            country: "pe",
+            distance: 1019,
+            x: 623,
+            y: 827,
+        },
+        {
+            name: "La Paz",
+            country: "bo",
+            distance: 1517,
+            x: 675,
+            y: 853,
+        },
+        {
+            name: "Antofagasta",
+            country: "cl",
+            distance: 1116,
+            x: 670,
+            y: 893,
+        },
+        {
+            name: "Santiago de Chile",
+            country: "cl",
+            distance: 1335,
+            x: 664,
+            y: 968,
+        },
+        {
+            name: "Bariloche",
+            country: "ar",
+            distance: 1155,
+            x: 653,
+            y: 1021,
+        },
+        {
+            name: "Rio Gallegos",
+            country: "ar",
+            distance: 1539,
+            x: 680,
+            y: 1099,
+        },
+        {
+            name: "Comodo Rivadavia",
+            country: "ar",
+            distance: 779,
+            x: 692,
+            y: 692,
+        },
+        {
+            name: "Bahia Blanca",
+            country: "ar",
+            distance: 1093,
+            x: 729,
+            y: 1011,
+        },
+        {
+            name: "Buenos Aires",
+            country: "ar",
+            distance: 635,
+            x: 752,
+            y: 987,
+        },
+        {
+            name: "Montevideo",
+            country: "uy",
+            distance: 184,
+            x: 764,
+            y: 982,
+        },
+        {
+            name: "Porto Alegre",
+            country: "br",
+            distance: 789,
+            x: 797,
+            y: 941,
+        },
+        {
+            name: "Curtiba",
+            country: "br",
+            distance: 684,
+            x: 809,
+            y: 916,
+        },
+        {
+            name: "Sao Paulo",
+            country: "br",
+            distance: 417,
+            x: 833,
+            y: 902,
+        },
+        {
+            name: "Rio de Janeiro",
+            country: "br",
+            distance: 434,
+            x: 855,
+            y: 892,
+        },
+        {
+            name: "Vitória",
+            country: "br",
+            distance: 524,
+            x: 867,
+            y: 869,
+        },
+        {
+            name: "Salvador",
+            country: "br",
+            distance: 1167,
+            x: 870,
+            y: 827,
+        },
+        {
+            name: "Recife",
+            country: "br",
+            distance: 805,
+            x: 896,
+            y: 801,
+        },
+        {
+            name: "Fortaleza",
+            country: "br",
+            distance: 759,
+            x: 868,
+            y: 772,
+        },
+        {
+            name: "Sao Luis",
+            country: "br",
+            distance: 900,
+            x: 831,
+            y: 772,
+        },
+        {
+            name: "Belèm",
+            country: "br",
+            distance: 580,
+            x: 806,
+            y: 758,
+        },
+        {
+            name: "Macapá",
+            country: "br",
+            distance: 333,
+            x: 794,
+            y: 746,
+        },
+        {
+            name: "Cayenne",
+            country: "gf",
+            distance: 333,
+            x: 781,
+            y: 720,
+        },
+        {
+            name: "Paramaribo",
+            country: "sr",
+            distance: 333,
+            x: 762,
+            y: 711,
+        },
+        {
+            name: "Georgetown",
+            country: "gy",
+            distance: 444,
+            x: 737,
+            y: 706,
+        },
+        {
+            name: "Caracas",
+            country: "ve",
+            distance: 1044,
+            x: 681,
+            y: 688,
+        },
+        {
+            name: "Port au Prince",
+            country: "ht",
+            distance: 520,
+            x: 662,
+            y: 643,
+        },
+        {
+            name: "Havanna",
+            country: "cu",
+            distance: 880,
+            x: 596,
+            y: 609,
+        },
+        {
+            name: "Miami",
+            country: "us",
+            distance: 1068,
+            x: 602,
+            y: 585,
+        },
+        {
+            name: "Atlanta",
+            country: "us",
+            distance: 711,
+            x: 600,
+            y: 520,
+        },
+        {
+            name: "Charlotte",
+            country: "us",
+            distance: 268,
+            x: 600,
+            y: 520,
+        },
+        {
+            name: "Washington",
+            country: "us",
+            distance: 405,
+            x: 628,
+            y: 487,
+        },
+        {
+            name: "New York City",
+            country: "us",
+            distance: 241,
+            x: 653,
+            y: 477,
+        },
+        {
+            name: "Bangor",
+            country: "us",
+            distance: 481,
+            x: 671,
+            y: 451,
+        },
+        {
+            name: "Rigolet",
+            country: "ca",
+            distance: 1280,
+            x: 736,
+            y: 373,
+        },
+        {
+            name: "Nanortalik",
+            country: "gl",
+            distance: 1028,
+            x: 807,
+            y: 319,
+        },
+        {
+            name: "Ammassalik",
+            country: "gl",
+            distance: 720,
+            x: 876,
+            y: 270,
+        },
+        {
+            name: "Reykjavík",
+            country: "is",
+            distance: 757,
+            x: 963,
+            y: 282,
+        },
+        {
+            name: "Neskaupstaður",
+            country: "is",
+            distance: 703,
+            x: 1024,
+            y: 271,
+        },
+        {
+            name: "Bodø",
+            country: "no",
+            distance: 1269,
+            x: 1213,
+            y: 255,
+        },
+        {
+            name: "Trondheim",
+            country: "no",
+            distance: 704,
+            x: 1188,
+            y: 289,
+        },
+        {
+            name: "Lillehammer",
+            country: "no",
+            distance: 352,
+            x: 1191,
+            y: 311,
+        },
+        {
+            name: "Oslo",
+            country: "no",
+            distance: 185,
+            x: 1193,
+            y: 329,
+        },
+        {
+            name: "Göteborg",
+            country: "se",
+            distance: 328,
+            x: 1199,
+            y: 347,
+        },
+        {
+            name: "Kopenhagen",
+            country: "dk",
+            distance: 307,
+            x: 1198,
+            y: 357,
+        },
+        {
+            name: "Hamburg",
+            country: "de",
+            distance: 338,
+            x: 1188,
+            y: 384,
+        },
+        {
+            name: "Würzburg",
+            country: "de",
+            distance: 518,
+            x: 1189,
+            y: 409,
+        },
+        {
+            name: "Kempten",
+            country: "de",
+            distance: 268,
+            x: 1183,
+            y: 426,
+            image: "de_kempten_2.jpg",
+        },
     ];
 
     export const countries: Country[] = [
@@ -693,5 +1115,107 @@ export module data {
             code: "ca",
             name: "Kanada"
         },
+        {
+            code: "mx",
+            name: "Mexiko"
+        },
+        {
+            code: "gt",
+            name: "Guatemala"
+        },
+        {
+            code: "hn",
+            name: "Honduras"
+        },
+        {
+            code: "ni",
+            name: "Nicaragua"
+        },
+        {
+            code: "cr",
+            name: "Costa Rica"
+        },
+
+        {
+            code: "pa",
+            name: "Panama"
+        },
+        {
+            code: "co",
+            name: "Kolumbien"
+        },
+        {
+            code: "ec",
+            name: "Ecuador"
+        },
+        {
+            code: "pe",
+            name: "Peru"
+        },
+        {
+            code: "bo",
+            name: "Bolivien"
+        },
+        {
+            code: "cl",
+            name: "Chile"
+        },
+        {
+            code: "ar",
+            name: "Argentinien"
+        },
+        {
+            code: "uy",
+            name: "Uruguay"
+        },
+        {
+            code: "br",
+            name: "Brasilien"
+        },
+        {
+            code: "gf",
+            name: "Franz. Guyana"
+        },
+        {
+            code: "sr",
+            name: "Suriname"
+        },
+        {
+            code: "gy",
+            name: "Guyana"
+        },
+        {
+            code: "ve",
+            name: "Venezuela"
+        },
+        {
+            code: "ht",
+            name: "Haiti"
+        },
+        {
+            code: "cu",
+            name: "Kuba"
+        },
+        {
+            code: "gl",
+            name: "Grönland"
+        },
+        {
+            code: "is",
+            name: "Island"
+        },
+        {
+            code: "no",
+            name: "Norwegen"
+        },
+        {
+            code: "se",
+            name: "Schweden"
+        },
+        {
+            code: "dk",
+            name: "Dänemark"
+        },
+
     ];
 }

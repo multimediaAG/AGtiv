@@ -52,6 +52,6 @@ export class HomeComponent {
   }
 
   public getImg(c) {
-    return `/assets/cities/${c.country}_${c.name.toLowerCase().replace(" ", "_")}.jpg`;
+    return `/assets/cities/${c.image ? c.image : `${c.country}_${c.name.toLowerCase().replace(/ /g, "_")}.jpg`}`;
   }
 }

@@ -23,7 +23,8 @@ class StatisticsController {
     if (bestUser && bestUser[0]) {
       bestUser = bestUser[0];
     }
-    res.send({ currentDistance: sum, userCount, bestUser });
+    const totalDistance = data.cities.reduce((p, c) => p + c.distance, 0);
+    res.send({ currentDistance: sum, userCount, bestUser, remainingDistance: totalDistance - sum });
   }
 
   public static currentMap = async (req: Request, res: Response) => {

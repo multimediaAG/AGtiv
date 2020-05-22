@@ -18,6 +18,8 @@ export class HomeComponent {
   public currentStepDistance: number;
   public userCount: number;
   public bestUser: any = {};
+  public remainingDistance: number;
+  public endCityName = data.cities[data.cities.length - 1].name;
   public mapSrc: string = `${environment.apiUrl}statistics/currentMap.png`
 
   constructor(public authenticationService: AuthenticationService, private remoteService: RemoteService) { }
@@ -29,8 +31,12 @@ export class HomeComponent {
         if (d.currentDistance === null) {
           d.currentDistance = 0;
         }
+        if (d.remainingDistance === null) {
+          d.remainingDistance = 0;
+        }
         this.userCount = d.userCount;
         this.bestUser = d.bestUser;
+        this.remainingDistance = d.remainingDistance;
         this.currentDistanceLoaded = true;
         this.currentDistance = d.currentDistance;
         let distanceCounter: number = 0;

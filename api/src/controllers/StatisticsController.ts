@@ -11,20 +11,20 @@ class StatisticsController {
     const sum = await StatisticsController.getCurrentDistance();
     const userRepository = getRepository(User);
     const userCount = await userRepository.count();
-    let bestUser = await userRepository.query(`
+    let bestUsers = await userRepository.query(`
       SELECT user.username, user.grade, Sum(way.distance) AS distance
       FROM user
       LEFT JOIN way
       ON user.id = way.userId AND way.hidden = false
       GROUP BY user.id
       ORDER BY distance DESC
-      LIMIT 1;
+      LIMIT 3;
     `);
-    if (bestUser && bestUser[0]) {
-      bestUser = bestUser[0];
+    if (!bestUsers) {
+      bestUsers = [];
     }
     const totalDistance = data.cities.reduce((p, c) => p + c.distance, 0);
-    res.send({ currentDistance: sum, userCount, bestUser, remainingDistance: totalDistance - sum });
+    res.send({ currentDistance: sum, userCount, bestUsers, remainingDistance: totalDistance - sum });
   }
 
   public static currentMap = async (req: Request, res: Response) => {

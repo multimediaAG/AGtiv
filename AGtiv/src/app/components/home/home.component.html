@@ -32,7 +32,14 @@
             <p>Eure Fachschaft Sport</p>
 
             <p class="p-2 border-warning border bg-warning-light">Es sind <b>noch {{remainingDistance}} km</b> bis nach {{endCityName}}.</p>
-            <p class="p-2 border-warning border bg-warning-light">Der derzeitige Träger des gelben Trikots der Gesamtwertung: <b>{{bestUser.username}} ({{bestUser.grade}})</b> </p>
+            <div class="p-2 border-warning border bg-warning-light">
+                <span class="d-block">Die Führenden in der Gesamtwertung:</span>
+                <div class="text-left d-inline-block">
+                    <ol>
+                        <li *ngFor="let bestUser of bestUsers"><b>{{bestUser.username}}</b> ({{bestUser.grade}}): {{bestUser.distance}} km</li>
+                    </ol>
+                </div>
+            </div>
 
             <div class="d-block d-md-none">
                 <a href="/assets/info/Ausdauerguide_Laufen.pdf" target="_blank" class="btn btn-outline-primary mt-2 d-block">Zum Ausdauerguide Laufen <i class="fa fa-running"></i></a>
@@ -45,7 +52,6 @@
             </div>
         </div>
     </div>
-
     <div class="card p-3 mb-4" *ngIf="!authenticationService.loggedIn">
         <h3 class="text-center">Jetzt mitmachen!</h3>
         <div class="row">

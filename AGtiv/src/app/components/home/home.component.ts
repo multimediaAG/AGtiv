@@ -17,7 +17,7 @@ export class HomeComponent {
   public currentStepTotalDistance: number;
   public currentStepDistance: number;
   public userCount: number;
-  public bestUser: any = {};
+  public bestUsers: any = [];
   public remainingDistance: number;
   public endCityName = data.cities[data.cities.length - 1].name;
   public mapSrc: string = `${environment.apiUrl}statistics/currentMap.png`
@@ -35,7 +35,7 @@ export class HomeComponent {
           d.remainingDistance = 0;
         }
         this.userCount = d.userCount;
-        this.bestUser = d.bestUser;
+        this.bestUsers = d.bestUsers;
         this.remainingDistance = d.remainingDistance;
         this.currentDistanceLoaded = true;
         this.currentDistance = d.currentDistance;

@@ -52,7 +52,6 @@ export class StatisticsComponent {
                     }
                 ];
                 this.lineChartLabels = d.days.map((day) => this.datePipe.transform(day.date, "d. MMM"));
-                console.log(this.distanceData)
             }
         });
     }

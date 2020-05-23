@@ -4,10 +4,22 @@
         <h1 class="mb-3 display-1 font-weight-bold headline d-none d-md-block"> Mach mit bei <i>AG</i>tiv!</h1>
         <h2 class="headline">Die interaktive Radel- und Lauf-Aktion des Allg&auml;u-Gymnasiums Kempten</h2>
     </div>
-
+    <div class="card mb-4 border-0 bg-transparent" *ngIf="finished">
+        <img src="assets/finished_01.svg">
+        <div class="bg-white p-3 pt-0 stats-container text-center">
+            <div class="alert alert-primary">
+                <b>{{userCount}} Teilnehmer</b> haben
+                <b>{{currentDistance}} km</b> gesammelt!
+            </div>
+            <div class="alert alert-success" *ngIf="authenticationService.loggedIn">
+                Du hast davon <b>{{myDistance}} km</b> beigetragen!
+            </div>
+            <div class="alert alert-warning mb-1">
+                Weitere Statistiken gibt es unten <i class="fas fa-arrow-down"></i>.
+            </div>
+        </div>
+    </div>
     <div class="card p-3 mb-3">
-        <h3 class="text-center" *ngIf="authenticationService.loggedIn">Hallo {{authenticationService.currentUser.username}}!
-        </h3>
         <h3 class="text-center" *ngIf="!authenticationService.loggedIn">
             <i class="fa fa-running text-secondary pt-5 d-inline d-md-none mr-2"></i>Liebe Mitglieder der Schulgemeinschaft!
             <i class="fa fa-bicycle text-secondary pt-5 d-inline d-md-none ml-2"></i>
@@ -19,53 +31,67 @@
         <div class="d-flex justify-space-between text-center">
             <div class="d-none d-md-block">
                 <i class="fa fa-running fa-7x text-secondary pt-5"></i>
-                <a href="/assets/info/Ausdauerguide_Laufen.pdf" target="_blank" class="btn btn-outline-primary mt-5">Zum Ausdauerguide Laufen</a>
+                <a href="/assets/info/Ausdauerguide_Laufen.pdf" target="_blank" class="btn btn-outline-primary mt-5">Zum
+          Ausdauerguide Laufen</a>
             </div>
-            <span class="px-3 pt-3 ">
-                <p>- Das AG radelt, rollert und läuft gemeinsam einmal um die Welt! -</p>
-                <p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
-                <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir versuchen, einmal virtuell die Welt zu umrunden!
-                Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren Beitrag für dieses Ziel.
-            </p>
-            <p>Jedes Mitglied der Schulfamilie - egal ob Radler, Läufer oder Inliner/Skiroller - kann jeden Tag einen kleinen Beitrag dazu leisten. Näheres erfahrt Ihr in den Regeln. </p>
-            <p>Zum Mitmachen eingeladen sind alle Schülerinnen und Schüler, deren Eltern und sowie alle Lehrkräfte am Allgäu-Gymnasium. Viel Spaß beim Trainieren! </p>
-            <p>Eure Fachschaft Sport</p>
+            <div class="px-3 pt-3">
 
-            <p class="p-2 border-warning border bg-warning-light">Es sind <b>noch {{remainingDistance}} km</b> bis nach {{endCityName}}.</p>
-            <div class="p-2 border-warning border bg-warning-light">
-                <span class="d-block">Die Führenden in der Gesamtwertung:</span>
-                <div class="text-left d-inline-block">
-                    <ol>
-                        <li *ngFor="let bestUser of bestUsers"><b>{{bestUser.username}}</b> ({{bestUser.grade}}): {{bestUser.distance}} km</li>
-                    </ol>
+                <h3 class="text-center" *ngIf="authenticationService.loggedIn">
+                    Hallo <i>{{authenticationService.currentUser.username}}!</i>
+                </h3>
+                <p>- Das AG radelt, rollert und läuft gemeinsam einmal um die Welt! -</p>
+                <div *ngIf="!finished">
+                    <p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
+                    <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir versuchen, einmal virtuell die Welt zu umrunden! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren
+                        Beitrag für dieses Ziel.
+                    </p>
+                    <p>Jedes Mitglied der Schulfamilie - egal ob Radler, Läufer oder Inliner/Skiroller - kann jeden Tag einen kleinen Beitrag dazu leisten. Näheres erfahrt Ihr in den Regeln. </p>
+                    <p>Zum Mitmachen eingeladen sind alle Schülerinnen und Schüler, deren Eltern und sowie alle Lehrkräfte am Allgäu-Gymnasium. Viel Spaß beim Trainieren! </p>
+                    <p>Eure Fachschaft Sport</p>
+                </div>
+                <div *ngIf="finished">
+                    <p>Schön, dass du so fleißig mitgemacht hast! Die erste Runde von AGtiv ist leider nun schon vorbei.</p>
+                    <p>Du findest alle Leistungen und Ergebnisse in der <a routerLink="/scores">Bestenliste</a>.</p>
+                    <div class="alert alert-primary">
+                        <h5>Es gibt noch eine zweite Runde!</h5>
+                        <p>Sie beginnt am 30. Mai.</p>
+                    </div>
+                </div>
+
+                <p class="p-2 border-warning border bg-warning-light" *ngIf="!finished">Es sind <b>noch {{remainingDistance}}
+                km</b> bis nach {{endCityName}}.</p>
+                <div class="p-2 border-warning border bg-warning-light" *ngIf="!finished">
+                    <span class="d-block">Die Führenden in der Gesamtwertung:</span>
+                    <div class="text-left d-inline-block">
+                        <ol>
+                            <li *ngFor="let bestUser of bestUsers"><b>{{bestUser.username}}</b> ({{bestUser.grade}}): {{bestUser.distance}} km</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="d-block d-md-none">
+                    <a href="/assets/info/Ausdauerguide_Laufen.pdf" target="_blank" class="btn btn-outline-primary mt-2 d-block">Zum Ausdauerguide Laufen <i class="fa fa-running"></i></a>
+                    <a href="/assets/info/Ausdauerguide_Bike.pdf" target="_blank" class="btn btn-outline-primary mt-2 d-block">Zum
+                Ausdauerguide Radeln <i class="fa fa-bicycle"></i></a>
                 </div>
             </div>
-
-            <div class="d-block d-md-none">
-                <a href="/assets/info/Ausdauerguide_Laufen.pdf" target="_blank" class="btn btn-outline-primary mt-2 d-block">Zum Ausdauerguide Laufen <i class="fa fa-running"></i></a>
-                <a href="/assets/info/Ausdauerguide_Bike.pdf" target="_blank" class="btn btn-outline-primary mt-2 d-block">Zum Ausdauerguide Radeln <i class="fa fa-bicycle"></i></a>
-            </div>
-            </span>
             <div class="d-none d-md-block">
                 <i class="fa fa-bicycle fa-7x text-secondary pt-5"></i>
-                <a href="/assets/info/Ausdauerguide_Bike.pdf" target="_blank" class="btn btn-outline-primary mt-5">Zum Ausdauerguide Radeln</a>
+                <a href="/assets/info/Ausdauerguide_Bike.pdf" target="_blank" class="btn btn-outline-primary mt-5">Zum
+          Ausdauerguide Radeln</a>
             </div>
         </div>
     </div>
     <div class="card p-3 mb-4" *ngIf="!authenticationService.loggedIn">
         <h3 class="text-center">Jetzt mitmachen!</h3>
         <div class="row">
-            <a class="btn btn-outline-success col-4 mr-2 offset-2" routerLink="/signup"><i class="fas fa-user-plus"></i> Registrieren</a>
+            <a class="btn btn-outline-success col-4 mr-2 offset-2" routerLink="/signup"><i class="fas fa-user-plus"></i>
+        Registrieren</a>
             <a class="btn btn-outline-primary col-4 ml-2" routerLink="/login"><i class="fas fa-sign-in-alt"></i> Anmelden</a>
         </div>
-        <!--
-        <div class="row" *ngIf="authenticationService.loggedIn">
-            <a class="btn btn-outline-success col-4 mr-2 offset-2" routerLink="/my-ways">Meine Strecken</a>
-            <a class="btn btn-outline-primary col-4 ml-2" routerLink="/scores">Bestenliste</a>
-        </div>-->
     </div>
 
-    <div class="card p-3 mb-3">
+    <div class="card p-3 mb-3" *ngIf="!finished">
         <div class="row text-center" *ngIf="currentDistanceLoaded">
             <div class="col-12 col-sm-4">
                 <div class="info mx-auto">

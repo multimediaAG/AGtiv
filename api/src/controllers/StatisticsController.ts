@@ -23,8 +23,21 @@ class StatisticsController {
     if (!bestUsers) {
       bestUsers = [];
     }
+    let myDistance: number;
+    if (res.locals.jwtPayload && res.locals.jwtPayload.userId) {
+      const result = await userRepository.query(`
+      SELECT Sum(way.distance) AS distance
+      FROM user
+      LEFT JOIN way
+      ON user.id = way.userId AND way.hidden = false AND user.id = ?
+      GROUP BY user.id
+    `, [res.locals.jwtPayload.userId]);
+      if (result && result[0] && result[0].distance) {
+        myDistance = result[0].distance;
+      }
+    }
     const totalDistance = data.cities.reduce((p, c) => p + c.distance, 0);
-    res.send({ currentDistance: sum, userCount, bestUsers, remainingDistance: totalDistance - sum });
+    res.send({ currentDistance: sum, userCount, bestUsers, remainingDistance: totalDistance - sum, myDistance });
   }
 
   public static currentMap = async (req: Request, res: Response) => {

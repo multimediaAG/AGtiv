@@ -14,6 +14,14 @@ img.city {
     margin-top: calc(30%);
 }
 
+.stats-container {
+    position: absolute;
+    top: 27%;
+    margin-left: 24.6%;
+    margin-right: 27.2%;
+    width: 47.2%;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
     img.city {
         height: 10rem !important;
@@ -28,6 +36,16 @@ img.city {
     }
     .progress {
         margin-top: 1rem;
+    }
+    .stats-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        background: none !important;
+        div {
+            padding: 1px;
+            font-size: smaller;
+        }
     }
 }
 

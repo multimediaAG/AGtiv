@@ -25,7 +25,7 @@ export class HomeComponent {
     public myDistance: number;
     public endCityName = data.cities[data.cities.length - 1].name;
     public mapSrc: string = `${environment.apiUrl}statistics/currentMap.png`
-    public confettiInterval: number;
+    public confettiTimeout: number;
 
     constructor(public authenticationService: AuthenticationService, private remoteService: RemoteService) { }
 
@@ -78,6 +78,7 @@ export class HomeComponent {
     }
 
     private manageConfetti() {
+        const that = this;
         function frame() {
             for (let i = 0; i <= 1; i += 0.25) {
                 window.confetti({
@@ -88,97 +89,49 @@ export class HomeComponent {
                     ticks: 500,
                 });
             }
-        };
-        this.confettiInterval = setInterval(() => {
-            requestAnimationFrame(frame);
-        }, 500) as unknown as number;
-
-        const count = 200;
-        const defaults = {
-            origin: { y: 0.9 }
+            that.confettiTimeout = setTimeout(() => {
+                requestAnimationFrame(frame);
+            }, 500) as unknown as number;
         };
 
-        function fire(particleRatio, opts) {
-            window.confetti(Object.assign({}, defaults, opts, {
-                particleCount: Math.floor(count * particleRatio)
-            }));
-        }
-
-        fire(0.25, {
-            spread: 26,
-            startVelocity: 55,
-        });
-        fire(0.2, {
-            spread: 60,
-        });
-        fire(0.35, {
-            spread: 100,
-            decay: 0.91,
-        });
-        fire(0.1, {
-            spread: 120,
-            startVelocity: 25,
-            decay: 0.92,
-        });
-        fire(0.1, {
-            spread: 120,
-            startVelocity: 45,
-        });
-        /* const count = 100;
-        const defaults = {
-            angle: 270,
-            gravity: 0.2,
-            disableForReducedMotion: true,
-        };
-
-        const fire = (particleRatio, opts) => {
-            window.confetti(Object.assign({}, defaults, opts, {
-                particleCount: Math.floor(count * particleRatio)
-            }));
-        }
-
-        const c = (x, y) => {
+        function cannon(x) {
+            const count = 200;
+            const defaults = {
+                origin: { y: 0.9, x }
+            };
+                function fire(particleRatio, opts) {
+                window.confetti(Object.assign({}, defaults, opts, {
+                    particleCount: Math.floor(count * particleRatio)
+                }));
+            }
             fire(0.25, {
-                origin: { x, y },
                 spread: 26,
-                startVelocity: 30,
+                startVelocity: 55,
             });
             fire(0.2, {
-                origin: { x, y },
                 spread: 60,
-                startVelocity: 25,
             });
             fire(0.35, {
-                origin: { x, y },
                 spread: 100,
                 decay: 0.91,
-                startVelocity: 20,
             });
             fire(0.1, {
-                origin: { x, y },
                 spread: 120,
-                startVelocity: 15,
+                startVelocity: 25,
                 decay: 0.92,
             });
             fire(0.1, {
-                origin: { x, y },
                 spread: 120,
-                startVelocity: 50,
+                startVelocity: 45,
             });
         }
-
-        const s = (t) => {
-            setTimeout(() => {
-                for (let i = 0; i < 1; i += 0.1) {
-                    c(i, 0);
-                }
-                s(10000);
-            }, t)
-        };
-        s(500); */
+        frame();
+        cannon(0.25);
+        cannon(0.5);
+        cannon(0.75);
     }
 
     public ngOnDestroy() {
-        clearInterval(this.confettiInterval);
+        clearTimeout(this.confettiTimeout);
     }
 }

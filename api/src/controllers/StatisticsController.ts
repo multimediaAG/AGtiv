@@ -40,6 +40,16 @@ class StatisticsController {
     res.send({ currentDistance: sum, userCount, bestUsers, remainingDistance: totalDistance - sum, myDistance });
   }
 
+  public static statistics = async (req: Request, res: Response) => {
+    const wayRepository = getRepository(Way);
+    const days = await wayRepository.query(`
+      SELECT way.date, Sum(way.distance) AS distance, COUNT(DISTINCT way.userId) as users
+      FROM way
+      WHERE way.hidden = false
+      GROUP BY way.date;
+    `);
+    res.send({ days });
+  }
   public static currentMap = async (req: Request, res: Response) => {
     const PRIMARY = "#f1c40f";
     const SECONDARY = "#c0392b";

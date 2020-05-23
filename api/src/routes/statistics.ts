@@ -3,6 +3,7 @@ import StatisticsController from "../controllers/StatisticsController";
 
 const router = Router();
 
+router.get("/", StatisticsController.statistics);
 router.get("/currentDistance", StatisticsController.currentDistance);
 router.get("/currentMap.png", StatisticsController.currentMap);
 

@@ -28,6 +28,7 @@ export class HomeComponent {
     public mapSrc: string = `${environment.apiUrl}statistics/currentMap.png`
     public confettiTimeout: number;
     public data = data;
+    public canAddWays = false;
 
     constructor(public authenticationService: AuthenticationService, private remoteService: RemoteService) { }
 
@@ -63,6 +64,7 @@ export class HomeComponent {
                     this.lastCity = city;
                 }
                 this.finished = d.finished;
+                this.canAddWays = d.canAddWays;
                 localStorage.setItem("finished", d.finished ? "true" : "false");
                 localStorage.setItem("canAddWays", d.canAddWays ? "true" : "false");
                 localStorage.setItem("currentRoundIdx", d.currentRoundIdx);

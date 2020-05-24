@@ -66,6 +66,10 @@ export class HomeComponent {
                 localStorage.setItem("finished", d.finished ? "true" : "false");
                 localStorage.setItem("currentRoundIdx", d.currentRoundIdx);
             }
+            if (this.nextCity && this.lastCity) {
+                this.lastCity.countryName = data.countries.filter((c) => c.code == this.lastCity.country)[0].name;
+                this.nextCity.countryName = data.countries.filter((c) => c.code == this.nextCity.country)[0].name;
+            }
             if (this.finished) {
                 this.manageConfetti();
             }

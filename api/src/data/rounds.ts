@@ -1048,291 +1048,1085 @@
 /* do not edit */                     image: "de_kempten_2.jpg",
 /* do not edit */                 },
 /* do not edit */             ],
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             id: 2,
+/* do not edit */             postText: `PLATZHALTER POSTTEXT RUNDE 2`,
+/* do not edit */             text: `PLATZHALTER TEXT RUNDE 2`,
+/* do not edit */             startDate: new Date("2020-05-30"),
+/* do not edit */             cities: [
+/* do not edit */                 {
+/* do not edit */                     name: "Kempten",
+/* do not edit */                     country: "de",
+/* do not edit */                     distance: 0,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Zagreb",
+/* do not edit */                     country: "hr",
+/* do not edit */                     distance: 673,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Belgrad",
+/* do not edit */                     country: "rs",
+/* do not edit */                     distance: 393,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Sofia",
+/* do not edit */                     country: "bg",
+/* do not edit */                     distance: 392,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Istanbul",
+/* do not edit */                     country: "tr",
+/* do not edit */                     distance: 550,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Samsun",
+/* do not edit */                     country: "tr",
+/* do not edit */                     distance: 744,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Tiflis",
+/* do not edit */                     country: "ge",
+/* do not edit */                     distance: 901,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Baku",
+/* do not edit */                     country: "az",
+/* do not edit */                     distance: 580,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Teheran",
+/* do not edit */                     country: "ir",
+/* do not edit */                     distance: 785,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Aşgabat",
+/* do not edit */                     country: "tm",
+/* do not edit */                     distance: 956,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Herat",
+/* do not edit */                     country: "af",
+/* do not edit */                     distance: 696,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Kabul",
+/* do not edit */                     country: "af",
+/* do not edit */                     distance: 817,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Islamabad",
+/* do not edit */                     country: "pk",
+/* do not edit */                     distance: 472,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Lahore",
+/* do not edit */                     country: "pk",
+/* do not edit */                     distance: 374,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Neu-Delhi",
+/* do not edit */                     country: "in",
+/* do not edit */                     distance: 512,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Ghorahi",
+/* do not edit */                     country: "np",
+/* do not edit */                     distance: 980,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Kathmandu",
+/* do not edit */                     country: "np",
+/* do not edit */                     distance: 420,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Khumjung",
+/* do not edit */                     country: "np",
+/* do not edit */                     distance: 350,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Thimphu",
+/* do not edit */                     country: "bt",
+/* do not edit */                     distance: 819,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Lhasa",
+/* do not edit */                     country: "cn",
+/* do not edit */                     distance: 986,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Qamdo",
+/* do not edit */                     country: "cn",
+/* do not edit */                     distance: 1097,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Xining",
+/* do not edit */                     country: "cn",
+/* do not edit */                     distance: 1113,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Xi’an",
+/* do not edit */                     country: "cn",
+/* do not edit */                     distance: 845,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Shijiazhuang",
+/* do not edit */                     country: "cn",
+/* do not edit */                     distance: 813,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Yantai",
+/* do not edit */                     country: "cn",
+/* do not edit */                     distance: 738,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Seoul",
+/* do not edit */                     country: "kr",
+/* do not edit */                     distance: 488,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Busan",
+/* do not edit */                     country: "kr",
+/* do not edit */                     distance: 326,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Kumamoto",
+/* do not edit */                     country: "jp",
+/* do not edit */                     distance: 304,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Nago",
+/* do not edit */                     country: "jp",
+/* do not edit */                     distance: 875,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Taipeh",
+/* do not edit */                     country: "tw",
+/* do not edit */                     distance: 665,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Tuguegarao City",
+/* do not edit */                     country: "ph",
+/* do not edit */                     distance: 828,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Manila",
+/* do not edit */                     country: "ph",
+/* do not edit */                     distance: 478,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Tacloban City",
+/* do not edit */                     country: "ph",
+/* do not edit */                     distance: 859,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Davao City",
+/* do not edit */                     country: "ph",
+/* do not edit */                     distance: 644,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Bandar Seri Begawan",
+/* do not edit */                     country: "bn",
+/* do not edit */                     distance: 1223,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Pontianak",
+/* do not edit */                     country: "id",
+/* do not edit */                     distance: 1208,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Jakarta",
+/* do not edit */                     country: "id",
+/* do not edit */                     distance: 738,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Surabaya",
+/* do not edit */                     country: "id",
+/* do not edit */                     distance: 661,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Labuhanbajo",
+/* do not edit */                     country: "id",
+/* do not edit */                     distance: 802,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Dili",
+/* do not edit */                     country: "tl",
+/* do not edit */                     distance: 611,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Darwin",
+/* do not edit */                     country: "au",
+/* do not edit */                     distance: 729,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Daly Waters",
+/* do not edit */                     country: "au",
+/* do not edit */                     distance: 590,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Alice Springs",
+/* do not edit */                     country: "au",
+/* do not edit */                     distance: 915,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Mutitjulu",
+/* do not edit */                     country: "au",
+/* do not edit */                     distance: 470,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Coober Pedy",
+/* do not edit */                     country: "au",
+/* do not edit */                     distance: 661,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Adelaide",
+/* do not edit */                     country: "au",
+/* do not edit */                     distance: 759,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Melbourne",
+/* do not edit */                     country: "au",
+/* do not edit */                     distance: 727,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Sydney",
+/* do not edit */                     country: "au",
+/* do not edit */                     distance: 878,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Auckland",
+/* do not edit */                     country: "nz",
+/* do not edit */                     distance: 2145,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Suva",
+/* do not edit */                     country: "fj",
+/* do not edit */                     distance: 2112,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Nuku'alofa",
+/* do not edit */                     country: "to",
+/* do not edit */                     distance: 987,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Apia",
+/* do not edit */                     country: "ws",
+/* do not edit */                     distance: 898,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Avarua",
+/* do not edit */                     country: "ck",
+/* do not edit */                     distance: 1512,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Papeete",
+/* do not edit */                     country: "pf",
+/* do not edit */                     distance: 1147,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Adamstown",
+/* do not edit */                     country: "pn",
+/* do not edit */                     distance: 2183,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Osterinsel",
+/* do not edit */                     country: "cl",
+/* do not edit */                     distance: 2068,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Robinson Crusoe Insel",
+/* do not edit */                     country: "cl",
+/* do not edit */                     distance: 3015,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Santiago de Chile",
+/* do not edit */                     country: "cl",
+/* do not edit */                     distance: 760,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Córdoba",
+/* do not edit */                     country: "ar",
+/* do not edit */                     distance: 646,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Asunción",
+/* do not edit */                     country: "py",
+/* do not edit */                     distance: 1200,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Campo Grande",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 752,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Cuiabá",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 704,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Ji-Paraná",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 1085,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Porto Velho",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 377,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Manaus",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 888,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Santarém",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 610,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Macapá",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 550,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "São Luís",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 840,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Natal",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 1423,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Georgetown",
+/* do not edit */                     country: "sh",
+/* do not edit */                     distance: 3424,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Benguela",
+/* do not edit */                     country: "ao",
+/* do not edit */                     distance: 642,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Dundo",
+/* do not edit */                     country: "ao",
+/* do not edit */                     distance: 742,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Mbuji-Mayi",
+/* do not edit */                     country: "cd",
+/* do not edit */                     distance: 575,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Kisangani",
+/* do not edit */                     country: "cd",
+/* do not edit */                     distance: 1357,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Juba",
+/* do not edit */                     country: "ss",
+/* do not edit */                     distance: 1354,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Wau",
+/* do not edit */                     country: "ss",
+/* do not edit */                     distance: 645,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "N'Djamena",
+/* do not edit */                     country: "td",
+/* do not edit */                     distance: 2199,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Faya-Largeau",
+/* do not edit */                     country: "td",
+/* do not edit */                     distance: 778,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Plateau von Djado",
+/* do not edit */                     country: "ne",
+/* do not edit */                     distance: 794,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Tamanrasset",
+/* do not edit */                     country: "dz",
+/* do not edit */                     distance: 727,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "In Salah",
+/* do not edit */                     country: "dz",
+/* do not edit */                     distance: 664,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Touggourt",
+/* do not edit */                     country: "dz",
+/* do not edit */                     distance: 962,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Gafsa",
+/* do not edit */                     country: "tn",
+/* do not edit */                     distance: 336,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "El Kef",
+/* do not edit */                     country: "tn",
+/* do not edit */                     distance: 234,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Tunis",
+/* do not edit */                     country: "tn",
+/* do not edit */                     distance: 168,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Marsala",
+/* do not edit */                     country: "it",
+/* do not edit */                     distance: 285,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Reggio Calabria",
+/* do not edit */                     country: "it",
+/* do not edit */                     distance: 371,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Bari",
+/* do not edit */                     country: "it",
+/* do not edit */                     distance: 443,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Rom",
+/* do not edit */                     country: "it",
+/* do not edit */                     distance: 428,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Florenz",
+/* do not edit */                     country: "it",
+/* do not edit */                     distance: 280,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Mailand",
+/* do not edit */                     country: "it",
+/* do not edit */                     distance: 305,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Luzern",
+/* do not edit */                     country: "ch",
+/* do not edit */                     distance: 243,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Kempten",
+/* do not edit */                     country: "de",
+/* do not edit */                     distance: 295,
+/* do not edit */                     x: 10000000,
+/* do not edit */                     y: 10000000,
+/* do not edit */                     image: "de_kempten_2.jpg"
+/* do not edit */                 },
+/* do not edit */             ]
 /* do not edit */         }
 /* do not edit */     ]
 /* do not edit */
 /* do not edit */     export const countries: Country[] = [
 /* do not edit */         {
-/* do not edit */             code: "de",
-/* do not edit */             name: "Deutschland"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "fr",
-/* do not edit */             name: "Frankreich"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "it",
-/* do not edit */             name: "Italien"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "es",
-/* do not edit */             name: "Spanien"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "gi",
-/* do not edit */             name: "Gibraltar"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ma",
-/* do not edit */             name: "Marokko"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "eh",
-/* do not edit */             name: "Westsahara"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "sn",
-/* do not edit */             name: "Senegal"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "gn",
-/* do not edit */             name: "Guinea"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "sl",
-/* do not edit */             name: "Sierra Leone"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ci",
-/* do not edit */             name: "Cote d`Ivoir"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "gh",
-/* do not edit */             name: "Ghana"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "bj",
-/* do not edit */             name: "Benin"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ng",
-/* do not edit */             name: "Nigeria"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "cm",
-/* do not edit */             name: "Kamerun"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ga",
-/* do not edit */             name: "Gabun"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "cg",
-/* do not edit */             name: "Kongo"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "cd",
-/* do not edit */             name: "D. R. Kongo"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "vn",
-/* do not edit */             name: "Vietnam"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "kh",
-/* do not edit */             name: "Kambodscha"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "th",
-/* do not edit */             name: "Thailand"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "mm",
-/* do not edit */             name: "Myanmar"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "in",
-/* do not edit */             name: "Indien"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "pk",
-/* do not edit */             name: "Pakistan"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ir",
-/* do not edit */             name: "Iran"
-/* do not edit */         },
-/* do not edit */         {
 /* do not edit */             code: "ae",
 /* do not edit */             name: "Ver. arab. Emirate"
 /* do not edit */         },
 /* do not edit */         {
-/* do not edit */             code: "om",
-/* do not edit */             name: "Oman"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "dj",
-/* do not edit */             name: "Dschibouti"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "et",
-/* do not edit */             name: "Äthiopien"
+/* do not edit */             code: "af",
+/* do not edit */             name: "Afghanistan"
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ao",
 /* do not edit */             name: "Angola"
 /* do not edit */         },
 /* do not edit */         {
-/* do not edit */             code: "na",
-/* do not edit */             name: "Namibia"
+/* do not edit */             code: "ar",
+/* do not edit */             name: "Argentinien"
 /* do not edit */         },
 /* do not edit */         {
-/* do not edit */             code: "za",
-/* do not edit */             name: "Südafrika"
+/* do not edit */             code: "au",
+/* do not edit */             name: "Australien"
 /* do not edit */         },
 /* do not edit */         {
-/* do not edit */             code: "mz",
-/* do not edit */             name: "Mosambik"
+/* do not edit */             code: "az",
+/* do not edit */             name: "Aserbaidschan"
 /* do not edit */         },
 /* do not edit */         {
-/* do not edit */             code: "zw",
-/* do not edit */             name: "Simbabwe"
+/* do not edit */             code: "bg",
+/* do not edit */             name: "Bulgarien"
 /* do not edit */         },
 /* do not edit */         {
-/* do not edit */             code: "mw",
-/* do not edit */             name: "Malawi"
+/* do not edit */             code: "bj",
+/* do not edit */             name: "Benin"
 /* do not edit */         },
 /* do not edit */         {
-/* do not edit */             code: "tz",
-/* do not edit */             name: "Tansania"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ke",
-/* do not edit */             name: "Kenia"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "hk",
-/* do not edit */             name: "Hongkong"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "cn",
-/* do not edit */             name: "China"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ru",
-/* do not edit */             name: "Russland"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "us",
-/* do not edit */             name: "USA"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ca",
-/* do not edit */             name: "Kanada"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "mx",
-/* do not edit */             name: "Mexiko"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "gt",
-/* do not edit */             name: "Guatemala"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "hn",
-/* do not edit */             name: "Honduras"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ni",
-/* do not edit */             name: "Nicaragua"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "cr",
-/* do not edit */             name: "Costa Rica"
-/* do not edit */         },
-/* do not edit */
-/* do not edit */         {
-/* do not edit */             code: "pa",
-/* do not edit */             name: "Panama"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "co",
-/* do not edit */             name: "Kolumbien"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ec",
-/* do not edit */             name: "Ecuador"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "pe",
-/* do not edit */             name: "Peru"
+/* do not edit */             code: "bn",
+/* do not edit */             name: "Brunei"
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "bo",
 /* do not edit */             name: "Bolivien"
 /* do not edit */         },
 /* do not edit */         {
-/* do not edit */             code: "cl",
-/* do not edit */             name: "Chile"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ar",
-/* do not edit */             name: "Argentinien"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "uy",
-/* do not edit */             name: "Uruguay"
-/* do not edit */         },
-/* do not edit */         {
 /* do not edit */             code: "br",
 /* do not edit */             name: "Brasilien"
 /* do not edit */         },
 /* do not edit */         {
-/* do not edit */             code: "gf",
-/* do not edit */             name: "Franz. Guyana"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "sr",
-/* do not edit */             name: "Suriname"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "gy",
-/* do not edit */             name: "Guyana"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ve",
-/* do not edit */             name: "Venezuela"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "ht",
-/* do not edit */             name: "Haiti"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "cu",
-/* do not edit */             name: "Kuba"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "gl",
-/* do not edit */             name: "Grönland"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "is",
-/* do not edit */             name: "Island"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "no",
-/* do not edit */             name: "Norwegen"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "se",
-/* do not edit */             name: "Schweden"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "dk",
-/* do not edit */             name: "Dänemark"
-/* do not edit */         },
-/* do not edit */         {
-/* do not edit */             code: "fi",
-/* do not edit */             name: "Finnland"
+/* do not edit */             code: "bt",
+/* do not edit */             name: "Bhutan"
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "by",
 /* do not edit */             name: "Weißrussland"
 /* do not edit */         },
 /* do not edit */         {
+/* do not edit */             code: "ca",
+/* do not edit */             name: "Kanada"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "cd",
+/* do not edit */             name: "D. R. Kongo"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "cd",
+/* do not edit */             name: "Demokratische Republik Kongo"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "cg",
+/* do not edit */             name: "Kongo"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ch",
+/* do not edit */             name: "Schweiz"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ci",
+/* do not edit */             name: "Cote d`Ivoir"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ck",
+/* do not edit */             name: "Cookinseln"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "cl",
+/* do not edit */             name: "Chile"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "cm",
+/* do not edit */             name: "Kamerun"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "cn",
+/* do not edit */             name: "China"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "cn",
+/* do not edit */             name: "Tibet"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "co",
+/* do not edit */             name: "Kolumbien"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "cr",
+/* do not edit */             name: "Costa Rica"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "cu",
+/* do not edit */             name: "Kuba"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "de",
+/* do not edit */             name: "Deutschland"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "dj",
+/* do not edit */             name: "Dschibouti"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "dk",
+/* do not edit */             name: "Dänemark"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "dz",
+/* do not edit */             name: "Algerien"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ec",
+/* do not edit */             name: "Ecuador"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "eh",
+/* do not edit */             name: "Westsahara"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "es",
+/* do not edit */             name: "Spanien"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "et",
+/* do not edit */             name: "Äthiopien"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "fi",
+/* do not edit */             name: "Finnland"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "fj",
+/* do not edit */             name: "Fidschi"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "fr",
+/* do not edit */             name: "Frankreich"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ga",
+/* do not edit */             name: "Gabun"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ge",
+/* do not edit */             name: "Georgien"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "gf",
+/* do not edit */             name: "Franz. Guyana"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "gh",
+/* do not edit */             name: "Ghana"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "gi",
+/* do not edit */             name: "Gibraltar"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "gl",
+/* do not edit */             name: "Grönland"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "gn",
+/* do not edit */             name: "Guinea"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "gt",
+/* do not edit */             name: "Guatemala"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "gy",
+/* do not edit */             name: "Guyana"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "hk",
+/* do not edit */             name: "Hongkong"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "hn",
+/* do not edit */             name: "Honduras"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "hr",
+/* do not edit */             name: "Kroatien"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ht",
+/* do not edit */             name: "Haiti"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "id",
+/* do not edit */             name: "Indonesien"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "in",
+/* do not edit */             name: "Indien"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ir",
+/* do not edit */             name: "Iran"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "is",
+/* do not edit */             name: "Island"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "it",
+/* do not edit */             name: "Italien"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "jp",
+/* do not edit */             name: "Japan"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ke",
+/* do not edit */             name: "Kenia"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "kh",
+/* do not edit */             name: "Kambodscha"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "kr",
+/* do not edit */             name: "Südkorea"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ma",
+/* do not edit */             name: "Marokko"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "mm",
+/* do not edit */             name: "Myanmar"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "mw",
+/* do not edit */             name: "Malawi"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "mx",
+/* do not edit */             name: "Mexiko"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "mz",
+/* do not edit */             name: "Mosambik"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "na",
+/* do not edit */             name: "Namibia"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ng",
+/* do not edit */             name: "Nigeria"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ni",
+/* do not edit */             name: "Nicaragua"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "no",
+/* do not edit */             name: "Norwegen"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "np",
+/* do not edit */             name: "Nepal"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "nz",
+/* do not edit */             name: "Neuseeland"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "om",
+/* do not edit */             name: "Oman"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "pa",
+/* do not edit */             name: "Panama"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "pe",
+/* do not edit */             name: "Peru"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "pf",
+/* do not edit */             name: "Französisch-Polynesien"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ph",
+/* do not edit */             name: "Philippinen"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "pk",
+/* do not edit */             name: "Pakistan"
+/* do not edit */         },
+/* do not edit */         {
 /* do not edit */             code: "pl",
 /* do not edit */             name: "Polen"
 /* do not edit */         },
-/* do not edit */
+/* do not edit */         {
+/* do not edit */             code: "pn",
+/* do not edit */             name: "Piticairninseln"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "py",
+/* do not edit */             name: "Paraguay"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "rs",
+/* do not edit */             name: "Serbien"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ru",
+/* do not edit */             name: "Russland"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "se",
+/* do not edit */             name: "Schweden"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "sh",
+/* do not edit */             name: "St. Helena"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "sl",
+/* do not edit */             name: "Sierra Leone"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "sn",
+/* do not edit */             name: "Senegal"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "sr",
+/* do not edit */             name: "Suriname"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ss",
+/* do not edit */             name: "Südsudan"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "tdt",
+/* do not edit */             name: "Tschad"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "th",
+/* do not edit */             name: "Thailand"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "tl",
+/* do not edit */             name: "Osttimor"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "tm",
+/* do not edit */             name: "Turkmenistan"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "tn",
+/* do not edit */             name: "Tunesien"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "to",
+/* do not edit */             name: "Tonga"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "tr",
+/* do not edit */             name: "Türkei"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "tw",
+/* do not edit */             name: "Taiwan"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "tz",
+/* do not edit */             name: "Tansania"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "us",
+/* do not edit */             name: "USA"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "uy",
+/* do not edit */             name: "Uruguay"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ve",
+/* do not edit */             name: "Venezuela"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "vn",
+/* do not edit */             name: "Vietnam"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "ws",
+/* do not edit */             name: "Samoa"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "za",
+/* do not edit */             name: "Südafrika"
+/* do not edit */         },
+/* do not edit */         {
+/* do not edit */             code: "zw",
+/* do not edit */             name: "Simbabwe"
+/* do not edit */         },
 /* do not edit */     ];
 /* do not edit */ }

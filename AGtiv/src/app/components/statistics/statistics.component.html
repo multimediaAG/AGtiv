@@ -1,6 +1,6 @@
 <div style="display: block;">
     <!--*ngIf="distanceData.length > 0"-->
     <canvas baseChart width="4" height="1" [datasets]="distanceData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="'line'"></canvas>
-    <canvas baseChart width="4" height="1" [datasets]="userCountData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="'line'">
+    <canvas *ngIf="myDistanceData[0].data.length" baseChart width="4" height="1" [datasets]="myDistanceData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="'line'">
     </canvas>
 </div>

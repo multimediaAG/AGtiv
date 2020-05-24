@@ -43,12 +43,22 @@ class StatisticsController {
   public static statistics = async (req: Request, res: Response) => {
     const wayRepository = getRepository(Way);
     const days = await wayRepository.query(`
-      SELECT way.date, Sum(way.distance) AS distance, COUNT(DISTINCT way.userId) as users
+      SELECT way.date, Sum(way.distance) AS distance
       FROM way
       WHERE way.hidden = false
       GROUP BY way.date;
     `);
-    res.send({ days });
+
+    let myDays;
+    if (res.locals.jwtPayload && res.locals.jwtPayload.userId) {
+        myDays = await wayRepository.query(`
+        SELECT way.date, Sum(way.distance) AS distance
+        FROM way
+        WHERE way.hidden = false && way.userId = ?
+        GROUP BY way.date;
+      `, [res.locals.jwtPayload.userId]);
+    }
+    res.send({ days, myDays });
   }
   public static currentMap = async (req: Request, res: Response) => {
     const PRIMARY = "#f1c40f";

@@ -31,7 +31,7 @@ class StatisticsController {
       SELECT Sum(way.distance) AS distance
       FROM user
       LEFT JOIN way
-      ON user.id = way.userId AND way.hidden = false AND user.id = ?
+      ON way.userId = ? AND way.hidden = false
       GROUP BY user.id
     `, [res.locals.jwtPayload.userId]);
       if (result && result[0] && result[0].distance) {

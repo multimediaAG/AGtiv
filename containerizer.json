@@ -1,6 +1,6 @@
 {
     "imageName": "AGtiv",
-    "imageVersion": "0.0.1",
+    "imageVersion": "1.0.2",
     "imageMaintainer": "H. Rüger",
     "imageMaintainerUsername": "hrueger",
     "branch": "master",
@@ -16,7 +16,7 @@
     ],
     "debug": true,
     "fastUpdateMode": true,
-    "wirkingDirPath": "/app/work",
+    "workingDirPath": "/app/work",
     "filesToCreate": [
         {
             "path": "AGtiv/src/environments/environment.ts",
@@ -57,7 +57,6 @@
             }
         }
     ],
-    "workingDirPath": "./work",
     "additionalBuilds": [
         {
             "dir": "api",

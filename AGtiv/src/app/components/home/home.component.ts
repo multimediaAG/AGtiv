@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { RemoteService } from 'src/app/services/remote.service';
-import { data } from 'src/app/data/ways';
+import { data } from 'src/app/data/rounds';
 import { environment } from 'src/environments/environment';
 
 declare const window: any;
@@ -23,9 +23,10 @@ export class HomeComponent {
     public bestUsers: any = [];
     public remainingDistance: number;
     public myDistance: number;
-    public endCityName = data.cities[data.cities.length - 1].name;
+    public endCityName = data.rounds[0].cities[data.rounds[0].cities.length - 1].name;
     public mapSrc: string = `${environment.apiUrl}statistics/currentMap.png`
     public confettiTimeout: number;
+    public data = data;
 
     constructor(public authenticationService: AuthenticationService, private remoteService: RemoteService) { }
 
@@ -49,7 +50,7 @@ export class HomeComponent {
                 this.currentDistance = d.currentDistance;
                 this.myDistance = d.myDistance;
                 let distanceCounter: number = 0;
-                for (const city of data.cities) {
+                for (const city of data.rounds[0].cities) {
                     if (this.lastCity) {
                         distanceCounter += city.distance;
                         if (this.currentDistance < distanceCounter) {
@@ -75,6 +76,10 @@ export class HomeComponent {
 
     public getImg(c) {
         return `/assets/cities/${c.image ? c.image : `${c.country}_${c.name.toLowerCase().replace(/ /g, "_")}.jpg`}`;
+    }
+
+    public replaceVariables(s: string) {
+        return s.replace(/\{\{userCount\}\}/, this.userCount ? this.userCount.toString() : "");
     }
 
     private manageConfetti() {

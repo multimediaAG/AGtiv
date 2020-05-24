@@ -25,6 +25,7 @@ import { NgbDatepickerModule } from "@ng-bootstrap/ng-bootstrap";
 import { ChartsModule } from 'ng2-charts';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
+import { SafePipe } from 'src/pipes/safe.pipe';
 
 registerLocaleData(localeDe);
 
@@ -43,6 +44,7 @@ registerLocaleData(localeDe);
     InfoBikeDistanceComponent,
     StatisticsComponent,
     UsersComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

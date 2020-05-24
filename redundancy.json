@@ -1,7 +1,7 @@
 {
     "version": 1,
     "files": [{
-        "src": "AGtiv/src/app/data/ways.ts",
-        "dest": "api/src/data/ways.ts"
+        "src": "AGtiv/src/app/data/rounds.ts",
+        "dest": "api/src/data/rounds.ts"
     }]
 }

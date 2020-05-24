@@ -40,22 +40,7 @@
                     Hallo <i>{{authenticationService.currentUser.username}}!</i>
                 </h3>
                 <p>- Das AG radelt, rollert und läuft gemeinsam einmal um die Welt! -</p>
-                <div *ngIf="!finished">
-                    <p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
-                    <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir versuchen, einmal virtuell die Welt zu umrunden! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren
-                        Beitrag für dieses Ziel.
-                    </p>
-                    <p>Jedes Mitglied der Schulfamilie - egal ob Radler, Läufer oder Inliner/Skiroller - kann jeden Tag einen kleinen Beitrag dazu leisten. Näheres erfahrt Ihr in den Regeln. </p>
-                    <p>Zum Mitmachen eingeladen sind alle Schülerinnen und Schüler, deren Eltern und sowie alle Lehrkräfte am Allgäu-Gymnasium. Viel Spaß beim Trainieren! </p>
-                    <p>Eure Fachschaft Sport</p>
-                </div>
-                <div *ngIf="finished">
-                    <p>Schön, dass du so fleißig mitgemacht hast! Die erste Runde von AGtiv ist leider nun schon vorbei.</p>
-                    <p>Du findest alle Leistungen und Ergebnisse in der <a routerLink="/scores">Bestenliste</a>.</p>
-                    <div class="alert alert-primary">
-                        <h5>Es gibt noch eine zweite Runde!</h5>
-                        <p>Sie beginnt am 30. Mai.</p>
-                    </div>
+                <div [innerHtml]="replaceVariables(data.rounds[0][(finished ? 'postText' : 'text')]) | safe: 'html'">
                 </div>
 
                 <p class="p-2 border-warning border bg-warning-light" *ngIf="!finished">Es sind <b>noch {{remainingDistance}}

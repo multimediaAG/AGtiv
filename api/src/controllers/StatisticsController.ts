@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { getRepository } from "typeorm";
 import { Way } from "../entity/Way";
 import * as path from "path";
-import { data } from "../data/ways";
+import { data } from "../data/rounds";
 import { fabric } from "fabric";
 import { User } from "../entity/User";
 
@@ -36,7 +36,7 @@ class StatisticsController {
         myDistance = result[0].distance;
       }
     }
-    const totalDistance = data.cities.reduce((p, c) => p + c.distance, 0);
+    const totalDistance = data.rounds[0].cities.reduce((p, c) => p + c.distance, 0);
     res.send({ currentDistance: sum, userCount, bestUsers, remainingDistance: totalDistance - sum, myDistance });
   }
 
@@ -74,7 +74,7 @@ class StatisticsController {
       const citiesVisited: data.City[] = [];
 
       let distanceCounter: number = 0;
-        for (const city of data.cities) {
+        for (const city of data.rounds[0].cities) {
             distanceCounter += city.distance;
             if (currentDistance < distanceCounter) {
               break;

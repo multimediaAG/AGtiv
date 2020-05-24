@@ -23,7 +23,8 @@ export class HomeComponent {
     public bestUsers: any = [];
     public remainingDistance: number;
     public myDistance: number;
-    public endCityName = data.rounds[0].cities[data.rounds[0].cities.length - 1].name;
+    public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx") ? localStorage.getItem("currentRoundIdx") : "0", undefined);
+    public endCityName = data.rounds[this.currentRoundIdx].cities[data.rounds[this.currentRoundIdx].cities.length - 1].name;
     public mapSrc: string = `${environment.apiUrl}statistics/currentMap.png`
     public confettiTimeout: number;
     public data = data;
@@ -50,7 +51,7 @@ export class HomeComponent {
                 this.currentDistance = d.currentDistance;
                 this.myDistance = d.myDistance;
                 let distanceCounter: number = 0;
-                for (const city of data.rounds[0].cities) {
+                for (const city of data.rounds[this.currentRoundIdx].cities) {
                     if (this.lastCity) {
                         distanceCounter += city.distance;
                         if (this.currentDistance < distanceCounter) {
@@ -61,12 +62,9 @@ export class HomeComponent {
                     }
                     this.lastCity = city;
                 }
-                if (this.nextCity && this.lastCity) {
-                    this.lastCity.countryName = data.countries.filter((c) => c.code == this.lastCity.country)[0].name;
-                    this.nextCity.countryName = data.countries.filter((c) => c.code == this.nextCity.country)[0].name;
-                } else {
-                    this.finished = true;
-                }
+                this.finished = d.finished;
+                localStorage.setItem("finished", d.finished ? "true" : "false");
+                localStorage.setItem("currentRoundIdx", d.currentRoundIdx);
             }
             if (this.finished) {
                 this.manageConfetti();

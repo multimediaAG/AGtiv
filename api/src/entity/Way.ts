@@ -24,6 +24,9 @@ import { User } from "./User";
     @Column({default: false})
     public hidden: boolean;
 
+    @Column({default: 0})
+    public roundIdx: number;
+
     @Column()
     @CreateDateColumn()
     public createdAt: string;

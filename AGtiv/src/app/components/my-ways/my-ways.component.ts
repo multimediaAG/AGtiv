@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { RemoteService } from 'src/app/services/remote.service';
 import { AlertService } from 'src/app/services/alert.service';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { data } from 'src/app/data/rounds';
 
 @Component({
   selector: 'app-my-ways',
@@ -14,6 +15,8 @@ export class MyWaysComponent implements OnInit {
   public waysLoaded: boolean = false;
   public myTotalDistance: number = 0;
   public myWays = [];
+  public finished: boolean = localStorage.getItem("finished") == "true";
+  public startDate: string = data.rounds[parseInt(localStorage.getItem("currentRoundIdx"), undefined)]?.startDate.toLocaleDateString();
 
   public constructor(public route: ActivatedRoute, private remoteService: RemoteService, private alertService: AlertService, public authenticationService: AuthenticationService) {}
 

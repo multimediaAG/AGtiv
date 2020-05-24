@@ -8,7 +8,7 @@
                 Die Strecke wurde erfolgreich gespeichert!
             </div>
             <div>
-                <a class="btn btn-outline-success d-inline" routerLink="/my-way"><i class="fas fa-plus"></i> Neue Strecke</a>
+                <a class="btn btn-outline-success d-inline" routerLink="/my-way" *ngIf="!finished"><i class="fas fa-plus"></i> Neue Strecke</a>
             </div>
             <div class="alert alert-info my-3" *ngIf="!waysLoaded">
                 <i class="fas fa-spinner fa-spin"></i> Laden
@@ -19,8 +19,11 @@
             </div>
             <div *ngIf="waysLoaded">
                 <div class="alert alert-success mt-3">Du hast insgesamt <b>{{myTotalDistance}} km</b> zur Gesamtstrecke beigetragen!</div>
-                <div class="alert alert-danger">
-                    <b>Achtung:</b><br>Es zählen <b>nur</b> die Strecken, die <b>seit dem 28.04.2020</b> zurückgelegt wurden!
+                <div class="alert alert-danger" *ngIf="!finished">
+                    <b>Achtung:</b><br>In dieser Runde zählen <b>nur</b> die Strecken, die <b>seit dem {{startDate}}</b> zurückgelegt wurden!
+                </div>
+                <div class="alert alert-warning" *ngIf="finished">
+                    <b>Diese Runde ist leider zu Ende</b>. Du kannst keine Kilometer mehr eintragen!
                 </div>
                 <div class="table-responsive">
                     <table class="table table-striped">
@@ -30,8 +33,8 @@
                                 <th>Datum</th>
                                 <th colspan="2">Strecke</th>
                                 <th></th>
-                                <th class="text-center">Bearbeiten</th>
-                                <th class="text-center">Löschen</th>
+                                <th class="text-center" *ngIf="!finished">Bearbeiten</th>
+                                <th class="text-center" *ngIf="!finished">Löschen</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -47,8 +50,8 @@
                                         <div class="progress-bar" role="progressbar" [style.width]="myWay.distance / maxDistance * 100 + '%'"></div>
                                     </div>
                                 </td>
-                                <td class="text-center"><a class="btn btn-outline-primary" [routerLink]="['/', 'my-way', 'edit', myWay.id]" [queryParams]="{distance: myWay.distance, date: myWay.date, type: myWay.type}"><i class="fas fa-pen"></i></a></td>
-                                <td class="text-center"><button class="btn btn-outline-danger" (click)="removeMyWay(myWay)"><i class="fas fa-trash"></i></button></td>
+                                <td class="text-center" *ngIf="!finished"><a class="btn btn-outline-primary" [routerLink]="['/', 'my-way', 'edit', myWay.id]" [queryParams]="{distance: myWay.distance, date: myWay.date, type: myWay.type}"><i class="fas fa-pen"></i></a></td>
+                                <td class="text-center" *ngIf="!finished"><button class="btn btn-outline-danger" (click)="removeMyWay(myWay)"><i class="fas fa-trash"></i></button></td>
                             </tr>
                         </tbody>
                     </table>

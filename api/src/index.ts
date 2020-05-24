@@ -11,6 +11,7 @@ import { createAdminUser1574018391679 } from "./migration/1574018391679-createAd
 import routes from "./routes";
 import { toInt, log } from "./utils/utils";
 import * as fs from "fs";
+import { RoundController } from "./controllers/RoundController";
 
 // Connects to the Database -> then starts the express
 createConnection({
@@ -41,6 +42,7 @@ createConnection({
 
     if (!fs.existsSync("/data")) fs.mkdirSync("/data");
     if (!fs.existsSync(path.join("/data/agtiv.log"))) fs.writeFileSync(path.join("/data/agtiv.log"), "");
+    RoundController.init();
     log("server started", null);
 
     // Fix problems with UTF8 chars

@@ -5,9 +5,11 @@ import * as path from "path";
 import { data } from "../data/rounds";
 import { fabric } from "fabric";
 import { User } from "../entity/User";
+import { RoundController } from "./RoundController";
 
 class StatisticsController {
   public static currentDistance = async (req: Request, res: Response) => {
+    const currentRoundIdx = RoundController.getRoundIdx();
     const sum = await StatisticsController.getCurrentDistance();
     const userRepository = getRepository(User);
     const userCount = await userRepository.count();
@@ -36,8 +38,16 @@ class StatisticsController {
         myDistance = result[0].distance;
       }
     }
-    const totalDistance = data.rounds[0].cities.reduce((p, c) => p + c.distance, 0);
-    res.send({ currentDistance: sum, userCount, bestUsers, remainingDistance: totalDistance - sum, myDistance });
+    const totalDistance = data.rounds[currentRoundIdx].cities.reduce((p, c) => p + c.distance, 0);
+    res.send({
+      currentDistance: sum,
+      userCount,
+      bestUsers,
+      remainingDistance: totalDistance - sum,
+      myDistance,
+      finished: !await RoundController.roundRunning(),
+      currentRoundIdx,
+    });
   }
 
   public static statistics = async (req: Request, res: Response) => {
@@ -61,6 +71,7 @@ class StatisticsController {
     res.send({ days, myDays });
   }
   public static currentMap = async (req: Request, res: Response) => {
+    const currentRoundIdx = RoundController.getRoundIdx();
     const PRIMARY = "#f1c40f";
     const SECONDARY = "#c0392b";
 
@@ -74,7 +85,7 @@ class StatisticsController {
       const citiesVisited: data.City[] = [];
 
       let distanceCounter: number = 0;
-        for (const city of data.rounds[0].cities) {
+        for (const city of data.rounds[currentRoundIdx].cities) {
             distanceCounter += city.distance;
             if (currentDistance < distanceCounter) {
               break;
@@ -183,10 +194,12 @@ class StatisticsController {
     });
   }
 
-  private static async getCurrentDistance(): Promise<number> {
+  public static async getCurrentDistance(): Promise<number> {
+    const currentRoundIdx = RoundController.getRoundIdx();
     return (await getRepository(Way).createQueryBuilder("way")
       .select("SUM(way.distance)", "sum")
       .where("way.hidden = false")
+      .where("way.roundIdx = :currentRoundIdx", {currentRoundIdx})
       .getRawOne()).sum;
   }
 }

@@ -3,6 +3,7 @@ import { getRepository } from "typeorm";
 import { Way } from "../entity/Way";
 import { User } from "../entity/User";
 import { log } from "../utils/utils";
+import { RoundController } from "./RoundController";
 
 class WayController {
   public static listAll = async (req: Request, res: Response) => {
@@ -48,6 +49,7 @@ class WayController {
     way.distance = distance;
     way.date = date;
     way.type = type;
+    way.roundIdx = RoundController.getRoundIdx();
     way.user = await getRepository(User).findOne(res.locals.jwtPayload.userId);
 
     try {

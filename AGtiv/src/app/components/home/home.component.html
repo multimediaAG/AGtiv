@@ -40,7 +40,7 @@
                     Hallo <i>{{authenticationService.currentUser.username}}!</i>
                 </h3>
                 <p>- Das AG radelt, rollert und läuft gemeinsam einmal um die Welt! -</p>
-                <div [innerHtml]="replaceVariables(data.rounds[0][(finished ? 'postText' : 'text')]) | safe: 'html'">
+                <div [innerHtml]="replaceVariables(data.rounds[currentRoundIdx][(finished ? 'postText' : 'text')]) | safe: 'html'">
                 </div>
 
                 <p class="p-2 border-warning border bg-warning-light" *ngIf="!finished">Es sind <b>noch {{remainingDistance}}

@@ -15,7 +15,7 @@ export class MyWaysComponent implements OnInit {
   public waysLoaded: boolean = false;
   public myTotalDistance: number = 0;
   public myWays = [];
-  public finished: boolean = localStorage.getItem("finished") == "true";
+  public finished: boolean = localStorage.getItem("canAddWays") == "false";
   public startDate: string = data.rounds[parseInt(localStorage.getItem("currentRoundIdx"), undefined)]?.startDate.toLocaleDateString();
 
   public constructor(public route: ActivatedRoute, private remoteService: RemoteService, private alertService: AlertService, public authenticationService: AuthenticationService) {}
@@ -33,8 +33,8 @@ export class MyWaysComponent implements OnInit {
 
   public removeMyWay(myWay) {
     if (confirm(`Soll die Strecke vom ${new Date(myWay.date).toLocaleDateString()} mit einer Strecke von ${myWay.distance} km wirklich gelöscht werden?`)) {
-      this.remoteService.delete(`ways/${myWay.id}`).subscribe((data) => {
-        if (data && data.status) {
+      this.remoteService.delete(`ways/${myWay.id}`).subscribe((d) => {
+        if (d && d.status) {
           this.alertService.success("Die Strecke wurde erfolgreich gelöscht!");
           this.myWays = this.myWays.filter((w) => w.id != myWay.id);
           this.update();

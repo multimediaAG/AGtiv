@@ -64,6 +64,7 @@ export class HomeComponent {
                 }
                 this.finished = d.finished;
                 localStorage.setItem("finished", d.finished ? "true" : "false");
+                localStorage.setItem("canAddWays", d.canAddWays ? "true" : "false");
                 localStorage.setItem("currentRoundIdx", d.currentRoundIdx);
             }
             if (this.nextCity && this.lastCity) {

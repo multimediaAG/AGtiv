@@ -46,6 +46,7 @@ class StatisticsController {
       remainingDistance: totalDistance - sum,
       myDistance,
       finished: !await RoundController.roundRunning(),
+      canAddWays: await RoundController.roundRunning(true),
       currentRoundIdx,
     });
   }

@@ -1697,6 +1697,7 @@ export module data {
                     distance: 295,
                     x: 10000000,
                     y: 10000000,
+                    image: "de_kempten_2.jpg"
                 },
             ]
         }

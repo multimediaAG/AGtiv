@@ -34,7 +34,6 @@ export class StatisticsComponent {
                 const length = d.days.length;
 
                 d.days = this.fixTimezoneProblems(d.days);
-                d.myDays = this.fixTimezoneProblems(d.myDays);
 
                 this.distanceData = [
                     {
@@ -48,6 +47,7 @@ export class StatisticsComponent {
                     }
                 ];
                 if (d.myDays) {
+                    d.myDays = this.fixTimezoneProblems(d.myDays);
                     this.myDistanceData = [
                         {
                             data: this.fixMissingDays(d.myDays, firstDay, length).map((day) => parseInt(day.distance, undefined)),

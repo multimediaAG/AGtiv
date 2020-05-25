@@ -995,7 +995,7 @@
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Moskau",
-/* do not edit */                     country: "by",
+/* do not edit */                     country: "ru",
 /* do not edit */                     distance: 810,
 /* do not edit */                     x: 1369,
 /* do not edit */                     y: 358,

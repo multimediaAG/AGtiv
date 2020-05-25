@@ -987,7 +987,7 @@ export module data {
                 },
                 {
                     name: "Moskau",
-                    country: "by",
+                    country: "ru",
                     distance: 810,
                     x: 1369,
                     y: 358,

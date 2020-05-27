@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="alert alert-warning" *ngIf="f.type.value == 'hike'">
-                        Du hast <b>Wandern / Bergsteigen</b> als Sportart ausgewählt. Gib deshalb die <b>Höhenmeter</b> ein, die du zurückgelegt hast, nicht die horizontale Strecke. Die Höhenmeter müssen zwischen 0 und 3 km liegen.
+                        Du hast <b>Wandern / Bergsteigen</b> als Sportart ausgewählt. Gib deshalb die <b>Höhenmeter</b> ein, die Du zurückgelegt hast, nicht die horizontale Strecke. Die Höhenmeter müssen zwischen 0 und 3 km liegen.
                     </div>
                     <div class="alert alert-success" *ngIf="f.type.value && f.distance.value && f.type.value != 'bike'">
                         Das entspricht <b>{{getBikeDistance()}} Fahrradkilometern</b>.

@@ -29,7 +29,7 @@ export module data {
     export const rounds: Round[] = [
         {
             id: 1,
-            postText: `<p>Schön, dass du so fleißig mitgemacht hast! Die erste Runde von AGtiv ist leider nun schon vorbei.</p>
+            postText: `<p>Schön, dass Du so fleißig mitgemacht hast! Die erste Runde von AGtiv ist leider nun schon vorbei.</p>
             <p>Du findest alle Leistungen und Ergebnisse in der <a href="/scores">Bestenliste</a>.</p>
             <div class="alert alert-primary">
                 <h5>Es gibt noch eine zweite Runde mit neuen Zielen!</h5>

@@ -37,7 +37,7 @@
 /* do not edit */     export const rounds: Round[] = [
 /* do not edit */         {
 /* do not edit */             id: 1,
-/* do not edit */             postText: `<p>Schön, dass du so fleißig mitgemacht hast! Die erste Runde von AGtiv ist leider nun schon vorbei.</p>
+/* do not edit */             postText: `<p>Schön, dass Du so fleißig mitgemacht hast! Die erste Runde von AGtiv ist leider nun schon vorbei.</p>
 /* do not edit */             <p>Du findest alle Leistungen und Ergebnisse in der <a href="/scores">Bestenliste</a>.</p>
 /* do not edit */             <div class="alert alert-primary">
 /* do not edit */                 <h5>Es gibt noch eine zweite Runde mit neuen Zielen!</h5>

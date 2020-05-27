@@ -59,7 +59,7 @@ class StatisticsController {
       FROM way
       WHERE way.hidden = false AND way.roundIdx = ?
       GROUP BY way.date;
-    `, [currentRoundIdx - 1]);
+    `, [currentRoundIdx]);
 
     let myDays;
     if (res.locals.jwtPayload && res.locals.jwtPayload.userId) {
@@ -68,7 +68,7 @@ class StatisticsController {
         FROM way
         WHERE way.hidden = false && way.userId = ? AND way.roundIdx = ?
         GROUP BY way.date;
-      `, [res.locals.jwtPayload.userId, currentRoundIdx - 1]);
+      `, [res.locals.jwtPayload.userId, currentRoundIdx]);
     }
     res.send({ days, myDays });
   }

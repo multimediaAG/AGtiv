@@ -13,6 +13,9 @@ export class ScoresComponent {
   public maxDistance: number = 1000000000;
   public myPlace: number;
   public placesCount: number;
+  public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx"), undefined);
+  public currentViewRoundIdx = this.currentRoundIdx;
+  public rounds = Array(this.currentRoundIdx + 1).fill(undefined).map((x,i)=>i).reverse();
   public views = [
     {
       id: "all",
@@ -43,7 +46,7 @@ export class ScoresComponent {
   constructor(private remoteService: RemoteService, public authenticationService: AuthenticationService) { }
 
   public ngOnInit() {
-   this.remoteService.get("users").subscribe((data) => {
+   this.remoteService.get(`users/${this.currentViewRoundIdx}`).subscribe((data) => {
       if (data) {
         this.allUsers = data;
         for (const user of this.allUsers) {
@@ -53,6 +56,11 @@ export class ScoresComponent {
         this.filterAndDisplayData();
       }
     });
+  }
+
+  public viewRound(idx) {
+    this.currentViewRoundIdx = idx;
+    this.ngOnInit();
   }
 
   private filterAndDisplayData() {

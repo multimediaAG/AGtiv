@@ -11,10 +11,10 @@ class UserController {
       SELECT user.username, user.grade, Sum(way.distance) AS distance
       FROM user
       LEFT JOIN way
-      ON user.id = way.userId AND way.hidden = false
+      ON user.id = way.userId AND way.hidden = false AND way.roundIdx = ?
       GROUP BY user.id
       ORDER BY distance DESC
-    `);
+    `, [req.params.roundIdx]);
     res.send(users);
   }
 

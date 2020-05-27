@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
   public submitted: boolean = false;
   public loading: boolean = false;
   public grades: string[] = grades;
+  public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx"), undefined);
 
   public readonly maxUsernameLength: number = 20;
   public readonly minUsernameLength: number = 2;

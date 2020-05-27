@@ -50,7 +50,7 @@
                 </div>
                 <p class="p-2 border-warning border bg-warning-light" *ngIf="!finished">Es sind <b>noch {{remainingDistance}}
                 km</b> bis nach {{endCityName}}.</p>
-                <div class="p-2 border-warning border bg-warning-light" *ngIf="!finished && bestUsers && bestUsers[0] && bestUsers[0].distance">
+                <div class="p-2 border-warning border bg-warning-light" *ngIf="!finished && bestUsers && bestUsers[0] && bestUsers[0].distance  && bestUsers[1] && bestUsers[1].distance && bestUsers[2] && bestUsers[2].distance">
                     <span class="d-block">Die Führenden in der Gesamtwertung:</span>
                     <div class="text-left d-inline-block">
                         <ol>

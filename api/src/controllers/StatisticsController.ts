@@ -17,11 +17,11 @@ class StatisticsController {
       SELECT user.username, user.grade, Sum(way.distance) AS distance
       FROM user
       LEFT JOIN way
-      ON user.id = way.userId AND way.hidden = false
+      ON user.id = way.userId AND way.hidden = false AND way.roundIdx = ?
       GROUP BY user.id
       ORDER BY distance DESC
       LIMIT 3;
-    `);
+    `, [currentRoundIdx]);
     if (!bestUsers) {
       bestUsers = [];
     }
@@ -31,9 +31,9 @@ class StatisticsController {
       SELECT Sum(way.distance) AS distance
       FROM user
       LEFT JOIN way
-      ON way.userId = ? AND way.hidden = false
+      ON way.userId = ? AND way.hidden = false AND way.roundIdx = ?
       GROUP BY user.id
-    `, [res.locals.jwtPayload.userId]);
+    `, [res.locals.jwtPayload.userId, currentRoundIdx]);
       if (result && result[0] && result[0].distance) {
         myDistance = result[0].distance;
       }
@@ -52,22 +52,23 @@ class StatisticsController {
   }
 
   public static statistics = async (req: Request, res: Response) => {
+    const currentRoundIdx = RoundController.getRoundIdx();
     const wayRepository = getRepository(Way);
     const days = await wayRepository.query(`
       SELECT way.date, Sum(way.distance) AS distance
       FROM way
-      WHERE way.hidden = false
+      WHERE way.hidden = false AND way.roundIdx = ?
       GROUP BY way.date;
-    `);
+    `, [currentRoundIdx - 1]);
 
     let myDays;
     if (res.locals.jwtPayload && res.locals.jwtPayload.userId) {
         myDays = await wayRepository.query(`
         SELECT way.date, Sum(way.distance) AS distance
         FROM way
-        WHERE way.hidden = false && way.userId = ?
+        WHERE way.hidden = false && way.userId = ? AND way.roundIdx = ?
         GROUP BY way.date;
-      `, [res.locals.jwtPayload.userId]);
+      `, [res.locals.jwtPayload.userId, currentRoundIdx - 1]);
     }
     res.send({ days, myDays });
   }

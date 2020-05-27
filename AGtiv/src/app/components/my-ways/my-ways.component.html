@@ -47,7 +47,7 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let myWay of myWays">
-                                <td><i [class]="'fas fa-' + (myWay.type == 'bike' ? 'biking' : myWay.type == 'walk' ? 'walking' : 'skating')"></i></td>
+                                <td><i [class]="'fas fa-' + (myWay.type == 'bike' ? 'biking' : myWay.type == 'walk' ? 'walking' : myWay.type == 'hike' ? 'hiking' : myWay.type == 'swim' ? 'swimmer fa-flip-horizontal' : 'skating')"></i></td>
                                 <td>{{myWay.date | date}}</td>
                                 <td>{{myWay.distance}} km</td>
                                 <td>

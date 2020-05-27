@@ -2,7 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormBuilder, FormGroup, AbstractControl } from '@angular/forms';
 import { RemoteService } from 'src/app/services/remote.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { IDatePickerConfig } from 'ng2-date-picker';
+
+const types = {
+  bike: 1,
+  walk: 4,
+  skiroller: 2.5,
+  swim: 14,
+  hike: 80,
+}
 
 @Component({
   selector: 'app-my-way',
@@ -54,11 +61,7 @@ export class MyWayComponent {
         // @ts-ignore
         defaultDistance = parseInt(defaultDistance, undefined);
       }
-      if (defaultType == "skiroller") {
-        defaultDistance /= 2.5;
-      } else if (defaultType == "walk") {
-        defaultDistance /= 4;
-      }
+      defaultDistance /= types[defaultType];
       defaultDistance = Math.round(defaultDistance);
 
     }
@@ -86,6 +89,9 @@ export class MyWayComponent {
   public save() {
     this.submitted = true;
     if (!this.wayForm.invalid) {
+      if (this.wayForm.controls.type.value == "hike" && this.wayForm.controls.distance.value > 3) {
+        return;
+      }
       this.loading = true;
       this.remoteService.post(this.editing ? `ways/${this.route.snapshot.params.id}`: "ways", {
         distance: this.getBikeDistance(),
@@ -100,6 +106,6 @@ export class MyWayComponent {
   }
 
   public getBikeDistance() {
-    return Math.round(this.f.distance.value * (this.f.type.value == "walk" ? 4 : this.f.type.value == "skiroller" ? 2.5 : 1));
+    return Math.round(this.f.distance.value * types[this.f.type.value]);
   }
 }

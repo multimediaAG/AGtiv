@@ -16,12 +16,15 @@ export class MyWaysComponent implements OnInit {
   public myTotalDistance: number = 0;
   public myWays = [];
   public finished: boolean = localStorage.getItem("canAddWays") == "false";
-  public startDate: string = data.rounds[parseInt(localStorage.getItem("currentRoundIdx"), undefined)]?.startDate.toLocaleDateString();
+  public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx"), undefined);
+  public currentViewRoundIdx = this.currentRoundIdx;
+  public startDate: string = data.rounds[this.currentViewRoundIdx]?.startDate.toLocaleDateString();
+  public rounds = Array(this.currentRoundIdx + 1).fill(undefined).map((x,i)=>i).reverse();
 
   public constructor(public route: ActivatedRoute, private remoteService: RemoteService, private alertService: AlertService, public authenticationService: AuthenticationService) {}
 
   ngOnInit(): void {
-    this.remoteService.get("ways").subscribe((ways) => {
+    this.remoteService.get(`ways/${this.currentViewRoundIdx}`).subscribe((ways) => {
       this.myWays = ways;
       this.authenticationService.currentUser.hasHiddenWays = this.myWays.filter((w) => w.hidden).length > 0;
       this.waysLoaded = true;
@@ -29,6 +32,12 @@ export class MyWaysComponent implements OnInit {
         this.update();
       }, 20);
     })
+  }
+
+  public viewRound(idx) {
+    this.currentViewRoundIdx = idx;
+    this.startDate = data.rounds[this.currentViewRoundIdx]?.startDate.toLocaleDateString();
+    this.ngOnInit();
   }
 
   public removeMyWay(myWay) {
@@ -44,7 +53,7 @@ export class MyWaysComponent implements OnInit {
   }
 
   private update() {
-    this.maxDistance = this.myWays.reduce((p, c) => p.distance > c.distance ? p : c).distance;
+    this.maxDistance = this.myWays.reduce((p, c) => p.distance > c.distance ? p : c, 0).distance;
     this.myTotalDistance = this.myWays.reduce((a, b) => a + (b.distance && !b.hidden ? b.distance : 0), 0);
   }
 

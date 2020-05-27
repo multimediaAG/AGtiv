@@ -7,16 +7,24 @@
             <div class="alert alert-success my-3" *ngIf="route.snapshot.queryParams.savedSuccessfully">
                 Die Strecke wurde erfolgreich gespeichert!
             </div>
-            <div>
-                <a class="btn btn-outline-success d-inline" routerLink="/my-way" *ngIf="!finished"><i class="fas fa-plus"></i> Neue Strecke</a>
+            <ul class="nav nav-tabs mb-3">
+                <li class="nav-item" *ngFor="let r of rounds">
+                    <a class="nav-link" [class.active]="currentViewRoundIdx == r" (click)="viewRound(r)" [routerLink]="">{{r + 1}}. Runde</a>
+                </li>
+            </ul>
+            <div *ngIf="currentViewRoundIdx == currentRoundIdx">
+                <div>
+                    <a class="btn btn-outline-success d-inline" routerLink="/my-way" *ngIf="!finished"><i class="fas fa-plus"></i> Neue Strecke</a>
+                </div>
+                <div class="alert alert-info my-3" *ngIf="!waysLoaded">
+                    <i class="fas fa-spinner fa-spin"></i> Laden
+                </div>
+                <div class="alert alert-warning mt-3" *ngIf="authenticationService.currentUser.hasHiddenWays">
+                    <b>Wichtig!</b><br> Mindestens eine deiner eingegebenen Strecken wurde <b>ausgeblendet</b>, weil sie als Tagesleistung <b>nicht realistisch erscheint</b>.<br> Diese Strecken sind mit <i class="fas fa-eye-slash"></i> markiert.<br> Du
+                    kannst diese Distanz hier anpassen oder Dich bei Herrn Herz über Teams melden.
+                </div>
             </div>
-            <div class="alert alert-info my-3" *ngIf="!waysLoaded">
-                <i class="fas fa-spinner fa-spin"></i> Laden
-            </div>
-            <div class="alert alert-warning mt-3" *ngIf="authenticationService.currentUser.hasHiddenWays">
-                <b>Wichtig!</b><br> Mindestens eine deiner eingegebenen Strecken wurde <b>ausgeblendet</b>, weil sie als Tagesleistung <b>nicht realistisch erscheint</b>.<br> Diese Strecken sind mit <i class="fas fa-eye-slash"></i> markiert.<br> Du kannst
-                diese Distanz hier anpassen oder Dich bei Herrn Herz über Teams melden.
-            </div>
+
             <div *ngIf="waysLoaded">
                 <div class="alert alert-success mt-3">Du hast insgesamt <b>{{myTotalDistance}} km</b> zur Gesamtstrecke beigetragen!</div>
                 <div class="alert alert-danger" *ngIf="!finished">

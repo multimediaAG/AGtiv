@@ -11,6 +11,7 @@ class WayController {
         const ways = await wayRepository.find({
             where: {
                 user: await getRepository(User).findOne(res.locals.jwtPayload.userId),
+                roundIdx: parseInt(req.params.roundIdx, undefined),
             }
         });
         res.send(ways);

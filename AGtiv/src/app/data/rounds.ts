@@ -1044,13 +1044,13 @@ export module data {
         {
             id: 2,
             postText: `PLATZHALTER POSTTEXT RUNDE 2`,
-            text: `<p>- Das AG radelt, rollert, läuft, schwimmt und klettert auf einer zweiten Runde mit einer brandneuen Route erneut gemeinsam  um die Welt! -</p><p>Ziel unseres Projekts <b><i>AG</i>tiv</b> bleibt es weiterhin, eine Abwechslung zum immer noch bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
-            <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir erneut versuchen, auf einer neuen Strecke virtuell die Welt zu bereisen und dabei neue Orte zu entdecken! Die Teilnehmeraccounts bleiben bestehen, jedoch wird der Kilometerstand der ersten Runde zurückgesetzt. Ihr könnt aber trotzdem eure in der 1. Runde erzielte Leistungen unter dem Tab "Runde 1" bei "Meine Strecken" ansehen. Wir starten also alle bei 0 km! Lasst uns die 2. Runde beginnen! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren Beitrag für dieses Ziel.
+            text: `<p>- Das AG radelt, rollert, läuft, schwimmt und klettert auf einer <span class="badge badge-primary big-badge">zweiten Runde</span> mit einer brandneuen Route erneut gemeinsam  um die Welt! -</p><p>Ziel unseres Projekts <b><i>AG</i>tiv</b> bleibt es weiterhin, eine Abwechslung zum immer noch bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
+            <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir erneut versuchen, auf einer neuen Strecke virtuell die Welt zu bereisen und dabei neue Orte zu entdecken! Die <b>Teilnehmeraccounts bleiben bestehen</b>, jedoch wird der <b>Kilometerstand der ersten Runde zurückgesetzt</b>. Ihr könnt aber trotzdem eure in der 1. Runde erzielte Leistungen unter dem Tab "Runde 1" bei "Meine Strecken" ansehen. Wir starten also alle bei 0 km!</p><p>Lasst uns die 2. Runde beginnen! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren Beitrag für dieses Ziel.
             </p>
-            <p>Jedes Mitglied der Schulfamilie - egal ob Radler, Läufer, Inliner/Skiroller, Schwimmer oder Kletterer - kann jeden Tag einen kleinen Beitrag dazu leisten. Näheres erfahrt Ihr in den Regeln. </p>
+            <p>Jedes Mitglied der Schulfamilie - egal ob Radler, Läufer, Inliner/Skiroller, Schwimmer oder Kletterer - kann jeden Tag einen kleinen Beitrag dazu leisten. Näheres erfahrt Ihr in den Regeln.</p>
             <p>Zum Mitmachen eingeladen sind alle Schülerinnen und Schüler, deren Eltern und sowie alle Lehrkräfte am Allgäu-Gymnasium. Viel Spaß beim Trainieren! </p>
             <p>Eure Fachschaft Sport</p>`,
-            startDate: new Date("2020-05-27"),
+            startDate: new Date("2020-05-30"),
             cities: [
                 {
                     name: "Kempten",

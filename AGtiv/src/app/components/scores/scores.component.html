@@ -15,7 +15,7 @@
                 </li>
             </ul>
             <div class="alert alert-success my-3" *ngIf="authenticationService.loggedIn && myPlace">
-                Du bist auf <b>Platz {{myPlace}}</b> von {{placesCount}} in der Kategorie <i>{{currentView.name}}</i>.
+                Du bist auf <b>Platz {{myPlace}}</b> von {{placesCount}} in der <i>{{currentViewRoundIdx + 1}}. Runde</i> in der Kategorie <i>{{currentView.name}}</i>.
             </div>
             <div class="table-responsive mt-1">
                 <table class="table table-striped border-top-0">

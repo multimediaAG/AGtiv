@@ -5,8 +5,8 @@ import { checkForAdmin } from "../middlewares/checkForAdmin";
 
 const router = Router();
 
-router.get("/:roundIdx", UserController.listAll);
 router.get("/admin", [checkJwt, checkForAdmin()], UserController.listAllAdmin);
+router.get("/:roundIdx", UserController.listAll);
 router.post("/:id([0-9]+)/admin", [checkJwt, checkForAdmin()], UserController.changeAdminStatus);
 router.post("/ways/:id([0-9]+)/visibility", [checkJwt, checkForAdmin()], UserController.changeVisibility);
 router.get("/usernameAvailable/:username", UserController.usernameAvailable);

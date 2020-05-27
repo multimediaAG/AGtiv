@@ -44,7 +44,7 @@
 /* do not edit */                 <p>Sie beginnt am <b>Samstag, 30. Mai</b>.</p>
 /* do not edit */             </div>`,
 /* do not edit */             startDate: new Date("2020-04-28"),
-/* do not edit */             text: `<p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
+/* do not edit */             text: `<p>- Das AG radelt, rollert und läuft gemeinsam einmal um die Welt! -</p><p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
 /* do not edit */             <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir versuchen, einmal virtuell die Welt zu umrunden! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren
 /* do not edit */                 Beitrag für dieses Ziel.
 /* do not edit */             </p>
@@ -1052,8 +1052,13 @@
 /* do not edit */         {
 /* do not edit */             id: 2,
 /* do not edit */             postText: `PLATZHALTER POSTTEXT RUNDE 2`,
-/* do not edit */             text: `PLATZHALTER TEXT RUNDE 2`,
-/* do not edit */             startDate: new Date("2020-05-30"),
+/* do not edit */             text: `<p>- Das AG radelt, rollert, läuft, schwimmt und klettert auf einer zweiten Runde mit einer brandneuen Route erneut gemeinsam  um die Welt! -</p><p>Ziel unseres Projekts <b><i>AG</i>tiv</b> bleibt es weiterhin, eine Abwechslung zum immer noch bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
+/* do not edit */             <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir erneut versuchen, auf einer neuen Strecke virtuell die Welt zu bereisen und dabei neue Orte zu entdecken! Die Teilnehmeraccounts bleiben bestehen, jedoch wird der Kilometerstand der ersten Runde zurückgesetzt. Ihr könnt aber trotzdem eure in der 1. Runde erzielte Leistungen unter dem Tab "Runde 1" bei "Meine Strecken" ansehen. Wir starten also alle bei 0 km! Lasst uns die 2. Runde beginnen! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren Beitrag für dieses Ziel.
+/* do not edit */             </p>
+/* do not edit */             <p>Jedes Mitglied der Schulfamilie - egal ob Radler, Läufer, Inliner/Skiroller, Schwimmer oder Kletterer - kann jeden Tag einen kleinen Beitrag dazu leisten. Näheres erfahrt Ihr in den Regeln. </p>
+/* do not edit */             <p>Zum Mitmachen eingeladen sind alle Schülerinnen und Schüler, deren Eltern und sowie alle Lehrkräfte am Allgäu-Gymnasium. Viel Spaß beim Trainieren! </p>
+/* do not edit */             <p>Eure Fachschaft Sport</p>`,
+/* do not edit */             startDate: new Date("2020-05-27"),
 /* do not edit */             cities: [
 /* do not edit */                 {
 /* do not edit */                     name: "Kempten",

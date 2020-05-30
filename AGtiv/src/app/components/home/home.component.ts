@@ -36,6 +36,14 @@ export class HomeComponent {
         this.currentDistanceLoaded = false;
         this.remoteService.get("statistics/currentDistance").subscribe((d) => {
             if (d && (d.currentDistance || d.currentDistance === null)) {
+
+                localStorage.setItem("finished", d.finished ? "true" : "false");
+                localStorage.setItem("canAddWays", d.canAddWays ? "true" : "false");
+                localStorage.setItem("currentRoundIdx", d.currentRoundIdx);
+                this.finished = d.finished;
+                this.canAddWays = d.canAddWays;
+                this.currentRoundIdx = d.currentRoundIdx;
+
                 if (d.currentDistance === null) {
                     d.currentDistance = 0;
                 }
@@ -65,9 +73,6 @@ export class HomeComponent {
                 }
                 this.finished = d.finished;
                 this.canAddWays = d.canAddWays;
-                localStorage.setItem("finished", d.finished ? "true" : "false");
-                localStorage.setItem("canAddWays", d.canAddWays ? "true" : "false");
-                localStorage.setItem("currentRoundIdx", d.currentRoundIdx);
             }
             if (this.nextCity && this.lastCity) {
                 this.lastCity.countryName = data.countries.filter((c) => c.code == this.lastCity.country)[0].name;

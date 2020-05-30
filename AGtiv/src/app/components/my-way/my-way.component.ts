@@ -99,8 +99,8 @@ export class MyWayComponent {
         distance: this.getBikeDistance(),
         date: `${this.f.date.value.year}-${this.f.date.value.month}-${this.f.date.value.day}`,
         type: this.f.type.value,
-      }).subscribe((data) => {
-        if (data && data.status) {
+      }).subscribe((d) => {
+        if (d && d.status) {
           this.router.navigate(["/my-ways"], { queryParams: { savedSuccessfully: true}})
         }
       });

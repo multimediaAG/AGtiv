@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormBuilder, FormGroup, AbstractControl } from '@angular/forms';
 import { RemoteService } from 'src/app/services/remote.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { data } from 'src/app/data/rounds';
 
 const types = {
   bike: 1,
@@ -21,11 +22,13 @@ export class MyWayComponent {
   public submitted: boolean = false;
   public loading: boolean = false;
   public wayForm: FormGroup;
+  public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx"), undefined);
   public minDate = {
-    year: 2020,
-    day: 28,
-    month: 4,
+    year: data.rounds[this.currentRoundIdx].startDate.getFullYear(),
+    day: data.rounds[this.currentRoundIdx].startDate.getDate(),
+    month: data.rounds[this.currentRoundIdx].startDate.getMonth()+1, // because they start with 0
   }
+  public minDateFormatted: string = data.rounds[this.currentRoundIdx]?.startDate.toLocaleDateString();
   public maxDate = {
     year: 2020,
     day: new Date().getDate(),
@@ -39,7 +42,6 @@ export class MyWayComponent {
   ) { }
 
   public ngOnInit() {
-
     let defaultDate = "" as any;
     let defaultDistance = 0;
     let defaultType = "bike";

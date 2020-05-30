@@ -1058,6 +1058,7 @@ export module data {
                     distance: 0,
                     x: 1183,
                     y: 426,
+                    angleCCW: false,
                 },
                 {
                     name: "Zagreb",
@@ -1065,6 +1066,7 @@ export module data {
                     distance: 673,
                     x: 1226,
                     y: 442,
+                    angleCCW: false,
                 },
                 {
                     name: "Belgrad",
@@ -1072,6 +1074,7 @@ export module data {
                     distance: 393,
                     x: 1259,
                     y: 452,
+                    angleCCW: false,
                 },
                 {
                     name: "Sofia",
@@ -1079,6 +1082,7 @@ export module data {
                     distance: 392,
                     x: 1274,
                     y: 464,
+                    angleCCW: false,
                 },
                 {
                     name: "Istanbul",
@@ -1086,6 +1090,7 @@ export module data {
                     distance: 550,
                     x: 1302,
                     y: 480,
+                    angleCCW: false,
                 },
                 {
                     name: "Samsun",
@@ -1093,6 +1098,7 @@ export module data {
                     distance: 744,
                     x: 1351,
                     y: 478,
+                    angleCCW: false,
                 },
                 {
                     name: "Tiflis",
@@ -1107,6 +1113,7 @@ export module data {
                     distance: 580,
                     x: 1436,
                     y: 497,
+                    left: true,
                 },
                 {
                     name: "Teheran",
@@ -1114,6 +1121,7 @@ export module data {
                     distance: 785,
                     x: 1458,
                     y: 520,
+                    left: true,
                 },
                 {
                     name: "Aşgabat",
@@ -1128,6 +1136,7 @@ export module data {
                     distance: 696,
                     x: 1514,
                     y: 526,
+                    left: true,
                 },
                 {
                     name: "Kabul",
@@ -1156,6 +1165,7 @@ export module data {
                     distance: 512,
                     x: 1621,
                     y: 568,
+                    angleCCW: true,
                 },
                 {
                     name: "Ghorahi",
@@ -1163,6 +1173,7 @@ export module data {
                     distance: 980,
                     x: 1647,
                     y: 575,
+                    angleCCW: true,
                 },
                 {
                     name: "Kathmandu",
@@ -1170,6 +1181,7 @@ export module data {
                     distance: 420,
                     x: 1670,
                     y: 577,
+                    angleCCW: true,
                 },
                 {
                     name: "Khumjung",
@@ -1177,6 +1189,7 @@ export module data {
                     distance: 350,
                     x: 1682,
                     y: 568,
+                    angleCCW: false,
                 },
                 {
                     name: "Thimphu",
@@ -1184,6 +1197,7 @@ export module data {
                     distance: 819,
                     x: 1701,
                     y: 574,
+                    angleCCW: true,
                 },
                 {
                     name: "Lhasa",
@@ -1191,6 +1205,7 @@ export module data {
                     distance: 986,
                     x: 1709,
                     y: 550,
+                    angleCCW: false,
                 },
                 {
                     name: "Qamdo",
@@ -1198,6 +1213,7 @@ export module data {
                     distance: 1097,
                     x: 1739,
                     y: 538,
+                    angleCCW: false,
                 },
                 {
                     name: "Xining",
@@ -1205,6 +1221,7 @@ export module data {
                     distance: 1113,
                     x: 1768,
                     y: 509,
+                    angleCCW: false,
                 },
                 {
                     name: "Xi’an",
@@ -1212,6 +1229,7 @@ export module data {
                     distance: 845,
                     x: 1809,
                     y: 519,
+                    angleCCW: true,
                 },
                 {
                     name: "Shijiazhuang",
@@ -1219,6 +1237,7 @@ export module data {
                     distance: 813,
                     x: 1853,
                     y: 497,
+                    angleCCW: true,
                 },
                 {
                     name: "Yantai",
@@ -1226,6 +1245,7 @@ export module data {
                     distance: 738,
                     x: 1900,
                     y: 501,
+                    angleCCW: true,
                 },
                 {
                     name: "Seoul",
@@ -1261,6 +1281,7 @@ export module data {
                     distance: 665,
                     x: 1902,
                     y: 588,
+                    left: true,
                 },
                 {
                     name: "Tuguegarao City",
@@ -1310,6 +1331,7 @@ export module data {
                     distance: 738,
                     x: 1815,
                     y: 788,
+                    left: true,
                 },
                 {
                     name: "Surabaya",
@@ -1324,6 +1346,7 @@ export module data {
                     distance: 802,
                     x: 1902,
                     y: 811,
+                    left: true,
                 },
                 {
                     name: "Dili",
@@ -1359,6 +1382,7 @@ export module data {
                     distance: 470,
                     x: 1977,
                     y: 910,
+                    left: true,
                 },
                 {
                     name: "Coober Pedy",
@@ -1380,6 +1404,7 @@ export module data {
                     distance: 727,
                     x: 2054,
                     y: 1004,
+                    left: true,
                 },
                 {
                     name: "Sydney",
@@ -1387,6 +1412,7 @@ export module data {
                     distance: 878,
                     x: 2098,
                     y: 976,
+                    angleCCW: true,
                 },
                 {
                     name: "Auckland",
@@ -1401,6 +1427,7 @@ export module data {
                     distance: 2112,
                     x: 2256,
                     y: 870,
+                    left: true,
                 },
                 {
                     name: "Nuku'alofa",
@@ -1408,6 +1435,7 @@ export module data {
                     distance: 987,
                     x: 2288,
                     y: 882,
+                    angleCCW: false,
                 },
                 {
                     name: "Apia",
@@ -1422,6 +1450,8 @@ export module data {
                     distance: 1512,
                     x: 2334,
                     y: 883,
+                    angleCCW: true,
+                    isEasternEndpoint: true,
                 },
                 {
                     name: "Papeete",
@@ -1429,6 +1459,8 @@ export module data {
                     distance: 1147,
                     x: 96,
                     y: 838,
+                    angleCCW: true,
+                    isWesternStartpoint: true,
                 },
                 {
                     name: "Adamstown",
@@ -1436,6 +1468,7 @@ export module data {
                     distance: 2183,
                     x: 282,
                     y: 920,
+                    angleCCW: true,
                 },
                 {
                     name: "Osterinsel",
@@ -1443,6 +1476,7 @@ export module data {
                     distance: 2068,
                     x: 429,
                     y: 940,
+                    angleCCW: true,
                 },
                 {
                     name: "Robinson Crusoe Insel",
@@ -1450,6 +1484,7 @@ export module data {
                     distance: 3015,
                     x: 601,
                     y: 966,
+                    angleCCW: true,
                 },
                 {
                     name: "Santiago de Chile",
@@ -1457,6 +1492,7 @@ export module data {
                     distance: 760,
                     x: 664,
                     y: 968,
+                    angleCCW: true,
                 },
                 {
                     name: "Córdoba",
@@ -1499,6 +1535,7 @@ export module data {
                     distance: 377,
                     x: 718,
                     y: 811,
+                    left: true,
                 },
                 {
                     name: "Manaus",
@@ -1506,6 +1543,7 @@ export module data {
                     distance: 888,
                     x: 736,
                     y: 782,
+                    left: true,
                 },
                 {
                     name: "Santarém",
@@ -1520,6 +1558,7 @@ export module data {
                     distance: 550,
                     x: 794,
                     y: 746,
+                    left: true,
                 },
                 {
                     name: "São Luís",
@@ -1527,6 +1566,7 @@ export module data {
                     distance: 840,
                     x: 831,
                     y: 772,
+                    angleCCW: false,
                 },
                 {
                     name: "Natal",
@@ -1534,6 +1574,7 @@ export module data {
                     distance: 1423,
                     x: 928,
                     y: 789,
+                    angleCCW: false,
                 },
                 {
                     name: "Georgetown",
@@ -1541,6 +1582,7 @@ export module data {
                     distance: 3424,
                     x: 1025,
                     y: 805,
+                    angleCCW: false,
                 },
                 {
                     name: "Benguela",
@@ -1555,6 +1597,7 @@ export module data {
                     distance: 742,
                     x: 1252,
                     y: 801,
+                    left: true,
                 },
                 {
                     name: "Mbuji-Mayi",
@@ -1583,6 +1626,7 @@ export module data {
                     distance: 645,
                     x: 1276,
                     y: 701,
+                    left: true,
                 },
                 {
                     name: "N'Djamena",
@@ -1590,6 +1634,7 @@ export module data {
                     distance: 2199,
                     x: 1218,
                     y: 676,
+                    left: true,
                 },
                 {
                     name: "Faya-Largeau",
@@ -1604,6 +1649,7 @@ export module data {
                     distance: 794,
                     x: 1212,
                     y: 616,
+                    left: true,
                 },
                 {
                     name: "Tamanrasset",
@@ -1611,6 +1657,7 @@ export module data {
                     distance: 727,
                     x: 1162,
                     y: 594,
+                    left: true,
                 },
                 {
                     name: "In Salah",
@@ -1618,6 +1665,7 @@ export module data {
                     distance: 664,
                     x: 1144,
                     y: 571,
+                    left: true,
                 },
                 {
                     name: "Touggourt",
@@ -1625,6 +1673,7 @@ export module data {
                     distance: 962,
                     x: 1171,
                     y: 541,
+                    left: true,
                 },
                 {
                     name: "Gafsa",
@@ -1639,6 +1688,7 @@ export module data {
                     distance: 234,
                     x: 1180,
                     y: 518,
+                    left: true,
                 },
                 {
                     name: "Tunis",
@@ -1653,6 +1703,7 @@ export module data {
                     distance: 285,
                     x: 1205,
                     y: 500,
+                    left: true,
                 },
                 {
                     name: "Reggio Calabria",
@@ -1674,6 +1725,7 @@ export module data {
                     distance: 428,
                     x: 1202,
                     y: 475,
+                    left: true,
                 },
                 {
                     name: "Florenz",
@@ -1681,6 +1733,7 @@ export module data {
                     distance: 280,
                     x: 1195,
                     y: 461,
+                    left: true,
                 },
                 {
                     name: "Mailand",
@@ -1688,6 +1741,7 @@ export module data {
                     distance: 305,
                     x: 1178,
                     y: 447,
+                    left: true,
                 },
                 {
                     name: "Luzern",
@@ -1695,6 +1749,7 @@ export module data {
                     distance: 243,
                     x: 1166,
                     y: 439,
+                    left: true,
                 },
                 {
                     name: "Kempten",
@@ -1703,6 +1758,7 @@ export module data {
                     x: 1183,
                     y: 426,
                     image: "de_kempten_2.jpg",
+                    angleCCW: false,
                 },
             ]
         }

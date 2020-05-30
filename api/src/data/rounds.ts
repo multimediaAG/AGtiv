@@ -1066,6 +1066,7 @@
 /* do not edit */                     distance: 0,
 /* do not edit */                     x: 1183,
 /* do not edit */                     y: 426,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Zagreb",
@@ -1073,6 +1074,7 @@
 /* do not edit */                     distance: 673,
 /* do not edit */                     x: 1226,
 /* do not edit */                     y: 442,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Belgrad",
@@ -1080,6 +1082,7 @@
 /* do not edit */                     distance: 393,
 /* do not edit */                     x: 1259,
 /* do not edit */                     y: 452,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Sofia",
@@ -1087,6 +1090,7 @@
 /* do not edit */                     distance: 392,
 /* do not edit */                     x: 1274,
 /* do not edit */                     y: 464,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Istanbul",
@@ -1094,6 +1098,7 @@
 /* do not edit */                     distance: 550,
 /* do not edit */                     x: 1302,
 /* do not edit */                     y: 480,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Samsun",
@@ -1101,6 +1106,7 @@
 /* do not edit */                     distance: 744,
 /* do not edit */                     x: 1351,
 /* do not edit */                     y: 478,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Tiflis",
@@ -1115,6 +1121,7 @@
 /* do not edit */                     distance: 580,
 /* do not edit */                     x: 1436,
 /* do not edit */                     y: 497,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Teheran",
@@ -1122,6 +1129,7 @@
 /* do not edit */                     distance: 785,
 /* do not edit */                     x: 1458,
 /* do not edit */                     y: 520,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Aşgabat",
@@ -1136,6 +1144,7 @@
 /* do not edit */                     distance: 696,
 /* do not edit */                     x: 1514,
 /* do not edit */                     y: 526,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Kabul",
@@ -1164,6 +1173,7 @@
 /* do not edit */                     distance: 512,
 /* do not edit */                     x: 1621,
 /* do not edit */                     y: 568,
+/* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Ghorahi",
@@ -1171,6 +1181,7 @@
 /* do not edit */                     distance: 980,
 /* do not edit */                     x: 1647,
 /* do not edit */                     y: 575,
+/* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Kathmandu",
@@ -1178,6 +1189,7 @@
 /* do not edit */                     distance: 420,
 /* do not edit */                     x: 1670,
 /* do not edit */                     y: 577,
+/* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Khumjung",
@@ -1185,6 +1197,7 @@
 /* do not edit */                     distance: 350,
 /* do not edit */                     x: 1682,
 /* do not edit */                     y: 568,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Thimphu",
@@ -1192,6 +1205,7 @@
 /* do not edit */                     distance: 819,
 /* do not edit */                     x: 1701,
 /* do not edit */                     y: 574,
+/* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Lhasa",
@@ -1199,6 +1213,7 @@
 /* do not edit */                     distance: 986,
 /* do not edit */                     x: 1709,
 /* do not edit */                     y: 550,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Qamdo",
@@ -1206,6 +1221,7 @@
 /* do not edit */                     distance: 1097,
 /* do not edit */                     x: 1739,
 /* do not edit */                     y: 538,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Xining",
@@ -1213,6 +1229,7 @@
 /* do not edit */                     distance: 1113,
 /* do not edit */                     x: 1768,
 /* do not edit */                     y: 509,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Xi’an",
@@ -1220,6 +1237,7 @@
 /* do not edit */                     distance: 845,
 /* do not edit */                     x: 1809,
 /* do not edit */                     y: 519,
+/* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Shijiazhuang",
@@ -1227,6 +1245,7 @@
 /* do not edit */                     distance: 813,
 /* do not edit */                     x: 1853,
 /* do not edit */                     y: 497,
+/* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Yantai",
@@ -1234,6 +1253,7 @@
 /* do not edit */                     distance: 738,
 /* do not edit */                     x: 1900,
 /* do not edit */                     y: 501,
+/* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Seoul",
@@ -1269,6 +1289,7 @@
 /* do not edit */                     distance: 665,
 /* do not edit */                     x: 1902,
 /* do not edit */                     y: 588,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Tuguegarao City",
@@ -1318,6 +1339,7 @@
 /* do not edit */                     distance: 738,
 /* do not edit */                     x: 1815,
 /* do not edit */                     y: 788,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Surabaya",
@@ -1332,6 +1354,7 @@
 /* do not edit */                     distance: 802,
 /* do not edit */                     x: 1902,
 /* do not edit */                     y: 811,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Dili",
@@ -1367,6 +1390,7 @@
 /* do not edit */                     distance: 470,
 /* do not edit */                     x: 1977,
 /* do not edit */                     y: 910,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Coober Pedy",
@@ -1388,6 +1412,7 @@
 /* do not edit */                     distance: 727,
 /* do not edit */                     x: 2054,
 /* do not edit */                     y: 1004,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Sydney",
@@ -1395,6 +1420,7 @@
 /* do not edit */                     distance: 878,
 /* do not edit */                     x: 2098,
 /* do not edit */                     y: 976,
+/* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Auckland",
@@ -1409,6 +1435,7 @@
 /* do not edit */                     distance: 2112,
 /* do not edit */                     x: 2256,
 /* do not edit */                     y: 870,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Nuku'alofa",
@@ -1416,6 +1443,7 @@
 /* do not edit */                     distance: 987,
 /* do not edit */                     x: 2288,
 /* do not edit */                     y: 882,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Apia",
@@ -1430,6 +1458,8 @@
 /* do not edit */                     distance: 1512,
 /* do not edit */                     x: 2334,
 /* do not edit */                     y: 883,
+/* do not edit */                     angleCCW: true,
+/* do not edit */                     isEasternEndpoint: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Papeete",
@@ -1437,6 +1467,8 @@
 /* do not edit */                     distance: 1147,
 /* do not edit */                     x: 96,
 /* do not edit */                     y: 838,
+/* do not edit */                     angleCCW: true,
+/* do not edit */                     isWesternStartpoint: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Adamstown",
@@ -1444,6 +1476,7 @@
 /* do not edit */                     distance: 2183,
 /* do not edit */                     x: 282,
 /* do not edit */                     y: 920,
+/* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Osterinsel",
@@ -1451,6 +1484,7 @@
 /* do not edit */                     distance: 2068,
 /* do not edit */                     x: 429,
 /* do not edit */                     y: 940,
+/* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Robinson Crusoe Insel",
@@ -1458,6 +1492,7 @@
 /* do not edit */                     distance: 3015,
 /* do not edit */                     x: 601,
 /* do not edit */                     y: 966,
+/* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Santiago de Chile",
@@ -1465,6 +1500,7 @@
 /* do not edit */                     distance: 760,
 /* do not edit */                     x: 664,
 /* do not edit */                     y: 968,
+/* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Córdoba",
@@ -1507,6 +1543,7 @@
 /* do not edit */                     distance: 377,
 /* do not edit */                     x: 718,
 /* do not edit */                     y: 811,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Manaus",
@@ -1514,6 +1551,7 @@
 /* do not edit */                     distance: 888,
 /* do not edit */                     x: 736,
 /* do not edit */                     y: 782,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Santarém",
@@ -1528,6 +1566,7 @@
 /* do not edit */                     distance: 550,
 /* do not edit */                     x: 794,
 /* do not edit */                     y: 746,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "São Luís",
@@ -1535,6 +1574,7 @@
 /* do not edit */                     distance: 840,
 /* do not edit */                     x: 831,
 /* do not edit */                     y: 772,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Natal",
@@ -1542,6 +1582,7 @@
 /* do not edit */                     distance: 1423,
 /* do not edit */                     x: 928,
 /* do not edit */                     y: 789,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Georgetown",
@@ -1549,6 +1590,7 @@
 /* do not edit */                     distance: 3424,
 /* do not edit */                     x: 1025,
 /* do not edit */                     y: 805,
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Benguela",
@@ -1563,6 +1605,7 @@
 /* do not edit */                     distance: 742,
 /* do not edit */                     x: 1252,
 /* do not edit */                     y: 801,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Mbuji-Mayi",
@@ -1591,6 +1634,7 @@
 /* do not edit */                     distance: 645,
 /* do not edit */                     x: 1276,
 /* do not edit */                     y: 701,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "N'Djamena",
@@ -1598,6 +1642,7 @@
 /* do not edit */                     distance: 2199,
 /* do not edit */                     x: 1218,
 /* do not edit */                     y: 676,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Faya-Largeau",
@@ -1612,6 +1657,7 @@
 /* do not edit */                     distance: 794,
 /* do not edit */                     x: 1212,
 /* do not edit */                     y: 616,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Tamanrasset",
@@ -1619,6 +1665,7 @@
 /* do not edit */                     distance: 727,
 /* do not edit */                     x: 1162,
 /* do not edit */                     y: 594,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "In Salah",
@@ -1626,6 +1673,7 @@
 /* do not edit */                     distance: 664,
 /* do not edit */                     x: 1144,
 /* do not edit */                     y: 571,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Touggourt",
@@ -1633,6 +1681,7 @@
 /* do not edit */                     distance: 962,
 /* do not edit */                     x: 1171,
 /* do not edit */                     y: 541,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Gafsa",
@@ -1647,6 +1696,7 @@
 /* do not edit */                     distance: 234,
 /* do not edit */                     x: 1180,
 /* do not edit */                     y: 518,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Tunis",
@@ -1661,6 +1711,7 @@
 /* do not edit */                     distance: 285,
 /* do not edit */                     x: 1205,
 /* do not edit */                     y: 500,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Reggio Calabria",
@@ -1682,6 +1733,7 @@
 /* do not edit */                     distance: 428,
 /* do not edit */                     x: 1202,
 /* do not edit */                     y: 475,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Florenz",
@@ -1689,6 +1741,7 @@
 /* do not edit */                     distance: 280,
 /* do not edit */                     x: 1195,
 /* do not edit */                     y: 461,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Mailand",
@@ -1696,6 +1749,7 @@
 /* do not edit */                     distance: 305,
 /* do not edit */                     x: 1178,
 /* do not edit */                     y: 447,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Luzern",
@@ -1703,6 +1757,7 @@
 /* do not edit */                     distance: 243,
 /* do not edit */                     x: 1166,
 /* do not edit */                     y: 439,
+/* do not edit */                     left: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Kempten",
@@ -1711,6 +1766,7 @@
 /* do not edit */                     x: 1183,
 /* do not edit */                     y: 426,
 /* do not edit */                     image: "de_kempten_2.jpg",
+/* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */             ]
 /* do not edit */         }

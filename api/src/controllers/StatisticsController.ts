@@ -76,6 +76,7 @@ class StatisticsController {
     const currentRoundIdx = RoundController.getRoundIdx();
     const PRIMARY = "#f1c40f";
     const SECONDARY = "#c0392b";
+    const GREY = "#575757";
 
     const canvas = new fabric.StaticCanvas(undefined);
     fabric.Image.fromURL("file:///" + path.join(__dirname, "../../assets/worldmap.png"), async (img) => {
@@ -85,17 +86,18 @@ class StatisticsController {
 
       const currentDistance = await StatisticsController.getCurrentDistance();
       const citiesVisited: data.City[] = [];
+      const citiesNotVisited: data.City[] = [];
 
       let distanceCounter: number = 0;
         for (const city of data.rounds[currentRoundIdx].cities) {
             distanceCounter += city.distance;
             if (currentDistance < distanceCounter) {
-              break;
+              citiesNotVisited.push(city);
             } else {
               citiesVisited.push(city);
             }
         }
-
+      citiesNotVisited.unshift(citiesVisited[citiesVisited.length - 1]);
 
       const texts = [];
 
@@ -164,23 +166,28 @@ class StatisticsController {
 
 
       let first = true;
-      let pathString = "";
-      for (const city of citiesVisited) {
-        if (!city.x) continue;
-        if (city.isWesternStartpoint) {
-          pathString += ` M 0 ${city.y}`
-          pathString += ` L ${city.x} ${city.y}`
-        } else {
-          pathString += ` ${first ? "M" : "L"} ${city.x} ${city.y}`
+      const drawRoute = (cities, color, dotted?) => {
+        let pathString = "";
+        for (const city of cities) {
+          if (!city.x) continue;
+          if (city.isWesternStartpoint) {
+            pathString += ` M 0 ${city.y}`
+            pathString += ` L ${city.x} ${city.y}`
+          } else {
+            pathString += ` ${first ? "M" : "L"} ${city.x} ${city.y}`
+          }
+          if (city.isEasternEndpoint) {
+            pathString += ` L ${img.width} ${city.y}`
+            drawPath(canvas, pathString, color, dotted);
+            pathString = "";
+          }
+          first = false;
         }
-        if (city.isEasternEndpoint) {
-          pathString += ` L ${img.width} ${city.y}`
-          drawPath(canvas, pathString, SECONDARY);
-          pathString = "";
-        }
-        first = false;
+        drawPath(canvas, pathString, color, dotted);
       }
-      drawPath(canvas, pathString, SECONDARY);
+
+      drawRoute(citiesVisited, SECONDARY);
+      drawRoute(citiesNotVisited, GREY, true);
 
 
       canvas.renderAll();
@@ -207,11 +214,12 @@ class StatisticsController {
 }
 
 export default StatisticsController;
-function drawPath(canvas: fabric.StaticCanvas, pathString: string, SECONDARY: string) {
+function drawPath(canvas: fabric.StaticCanvas, pathString: string, SECONDARY: string, dotted) {
   canvas.add(new fabric.Path(pathString, {
     stroke: SECONDARY,
     strokeWidth: 4,
     fill: undefined,
+    strokeDashArray: dotted ? [5, 5] : undefined,
   }));
 }
 

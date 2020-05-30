@@ -25,7 +25,7 @@ export class RoundController {
 
     public static async roundRunning(justToAddWays = false) {
         if (data.rounds[RoundController.getRoundIdx()].cities.reduce((p, c) => p + c.distance, 0) <= await StatisticsController.getCurrentDistance()) {
-            if (data.rounds[RoundController.getRoundIdx() + 1].startDate < new Date()) {
+            if (data.rounds[RoundController.getRoundIdx() + 1] && data.rounds[RoundController.getRoundIdx() + 1].startDate < new Date()) {
                 RoundController.setRoundIdx(RoundController.getRoundIdx() + 1);
                 return true;
             } else {

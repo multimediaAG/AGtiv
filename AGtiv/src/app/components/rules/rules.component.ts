@@ -29,7 +29,7 @@ export class RulesComponent {
       title: "Was zählt?",
       content: "Du kannst alle Strecken-Kilometer eintragen, die Du mit dem Fahrrad oder dem Roller (Inliner/Skiroller) zurückgelegt hast und die Du gelaufen, gewandert oder geschwimmen bist.\
       Alle eingetragenen Strecken werden in \"Fahrrad-Kilometer\" umgerechnet, um die Leistungen vergleichbar zu machen.\
-      Gemäß des größeren Energieaufwands werden Laufstrecken mit dem Faktor 4, Rollerstrecken mit dem Faktor 2,5, Schwimmstrecken mit dem Faktor 14 und die Höhenmeter beim Bergsteigen mit dem Faktor 80 automatisch multipliziert.\
+      Gemäß des größeren Energieaufwands werden Laufstrecken mit dem Faktor 4, Rollerstrecken mit dem Faktor 2,5, Schwimmstrecken mit dem Faktor 14 und die Höhenmeter beim Klettern mit dem Faktor 80 automatisch multipliziert.\
       Die sich daraus ergebenden Streckenlängen werden mathematisch auf ganze Kilometer gerundet.",
       icon: "fa-question",
     }

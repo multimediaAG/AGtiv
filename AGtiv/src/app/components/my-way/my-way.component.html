@@ -47,7 +47,7 @@
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="type-hike" formControlName="type" value="hike" class="custom-control-input" [class.is-invalid]="submitted && f.type.errors" [class.is-valid]="submitted && !f.type.errors">
-                            <label class="custom-control-label" for="type-hike"><i class="fas fa-hiking"></i> Ich bin <b>berggestiegen (oder geklettert).</b></label>
+                            <label class="custom-control-label" for="type-hike"><i class="fas fa-hiking"></i> Ich bin <b>geklettert.</b></label>
                         </div>
                     </div>
                     <div class="form-group">
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="alert alert-warning" *ngIf="f.type.value == 'hike'">
-                        Du hast <b>Wandern / Bergsteigen</b> als Sportart ausgewählt. Gib deshalb die <b>Höhenmeter</b> ein, die Du zurückgelegt hast, nicht die horizontale Strecke. Die Höhenmeter müssen zwischen 0 und 3 km liegen.
+                        Du hast <b>Klettern</b> als Sportart ausgewählt. Gib deshalb die <b>Höhenmeter</b> ein, die Du zurückgelegt hast, nicht die horizontale Strecke. Die Höhenmeter müssen zwischen 0 und 3 km liegen.
                     </div>
                     <div class="alert alert-success" *ngIf="f.type.value && f.distance.value && f.type.value != 'bike'">
                         Das entspricht <b>{{getBikeDistance()}} Fahrradkilometern</b>.

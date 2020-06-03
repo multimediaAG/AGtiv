@@ -45,12 +45,6 @@
                             <input type="radio" id="type-swim" formControlName="type" value="swim" class="custom-control-input" [class.is-invalid]="submitted && f.type.errors" [class.is-valid]="submitted && !f.type.errors">
                             <label class="custom-control-label" for="type-swim"><i class="fas fa-swimmer fa-flip-horizontal"></i> Ich bin <b>geschwommen.</b></label>
                         </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="type-hike" disabled="disabled" formControlName="type" value="hike" class="custom-control-input" [class.is-invalid]="submitted && f.type.errors" [class.is-valid]="submitted && !f.type.errors">
-                            <label class="custom-control-label" for="type-hike"><i class="fas fa-hiking"></i> Ich bin <b>geklettert.</b></label>
-                            <br>
-                            <small>Der Faktor für die Höhenmeter beim Klettern wird momentan überprüft. Wir bitten um Geduld.</small>
-                        </div>
                     </div>
                     <div class="form-group">
                         <label for="distance">Distanz in km (<b>nicht schummeln!</b>):</label>

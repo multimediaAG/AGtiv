@@ -1468,7 +1468,7 @@ export module data {
                     country: "au",
                     distance: 483,
                     x: 1910,
-                    y: 970,
+                    y: 973,
                     angleCCW: true,
                 },
                 {

@@ -1476,7 +1476,7 @@
 /* do not edit */                     country: "au",
 /* do not edit */                     distance: 483,
 /* do not edit */                     x: 1910,
-/* do not edit */                     y: 970,
+/* do not edit */                     y: 973,
 /* do not edit */                     angleCCW: true,
 /* do not edit */                 },
 /* do not edit */                 {

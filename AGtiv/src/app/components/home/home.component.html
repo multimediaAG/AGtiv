@@ -4,13 +4,13 @@
         <h1 class="mb-3 display-1 font-weight-bold headline d-none d-md-block"> Mach mit bei <i>AG</i>tiv!</h1>
         <h2 class="headline">Die interaktive Radel- und Lauf-Aktion des Allg&auml;u-Gymnasiums Kempten</h2>
     </div>
-    <div class="mb-3 alert alert-success d-block d-lg-none text-center" *ngIf="finished">
+    <div class="mb-3 alert alert-success d-block d-lg-none text-center" *ngIf="finished && !canAddWays">
         <b>Sieger der Gesamtwertung</b> ist <b>{{bestUsers[0].username}} ({{bestUsers[0].grade}})</b> mit {{bestUsers[0].distance}} km.<br>Herzlichen Glückwunsch!
     </div>
     <div class="card mb-4 border-0 bg-transparent" *ngIf="finished">
         <img src="assets/finished_01.svg">
         <div class="bg-white p-3 pt-0 stats-container text-center">
-            <div class="alert alert-success d-none d-lg-block">
+            <div class="alert alert-success d-none d-lg-block" *ngIf="finished && !canAddWays">
                 <b>Sieger der Gesamtwertung</b> ist <b>{{bestUsers[0].username}} ({{bestUsers[0].grade}})</b> mit {{bestUsers[0].distance}} km.<br>Herzlichen Glückwunsch!
             </div>
             <div class="alert alert-primary">

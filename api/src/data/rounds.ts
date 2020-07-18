@@ -1849,8 +1849,8 @@
 /* do not edit */                     name: "Natal",
 /* do not edit */                     country: "br",
 /* do not edit */                     distance: 1423,
-/* do not edit */                     x: 928,
-/* do not edit */                     y: 789,
+/* do not edit */                     x: 895,
+/* do not edit */                     y: 801,
 /* do not edit */                     angleCCW: false,
 /* do not edit */                 },
 /* do not edit */                 {

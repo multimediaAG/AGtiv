@@ -1841,8 +1841,8 @@ export module data {
                     name: "Natal",
                     country: "br",
                     distance: 1423,
-                    x: 928,
-                    y: 789,
+                    x: 895,
+                    y: 801,
                     angleCCW: false,
                 },
                 {

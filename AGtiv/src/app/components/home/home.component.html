@@ -8,7 +8,7 @@
         <b>Sieger der Gesamtwertung</b> ist <b>{{bestUsers[0].username}} ({{bestUsers[0].grade}})</b> mit {{bestUsers[0].distance}} km.<br>Herzlichen Glückwunsch!
     </div>
     <div class="card mb-4 border-0 bg-transparent" *ngIf="finished">
-        <img src="assets/finished_01.svg">
+        <img src="assets/finished_{{currentRoundIdx}}.svg">
         <div class="bg-white p-3 pt-0 stats-container text-center">
             <div class="alert alert-success d-none d-lg-block" *ngIf="finished && !canAddWays">
                 <b>Sieger der Gesamtwertung</b> ist <b>{{bestUsers[0].username}} ({{bestUsers[0].grade}})</b> mit {{bestUsers[0].distance}} km.<br>Herzlichen Glückwunsch!

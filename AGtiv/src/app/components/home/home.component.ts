@@ -29,6 +29,7 @@ export class HomeComponent {
     public confettiTimeout: number;
     public data = data;
     public canAddWays = false;
+    public showStadtradelnInfo: boolean =  new Date("2020-06-10") < new Date() && new Date() < new Date("2020-07-14");
 
     constructor(public authenticationService: AuthenticationService, private remoteService: RemoteService) { }
 

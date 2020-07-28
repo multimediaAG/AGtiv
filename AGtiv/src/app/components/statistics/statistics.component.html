@@ -9,3 +9,24 @@
     <canvas *ngIf="myDistanceData[0].data.length" baseChart width="2" height="1" [datasets]="myDistanceData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="'line'">
     </canvas>
 </div>
+<div class="container">
+    <div class="d-none d-lg-flex row my-3 mt-5">
+        <div [class.col]="myActivitiesData[0].data.length">
+            <h4 class="text-center">Gesamte Schulgemeinschaft:</h4>
+            <canvas baseChart width="2" height="1" [colors]="pieChartColors" [datasets]="activitiesData" [labels]="pieChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="'pie'"></canvas>
+        </div>
+        <div [class.col]="myActivitiesData[0].data.length">
+            <h4 class="text-center">Deine Strecken:</h4>
+            <canvas *ngIf="myActivitiesData[0].data.length" baseChart width="2" height="1" [datasets]="myActivitiesData" [labels]="myPieChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="'pie'" [colors]="pieChartColors">
+        </canvas>
+        </div>
+    </div>
+</div>
+
+<div class="d-block d-lg-none">
+    <h4 class="text-center mt-4">Gesamte Schulgemeinschaft:</h4>
+    <canvas baseChart width="2" height="1" [datasets]="activitiesData" [labels]="pieChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="'pie'" [colors]="pieChartColors"></canvas>
+    <h4 class="text-center mt-4">Deine Strecken:</h4>
+    <canvas *ngIf="myActivitiesData[0].data.length" baseChart width="2" height="1" [datasets]="myActivitiesData" [labels]="myPieChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="'pie'" [colors]="pieChartColors">
+    </canvas>
+</div>

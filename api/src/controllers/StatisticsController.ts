@@ -60,8 +60,15 @@ class StatisticsController {
       WHERE way.hidden = false AND way.roundIdx = ?
       GROUP BY way.date;
     `, [currentRoundIdx]);
+    const activities = await wayRepository.query(`
+      SELECT way.type, Sum(way.distance) AS distance
+      FROM way
+      WHERE way.hidden = false AND way.roundIdx = ?
+      GROUP BY way.type;
+    `, [currentRoundIdx]);
 
     let myDays;
+    let myActivities;
     if (res.locals.jwtPayload && res.locals.jwtPayload.userId) {
         myDays = await wayRepository.query(`
         SELECT way.date, Sum(way.distance) AS distance
@@ -69,8 +76,14 @@ class StatisticsController {
         WHERE way.hidden = false && way.userId = ? AND way.roundIdx = ?
         GROUP BY way.date;
       `, [res.locals.jwtPayload.userId, currentRoundIdx]);
+      myActivities = await wayRepository.query(`
+        SELECT way.type, Sum(way.distance) AS distance
+        FROM way
+        WHERE way.hidden = false && way.userId = ? AND way.roundIdx = ?
+        GROUP BY way.type;
+      `, [res.locals.jwtPayload.userId, currentRoundIdx]);
     }
-    res.send({ days, myDays });
+    res.send({ days, myDays, activities, myActivities });
   }
   public static currentMap = async (req: Request, res: Response) => {
     const currentRoundIdx = RoundController.getRoundIdx();

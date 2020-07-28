@@ -7,6 +7,22 @@ import { DatePipe } from "@angular/common";
 
 interface Day { date: string, distance: string };
 
+const LABELS = {
+    hike: "Bergsteigen",
+    walk: "Joggen",
+    bike: "Radeln",
+    swim: "Schwimmen",
+    skiroller: "Skirollern"
+}
+
+const COLORS = {
+    hike: "#a3b8cc",
+    walk: "#f9e490",
+    bike: "#72dfa0",
+    swim: "#70b6e6",
+    skiroller: "#f4aca4"
+}
+
 @Component({
     selector: "app-statistics",
     templateUrl: "./statistics.component.html",
@@ -20,15 +36,25 @@ export class StatisticsComponent {
     public myDistanceData: ChartDataSets[] = [
         { data: [], label: "" },
     ];
+    public activitiesData: ChartDataSets[] = [
+        { data: [], label: "" },
+    ];
+    public myActivitiesData: ChartDataSets[] = [
+        { data: [], label: "" },
+    ];
     public lineChartLabels: Label[] = [];
+    public pieChartLabels: Label[] = [];
+    public myPieChartLabels: Label[] = [];
     public lineChartOptions: ChartOptions = {
         responsive: true,
     };
+    public pieChartColors = [{ backgroundColor: [] }];
+    public myPieChartColors = [{ backgroundColor: [] }];
     public lineChartLegend = true;
     constructor(public authenticationService: AuthenticationService, private remoteService: RemoteService, private datePipe: DatePipe) { }
 
     public ngOnInit() {
-        this.remoteService.get("statistics").subscribe((d: {days: Day[], myDays: Day[]}) => {
+        this.remoteService.get("statistics").subscribe((d: {days: Day[], myDays: Day[], activities: any[], myActivities: any[]}) => {
             if (d && d.days) {
                 const firstDay = d.days[0].date;
                 const length = d.days.length;
@@ -46,6 +72,10 @@ export class StatisticsComponent {
                         pointHoverBorderColor: "rgb(0, 0, 0)",
                     }
                 ];
+                this.activitiesData = [{ data: d.activities.map((a) => a.distance) }];
+                this.pieChartColors[0].backgroundColor = [
+                    this.activitiesData.map((a) => a.type == "")
+                ]
                 if (d.myDays) {
                     d.myDays = this.fixTimezoneProblems(d.myDays);
                     this.myDistanceData = [
@@ -59,8 +89,13 @@ export class StatisticsComponent {
                             pointHoverBorderColor: "rgb(0, 0, 0)",
                         }
                     ];
+                    this.myActivitiesData = [{ data: d.myActivities.map((a) => a.distance) }];
+                    this.myPieChartLabels = d.myActivities.map((a) => LABELS[a.type]);
+                    this.myPieChartColors[0].backgroundColor = d.myActivities.map((a) => COLORS[a.type]);
                 }
                 this.lineChartLabels = d.days.map((day) => this.datePipe.transform(day.date, "d. MMM"));
+                this.pieChartLabels = d.activities.map((a) => LABELS[a.type]);
+                this.pieChartColors[0].backgroundColor = d.activities.map((a) => COLORS[a.type]);
             }
         });
     }

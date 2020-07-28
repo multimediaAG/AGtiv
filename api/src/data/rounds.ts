@@ -20,7 +20,7 @@
 /* do not edit */         isWesternStartpoint?: boolean;
 /* do not edit */         image?: string;
 /* do not edit */     }
-/* do not edit */
+/* do not edit */ 
 /* do not edit */     export interface Round {
 /* do not edit */         id: number;
 /* do not edit */         startDate: Date;
@@ -28,12 +28,12 @@
 /* do not edit */         postText: string;
 /* do not edit */         cities: City[];
 /* do not edit */     }
-/* do not edit */
+/* do not edit */ 
 /* do not edit */     export interface Country {
 /* do not edit */         code: string;
 /* do not edit */         name: string;
 /* do not edit */     }
-/* do not edit */
+/* do not edit */ 
 /* do not edit */     export const rounds: Round[] = [
 /* do not edit */         {
 /* do not edit */             id: 1,
@@ -1051,7 +1051,11 @@
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             id: 2,
-/* do not edit */             postText: `PLATZHALTER POSTTEXT RUNDE 2`,
+/* do not edit */             postText: `<h3>Geschafft!</h3></p><p>Schön, dass Du so fleißig mitgemacht hast! Jetzt ist leider auch die zweite Runde von AGtiv vorbei.</p>
+/* do not edit */             <p>Du findest alle Leistungen und Ergebnisse in der <a href="/scores">Bestenliste</a>.</p>
+/* do not edit */             <p>Wir hoffen, es hat Dir Spaß gemacht und freuen uns auf weitere tolle Projekte.</p>
+/* do not edit */             <p>Wir wünschen euch schöne Ferien und bleibt gesund!</p>
+/* do not edit */             <p>Die Fachschaft Sport</p>`,
 /* do not edit */             text: `<p>- Das AG radelt, rollert, läuft, schwimmt und klettert auf einer <span class="badge badge-primary big-badge">zweiten Runde</span> mit einer brandneuen Route erneut gemeinsam  um die Welt! -</p><p>Ziel unseres Projekts <b><i>AG</i>tiv</b> bleibt es weiterhin, eine Abwechslung zum immer noch bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
 /* do not edit */             <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir erneut versuchen, auf einer neuen Strecke virtuell die Welt zu bereisen und dabei neue Orte zu entdecken! Die <b>Teilnehmeraccounts bleiben bestehen</b>, jedoch wird der <b>Kilometerstand der ersten Runde zurückgesetzt</b>. Ihr könnt aber trotzdem eure in der 1. Runde erzielte Leistungen unter dem Tab "Runde 1" bei "Meine Strecken" ansehen. Wir starten also alle bei 0 km!</p><p>Lasst uns die 2. Runde beginnen! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren Beitrag für dieses Ziel.
 /* do not edit */             </p>
@@ -2040,7 +2044,7 @@
 /* do not edit */             ]
 /* do not edit */         }
 /* do not edit */     ]
-/* do not edit */
+/* do not edit */ 
 /* do not edit */     export const countries: Country[] = [
 /* do not edit */         {
 /* do not edit */             code: "ae",
@@ -2464,3 +2468,4 @@
 /* do not edit */         },
 /* do not edit */     ];
 /* do not edit */ }
+/* do not edit */

@@ -14,6 +14,10 @@ export class RoundController {
         fs.writeFileSync(RoundController.filename, JSON.stringify({ roundId: data.rounds[idx].id, updated: new Date() }));
     }
 
+    public static staticUpdateRoundIdxUpdatedDate() {
+        RoundController.setRoundIdx(RoundController.getRoundIdx());
+    }
+
     public static getRoundIdx(): number {
         const id = JSON.parse(fs.readFileSync(RoundController.filename).toString()).roundId;
         return data.rounds.findIndex((r) => r.id == id);

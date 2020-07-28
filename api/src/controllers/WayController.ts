@@ -40,6 +40,7 @@ class WayController {
             res.status(500).send({ message: err });
             return;
         }
+        RoundController.staticUpdateRoundIdxUpdatedDate();
         res.send({ status: true });
     }
 
@@ -69,7 +70,7 @@ class WayController {
             res.status(500).send({ message: `Fehler: ${e.toString()}` });
             return;
         }
-
+        RoundController.staticUpdateRoundIdxUpdatedDate();
         res.status(200).send({ status: true });
     }
 

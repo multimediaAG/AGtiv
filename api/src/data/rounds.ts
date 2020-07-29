@@ -20,7 +20,7 @@
 /* do not edit */         isWesternStartpoint?: boolean;
 /* do not edit */         image?: string;
 /* do not edit */     }
-/* do not edit */ 
+/* do not edit */
 /* do not edit */     export interface Round {
 /* do not edit */         id: number;
 /* do not edit */         startDate: Date;
@@ -28,12 +28,12 @@
 /* do not edit */         postText: string;
 /* do not edit */         cities: City[];
 /* do not edit */     }
-/* do not edit */ 
+/* do not edit */
 /* do not edit */     export interface Country {
 /* do not edit */         code: string;
 /* do not edit */         name: string;
 /* do not edit */     }
-/* do not edit */ 
+/* do not edit */
 /* do not edit */     export const rounds: Round[] = [
 /* do not edit */         {
 /* do not edit */             id: 1,
@@ -2044,7 +2044,7 @@
 /* do not edit */             ]
 /* do not edit */         }
 /* do not edit */     ]
-/* do not edit */ 
+/* do not edit */
 /* do not edit */     export const countries: Country[] = [
 /* do not edit */         {
 /* do not edit */             code: "ae",

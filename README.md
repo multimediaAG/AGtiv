@@ -1,4 +1,6 @@
 # AGtiv
+![Build](https://github.com/multimediaAG/AGtiv/workflows/Build/badge.svg)
+![Lint](https://github.com/multimediaAG/AGtiv/workflows/Lint/badge.svg)
 > We bike around the globe
 
 ## Development

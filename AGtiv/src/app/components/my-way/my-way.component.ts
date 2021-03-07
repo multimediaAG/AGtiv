@@ -30,7 +30,7 @@ export class MyWayComponent {
   }
   public minDateFormatted: string = data.rounds[this.currentRoundIdx]?.startDate.toLocaleDateString();
   public maxDate = {
-    year: 2020,
+    year: new Date().getFullYear(),
     day: new Date().getDate(),
     month: new Date().getMonth()+1, // because they start with 0
   }

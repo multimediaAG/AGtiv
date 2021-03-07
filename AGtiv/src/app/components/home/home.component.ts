@@ -23,7 +23,7 @@ export class HomeComponent {
     public bestUsers: any = [];
     public remainingDistance: number;
     public myDistance: number;
-    public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx") ? localStorage.getItem("currentRoundIdx") : "0", undefined);
+    public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx2") ? localStorage.getItem("currentRoundIdx2") : "0", undefined);
     public endCityName = data.rounds[this.currentRoundIdx].cities[data.rounds[this.currentRoundIdx].cities.length - 1].name;
     public mapSrc: string = `${environment.apiUrl}statistics/currentMap.png`
     public confettiTimeout: number;
@@ -38,9 +38,9 @@ export class HomeComponent {
         this.remoteService.get("statistics/currentDistance").subscribe((d) => {
             if (d && (d.currentDistance || d.currentDistance === null)) {
 
-                localStorage.setItem("finished", d.finished ? "true" : "false");
-                localStorage.setItem("canAddWays", d.canAddWays ? "true" : "false");
-                localStorage.setItem("currentRoundIdx", d.currentRoundIdx);
+                localStorage.setItem("finished2", d.finished ? "true" : "false");
+                localStorage.setItem("canAddWays2", d.canAddWays ? "true" : "false");
+                localStorage.setItem("currentRoundIdx2", d.currentRoundIdx);
                 this.finished = d.finished;
                 this.canAddWays = d.canAddWays;
                 this.currentRoundIdx = d.currentRoundIdx;

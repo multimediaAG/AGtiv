@@ -13,7 +13,7 @@ export class ScoresComponent {
   public maxDistance: number = 1000000000;
   public myPlace: number;
   public placesCount: number;
-  public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx"), undefined);
+  public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx2"), undefined);
   public currentViewRoundIdx = this.currentRoundIdx;
   public rounds = Array(this.currentRoundIdx + 1).fill(undefined).map((x,i)=>i).reverse();
   public views = [

@@ -22,7 +22,7 @@ export class MyWayComponent {
   public submitted: boolean = false;
   public loading: boolean = false;
   public wayForm: FormGroup;
-  public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx"), undefined);
+  public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx2"), undefined);
   public minDate = {
     year: data.rounds[this.currentRoundIdx].startDate.getFullYear(),
     day: data.rounds[this.currentRoundIdx].startDate.getDate(),

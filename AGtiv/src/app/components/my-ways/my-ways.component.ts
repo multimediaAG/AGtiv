@@ -15,8 +15,8 @@ export class MyWaysComponent implements OnInit {
   public waysLoaded: boolean = false;
   public myTotalDistance: number = 0;
   public myWays = [];
-  public finished: boolean = localStorage.getItem("canAddWays") == "false";
-  public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx"), undefined);
+  public finished: boolean = localStorage.getItem("canAddWays2") == "false";
+  public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx2"), undefined);
   public currentViewRoundIdx = this.currentRoundIdx;
   public startDate: string = data.rounds[this.currentViewRoundIdx]?.startDate.toLocaleDateString();
   public rounds = Array(this.currentRoundIdx + 1).fill(undefined).map((x,i)=>i).reverse();

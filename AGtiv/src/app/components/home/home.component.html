@@ -37,10 +37,8 @@
     </div>
     <div class="card p-3 mb-3">
         <h3 class="text-center" *ngIf="!authenticationService.loggedIn">
-            <i class="fa fa-running text-secondary pt-5 d-inline d-md-none mr-2"></i>
-            <i class="fa fa-swimmer fa-flip-horizontal text-secondary pt-5 d-inline d-md-none mr-2"></i>Liebe Mitglieder der Schulgemeinschaft!
+            <i class="fa fa-running text-secondary pt-5 d-inline d-md-none mr-2"></i>Liebe Mitglieder der Schulgemeinschaft!
             <i class="fa fa-bicycle text-secondary pt-5 d-inline d-md-none ml-2"></i>
-            <i class="fa fa-hiking text-secondary pt-5 d-inline d-md-none ml-2"></i>
         </h3>
         <div class="alert alert-warning" *ngIf="authenticationService.loggedIn && authenticationService.currentUser.hasHiddenWays">
             <b>Wichtig!</b><br> Mindestens eine deiner eingegebenen Strecken wurde <b>ausgeblendet</b>, weil sie als Tagesleistung nicht realistisch erscheint.<br> Du kannst diese Distanz <a routerLink="/my-ways">hier anpassen</a> oder Dich bei Herrn
@@ -50,8 +48,6 @@
             <div class="d-none d-md-block">
                 <i class="fa fa-running fa-5x text-secondary"></i><br>
                 <a href="/assets/info/Ausdauerguide_Laufen.pdf" target="_blank" class="btn btn-outline-primary mt-3">Zum Ausdauerguide Laufen</a>
-                <i class="fa fa-swimmer fa-5x fa-flip-horizontal text-secondary pt-5"></i><br>
-                <a href="/assets/info/Ausdauerguide_Schwimmen.pdf" target="_blank" class="btn btn-outline-primary mt-3">Zum Ausdauerguide Schwimmen</a>
             </div>
             <div class="px-3 pt-3">
 
@@ -75,15 +71,11 @@
                 <div class="d-block d-md-none">
                     <a href="/assets/info/Ausdauerguide_Laufen.pdf" target="_blank" class="btn btn-outline-primary mt-2 d-block">Zum Ausdauerguide Laufen <i class="fa fa-running"></i></a>
                     <a href="/assets/info/Ausdauerguide_Bike.pdf" target="_blank" class="btn btn-outline-primary mt-2 d-block">Zum Ausdauerguide Radeln <i class="fa fa-bicycle"></i></a>
-                    <a href="/assets/info/Ausdauerguide_Schwimmen.pdf" target="_blank" class="btn btn-outline-primary mt-2 d-block">Zum Ausdauerguide Schwimmen <i class="fa fa-swimmer fa-flip-horizontal"></i></a>
-                    <a href="/assets/info/Tipps_zum_Bergsteigen.pdf" target="_blank" class="btn btn-outline-primary mt-2 d-block">Tipps zum Bergsteigen <i class="fa fa-hiking"></i></a>
                 </div>
             </div>
             <div class="d-none d-md-block">
                 <i class="fa fa-bicycle fa-5x text-secondary"></i><br>
                 <a href="/assets/info/Ausdauerguide_Bike.pdf" target="_blank" class="btn btn-outline-primary mt-3">Zum Ausdauerguide Radeln</a>
-                <i class="fa fa-hiking fa-5x text-secondary pt-5"></i><br>
-                <a href="/assets/info/Tipps_zum_Bergsteigen.pdf" target="_blank" class="btn btn-outline-primary mt-3">Tipps zum Bergsteigen</a>
             </div>
         </div>
     </div>
@@ -108,7 +100,7 @@
                     in <a [href]="'https://de.wikipedia.org/wiki/' + lastCity.countryName" target="_blank">{{ lastCity.countryName }}</a>
                     <flag-icon class="ml-1" [country]="lastCity.country" squared></flag-icon>
                 </div>
-
+                <p>{{lastCity.text}}</p>
             </div>
             <div class="col-12 col-sm-4 status">
                 <h4 class="text-center">
@@ -143,6 +135,7 @@
                     in <a [href]="'https://de.wikipedia.org/wiki/' + nextCity.countryName" target="_blank">{{ nextCity.countryName }}</a>
                     <flag-icon class="ml-1" [country]="nextCity.country" squared></flag-icon>
                 </div>
+                <p>{{nextCity.text}}</p>
             </div>
             <div class="text-left px-5 mt-4">
                 <info-bike-distance></info-bike-distance>

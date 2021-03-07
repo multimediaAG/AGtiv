@@ -8,19 +8,13 @@ import { DatePipe } from "@angular/common";
 interface Day { date: string, distance: string };
 
 const LABELS = {
-    hike: "Bergsteigen",
     walk: "Joggen",
     bike: "Radeln",
-    swim: "Schwimmen",
-    skiroller: "Skirollern"
 }
 
 const COLORS = {
-    hike: "#a3b8cc",
     walk: "#f9e490",
     bike: "#72dfa0",
-    swim: "#70b6e6",
-    skiroller: "#f4aca4"
 }
 
 @Component({

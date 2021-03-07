@@ -37,28 +37,14 @@
                             <input type="radio" id="type-walk" formControlName="type" value="walk" class="custom-control-input" [class.is-invalid]="submitted && f.type.errors" [class.is-valid]="submitted && !f.type.errors">
                             <label class="custom-control-label" for="type-walk"><i class="fas fa-walking"></i> Ich bin <b>gejoggt.</b></label>
                         </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="type-skiroller" formControlName="type" value="skiroller" class="custom-control-input" [class.is-invalid]="submitted && f.type.errors" [class.is-valid]="submitted && !f.type.errors">
-                            <label class="custom-control-label" for="type-skiroller"><i class="fas fa-skating"></i> Ich bin mit dem <b>Skiroller gefahren.</b></label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="type-swim" formControlName="type" value="swim" class="custom-control-input" [class.is-invalid]="submitted && f.type.errors" [class.is-valid]="submitted && !f.type.errors">
-                            <label class="custom-control-label" for="type-swim"><i class="fas fa-swimmer fa-flip-horizontal"></i> Ich bin <b>geschwommen.</b></label>
-                        </div>
                     </div>
                     <div class="form-group">
                         <label for="distance">Distanz in km (<b>nicht schummeln!</b>):</label>
-                        <!--{{f.type.value != 'hike' ? "Distanz" : "Höhenmeter" }}-->
                         <input type="number" id="distance" class="form-control" formControlName="distance" placeholder="Distanz in km eingeben" [class.is-invalid]="(submitted && f.distance.errors)" [class.is-valid]="submitted && !f.distance.errors">
-                        <!-- || (f.type.value == 'hike' && f.distance.value > 3)-->
                         <div class="invalid-feedback">
                             Die Distanz ist muss zwischen 0 und 500 km liegen!
-                            <!--{{f.type.value != 'hike' ? "Die Distanz ist muss zwischen 0 und 500 km liegen!" : "Die Höhenmeter müssen zwischen 0 und 3 km liegen!" }}-->
                         </div>
                     </div>
-                    <!--<div class="alert alert-warning" *ngIf="f.type.value == 'hike'">
-                        Du hast <b>Wandern / Bergsteigen</b> als Sportart ausgewählt. Gib deshalb die <b>Höhenmeter</b> ein, die Du zurückgelegt hast, nicht die horizontale Strecke. Die Höhenmeter müssen zwischen 0 und 3 km liegen.
-                    </div>-->
                     <div class="alert alert-success" *ngIf="f.type.value && f.distance.value && f.type.value != 'bike'">
                         Das entspricht <b>{{getBikeDistance()}} Fahrradkilometern</b>.
                     </div>

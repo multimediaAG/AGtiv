@@ -7,9 +7,6 @@ import { data } from 'src/app/data/rounds';
 const types = {
   bike: 1,
   walk: 4,
-  skiroller: 2.5,
-  swim: 14,
-  hike: 80,
 }
 
 @Component({
@@ -91,9 +88,6 @@ export class MyWayComponent {
   public save() {
     this.submitted = true;
     if (!this.wayForm.invalid) {
-      if (this.wayForm.controls.type.value == "hike" && this.wayForm.controls.distance.value > 3) {
-        return;
-      }
       this.loading = true;
       this.remoteService.post(this.editing ? `ways/${this.route.snapshot.params.id}`: "ways", {
         distance: this.getBikeDistance(),

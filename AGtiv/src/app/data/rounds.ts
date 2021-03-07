@@ -38,7 +38,7 @@ export module data {
                 <h5>Es gibt noch eine zweite Runde mit neuen Zielen!</h5>
                 <p>Sie beginnt am <b>Samstag, 30. Mai</b>.</p>
             </div>`,
-            startDate: new Date("2021-04-28"),
+            startDate: new Date("2021-03-07"),
             text: `<p>- Das AG radelt, rollert und läuft gemeinsam einmal um die Welt! -</p><p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
             <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir versuchen, einmal virtuell die Welt zu umrunden! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren
                 Beitrag für dieses Ziel.
@@ -54,7 +54,7 @@ export module data {
                     x: 1183,
                     y: 426,
                     year: 0,
-                    text: "Hier geht's los!",
+                    text: "Die Olympischen Sommerspiele 2020 (offiziell Spiele der XXXII. Olympiade) sind die aktuellen Olympischen Sommerspiele und sollen vom 23. Juli bis zum 8. August 2021 in Tokio stattfinden.[1] Ursprünglich sollten sie vom 24. Juli bis 9. August 2020 abgehalten werden, doch wegen der sich ab dem Frühjahr 2020 weltweit ausbreitenden COVID-19-Pandemie wurden sie um fast genau ein Jahr verschoben",
                     isSummer: true,
                 },
                 {
@@ -64,7 +64,7 @@ export module data {
                     x: 1159,
                     y: 462,
                     year: 1350,
-                    text: "Hier waren die ersten Spiele, blablabla",
+                    text: "Die Olympischen Sommerspiele 2020 (offiziell Spiele der XXXII. Olympiade) sind die aktuellen Olympischen Sommerspiele und sollen vom 23. Juli bis zum 8. August 2021 in Tokio stattfinden.[1] Ursprünglich sollten sie vom 24. Juli bis 9. August 2020 abgehalten werden, doch wegen der sich ab dem Frühjahr 2020 weltweit ausbreitenden COVID-19-Pandemie wurden sie um fast genau ein Jahr verschoben",
                     isSummer: true,
                 },
             ],
@@ -91,6 +91,10 @@ export module data {
         {
             code: "au",
             name: "Australien"
+        },
+        {
+            code: "gr",
+            name: "Griechenland"
         },
         {
             code: "az",

@@ -4,14 +4,16 @@ import * as express from "express";
 import * as helmet from "helmet";
 import * as path from "path";
 import { createConnection } from "typeorm";
-import { config } from "./config/config";
 import { User } from "./entity/User";
 import { Way } from "./entity/Way";
 import { createAdminUser1574018391679 } from "./migration/1574018391679-createAdminUser";
 import routes from "./routes";
-import { toInt, log } from "./utils/utils";
+import { log } from "./utils/utils";
 import * as fs from "fs";
 import { RoundController } from "./controllers/RoundController";
+import { getConfig } from "container-env";
+
+const config = getConfig(JSON.parse(fs.readFileSync(path.join(__dirname, "../../container-env.json")).toString()), "/app/config/agtiv-config.json");
 
 // Connects to the Database -> then starts the express
 createConnection({
@@ -21,22 +23,22 @@ createConnection({
     migrationsDir: "src/migration",
     subscribersDir: "src/subscriber",
   },
-  database: config.database_name,
+  database: config.DB_NAME,
   // List all your entities here
   entities: [
     User,
     Way,
   ],
-  host: config.database_host,
+  host: config.DB_HOST,
   logging: false,
   // List all your migrations here
   migrations: [createAdminUser1574018391679],
   migrationsRun: true,
-  password: config.database_password,
-  port: toInt(config.database_port),
+  password: config.DB_PASSWORD,
+  port: config.DB_PORT,
   synchronize: true,
   type: "mysql",
-  username: config.database_user,
+  username: config.DB_USER,
 })
   .then(async (connection) => {
 
@@ -55,6 +57,9 @@ createConnection({
     // Create a new express application instance
     const app = express();
 
+    
+    app.locals.config = config;
+
     // Call midlewares
     // This sets up secure rules for CORS, see https://developer.mozilla.org/de/docs/Web/HTTP/CORS
     app.use(cors());
@@ -70,10 +75,15 @@ createConnection({
     app.use("/", express.static(path.join(__dirname, "../../frontend_build")));
     app.use("*", express.static(path.join(__dirname, "../../frontend_build/index.html")));
 
+    let port = 80;
+    if (process.env.NODE_ENV == "development") {
+        port = 3000;
+    }
+
     // That starts the server on the given port
-    app.listen(config.port, () => {
+    app.listen(port, () => {
       // tslint:disable-next-line: no-console
-      console.log(`Server started on port ${config.port}!`);
+      console.log(`Server started on port ${port}!`);
     });
   })
   // If an error happens, print it on the console

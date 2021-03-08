@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, AbstractControl } from "@angular/forms";
 import { HttpClient } from "@angular/common/http";
-import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 import { RemoteService } from 'src/app/services/remote.service';
 import { from } from 'rxjs';
 import { grades } from "../../data/grades";
+import { getApiUrl } from 'src/app/helpers/apiUrl';
 
 @Component({
   selector: 'app-signup',
@@ -44,7 +44,7 @@ export class SignupComponent implements OnInit {
     this.submitted = true;
     if (!this.signupForm.invalid  && this.f.password.value == this.f.passwordVerify.value) {
       this.loading = true;
-      this.httpClient.post(`${environment.apiUrl}users`, {
+      this.httpClient.post(`${getApiUrl()}users`, {
         username: this.f.username.value,
         realName: this.f.name.value,
         password: this.f.password.value,

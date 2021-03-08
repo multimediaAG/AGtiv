@@ -19,8 +19,7 @@
         "start": "ng serve",
         "build": "ng build --prod",
         "test": "ng test",
-        "lint": "ng lint",
-        "createFilesWithApiKeys": "node ../../createFilesWithApiKeys.js"
+        "lint": "ng lint"
     },
     "private": true,
     "dependencies": {

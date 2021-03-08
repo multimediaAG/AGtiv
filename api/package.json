@@ -50,7 +50,6 @@
         "prod": "tsc && node ./build/index.js",
         "build": "tsc",
         "lint": "npx tslint --project .",
-        "createFilesWithApiKeys": "node src/scripts/generateSecretFilesWithKeys.js",
         "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run"
     },
     "snyk": true

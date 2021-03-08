@@ -1,8 +1,6 @@
-import { validate } from "class-validator";
 import { Request, Response } from "express";
 import * as jwt from "jsonwebtoken";
 import { getRepository } from "typeorm";
-import { config } from "../config/config";
 import { User } from "../entity/User";
 import { log } from "../utils/utils";
 import { Way } from "../entity/Way";
@@ -37,7 +35,7 @@ class AuthController {
     }
     const token = jwt.sign(
       { userId: user.id, username: user.username },
-      config.jwtSecret,
+      res.app.locals.config.JWT_SECRET,
       { expiresIn: "1h" },
     );
 

@@ -11,7 +11,7 @@
     "rulesDirectory": [],
     "linterOptions": {
         "exclude": [
-
+            "src/data/rounds.ts"
         ]
     }
 }

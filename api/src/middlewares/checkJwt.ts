@@ -5,7 +5,7 @@ export const checkJwt = async (req: Request, res: Response, next: NextFunction) 
   // Get the jwt token from the head
   let token = req.headers.authorization as string;
   if (!token) {
-    token = req.query.authorization;
+    token = req.query.authorization.toString();
   }
   if (!token) {
     res.status(401).send({message: "Nicht authorisiert"});

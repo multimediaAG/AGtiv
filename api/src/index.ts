@@ -57,7 +57,6 @@ createConnection({
     // Create a new express application instance
     const app = express();
 
-    
     app.locals.config = config;
 
     // Call midlewares

@@ -14,14 +14,16 @@
 /* do not edit */         distance: number;
 /* do not edit */         x: number;
 /* do not edit */         y: number;
-/* do not edit */         year: number;
-/* do not edit */         text: string;
-/* do not edit */         isSummer: boolean;
+/* do not edit */         year?: number;
+/* do not edit */         text?: string;
+/* do not edit */         isSummer?: boolean;
 /* do not edit */         angleCCW?: boolean;
 /* do not edit */         left?: boolean;
 /* do not edit */         isEasternEndpoint?: boolean;
 /* do not edit */         isWesternStartpoint?: boolean;
 /* do not edit */         image?: string;
+/* do not edit */         isExtraCity?: boolean;
+/* do not edit */         wikiUrl?: string;
 /* do not edit */     }
 /* do not edit */ 
 /* do not edit */     export interface Round {
@@ -46,7 +48,7 @@
 /* do not edit */                 <h5>Es gibt noch eine zweite Runde mit neuen Zielen!</h5>
 /* do not edit */                 <p>Sie beginnt am <b>Samstag, 30. Mai</b>.</p>
 /* do not edit */             </div>`,
-/* do not edit */             startDate: new Date("2021-04-28"),
+/* do not edit */             startDate: new Date("2020-04-28"),
 /* do not edit */             text: `<p>- Das AG radelt, rollert und läuft gemeinsam einmal um die Welt! -</p><p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
 /* do not edit */             <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir versuchen, einmal virtuell die Welt zu umrunden! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren
 /* do not edit */                 Beitrag für dieses Ziel.
@@ -56,23 +58,715 @@
 /* do not edit */             <p>Eure Fachschaft Sport</p>`,
 /* do not edit */             cities: [
 /* do not edit */                 {
-/* do not edit */                     name: "Kempten",
-/* do not edit */                     country: "de",
-/* do not edit */                     distance: 0,
-/* do not edit */                     x: 1183,
-/* do not edit */                     y: 426,
-/* do not edit */                     year: 0,
-/* do not edit */                     text: "Hier geht's los!",
-/* do not edit */                     isSummer: true,
-/* do not edit */                 },
-/* do not edit */                 {
 /* do not edit */                     name: "Olympia",
 /* do not edit */                     country: "gr",
-/* do not edit */                     distance: 964,
-/* do not edit */                     x: 1159,
-/* do not edit */                     y: 462,
-/* do not edit */                     year: 1350,
-/* do not edit */                     text: "Hier waren die ersten Spiele, blablabla",
+/* do not edit */                     distance: 0,
+/* do not edit */                     x: 1267,
+/* do not edit */                     y: 514,
+/* do not edit */                     year: 0,
+/* do not edit */                     text: "Die heute nicht mehr bewohnte Stadt Olympia ist – wie am Namen unschwer zu erkennen – der Ursprungsort der Olympischen Spiele. In der Antike flankiert von einer heiligen Waffenruhe, die bei den streitlustigen Griechen bitter nötig war, wurden sie im Laufe der Zeit zu einem Symbol der Einheit aller Griechen. Auch heute noch steht der friedensstiftende und der Völkerverständigung dienliche Charakter der Spiele zumindest offiziell im Mittelpunkt. ",
+/* do not edit */                 },
+/* do not edit */                 {
+/* do not edit */                     name: "Athen",
+/* do not edit */                     country: "gr",
+/* do not edit */                     distance: 266,
+/* do not edit */                     x: 1280,
+/* do not edit */                     y: 511,
+/* do not edit */                     year: 2004,
+/* do not edit */                     text: "Athen, die Hauptstadt Griechenlands, hat eine bewegte Geschichte hinter sich. Nicht nur der Ursprung des Marathons steht der Sage nach in engem Zusammenhang mit Athen, auch die ersten Olympischen Spiele der Neuzeit wurden 1896 hier abgehalten, damals aber noch in deutlich kleinerem Rahmen als heute.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Istanbul",
+/* do not edit */                     country: "tr",
+/* do not edit */                     distance: 1094,
+/* do not edit */                     x: 307,
+/* do not edit */                     y: 483,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Samsun",
+/* do not edit */                     country: "tr",
+/* do not edit */                     distance: 731,
+/* do not edit */                     x: 1348,
+/* do not edit */                     y: 479,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Sotschi",
+/* do not edit */                     country: "ru",
+/* do not edit */                     distance: 903,
+/* do not edit */                     x: 1386,
+/* do not edit */                     y: 469,
+/* do not edit */                     year: 2014,
+/* do not edit */                     text: "Sotschi liegt am Schwarzen Meer und auf der gleichen Breitenlage wie Florenz und Nizza. Auch die Temperaturen fallen nur sehr selten unter 0°C. Die meisten Wettkämpfe fanden deshalb in den Bergen im Landesinneren auf über 600m Höhe statt. Fast alle Lifte, Bahnen etc. mussten neu gebaut werden, denn vorher war fast nichts vorhanden. Dies machte Sotchi zu den teuersten Spielen bisher.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Rostow am Don",
+/* do not edit */                     country: "ru",
+/* do not edit */                     distance: 553,
+/* do not edit */                     x: 1370,
+/* do not edit */                     y: 439,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Woronesch",
+/* do not edit */                     country: "ru",
+/* do not edit */                     distance: 568,
+/* do not edit */                     x: 1366,
+/* do not edit */                     y: 405,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Moskau",
+/* do not edit */                     country: "ru",
+/* do not edit */                     distance: 515,
+/* do not edit */                     x: 1362,
+/* do not edit */                     y: 5368,
+/* do not edit */                     year: 1980,
+/* do not edit */                     text: "Moskau, die Hauptstadt Russlands liegt an der Moskwa. Berühmt ist die Stadt für den Kreml, den Amtssitz des Präsidenten, und natürlich den Roten Platz mit den Türmen der Basilius-Kathedrale. 1980 war Moskau Austragungsort der olympischen Sommerspiele, die allerdings wegen des 1979 begonnenen Einmarsches der Sowjets in Afghanistan von vielen Ländern, darunter auch Deutschland, boykottiert wurden.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Helsinki",
+/* do not edit */                     country: "fi",
+/* do not edit */                     distance: 1082,
+/* do not edit */                     x: 1283,
+/* do not edit */                     y: 5324,
+/* do not edit */                     year: 1952,
+/* do not edit */                     text: "Während überall auf der Erde der Meeresspiegel ansteigt, hat Finnland damit kein Problem. Die Gletscher der letzten Eiszeit waren so schwer, dass sie die Erdkruste in Skandinavien in den Erdmantel hineindrückten. Seit das Eis vor 20.000 Jahren abgeschmolzen ist, hebt sich das Land langsam wieder an und der Meeresspiegelanstieg wird dadurch mehr als ausgeglichen. In Teilen Finnlands hebt sich das Land um 1cm/Jahr.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Stockholm",
+/* do not edit */                     country: "se",
+/* do not edit */                     distance: 524,
+/* do not edit */                     x: 1244,
+/* do not edit */                     y: 333,
+/* do not edit */                     year: 1912,
+/* do not edit */                     text: "Das Stadtgebiet Stockholms erstreckt sich über insgesamt 14 Inseln, die 53 Brücken miteinander verbinden. Dies hat Stockholm auch die Bezeichnung “Venedig des Nordens” eingebracht. Der Küste vorgelagert, finden sich mehr als 24.000 kleinere und größere Inseln, die als Schären bezeichnet werden, und die, wie auch die Ostsee selbst, ein Relikt aus der letzten Eiszeit darstellen.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Lillehammer",
+/* do not edit */                     country: "no",
+/* do not edit */                     distance: 614,
+/* do not edit */                     x: 1194,
+/* do not edit */                     y: 312,
+/* do not edit */                     year: 1994,
+/* do not edit */                     text: "Es gibt kaum einen Ort in Norwegen, der weiter vom Meer entfernt ist als Lillehammer. Und das ist auch gut so, denn sonst hätte es dort nie genug Schnee für Winterspiele gegeben. Denn der warme Golfstrom fließt an Norwegens Küste vorbei und beschert zumindest den Küstenregionen ein für diese Breitenlage ungewöhnlich mildes Klima.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Oslo",
+/* do not edit */                     country: "no",
+/* do not edit */                     distance: 186,
+/* do not edit */                     x: 1195,
+/* do not edit */                     y: 334,
+/* do not edit */                     year: 1952,
+/* do not edit */                     text: "Selbst in der Hauptstadt des so weit nördlich gelegenen Norwegen ist die Schneelage nicht immer sicher – für die Olympischen Winterspiele 1952 mussten, weil es zu wenig Schnee für die Abfahrten gab, Pisten künstlich präpariert werden. Oslo hieß bis 1924 „Kristiana“. Fast ein Drittel der gesamten Bevölkerung Norwegens (5,3 Millionen) lebt im Ballungsraum Oslo.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Berlin",
+/* do not edit */                     country: "de",
+/* do not edit */                     distance: 990,
+/* do not edit */                     x: 1208,
+/* do not edit */                     y: 397,
+/* do not edit */                     year: 1936,
+/* do not edit */                     text: "Olympia 1936 in Deutschland: Im Februar in Garmisch-Partenkirchen, im August in Berlin. Das Nazi-Regime nutzte und missbrauchte die Spiele, um sich im Ausland als sportbegeisterte und friedliebende Nation zu präsentieren. Bis heute ist das damals errichtete Olympiastadion ein Wahrzeichen der Stadt und Heimspielstätte von Hertha BSC.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Innsbruck",
+/* do not edit */                     country: "at",
+/* do not edit */                     distance: 753,
+/* do not edit */                     x: 1194,
+/* do not edit */                     y: 442,
+/* do not edit */                     year: 1976,
+/* do not edit */                     text: "Innsbruck ist die Hauptstadt des Bundeslandes Tirol. Gerade der Winter 1964 war sehr schneearm, so dass das Bundesheer 20000 Eisblöcke zu den Veranstaltungsorten transportieren musste. Die Bergisel-Schanze in Innsbruck ist wohl die einzige Skisprungschanze, bei der die Skispringer während des Fluges auf einen Friedhof schauen.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Sarajevo",
+/* do not edit */                     country: "ba",
+/* do not edit */                     distance: 989,
+/* do not edit */                     x: 1237,
+/* do not edit */                     y: 458,
+/* do not edit */                     year: 1984,
+/* do not edit */                     text: "1984 fanden die olympischen Winterspiele in Sarajevo im damaligen Jugoslawien statt. Acht Jahre später tobte der Bosnienkrieg. Heute ist Sarajevo die Hauptstadt des Staates Bosnien Herzegowina.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Garmisch-Patenkirchen",
+/* do not edit */                     country: "de",
+/* do not edit */                     distance: 985,
+/* do not edit */                     x: 1193,
+/* do not edit */                     y: 444,
+/* do not edit */                     year: 1936,
+/* do not edit */                     text: "Teile der Olympiaanlage der Winterspiele von Garmisch-Partenkirchen 1936 sind auch heute noch beim alljährlichen Neujahrsspringen der 4-Schanzentournee zu sehen wenn die Athleten nach den Sprüngen im Auslauf unten ankommen. Die Skisprungarena bot zu Beginn der Spiele 40.000 Zuschauer Platz, auf Grund des enormen Zuschauerandrangs wurde sie noch während der Spiele auf 60.000 Plätze ausgebaut.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Turin",
+/* do not edit */                     country: "it",
+/* do not edit */                     distance: 578,
+/* do not edit */                     x: 1179,
+/* do not edit */                     y: 578,
+/* do not edit */                     year: 2006,
+/* do not edit */                     text: "Die Stadt Turin ist eine wichtige Industriestadt im Norden Italiens und Zentrum der italienischen Autoindustrie. Viele Wettbewerbe wurden im über 90km entfernten Sestriere ausgetragen, das mit über 2000m Höhe sehr schneesicher ist. Erfolgreichster deutscher Teilnehmer war übrigens ein Allgäuer: Michael Greis aus Nesselwang gewann 3x Gold.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Rom",
+/* do not edit */                     country: "it",
+/* do not edit */                     distance: 692,
+/* do not edit */                     x: 1204,
+/* do not edit */                     y: 479,
+/* do not edit */                     year: 1960,
+/* do not edit */                     text: "Rom, die Hauptstadt Italiens, im Sommer 1960: Olympia in der “Ewigen Stadt” - Spiele, bei denen es eine ganze Reihe von Höhepunkten gab. Unter anderem lief als erster afrikanischer Sportler Abebe Bikila barfuß zum olympischen Gold im Marathon und der erst 18-jährige Muhammad Ali gewann seine Medaille im Halbschwergewicht. 1960 fand ein Vorläufer der Paralympics statt - die \"Weltspiele der Gelähmten\".",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Geneoble",
+/* do not edit */                     country: "fr",
+/* do not edit */                     distance: 921,
+/* do not edit */                     x: 1166,
+/* do not edit */                     y: 455,
+/* do not edit */                     year: 1968,
+/* do not edit */                     text: "Als die Winterspiele 1968 in der französischen Alpenmetropole ausgetragen wurden, gab es die Berliner Mauer schon seit sieben Jahren, doch zum ersten Mal traten die beiden deutschen Mannschaften der DDR und BRD gegeneinander an – allerdings noch mit gleicher Flagge und Hymne. Hier wurden auch die ersten Dopingkontrollen bei Olympischen Spielen durchgeführt.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Paris",
+/* do not edit */                     country: "fr",
+/* do not edit */                     distance: 576,
+/* do not edit */                     x: 1146,
+/* do not edit */                     y: 424,
+/* do not edit */                     year: 1924,
+/* do not edit */                     text: "Ballonwettfahrten, Hindernisschwimmen und die Jagd auf echte Tauben – was heute merkwürdig klingt, gehörte im Jahr 1900 in der französischen Hauptstadt zu den Disziplinen der Olympischen Spiele, die im Rahmen der Weltausstellung stattfanden. Man darf gespannt sein, was den Zuschauer 2024 in Paris bei den übernächsten Olympischen Spielen erwartet.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "London",
+/* do not edit */                     country: "gb",
+/* do not edit */                     distance: 459,
+/* do not edit */                     x: 1128,
+/* do not edit */                     y: 398,
+/* do not edit */                     year: 2012,
+/* do not edit */                     text: "1908 half in der britischen Hauptstadt der berühmte Sherlock- Holmes-Autor Arthur Doyle einem erschöpften italienischen Marathonläufer über die Ziellinie, der für diese Hilfestellung nachträglich disqualifiziert wurde. 1944 war dagegen ein friedliches, internationales Miteinander undenkbar – der Zweite Weltkrieg verhinderte die Austragung der Spiele in London. Doch schon 1948 und zuletzt 2012 kämpften die Athleten in London wieder friedlich um Medaillen.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Amsterdam",
+/* do not edit */                     country: "nl",
+/* do not edit */                     distance: 535,
+/* do not edit */                     x: 1154,
+/* do not edit */                     y: 396,
+/* do not edit */                     year: 1928,
+/* do not edit */                     text: "Amsterdam ist von unzähligen Kanälen, den “Grachten” durchzogen. Die Häuser stehen auf Millionen von Pfählen (früher aus Holz, heute aus Beton), die bis zu 20m in den moorigen Untergrund gerammt werden müssen, um festere Schichten zu erreichen, die das Gewicht der Häuser tragen können. Das klappt nicht immer: Viele alte Häuser sind so schief, dass die Bewohner ihre Möbel oder Fußböden anpassen müssen, damit z.B. keine Gegenstände vom Tisch rollen.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "München",
+/* do not edit */                     country: "de",
+/* do not edit */                     distance: 827,
+/* do not edit */                     x: 1197,
+/* do not edit */                     y: 433,
+/* do not edit */                     year: 1972,
+/* do not edit */                     text: "München war Austragungsort der Olympischen Sommerspiele im Jahr 1972. Dafür wurde damals sogar extra ein großes Gelände mit Sportstätten und einem olympischen Dorf für die Athletinnen und Athleten gebaut – für heute umgerechnet etwa 1 Milliarde Euro. Überschattet wurden die friedlichen Spiele 1972 von einem Attentat auf israelische Athleten durch Terroristen. Nach einem Trauertag wurden die Spiele wieder aufgenommen, um ein Zeichen für ein friedliches Miteinander und gegen den Terror zu setzen.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Cortina d´ Ampezzo",
+/* do not edit */                     country: "it",
+/* do not edit */                     distance: 299,
+/* do not edit */                     x: 1203,
+/* do not edit */                     y: 441,
+/* do not edit */                     year: 1956,
+/* do not edit */                     text: "Cortina d´Ampezzo, ein sehr schöner Skiort in den Dolomiten im Norden Italiens, war 1956 Austragungsort der olympischen Winterspiele. Mit dem Monte Cristallo (3221m) und der Tofana di Rozes (3225m) gilt Cortina als die Königin der Dolomiten.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Chamonix-Mont-Blanc",
+/* do not edit */                     country: "fr",
+/* do not edit */                     distance: 644,
+/* do not edit */                     x: 1170,
+/* do not edit */                     y: 448,
+/* do not edit */                     year: 1924,
+/* do not edit */                     text: "Chamonix liegt am Fuße des Mont Blanc, des höchsten Berges der Alpen (4810 m). 1924 wurden in Chamonix die ersten olympischen Winterspiele der Neuzeit ausgetragen.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Antwerpen",
+/* do not edit */                     country: "be",
+/* do not edit */                     distance: 888,
+/* do not edit */                     x: 1153,
+/* do not edit */                     y: 401,
+/* do not edit */                     year: 1920,
+/* do not edit */                     text: "Im Zentrum der belgischen Hafenstadt Antwerpen kann man Antwerpener Architektur im Stil der flämischen Renaissance bewundern. Peter Paul Rubens, einer der bekanntesten Barockmaler ist ein Kind dieser Stadt.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "St. Moritz",
+/* do not edit */                     country: "ch",
+/* do not edit */                     distance: 936,
+/* do not edit */                     x: 1187,
+/* do not edit */                     y: 411,
+/* do not edit */                     year: 1948,
+/* do not edit */                     text: "St. Moritz ist ein luxuriöser Ferienort im schweizerischen Engadin. In dem Skiort auf 1856 Metern Höhe fanden bereits zweimal olympische Winterspiele statt. Hier trifft sich alles, was Rang und Namen hat.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Albertville",
+/* do not edit */                     country: "fr",
+/* do not edit */                     distance: 488,
+/* do not edit */                     x: 1167,
+/* do not edit */                     y: 403,
+/* do not edit */                     year: 1992,
+/* do not edit */                     text: "Im französischen Albertville trat Deutschland 1992 zum ersten Mal seit der Wiedervereinigung mit einer gesamtdeutschen Mannschaft auf, die am Ende auch den Medaillenspiegel anführte.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Barcelona",
+/* do not edit */                     country: "es",
+/* do not edit */                     distance: 713,
+/* do not edit */                     x: 1143,
+/* do not edit */                     y: 482,
+/* do not edit */                     year: 1992,
+/* do not edit */                     text: "Barcelona ist die Hauptstadt Kataloniens und die zweitgrößte Stadt Spaniens. Die dort ausgetragenen Olympischen Sommerspiele 1992 waren eine echte Besonderheit. Zum ersten Mal seit 20 Jahren waren Sportler aller Nationen vertreten, denn nach der Auflösung der Sowjetunion schickten Estland, Lettland und Litauen jeweils eine eigene Mannschaft zu den Spielen und das wiedervereinigte Deutschland startete mit einem gesamtdeutschen Team.  ",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Malaga",
+/* do not edit */                     country: "es",
+/* do not edit */                     distance: 954,
+/* do not edit */                     x: 1099,
+/* do not edit */                     y: 517,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Casablanca",
+/* do not edit */                     country: "ma",
+/* do not edit */                     distance: 537,
+/* do not edit */                     x: 1089,
+/* do not edit */                     y: 532,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Fuerteventura",
+/* do not edit */                     country: "es",
+/* do not edit */                     distance: 826,
+/* do not edit */                     x: 1044,
+/* do not edit */                     y: 565,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Taarafal",
+/* do not edit */                     country: "cv",
+/* do not edit */                     distance: 1732,
+/* do not edit */                     x: 958,
+/* do not edit */                     y: 654,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Ilha Fernando de Noronha",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 2396,
+/* do not edit */                     x: 915,
+/* do not edit */                     y: 788,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Touros",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 409,
+/* do not edit */                     x: 900,
+/* do not edit */                     y: 796,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Salvador",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 1182,
+/* do not edit */                     x: 873,
+/* do not edit */                     y: 828,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Rio de Janeiro",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 1626,
+/* do not edit */                     x: 852,
+/* do not edit */                     y: 900,
+/* do not edit */                     year: 2016,
+/* do not edit */                     text: "Amerigo Vespucci (der Namensgeber “Amerikas”) sichtete am 1. Januar 1502 eine Bucht, die er für einen Fluss hielt und nannte sie “Fluss des Januar”. Der Zuckerhut, der Corcovado mit der Christusstatue sowie die Strände von Ipanema und Copacabana machen die Stadt zu einer der schönsten der Welt. Dabei wird häufig das Elend der Favelas übersehen, die von Drogenbanden kontrolliert werden.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Brasilia",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 2713,
+/* do not edit */                     x: 823,
+/* do not edit */                     y: 847,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Manaus",
+/* do not edit */                     country: "br",
+/* do not edit */                     distance: 957,
+/* do not edit */                     x: 757,
+/* do not edit */                     y: 777,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Bogota",
+/* do not edit */                     country: "co",
+/* do not edit */                     distance: 1782,
+/* do not edit */                     x: 639,
+/* do not edit */                     y: 718,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Panama City",
+/* do not edit */                     country: "pa",
+/* do not edit */                     distance: 816,
+/* do not edit */                     x: 612,
+/* do not edit */                     y: 707,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Guatemala City",
+/* do not edit */                     country: "gt",
+/* do not edit */                     distance: 1866,
+/* do not edit */                     x: 538,
+/* do not edit */                     y: 663,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Mexico City",
+/* do not edit */                     country: "mx",
+/* do not edit */                     distance: 1396,
+/* do not edit */                     x: 493,
+/* do not edit */                     y: 637,
+/* do not edit */                     year: 1968,
+/* do not edit */                     text: "Oktober 1968, Olympische Spiele in Mexico-City: Zwei dunkelhäutige US-Sprinter stehen auf der Siegertreppe. Sie strecken mit gesenktem Kopf ihre geballte Faust in einem schwarzen Handschuh in die Höhe, während die amerikanische Hymne gespielt wird. Vor den Augen der Welt wollen sie damit ein Zeichen setzen gegen Armut und die Ungerechtigkeit gegenüber Schwarzen in den USA. Mit Erfolg, denn die Bilder lösen eine große Diskussion aus: Dürfen SportlerInnen öffentlich eine politische Meinung vertreten und sich während einer Siegerehrung für Gleichberechtigung einsetzen? Das amerikanische Olympiakomitee ist dagegen. Die zwei Sportler müssen danach sofort das olympische Dorf verlassen und dürfen nie wieder an Olympischen Spielen teilnehmen. Erst viele Jahre später, im Dezember 2020, hat das amerikanische Olympiakomitee nun bekannt gegeben, dass seine SportlerInnen künftig „respektvoll protestieren“ dürfen. Ob bei Olympischen Spielen, beim American Football oder beim Fußball - heute ist es verbreitet und wird unterstützt, dass SportlerInnen sich aktiv dafür einsetzen, dass Rassismus in Gesellschaft und Sport keinen Platz haben darf. ",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Torreon",
+/* do not edit */                     country: "mx",
+/* do not edit */                     distance: 999,
+/* do not edit */                     x: 460,
+/* do not edit */                     y: 594,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Phoenix",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 1361,
+/* do not edit */                     x: 400,
+/* do not edit */                     y: 544,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Los Angeles",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 600,
+/* do not edit */                     x: 359,
+/* do not edit */                     y: 542,
+/* do not edit */                     year: 1984,
+/* do not edit */                     text: "Los Angeles ist sehr erdbebengefährdet, weil dort Erdplatten aneinander entlangdriften oder sich sogar übereinander schieben. Deswegen wurden lange Zeit keine Hochhäuser gebaut. Dadurch ist die Stadt enorm gewachsen: Die Fläche ist viermal so groß wie die von München, aber auf einen Quadratkilometer leben nur gut halb so viele Menschen. Weil die so weite Wege zurücklegen müssen und meistens Auto fahren, herrscht sehr oft Smog. Olympische Spiele gab es in Los Angeles schon zweimal, 1932 und 1984. Aber 1984 haben die Länder des damaligen Ostblocks um die Sowjetunion nicht mitgemacht – in Moskau erfährst du warum! ",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Albuquerque",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 1259,
+/* do not edit */                     x: 439,
+/* do not edit */                     y: 532,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Oklahoma City",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 868,
+/* do not edit */                     x: 493,
+/* do not edit */                     y: 532,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Memphis",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 745,
+/* do not edit */                     x: 533,
+/* do not edit */                     y: 533,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Atlanta",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 625,
+/* do not edit */                     x: 583,
+/* do not edit */                     y: 540,
+/* do not edit */                     year: 1996,
+/* do not edit */                     text: "Atlanta ist die Hauptstadt und größte Stadt des US- Bundesstaates Georgia. Ursprünglich siedelten hier Cherokee und Muskogee-Indianer. Atlanta ist auch Geburtsstadt von Martin Luther King. ",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "St. Louis",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 889,
+/* do not edit */                     x: 542,
+/* do not edit */                     y: 515,
+/* do not edit */                     year: 1904,
+/* do not edit */                     text: "St. Louis ist allen Karl May-Fans gut bekannt. Old Shatterhand ritt immer wieder in diese Stadt am Mississippi, die als Tor zum Westen galt. Heute ist St. Louis eine Großstadt in Missouri, die mit typischen Problemen zu kämpfen hat. Die Kriminalität ist hoch, in der Innenstadt stehen Bauruinen und wer es sich leisten kann, zieht aus der Innenstadt in attraktivere Vorstädte.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Detroit",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 864,
+/* do not edit */                     x: 587,
+/* do not edit */                     y: 467,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Montreal",
+/* do not edit */                     country: "ca",
+/* do not edit */                     distance: 899,
+/* do not edit */                     x: 649,
+/* do not edit */                     y: 438,
+/* do not edit */                     year: 1976,
+/* do not edit */                     text: "Montreal ist die zweitgrößte Stadt Kanadas, die größte Stadt der Provinz Quebec und nach Paris die zweitgrößte französischsprachige Stadt der Welt. Ein Referendum um die Unabhängigkeit Quebecs von Kanada scheiterte 1995 nur äußerst knapp (49.42% zu 50,58%) und seit 2006 gelten die Einwohner Quebecs als eine eigene Nation innerhalb Kanadas.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Lake Placid",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 181,
+/* do not edit */                     x: 646,
+/* do not edit */                     y: 444,
+/* do not edit */                     year: 1980,
+/* do not edit */                     text: "Nach 1932 fanden im Jahr 1980 bereits die zweiten olympischen Winterspiele in Lake Placid im US-Bundesstaat New York statt. Erstmals nahm die Volksrepublik China an Olympischen Winterspielen teil. Außerdem wurde zum ersten Mal Kunstschnee eingesetzt.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Sault Ste. Marie",
+/* do not edit */                     country: "ca",
+/* do not edit */                     distance: 1008,
+/* do not edit */                     x: 584,
+/* do not edit */                     y: 439,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Devils Lake",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 1240,
+/* do not edit */                     x: 491,
+/* do not edit */                     y: 423,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Calgary",
+/* do not edit */                     country: "ca",
+/* do not edit */                     distance: 1300,
+/* do not edit */                     x: 382,
+/* do not edit */                     y: 411,
+/* do not edit */                     year: 1988,
+/* do not edit */                     text: "Calgary liegt auf 1048m Höhe ca. 80km östlich der Rocky Mountains und damit eigentlich optimal für olympische Winterspiele. Leider führte der Chinook (ein warmer Fallwind wie unser Föhn) dazu, dass bei den Spielen an einem einzigen Tag die Temperatur von –30 auf +12°C anstieg und Schnee und Kunsteis schmolz. Die Verantwortlichen hätten gewarnt sein müssen, denn der Chinook ist in dieser Region ein häufiges Phänomen.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Vancouver",
+/* do not edit */                     country: "ca",
+/* do not edit */                     distance: 1007,
+/* do not edit */                     x: 338,
+/* do not edit */                     y: 429,
+/* do not edit */                     year: 2010,
+/* do not edit */                     text: "Vancouver liegt an der Westküste Kanadas und genau dort, wo die feuchten Luftmassen des Pazifiks über eine Gebirgskette aufsteigen müssen. Auf Vancouver Island wächst deshalb ein gemäßigter Regenwald und in den Bergen um Whistler sorgt dies im Winter für hohe Schneemengen – perfekt für Wintersport.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Portland",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 520,
+/* do not edit */                     x: 326,
+/* do not edit */                     y: 468,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Squaw Valley",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 1256,
+/* do not edit */                     x: 354,
+/* do not edit */                     y: 494,
+/* do not edit */                     year: 1960,
+/* do not edit */                     text: "Als das “Tal der Indianerin” den Zuschlag für die Spiele bekam, stand dort nur ein einziges Hotel. Doch das änderte sich schnell: für Olympia 1960 wurde innerhalb kurzer Zeit ein Wintersportparadies aus dem Boden gestampft. Nur die Bobfahrer gingen in diesem Jahr leer aus. Da nur wenige Teilnehmer erwartet wurden, weigerten sich die Veranstalter, ihnen eine Bahn zu bauen.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Salt Lake City",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 1309,
+/* do not edit */                     x: 399,
+/* do not edit */                     y: 482,
+/* do not edit */                     year: 2002,
+/* do not edit */                     text: "Der “Große Salzsee”, der der Hauptstadt der Mormonen seinen Namen gab, ist ca. 120km lang und hat einen Salzgehalt von bis zu 27%. Er ist damit 7x salzhaltiger als das Mittelmeer. Auf den ausgetrockneten Salzebenen rund um den See werden immer wieder Hochgeschwindigkeitsrennen ausgetragen – wenn es nicht ausnahmsweise einmal geregnet hat.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Hawaii",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 4742,
+/* do not edit */                     x: 139,
+/* do not edit */                     y: 631,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Howland Island",
+/* do not edit */                     country: "us",
+/* do not edit */                     distance: 3113,
+/* do not edit */                     x: 2300,
+/* do not edit */                     y: 749,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Lakena",
+/* do not edit */                     country: "tv",
+/* do not edit */                     distance: 1083,
+/* do not edit */                     x: 2253,
+/* do not edit */                     y: 805,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Vanuatu",
+/* do not edit */                     country: "vu",
+/* do not edit */                     distance: 1464,
+/* do not edit */                     x: 2182,
+/* do not edit */                     y: 870,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Brisbane",
+/* do not edit */                     country: "au",
+/* do not edit */                     distance: 1923,
+/* do not edit */                     x: 2117,
+/* do not edit */                     y: 918,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Melbourne",
+/* do not edit */                     country: "au",
+/* do not edit */                     distance: 1752,
+/* do not edit */                     x: 2071,
+/* do not edit */                     y: 1010,
+/* do not edit */                     year: 1956,
+/* do not edit */                     text: "Traumlage an der Great-Ocean-Road an der SO-Küste Australiens, zweitgrößte Stadt nach Sydney, südöstlichste Millionenstadt der Welt, größter Museumskomplex der Südhalbkugel - die Hauptstadt des australischen Bundesstaats Viktoria kann sich mit vielen Superlativen schmücken - aber Melbourne trägt auch die wichtigsten Sportveranstaltungen Australiens aus!",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Sydney",
+/* do not edit */                     country: "au",
+/* do not edit */                     distance: 875,
+/* do not edit */                     x: 2103,
+/* do not edit */                     y: 976,
+/* do not edit */                     year: 2000,
+/* do not edit */                     text: "Diese australische Metropolregion ist nicht nur Hauptstadt des Bundesstaates New South Wales, sondern auch die größte Stadt des Kontinents und dessen Handels- und Finanzzentrum. Jeder kennt das weltberühmteste Opernhaus, das aber auch 10 x mehr kostete als ursprünglich geplant.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Mackay",
+/* do not edit */                     country: "au",
+/* do not edit */                     distance: 1427,
+/* do not edit */                     x: 2095,
+/* do not edit */                     y: 897,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Atape",
+/* do not edit */                     country: "pg",
+/* do not edit */                     distance: 2133,
+/* do not edit */                     x: 2046,
+/* do not edit */                     y: 770,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Palau",
+/* do not edit */                     country: "fm",
+/* do not edit */                     distance: 1455,
+/* do not edit */                     x: 1977,
+/* do not edit */                     y: 699,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Nago-Okinawa",
+/* do not edit */                     country: "jp",
+/* do not edit */                     distance: 2238,
+/* do not edit */                     x: 1943,
+/* do not edit */                     y: 610,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Qingdao",
+/* do not edit */                     country: "cn",
+/* do not edit */                     distance: 1275,
+/* do not edit */                     x: 1900,
+/* do not edit */                     y: 512,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Peking",
+/* do not edit */                     country: "cn",
+/* do not edit */                     distance: 646,
+/* do not edit */                     x: 1870,
+/* do not edit */                     y: 485,
+/* do not edit */                     year: 2008,
+/* do not edit */                     text: "China ist die aufstrebende Weltmacht und zeigt das auch bei Olympischen Spielen: Nach den Sommerspielen 2008 sollen 2022 auch Winterspiele in der Hauptstadt Peking stattfinden. Das hat noch keine andere Stadt fertig gebracht. Aber dazu muss man wissen, dass die Ski- und Langlaufwettbewerbe rund 150 Kilometer von Peking entfernt ausgetragen werden, weil es in Peking selbst gar keine richtigen Berge gibt. Das bedeutet viel Verkehr und  Peking hat ohnehin große Probleme mit schlechter Luft. ",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Quinhuandao",
+/* do not edit */                     country: "cn",
+/* do not edit */                     distance: 292,
+/* do not edit */                     x: 1894,
+/* do not edit */                     y: 487,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Huludao",
+/* do not edit */                     country: "cn",
+/* do not edit */                     distance: 170,
+/* do not edit */                     x: 1898,
+/* do not edit */                     y: 484,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Dandong",
+/* do not edit */                     country: "cn",
+/* do not edit */                     distance: 488,
+/* do not edit */                     x: 1942,
+/* do not edit */                     y: 487,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Pyeongchang",
+/* do not edit */                     country: "kr",
+/* do not edit */                     distance: 633,
+/* do not edit */                     x: 1949,
+/* do not edit */                     y: 506,
+/* do not edit */                     year: 2018,
+/* do not edit */                     text: "Die bislang letzten Winterspiele fanden in der südkoreanischen Stadt Pyeongchang statt. Südkorea ist heute bekannt für Smartphones, Autos, Hightech, K-Pop und eben auch als Ausrichter von olympischen Spielen. Noch vor gut 60 Jahren war das Land jedoch ein verarmter Agrarstaat, der auf Wirtschaftshilfen, z.B. von Seiten der USA, angewiesen war.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Seoul",
+/* do not edit */                     country: "kr",
+/* do not edit */                     distance: 242,
+/* do not edit */                     x: 1949,
+/* do not edit */                     y: 504,
+/* do not edit */                     year: 1988,
+/* do not edit */                     text: "Hyundai, LG, Samsung – Südkorea ist in unserem Bewusstsein eine reiche und hochtechnisierte Demokratie. Als 1988 die Olympischen Sommerspiele in der Hauptstadt Seoul ausgerichtet wurden, war das noch ganz anders: Südkorea war erst seit kurzem im Begriff, ein demokratischer und wohlhabender Staat zu werden. Beides ist er bis heute, ganz im Gegensatz zu seinem bettelarmen Nachbarn in Nordkorea, wo seit Jahrzehnten Diktatoren herrschen. Nordkorea boykottierte übrigens nach gescheiterten Verhandlungen über eine Beteiligung an der Austragung die Spiele von Seoul.",
+/* do not edit */                     isSummer: true,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Sapporo",
+/* do not edit */                     country: "jp",
+/* do not edit */                     distance: 2623,
+/* do not edit */                     x: 2038,
+/* do not edit */                     y: 464,
+/* do not edit */                     year: 1972,
+/* do not edit */                     text: "Sapporo liegt auf Hokkaido, der nördlichsten der japanischen Hauptinseln. Im Winter weht ein kalter Wind aus Zentralasien, der Nordwestmonsun, über das Japanische Meer und nimmt Feuchtigkeit auf. In Sapporo stauen sich diese Luftmassen und steigen auf. Dies führt dazu, dass dort im Durchschnitt über 5m Schnee in einer Saison fallen.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Sendai",
+/* do not edit */                     country: "jp",
+/* do not edit */                     distance: 747,
+/* do not edit */                     x: 2029,
+/* do not edit */                     y: 502,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Nagano",
+/* do not edit */                     country: "jp",
+/* do not edit */                     distance: 472,
+/* do not edit */                     x: 2011,
+/* do not edit */                     y: 518,
+/* do not edit */                     year: 1998,
+/* do not edit */                     text: "Der Inselstaat Japan ist eigentlich ein Gebirge im Meer: über 70% der Landesfläche besteht aus Bergen. Kein Wunder also, dass von hier viele gute Wintersportler kommen und dort bereits zweimal die Winterspiele ausgetragen wurden – obwohl Nagano auf gleicher Breitenlage wie Gibraltar liegt und somit der bisher südlichste Austragungsort für Winterspiele war.",
+/* do not edit */                     isSummer: false,
+/* do not edit */                 },
+/* do not edit */ 				{
+/* do not edit */                     name: "Tokyo",
+/* do not edit */                     country: "jp",
+/* do not edit */                     distance: 232,
+/* do not edit */                     x: 2022,
+/* do not edit */                     y: 525,
+/* do not edit */                     year: 1964,
+/* do not edit */                     text: "In Tokio lauert die Bedrohung unter der Erde: Unter Japan treffen verschiedene Erdplatten aufeinander und immer wieder erschüttern Erdbeben auch die Regionen um Tokio. Das letzte schwere Beben ereignete sich im Jahr 1923, bei dem 140.000 Menschen durch einstürzende Gebäude oder Brände starben.  Da die großen Beben ungefähr alle 60 Jahren auftreten, erwarten viele Japaner in naher Zukunft die nächste Katastrophe und versuchen sich durch erdbebensichere Architektur und Katastrophenübungen vorzubereiten.",
 /* do not edit */                     isSummer: true,
 /* do not edit */                 },
 /* do not edit */             ],
@@ -97,6 +791,10 @@
 /* do not edit */             name: "Argentinien"
 /* do not edit */         },
 /* do not edit */         {
+/* do not edit */             code: "at",
+/* do not edit */             name: "Österreich"
+/* do not edit */         },
+/* do not edit */ 		{
 /* do not edit */             code: "au",
 /* do not edit */             name: "Australien"
 /* do not edit */         },
@@ -105,6 +803,14 @@
 /* do not edit */             name: "Aserbaidschan"
 /* do not edit */         },
 /* do not edit */         {
+/* do not edit */             code: "ba",
+/* do not edit */             name: "Bosnien-Herzegowina"
+/* do not edit */ 		},
+/* do not edit */         {
+/* do not edit */             code: "be",
+/* do not edit */             name: "Belgien"
+/* do not edit */ 		},
+/* do not edit */ 		{
 /* do not edit */             code: "bg",
 /* do not edit */             name: "Bulgarien"
 /* do not edit */         },
@@ -188,6 +894,10 @@
 /* do not edit */             code: "cu",
 /* do not edit */             name: "Kuba"
 /* do not edit */         },
+/* do not edit */ 		{
+/* do not edit */             code: "cv",
+/* do not edit */             name: "Cabo Verde"
+/* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "de",
 /* do not edit */             name: "Deutschland"
@@ -228,6 +938,10 @@
 /* do not edit */             code: "fj",
 /* do not edit */             name: "Fidschi"
 /* do not edit */         },
+/* do not edit */ 		{
+/* do not edit */             code: "fm",
+/* do not edit */             name: "Mikronesien"
+/* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "fr",
 /* do not edit */             name: "Frankreich"
@@ -237,6 +951,10 @@
 /* do not edit */             name: "Gabun"
 /* do not edit */         },
 /* do not edit */         {
+/* do not edit */             code: "gb",
+/* do not edit */             name: "Großbritannien"
+/* do not edit */         },
+/* do not edit */ 		{
 /* do not edit */             code: "ge",
 /* do not edit */             name: "Georgien"
 /* do not edit */         },
@@ -256,7 +974,11 @@
 /* do not edit */             code: "gl",
 /* do not edit */             name: "Grönland"
 /* do not edit */         },
-/* do not edit */         {
+/* do not edit */ 		{
+/* do not edit */             code: "gr",
+/* do not edit */             name: "Griechenland"
+/* do not edit */         },
+/* do not edit */ 		{
 /* do not edit */             code: "gn",
 /* do not edit */             name: "Guinea"
 /* do not edit */         },
@@ -360,7 +1082,11 @@
 /* do not edit */             code: "no",
 /* do not edit */             name: "Norwegen"
 /* do not edit */         },
-/* do not edit */         {
+/* do not edit */ 		{
+/* do not edit */             code: "nl",
+/* do not edit */             name: "Niederlande"
+/* do not edit */         },
+/* do not edit */ 		{
 /* do not edit */             code: "np",
 /* do not edit */             name: "Nepal"
 /* do not edit */         },
@@ -383,6 +1109,10 @@
 /* do not edit */         {
 /* do not edit */             code: "pf",
 /* do not edit */             name: "Französisch-Polynesien"
+/* do not edit */         },
+/* do not edit */ 		{
+/* do not edit */             code: "pg",
+/* do not edit */             name: "Papua Neuguinea"
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ph",
@@ -464,6 +1194,10 @@
 /* do not edit */             code: "tr",
 /* do not edit */             name: "Türkei"
 /* do not edit */         },
+/* do not edit */ 		{
+/* do not edit */             code: "tv",
+/* do not edit */             name: "Tuvalu"
+/* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "tw",
 /* do not edit */             name: "Taiwan"
@@ -487,6 +1221,10 @@
 /* do not edit */         {
 /* do not edit */             code: "vn",
 /* do not edit */             name: "Vietnam"
+/* do not edit */         },
+/* do not edit */ 		{
+/* do not edit */             code: "vu",
+/* do not edit */             name: "Vanuatu"
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ws",

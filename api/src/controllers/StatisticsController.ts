@@ -179,16 +179,28 @@ class StatisticsController {
 
 
       let first = true;
-      const drawRoute = (cities, color, dotted?) => {
+      const drawRoute = (cities: data.City[], color, dotted?) => {
         let pathString = "";
         for (const city of cities) {
           if (!city.x) continue;
+
           if (city.isWesternStartpoint) {
             pathString += ` M 0 ${city.y}`
             pathString += ` L ${city.x} ${city.y}`
-          } else {
-            pathString += ` ${first ? "M" : "L"} ${city.x} ${city.y}`
           }
+          
+          if (city.isEasternStartpoint) {
+            pathString += ` M ${img.width} ${city.y}`
+            pathString += ` L ${city.x} ${city.y}`
+          }
+          
+          pathString += ` ${first ? "M" : "L"} ${city.x} ${city.y}`
+
+          if (city.isWesternEndpoint) {
+            pathString += ` M 0 ${city.y}`
+            pathString += ` L ${city.x} ${city.y}`
+          }
+
           if (city.isEasternEndpoint) {
             pathString += ` L ${img.width} ${city.y}`
             drawPath(canvas, pathString, color, dotted);

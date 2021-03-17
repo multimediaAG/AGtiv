@@ -21,6 +21,8 @@
 /* do not edit */         left?: boolean;
 /* do not edit */         isEasternEndpoint?: boolean;
 /* do not edit */         isWesternStartpoint?: boolean;
+/* do not edit */         isEasternStartpoint?: boolean;
+/* do not edit */         isWesternEndpoint?: boolean;
 /* do not edit */         image?: string;
 /* do not edit */         isExtraCity?: boolean;
 /* do not edit */         wikiUrl?: string;
@@ -80,7 +82,7 @@
 /* do not edit */                     name: "Istanbul",
 /* do not edit */                     country: "tr",
 /* do not edit */                     distance: 1094,
-/* do not edit */                     x: 307,
+/* do not edit */                     x: 1307,
 /* do not edit */                     y: 483,
 /* do not edit */                 },
 /* do not edit */ 				{
@@ -119,7 +121,7 @@
 /* do not edit */                     country: "ru",
 /* do not edit */                     distance: 515,
 /* do not edit */                     x: 1362,
-/* do not edit */                     y: 5368,
+/* do not edit */                     y: 368,
 /* do not edit */                     year: 1980,
 /* do not edit */                     text: "Moskau, die Hauptstadt Russlands liegt an der Moskwa. Berühmt ist die Stadt für den Kreml, den Amtssitz des Präsidenten, und natürlich den Roten Platz mit den Türmen der Basilius-Kathedrale. 1980 war Moskau Austragungsort der olympischen Sommerspiele, die allerdings wegen des 1979 begonnenen Einmarsches der Sowjets in Afghanistan von vielen Ländern, darunter auch Deutschland, boykottiert wurden.",
 /* do not edit */                     isSummer: true,
@@ -129,7 +131,7 @@
 /* do not edit */                     country: "fi",
 /* do not edit */                     distance: 1082,
 /* do not edit */                     x: 1283,
-/* do not edit */                     y: 5324,
+/* do not edit */                     y: 324,
 /* do not edit */                     year: 1952,
 /* do not edit */                     text: "Während überall auf der Erde der Meeresspiegel ansteigt, hat Finnland damit kein Problem. Die Gletscher der letzten Eiszeit waren so schwer, dass sie die Erdkruste in Skandinavien in den Erdmantel hineindrückten. Seit das Eis vor 20.000 Jahren abgeschmolzen ist, hebt sich das Land langsam wieder an und der Meeresspiegelanstieg wird dadurch mehr als ausgeglichen. In Teilen Finnlands hebt sich das Land um 1cm/Jahr.",
 /* do not edit */                     isSummer: true,
@@ -597,6 +599,7 @@
 /* do not edit */                     distance: 4742,
 /* do not edit */                     x: 139,
 /* do not edit */                     y: 631,
+/* do not edit */                     isWesternEndpoint: true,
 /* do not edit */                 },
 /* do not edit */ 				{
 /* do not edit */                     name: "Howland Island",
@@ -604,6 +607,7 @@
 /* do not edit */                     distance: 3113,
 /* do not edit */                     x: 2300,
 /* do not edit */                     y: 749,
+/* do not edit */                     isEasternStartpoint: true,
 /* do not edit */                 },
 /* do not edit */ 				{
 /* do not edit */                     name: "Lakena",

@@ -13,6 +13,8 @@ export module data {
         left?: boolean;
         isEasternEndpoint?: boolean;
         isWesternStartpoint?: boolean;
+        isEasternStartpoint?: boolean;
+        isWesternEndpoint?: boolean;
         image?: string;
         isExtraCity?: boolean;
         wikiUrl?: string;
@@ -72,7 +74,7 @@ export module data {
                     name: "Istanbul",
                     country: "tr",
                     distance: 1094,
-                    x: 307,
+                    x: 1307,
                     y: 483,
                 },
 				{
@@ -111,7 +113,7 @@ export module data {
                     country: "ru",
                     distance: 515,
                     x: 1362,
-                    y: 5368,
+                    y: 368,
                     year: 1980,
                     text: "Moskau, die Hauptstadt Russlands liegt an der Moskwa. Berühmt ist die Stadt für den Kreml, den Amtssitz des Präsidenten, und natürlich den Roten Platz mit den Türmen der Basilius-Kathedrale. 1980 war Moskau Austragungsort der olympischen Sommerspiele, die allerdings wegen des 1979 begonnenen Einmarsches der Sowjets in Afghanistan von vielen Ländern, darunter auch Deutschland, boykottiert wurden.",
                     isSummer: true,
@@ -121,7 +123,7 @@ export module data {
                     country: "fi",
                     distance: 1082,
                     x: 1283,
-                    y: 5324,
+                    y: 324,
                     year: 1952,
                     text: "Während überall auf der Erde der Meeresspiegel ansteigt, hat Finnland damit kein Problem. Die Gletscher der letzten Eiszeit waren so schwer, dass sie die Erdkruste in Skandinavien in den Erdmantel hineindrückten. Seit das Eis vor 20.000 Jahren abgeschmolzen ist, hebt sich das Land langsam wieder an und der Meeresspiegelanstieg wird dadurch mehr als ausgeglichen. In Teilen Finnlands hebt sich das Land um 1cm/Jahr.",
                     isSummer: true,
@@ -589,6 +591,7 @@ export module data {
                     distance: 4742,
                     x: 139,
                     y: 631,
+                    isWesternEndpoint: true,
                 },
 				{
                     name: "Howland Island",
@@ -596,6 +599,7 @@ export module data {
                     distance: 3113,
                     x: 2300,
                     y: 749,
+                    isEasternStartpoint: true,
                 },
 				{
                     name: "Lakena",

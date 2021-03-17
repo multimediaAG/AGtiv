@@ -5,7 +5,7 @@ export const canHaveJwt = async (req: Request, res: Response, next: NextFunction
   // Get the jwt token from the head
   let token = req.headers.authorization as string;
   if (!token) {
-    token = req.query.authorization.toString();
+    token = req.query.authorization?.toString();
   }
   if (!token) {
     next();

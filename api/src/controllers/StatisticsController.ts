@@ -188,12 +188,12 @@ class StatisticsController {
             pathString += ` M 0 ${city.y}`
             pathString += ` L ${city.x} ${city.y}`
           }
-          
+
           if (city.isEasternStartpoint) {
             pathString += ` M ${img.width} ${city.y}`
             pathString += ` L ${city.x} ${city.y}`
           }
-          
+
           pathString += ` ${first ? "M" : "L"} ${city.x} ${city.y}`
 
           if (city.isWesternEndpoint) {

@@ -112,6 +112,45 @@ class StatisticsController {
         }
       citiesNotVisited.unshift(citiesVisited[citiesVisited.length - 1]);
 
+
+
+      let first = true;
+      const drawRoute = (cities: data.City[], color, dotted?) => {
+        let pathString = "";
+        for (const city of cities) {
+          if (!city.x) continue;
+
+          if (city.isWesternStartpoint) {
+            pathString += ` M 0 ${city.y}`
+            pathString += ` L ${city.x} ${city.y}`
+          }
+
+          if (city.isEasternStartpoint) {
+            pathString += ` M ${img.width} ${city.y}`
+            pathString += ` L ${city.x} ${city.y}`
+          }
+
+          pathString += ` ${first ? "M" : "L"} ${city.x} ${city.y}`
+
+          if (city.isWesternEndpoint) {
+            pathString += ` M 0 ${city.y}`
+            pathString += ` L ${city.x} ${city.y}`
+          }
+
+          if (city.isEasternEndpoint) {
+            pathString += ` L ${img.width} ${city.y}`
+            drawPath(canvas, pathString, color, dotted);
+            pathString = "";
+          }
+          first = false;
+        }
+        drawPath(canvas, pathString, color, dotted);
+      }
+
+      drawRoute(citiesVisited, SECONDARY);
+      drawRoute(citiesNotVisited, GREY, true);
+
+      
       const texts = [];
 
       for (const city of citiesVisited) {
@@ -176,43 +215,6 @@ class StatisticsController {
         texts.push(t);
       }
       canvas.add(...texts);
-
-
-      let first = true;
-      const drawRoute = (cities: data.City[], color, dotted?) => {
-        let pathString = "";
-        for (const city of cities) {
-          if (!city.x) continue;
-
-          if (city.isWesternStartpoint) {
-            pathString += ` M 0 ${city.y}`
-            pathString += ` L ${city.x} ${city.y}`
-          }
-
-          if (city.isEasternStartpoint) {
-            pathString += ` M ${img.width} ${city.y}`
-            pathString += ` L ${city.x} ${city.y}`
-          }
-
-          pathString += ` ${first ? "M" : "L"} ${city.x} ${city.y}`
-
-          if (city.isWesternEndpoint) {
-            pathString += ` M 0 ${city.y}`
-            pathString += ` L ${city.x} ${city.y}`
-          }
-
-          if (city.isEasternEndpoint) {
-            pathString += ` L ${img.width} ${city.y}`
-            drawPath(canvas, pathString, color, dotted);
-            pathString = "";
-          }
-          first = false;
-        }
-        drawPath(canvas, pathString, color, dotted);
-      }
-
-      drawRoute(citiesVisited, SECONDARY);
-      drawRoute(citiesNotVisited, GREY, true);
 
 
       canvas.renderAll();

@@ -71,8 +71,8 @@ createConnection({
     app.use("/api", routes);
 
     // Set routes for static built frontend
-    app.use("/", express.static(path.join(__dirname, "../../frontend_build")));
-    app.use("*", express.static(path.join(__dirname, "../../frontend_build/index.html")));
+    app.use("/", express.static(path.join(__dirname, "./frontend")));
+    app.use("*", express.static(path.join(__dirname, "./frontend/index.html")));
 
     let port = 80;
     if (process.env.NODE_ENV == "development") {

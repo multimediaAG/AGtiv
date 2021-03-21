@@ -13,7 +13,7 @@ import * as fs from "fs";
 import { RoundController } from "./controllers/RoundController";
 import { getConfig } from "container-env";
 
-const config = getConfig(JSON.parse(fs.readFileSync(path.join(__dirname, "../../../container-env.json")).toString()), "/app/config/agtiv-config.json");
+const config = getConfig(JSON.parse(fs.readFileSync(path.join(__dirname, "../../container-env.json")).toString()), "/app/config/agtiv-config.json");
 
 // Connects to the Database -> then starts the express
 createConnection({
@@ -71,8 +71,8 @@ createConnection({
     app.use("/api", routes);
 
     // Set routes for static built frontend
-    app.use("/", express.static(path.join(__dirname, "../frontend_build")));
-    app.use("*", express.static(path.join(__dirname, "../frontend_build/index.html")));
+    app.use("/", express.static(path.join(__dirname, "../../frontend_build")));
+    app.use("*", express.static(path.join(__dirname, "../../frontend_build/index.html")));
 
     let port = 80;
     if (process.env.NODE_ENV == "development") {

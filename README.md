@@ -4,7 +4,7 @@
 > We bike around the globe
 
 ## Development
-It's an application made with Angular for the frontend and Express for the backend. It's packed into a docker container with [containerizer](https://github.com/hrueger/containerizer).
+It's an application made with Angular for the frontend and Express for the backend. It's packed into a docker container.
 
 1. In the `api` folder run `npm install`.
 1. Start the api from the `api` folder with `npm start`.
@@ -12,6 +12,4 @@ It's an application made with Angular for the frontend and Express for the backe
 1. Start the frontend with `ng serve`.
 
 ## Deploy
-1. Update the `containerizer.json` file with your specific data
-1. `npm install containerizer --global`
-1. Run `containerizer`. You need to have docker installed.
+Run the build / deploy script in the `docker` folder using bash. 

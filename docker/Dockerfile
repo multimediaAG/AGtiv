@@ -1,4 +1,4 @@
-FROM tarampampam/node:13.1-alpine
+FROM tarampampam/node:12-alpine
 
 LABEL maintainer="Hannes Rüger"
 LABEL name="agtiv"

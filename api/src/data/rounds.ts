@@ -734,7 +734,7 @@
 /* do not edit */ 				{
 /* do not edit */                     name: "Huludao",
 /* do not edit */                     country: "cn",
-/* do not edit */                     distance: 170,
+/* do not edit */                     distance: 462,
 /* do not edit */                     x: 1898,
 /* do not edit */                     y: 484,
 /* do not edit */                     angleCCW: false,

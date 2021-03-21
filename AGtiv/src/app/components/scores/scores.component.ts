@@ -34,6 +34,10 @@ export class ScoresComponent {
       name: "Lehrer"
     },
     {
+      id: "ravk",
+      name: "RAVK"
+    },
+    {
       id: "grades-absolute",
       name: "Klassen (absolut)"
     },
@@ -68,6 +72,8 @@ export class ScoresComponent {
       this.users = this.allUsers;
     } else if (this.currentView.id == "students") {
       this.users = this.allUsers.filter((u) => u.grade.length < 4);
+    } else if (this.currentView.id == "ravk") {
+      this.users = this.allUsers.filter((u) => u.grade == "RAVK");
     } else if (this.currentView.id == "teachers") {
       this.users = this.allUsers.filter((u) => u.grade.length > 4 && u.grade != "Eltern");
     } else if (this.currentView.id == "parents") {

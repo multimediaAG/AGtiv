@@ -1,7 +1,13 @@
 {
     "version": 1,
-    "files": [{
-        "src": "AGtiv/src/app/data/rounds.ts",
-        "dest": "api/src/data/"
-    }]
+    "files": [
+        {
+            "src": "AGtiv/src/app/data/rounds.ts",
+            "dest": "api/src/data/"
+        },
+        {
+            "src": "AGtiv/src/app/data/grades.ts",
+            "dest": "api/src/data/"
+        }
+    ]
 }

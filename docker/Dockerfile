@@ -1,4 +1,4 @@
-FROM node:14-buster
+FROM node:14.16.0-buster
 
 LABEL maintainer="Hannes Rüger"
 LABEL name="agtiv"

@@ -95,12 +95,15 @@
                     <i class="fas fa-map-marker-alt fa-3x text-secondary mr-2 mt-1 mb-2"></i>
                 </div>
                 <img [src]="getImg(lastCity)" class="city" alt="Letzte Stadt">
-                <div>
-                    <h3>{{ lastCity.name }}</h3>
-                    in <a [href]="'https://de.wikipedia.org/wiki/' + lastCity.countryName" target="_blank">{{ lastCity.countryName }}</a>
+                <div class="pt-1">
+                    {{lastCity.isExtraCity ? 'Zwischenpunkt' : ('Olympische ' + (lastCity.isSummer ? 'Sommer' : 'Winter') + 'spiele ' + lastCity.year)}} in
+                    <a [href]="lastCity.wikiUrl" target="_blank">
+                        <h3>{{ lastCity.name }}</h3>
+                    </a>
+                    in {{ lastCity.countryName }}
                     <flag-icon class="ml-1" [country]="lastCity.country" squared></flag-icon>
                 </div>
-                <p>{{lastCity.text}}</p>
+                <p class="mt-2"><i>{{lastCity.text}}</i></p>
             </div>
             <div class="col-12 col-sm-4 status">
                 <h4 class="text-center">
@@ -130,12 +133,15 @@
 
                 </div>
                 <img [src]="getImg(nextCity)" class="city" alt="Nächste Stadt">
-                <div>
-                    <h3>{{ nextCity.name }}</h3>
-                    in <a [href]="'https://de.wikipedia.org/wiki/' + nextCity.countryName" target="_blank">{{ nextCity.countryName }}</a>
+                <div class="pt-1">
+                    {{nextCity.isExtraCity ? 'Zwischenpunkt' : ('Olympische ' + (nextCity.isSummer ? 'Sommer' : 'Winter') + 'spiele ' + nextCity.year)}} in
+                    <a [href]="nextCity.wikiUrl" target="_blank">
+                        <h3>{{ nextCity.name }}</h3>
+                    </a>
+                    in {{ nextCity.countryName }}
                     <flag-icon class="ml-1" [country]="nextCity.country" squared></flag-icon>
                 </div>
-                <p>{{nextCity.text}}</p>
+                <p class="mt-2"><i>{{nextCity.text}}</i></p>
             </div>
             <div class="text-left px-5 mt-4">
                 <info-bike-distance></info-bike-distance>
@@ -148,7 +154,22 @@
     <div class="card p-3 mb-3" *ngIf="finished">
         <app-statistics></app-statistics>
     </div>
-    <div class="card p-3">
+    <div class="card p-3 mb-3">
         <img class="img-fluid" alt="Karte wird geladen..." [src]="mapSrc">
+    </div>
+    <div class="card p-3">
+        <h2 class="text-center mb-3">Bisher besuchte Olympiastädte</h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tbody>
+                    <tr *ngFor="let city of passedCities">
+                        <td><img [src]="getImg(city)" class="city city-small" alt="Stadt"></td>
+                        <td>Olympische <b>{{city.isSummer ? 'Sommer' : 'Winter'}}spiele {{city.year}}</b></td>
+                        <td>in {{city.name }}, {{ city.countryName }} <flag-icon class="ml-1" [country]="city.country" squared></flag-icon></td>
+                        <td>{{city.text}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

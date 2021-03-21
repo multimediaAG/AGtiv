@@ -16,6 +16,7 @@ export class HomeComponent {
     public currentDistance: number = 0;
     public nextCity: any;
     public lastCity: any;
+    public passedCities: any[] = [];
     public currentStepTotalDistance: number;
     public currentStepDistance: number;
     public userCount: number;
@@ -62,6 +63,7 @@ export class HomeComponent {
                 this.myDistance = d.myDistance;
                 let distanceCounter: number = 0;
                 for (const city of data.rounds[this.currentRoundIdx].cities) {
+                    (city as any).countryName = data.countries.find((c) => c.code == city.country).name;
                     if (this.lastCity) {
                         distanceCounter += city.distance;
                         if (this.currentDistance < distanceCounter) {
@@ -69,15 +71,12 @@ export class HomeComponent {
                             this.currentStepDistance = this.currentDistance - (distanceCounter - city.distance);
                             break;
                         }
+                        if (!city.isExtraCity) this.passedCities.push(city);
                     }
                     this.lastCity = city;
                 }
                 this.finished = d.finished;
                 this.canAddWays = d.canAddWays;
-            }
-            if (this.nextCity && this.lastCity) {
-                this.lastCity.countryName = data.countries.filter((c) => c.code == this.lastCity.country)[0].name;
-                this.nextCity.countryName = data.countries.filter((c) => c.code == this.nextCity.country)[0].name;
             }
             if (this.finished) {
                 this.manageConfetti();

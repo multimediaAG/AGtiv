@@ -8,6 +8,10 @@ img.city {
     height: 15rem;
     width: 15rem;
     object-fit: cover;
+    &.city-small {
+        height: 7rem;
+        width: 7rem;
+    }
 }
 
 .progress {
@@ -26,6 +30,10 @@ img.city {
     img.city {
         height: 10rem !important;
         width: 10rem!important;
+        &.city-small {
+            height: 5rem;
+            width: 5rem;
+        }
     }
 }
 
@@ -33,6 +41,10 @@ img.city {
     img.city {
         height: 5rem !important;
         width: 5rem!important;
+        &.city-small {
+            height: 2.5rem;
+            width: 2.5rem;
+        }
     }
     .progress {
         margin-top: 1rem;

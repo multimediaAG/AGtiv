@@ -44,20 +44,16 @@
 /* do not edit */     export const rounds: Round[] = [
 /* do not edit */         {
 /* do not edit */             id: 1,
-/* do not edit */             postText: `<p>Schön, dass Du so fleißig mitgemacht hast! Die erste Runde von AGtiv ist leider nun schon vorbei.</p>
-/* do not edit */             <p>Du findest alle Leistungen und Ergebnisse in der <a href="/scores">Bestenliste</a>.</p>
-/* do not edit */             <div class="alert alert-primary">
-/* do not edit */                 <h5>Es gibt noch eine zweite Runde mit neuen Zielen!</h5>
-/* do not edit */                 <p>Sie beginnt am <b>Samstag, 30. Mai</b>.</p>
-/* do not edit */             </div>`,
-/* do not edit */             startDate: new Date("2020-04-28"),
-/* do not edit */             text: `<p>- Das AG radelt, rollert und läuft gemeinsam einmal um die Welt! -</p><p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
-/* do not edit */             <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir versuchen, einmal virtuell die Welt zu umrunden! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren
+/* do not edit */             postText: `<div class="alert alert-warning">ToDo</div>`,
+/* do not edit */             startDate: new Date("2020-03-22"),
+/* do not edit */             text: `<p>- Das AG radelt und läuft gemeinsam mit dem Olympischen Feuer von Olympia nach Tokyo! -</p
+/* do not edit */             <p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
+/* do not edit */             <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir versuchen, das Olympische Feuer von der Entzündung in Olympia über die Orte der Olympischen Sommer- und Winterspiele der Neuzeit bis nach Tokyo zu tragen! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren
 /* do not edit */                 Beitrag für dieses Ziel.
 /* do not edit */             </p>
-/* do not edit */             <p>Jedes Mitglied der Schulfamilie - egal ob Radler, Läufer oder Inliner/Skiroller - kann jeden Tag einen kleinen Beitrag dazu leisten. Näheres erfahrt Ihr in den Regeln. </p>
-/* do not edit */             <p>Zum Mitmachen eingeladen sind alle Schülerinnen und Schüler, deren Eltern und sowie alle Lehrkräfte am Allgäu-Gymnasium. Viel Spaß beim Trainieren! </p>
-/* do not edit */             <p>Eure Fachschaft Sport</p>`,
+/* do not edit */             <p>Jedes Mitglied der Schulfamilie - egal ob Radler oder Läufer - kann jeden Tag einen kleinen Beitrag dazu leisten. Näheres erfahrt Ihr in den Regeln. </p>
+/* do not edit */             <p>Zum Mitmachen eingeladen sind alle Schülerinnen und Schüler, deren Eltern,  Lehrkräfte und sowie alle ehemaligen über den RAVK am Allgäu-Gymnasium. Viel Spaß beim Trainieren! </p>
+/* do not edit */             <p>Eure SMV</p>`,
 /* do not edit */             cities: [
 /* do not edit */                 {
 /* do not edit */                     name: "Olympia",

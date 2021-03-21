@@ -36,20 +36,16 @@ export module data {
     export const rounds: Round[] = [
         {
             id: 1,
-            postText: `<p>Schön, dass Du so fleißig mitgemacht hast! Die erste Runde von AGtiv ist leider nun schon vorbei.</p>
-            <p>Du findest alle Leistungen und Ergebnisse in der <a href="/scores">Bestenliste</a>.</p>
-            <div class="alert alert-primary">
-                <h5>Es gibt noch eine zweite Runde mit neuen Zielen!</h5>
-                <p>Sie beginnt am <b>Samstag, 30. Mai</b>.</p>
-            </div>`,
-            startDate: new Date("2020-04-28"),
-            text: `<p>- Das AG radelt, rollert und läuft gemeinsam einmal um die Welt! -</p><p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
-            <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir versuchen, einmal virtuell die Welt zu umrunden! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren
+            postText: `<div class="alert alert-warning">ToDo</div>`,
+            startDate: new Date("2020-03-22"),
+            text: `<p>- Das AG radelt und läuft gemeinsam mit dem Olympischen Feuer von Olympia nach Tokyo! -</p
+            <p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
+            <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir versuchen, das Olympische Feuer von der Entzündung in Olympia über die Orte der Olympischen Sommer- und Winterspiele der Neuzeit bis nach Tokyo zu tragen! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren
                 Beitrag für dieses Ziel.
             </p>
-            <p>Jedes Mitglied der Schulfamilie - egal ob Radler, Läufer oder Inliner/Skiroller - kann jeden Tag einen kleinen Beitrag dazu leisten. Näheres erfahrt Ihr in den Regeln. </p>
-            <p>Zum Mitmachen eingeladen sind alle Schülerinnen und Schüler, deren Eltern und sowie alle Lehrkräfte am Allgäu-Gymnasium. Viel Spaß beim Trainieren! </p>
-            <p>Eure Fachschaft Sport</p>`,
+            <p>Jedes Mitglied der Schulfamilie - egal ob Radler oder Läufer - kann jeden Tag einen kleinen Beitrag dazu leisten. Näheres erfahrt Ihr in den Regeln. </p>
+            <p>Zum Mitmachen eingeladen sind alle Schülerinnen und Schüler, deren Eltern,  Lehrkräfte und sowie alle ehemaligen über den RAVK am Allgäu-Gymnasium. Viel Spaß beim Trainieren! </p>
+            <p>Eure SMV</p>`,
             cities: [
                 {
                     name: "Olympia",

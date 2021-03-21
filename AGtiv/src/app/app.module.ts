@@ -26,6 +26,7 @@ import { ChartsModule } from 'ng2-charts';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import { SafePipe } from 'src/pipes/safe.pipe';
+import { ReadMoreComponent } from './components/_helpers/read-more/read-more.component';
 
 registerLocaleData(localeDe);
 
@@ -45,6 +46,7 @@ registerLocaleData(localeDe);
     StatisticsComponent,
     UsersComponent,
     SafePipe,
+    ReadMoreComponent,
   ],
   imports: [
     BrowserModule,

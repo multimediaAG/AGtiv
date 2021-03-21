@@ -106,7 +106,7 @@
                     in {{ lastCity.countryName }}
                     <flag-icon class="ml-1" [country]="lastCity.country" squared></flag-icon>
                 </div>
-                <p class="mt-2"><i>{{lastCity.text}}</i></p>
+                <p class="mt-2"><i><read-more [text]="lastCity.text"></read-more></i></p>
             </div>
             <div class="col-12 col-sm-4 status">
                 <h4 class="text-center">
@@ -144,7 +144,7 @@
                     in {{ nextCity.countryName }}
                     <flag-icon class="ml-1" [country]="nextCity.country" squared></flag-icon>
                 </div>
-                <p class="mt-2"><i>{{nextCity.text}}</i></p>
+                <p class="mt-2"><i><read-more [text]="nextCity.text"></read-more></i></p>
             </div>
             <div class="text-left px-5 mt-4">
                 <info-bike-distance></info-bike-distance>

@@ -81,6 +81,9 @@
     </div>
     <div class="card p-3 mb-4" *ngIf="!authenticationService.loggedIn && !finished">
         <h3 class="text-center">Jetzt mitmachen!</h3>
+        <div class="embed-responsive mx-auto embed-responsive-16by9 my-3">
+            <iframe class="d-block" src="https://www.youtube-nocookie.com/embed/WIb91TIoq9U" title="Offizieller Startschuss durch Alfons Hörmann | AGtiv - Road to Tokyo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="row">
             <a class="btn btn-outline-success col-4 mr-2 offset-2" routerLink="/signup"><i class="fas fa-user-plus"></i>
         Registrieren</a>

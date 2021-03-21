@@ -150,7 +150,7 @@ class StatisticsController {
       drawRoute(citiesVisited, SECONDARY);
       drawRoute(citiesNotVisited, GREY, true);
 
-      
+
       const texts = [];
 
       for (const city of citiesVisited) {

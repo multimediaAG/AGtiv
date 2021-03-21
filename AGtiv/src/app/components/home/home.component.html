@@ -158,7 +158,9 @@
         <app-statistics></app-statistics>
     </div>
     <div class="card p-3 mb-3">
-        <img class="img-fluid" alt="Karte wird geladen..." [src]="mapSrc">
+        <a [href]="mapSrc" target="_blank">
+            <img class="img-fluid" alt="Karte wird geladen..." [src]="mapSrc">
+        </a>
     </div>
     <div class="card p-3" *ngIf="passedCities && passedCities.length > 0">
         <h2 class="text-center mb-3">Bisher besuchte Olympiastädte</h2>

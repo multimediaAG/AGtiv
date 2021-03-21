@@ -88,7 +88,7 @@ export class HomeComponent {
     }
 
     public getImg(c) {
-        return `/assets/cities/${c.image ? c.image : `${c.country}_${c.name.toLowerCase().replace(/ /g, "_")}.jpg`}`;
+        return `/assets/cities/${c.image ? c.image : `${c.country}_${c.name.toLowerCase().replace(/ /g, "_").replace("ü", "ue")}.jpg`}`;
     }
 
     public replaceVariables(s: string) {

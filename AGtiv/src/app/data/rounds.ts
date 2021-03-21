@@ -37,7 +37,7 @@ export module data {
         {
             id: 1,
             postText: "<div class=\"alert alert-warning\">ToDo</div>",
-            startDate: new Date("2020-03-22"),
+            startDate: new Date("2021-03-22"),
             text: `<p>- Das AG radelt und läuft gemeinsam mit dem Olympischen Feuer von Olympia nach Tokyo! -</p
             <p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
             <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir versuchen, das Olympische Feuer von der Entzündung in Olympia über die Orte der Olympischen Sommer- und Winterspiele der Neuzeit bis nach Tokyo zu tragen! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren

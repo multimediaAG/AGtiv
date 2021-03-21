@@ -6,7 +6,7 @@
 /*    |    Then, run "npx redundancyjs" in the terminal.                      |    */
 /*    +-----------------------------------------------------------------------+    */
 
-/* do not edit */ // tslint:disable-next-line
+/* do not edit */ // eslint-disable-next-line
 /* do not edit */ export module data {
 /* do not edit */     export interface City {
 /* do not edit */         name: string;
@@ -44,8 +44,8 @@
 /* do not edit */     export const rounds: Round[] = [
 /* do not edit */         {
 /* do not edit */             id: 1,
-/* do not edit */             postText: `<div class="alert alert-warning">ToDo</div>`,
-/* do not edit */             startDate: new Date("2020-03-22"),
+/* do not edit */             postText: "<div class=\"alert alert-warning\">ToDo</div>",
+/* do not edit */             startDate: new Date("2021-03-22"),
 /* do not edit */             text: `<p>- Das AG radelt und läuft gemeinsam mit dem Olympischen Feuer von Olympia nach Tokyo! -</p
 /* do not edit */             <p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
 /* do not edit */             <p>Mit einer <b>sportlichen Gemeinschaftsleistung</b> der gesamten Schulfamilie wollen wir versuchen, das Olympische Feuer von der Entzündung in Olympia über die Orte der Olympischen Sommer- und Winterspiele der Neuzeit bis nach Tokyo zu tragen! Aktuell leisten <span class="badge badge-primary fakebadge">{{userCount}} Teilnehmer</span> ihren
@@ -77,7 +77,7 @@
 /* do not edit */                     text: "Athen, die Hauptstadt Griechenlands, hat eine bewegte Geschichte hinter sich. Nicht nur der Ursprung des Marathons steht der Sage nach in engem Zusammenhang mit Athen, auch die ersten Olympischen Spiele der Neuzeit wurden 1896 hier abgehalten, damals aber noch in deutlich kleinerem Rahmen als heute.",
 /* do not edit */                     isSummer: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Istanbul",
 /* do not edit */                     country: "tr",
 /* do not edit */                     distance: 1094,
@@ -87,7 +87,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Istanbul",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Samsun",
 /* do not edit */                     country: "tr",
 /* do not edit */                     distance: 731,
@@ -97,7 +97,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Samsun",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Sotschi",
 /* do not edit */                     country: "ru",
 /* do not edit */                     distance: 903,
@@ -108,7 +108,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2014",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Rostow am Don",
 /* do not edit */                     country: "ru",
 /* do not edit */                     distance: 553,
@@ -117,7 +117,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Rostow_am_Don",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Woronesch",
 /* do not edit */                     country: "ru",
 /* do not edit */                     distance: 568,
@@ -126,7 +126,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Woronesch",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Moskau",
 /* do not edit */                     country: "ru",
 /* do not edit */                     distance: 515,
@@ -137,7 +137,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1980",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Helsinki",
 /* do not edit */                     country: "fi",
 /* do not edit */                     distance: 1082,
@@ -148,7 +148,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1952",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Stockholm",
 /* do not edit */                     country: "se",
 /* do not edit */                     distance: 524,
@@ -159,7 +159,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1912",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Lillehammer",
 /* do not edit */                     country: "no",
 /* do not edit */                     distance: 614,
@@ -170,7 +170,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1994",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Oslo",
 /* do not edit */                     country: "no",
 /* do not edit */                     distance: 186,
@@ -181,7 +181,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1952",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Berlin",
 /* do not edit */                     country: "de",
 /* do not edit */                     distance: 990,
@@ -192,7 +192,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1936",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Innsbruck",
 /* do not edit */                     country: "at",
 /* do not edit */                     distance: 753,
@@ -203,7 +203,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1976",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Sarajevo",
 /* do not edit */                     country: "ba",
 /* do not edit */                     distance: 989,
@@ -214,7 +214,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1984",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Garmisch-Patenkirchen",
 /* do not edit */                     country: "de",
 /* do not edit */                     distance: 985,
@@ -225,7 +225,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1936",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Turin",
 /* do not edit */                     country: "it",
 /* do not edit */                     distance: 578,
@@ -237,7 +237,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2006",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Rom",
 /* do not edit */                     country: "it",
 /* do not edit */                     distance: 692,
@@ -249,7 +249,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1960",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Grenoble",
 /* do not edit */                     country: "fr",
 /* do not edit */                     distance: 921,
@@ -261,7 +261,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1968",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Paris",
 /* do not edit */                     country: "fr",
 /* do not edit */                     distance: 576,
@@ -273,7 +273,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1924",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "London",
 /* do not edit */                     country: "gb",
 /* do not edit */                     distance: 459,
@@ -285,7 +285,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2012",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Amsterdam",
 /* do not edit */                     country: "nl",
 /* do not edit */                     distance: 535,
@@ -297,7 +297,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1928",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "München",
 /* do not edit */                     country: "de",
 /* do not edit */                     distance: 827,
@@ -309,7 +309,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1972",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Cortina d´ Ampezzo",
 /* do not edit */                     country: "it",
 /* do not edit */                     distance: 299,
@@ -321,7 +321,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1956",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Chamonix",
 /* do not edit */                     country: "fr",
 /* do not edit */                     distance: 644,
@@ -333,7 +333,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1924",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Antwerpen",
 /* do not edit */                     country: "be",
 /* do not edit */                     distance: 888,
@@ -345,7 +345,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1920",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "St. Moritz",
 /* do not edit */                     country: "ch",
 /* do not edit */                     distance: 936,
@@ -357,7 +357,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1948",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Albertville",
 /* do not edit */                     country: "fr",
 /* do not edit */                     distance: 488,
@@ -369,7 +369,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1992",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Barcelona",
 /* do not edit */                     country: "es",
 /* do not edit */                     distance: 713,
@@ -381,7 +381,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1992",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Malaga",
 /* do not edit */                     country: "es",
 /* do not edit */                     distance: 954,
@@ -390,7 +390,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/M%C3%A1laga",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Casablanca",
 /* do not edit */                     country: "ma",
 /* do not edit */                     distance: 537,
@@ -399,7 +399,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Casablanca",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Fuerteventura",
 /* do not edit */                     country: "es",
 /* do not edit */                     distance: 826,
@@ -408,7 +408,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Fuerteventura",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Tarrafal",
 /* do not edit */                     country: "cv",
 /* do not edit */                     distance: 1732,
@@ -417,7 +417,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Kap_Verde",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Ilha Fernando de Noronha",
 /* do not edit */                     country: "br",
 /* do not edit */                     distance: 2396,
@@ -426,7 +426,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Fernando_de_Noronha",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Touros",
 /* do not edit */                     country: "br",
 /* do not edit */                     distance: 409,
@@ -436,7 +436,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Natal_(Brasilien)",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Salvador",
 /* do not edit */                     country: "br",
 /* do not edit */                     distance: 1182,
@@ -445,7 +445,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Salvador_(Bahia)",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Rio de Janeiro",
 /* do not edit */                     country: "br",
 /* do not edit */                     distance: 1626,
@@ -456,7 +456,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2016",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Brasilia",
 /* do not edit */                     country: "br",
 /* do not edit */                     distance: 2713,
@@ -466,7 +466,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Bras%C3%ADlia",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Manaus",
 /* do not edit */                     country: "br",
 /* do not edit */                     distance: 957,
@@ -475,7 +475,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Manaus",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Bogota",
 /* do not edit */                     country: "co",
 /* do not edit */                     distance: 1782,
@@ -484,7 +484,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Bogot%C3%A1",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Panama City",
 /* do not edit */                     country: "pa",
 /* do not edit */                     distance: 816,
@@ -494,7 +494,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Panama_City",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Guatemala City",
 /* do not edit */                     country: "gt",
 /* do not edit */                     distance: 1866,
@@ -504,7 +504,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Guatemala-Stadt",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Mexico City",
 /* do not edit */                     country: "mx",
 /* do not edit */                     distance: 1396,
@@ -516,7 +516,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1968",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Torreon",
 /* do not edit */                     country: "mx",
 /* do not edit */                     distance: 999,
@@ -525,7 +525,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Torre%C3%B3n",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Los Angeles",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 600,
@@ -538,7 +538,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Phoenix_(Arizona)",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Phoenix",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 1361,
@@ -547,7 +547,7 @@
 /* do not edit */                     angleCCW: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1984",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Albuquerque",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 1259,
@@ -557,7 +557,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Albuquerque",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Oklahoma City",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 868,
@@ -567,7 +567,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Oklahoma_City",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Memphis",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 745,
@@ -577,7 +577,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Memphis_(Tennessee)",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Atlanta",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 625,
@@ -588,7 +588,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1996",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "St. Louis",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 889,
@@ -599,7 +599,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1904",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Detroit",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 864,
@@ -608,7 +608,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Detroit",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Lake Placid",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 181,
@@ -619,7 +619,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1980",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Montreal",
 /* do not edit */                     country: "ca",
 /* do not edit */                     distance: 899,
@@ -629,9 +629,9 @@
 /* do not edit */                     angleCCW: false,
 /* do not edit */                     text: "Montreal ist die zweitgrößte Stadt Kanadas, die größte Stadt der Provinz Quebec und nach Paris die zweitgrößte französischsprachige Stadt der Welt. Ein Referendum um die Unabhängigkeit Quebecs von Kanada scheiterte 1995 nur äußerst knapp (49.42% zu 50,58%) und seit 2006 gelten die Einwohner Quebecs als eine eigene Nation innerhalb Kanadas.",
 /* do not edit */                     isSummer: true,
-/* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1976"
+/* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1976",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Sault Ste. Marie",
 /* do not edit */                     country: "ca",
 /* do not edit */                     distance: 1008,
@@ -641,7 +641,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Sault_Ste._Marie_(Ontario)",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Devils Lake",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 1240,
@@ -651,7 +651,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Devils_Lake_(North_Dakota)",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Calgary",
 /* do not edit */                     country: "ca",
 /* do not edit */                     distance: 1300,
@@ -663,7 +663,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1988",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Vancouver",
 /* do not edit */                     country: "ca",
 /* do not edit */                     distance: 1007,
@@ -674,7 +674,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2010",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Portland",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 520,
@@ -684,7 +684,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Portland_(Oregon)",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Salt Lake City",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 1309,
@@ -693,9 +693,9 @@
 /* do not edit */                     year: 2002,
 /* do not edit */                     text: "Der \"Große Salzsee\", der der Hauptstadt der Mormonen seinen Namen gab, ist ca. 120km lang und hat einen Salzgehalt von bis zu 27%. Er ist damit 7x salzhaltiger als das Mittelmeer. Auf den ausgetrockneten Salzebenen rund um den See werden immer wieder Hochgeschwindigkeitsrennen ausgetragen – wenn es nicht ausnahmsweise einmal geregnet hat.",
 /* do not edit */                     isSummer: false,
-/* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2002"
+/* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2002",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Squaw Valley",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 1256,
@@ -707,7 +707,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1960",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Hawaii",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 4742,
@@ -717,7 +717,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Hawaii",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Howland Island",
 /* do not edit */                     country: "us",
 /* do not edit */                     distance: 3113,
@@ -728,7 +728,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Howlandinsel",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Lakena",
 /* do not edit */                     country: "tv",
 /* do not edit */                     distance: 1083,
@@ -737,7 +737,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Lakena",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Vanuatu",
 /* do not edit */                     country: "vu",
 /* do not edit */                     distance: 1464,
@@ -746,7 +746,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Vanuatu",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Brisbane",
 /* do not edit */                     country: "au",
 /* do not edit */                     distance: 1923,
@@ -755,7 +755,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Brisbane",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Sydney",
 /* do not edit */                     country: "au",
 /* do not edit */                     distance: 875,
@@ -766,7 +766,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2000",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Melbourne",
 /* do not edit */                     country: "au",
 /* do not edit */                     distance: 1752,
@@ -777,7 +777,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1956",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Mackay",
 /* do not edit */                     country: "au",
 /* do not edit */                     distance: 1427,
@@ -787,7 +787,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Mackay_(Queensland)",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Atape",
 /* do not edit */                     country: "pg",
 /* do not edit */                     distance: 2133,
@@ -796,7 +796,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Papua-Neuguinea",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Palau",
 /* do not edit */                     country: "fm",
 /* do not edit */                     distance: 1455,
@@ -805,7 +805,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Palau",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Nago-Okinawa",
 /* do not edit */                     country: "jp",
 /* do not edit */                     distance: 2238,
@@ -814,7 +814,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Nago",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Qingdao",
 /* do not edit */                     country: "cn",
 /* do not edit */                     distance: 1275,
@@ -824,7 +824,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Qingdao",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Peking",
 /* do not edit */                     country: "cn",
 /* do not edit */                     distance: 646,
@@ -836,7 +836,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2008",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Huludao",
 /* do not edit */                     country: "cn",
 /* do not edit */                     distance: 462,
@@ -846,7 +846,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Liaoning",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Dandong",
 /* do not edit */                     country: "cn",
 /* do not edit */                     distance: 488,
@@ -856,7 +856,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Dangdong",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Pyeongchang",
 /* do not edit */                     country: "kr",
 /* do not edit */                     distance: 633,
@@ -866,9 +866,9 @@
 /* do not edit */                     text: "Die bislang letzten Winterspiele fanden in der südkoreanischen Stadt Pyeongchang statt. Südkorea ist heute bekannt für Smartphones, Autos, Hightech, K-Pop und eben auch als Ausrichter von olympischen Spielen. Noch vor gut 60 Jahren war das Land jedoch ein verarmter Agrarstaat, der auf Wirtschaftshilfen, z.B. von Seiten der USA, angewiesen war.",
 /* do not edit */                     isSummer: false,
 /* do not edit */                     angleCCW: true,
-/* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2018"
+/* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2018",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Seoul",
 /* do not edit */                     country: "kr",
 /* do not edit */                     distance: 242,
@@ -879,7 +879,7 @@
 /* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1988",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Sapporo",
 /* do not edit */                     country: "jp",
 /* do not edit */                     distance: 2623,
@@ -890,7 +890,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1972",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Sendai",
 /* do not edit */                     country: "jp",
 /* do not edit */                     distance: 747,
@@ -899,7 +899,7 @@
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Sendai",
 /* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Nagano",
 /* do not edit */                     country: "jp",
 /* do not edit */                     distance: 472,
@@ -911,7 +911,7 @@
 /* do not edit */                     isSummer: false,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1998",
 /* do not edit */                 },
-/* do not edit */ 				{
+/* do not edit */                 {
 /* do not edit */                     name: "Tokyo",
 /* do not edit */                     country: "jp",
 /* do not edit */                     distance: 232,
@@ -920,476 +920,476 @@
 /* do not edit */                     year: 1964,
 /* do not edit */                     text: "In Tokyo lauert die Bedrohung unter der Erde: Unter Japan treffen verschiedene Erdplatten aufeinander und immer wieder erschüttern Erdbeben auch die Regionen um Tokyo. Das letzte schwere Beben ereignete sich im Jahr 1923, bei dem 140.000 Menschen durch einstürzende Gebäude oder Brände starben.  Da die großen Beben ungefähr alle 60 Jahren auftreten, erwarten viele Japaner in naher Zukunft die nächste Katastrophe und versuchen sich durch erdbebensichere Architektur und Katastrophenübungen vorzubereiten.",
 /* do not edit */                     isSummer: true,
-/* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2020"
+/* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2020",
 /* do not edit */                 },
 /* do not edit */             ],
-/* do not edit */         }
-/* do not edit */     ]
+/* do not edit */         },
+/* do not edit */     ];
 /* do not edit */ 
 /* do not edit */     export const countries: Country[] = [
 /* do not edit */         {
 /* do not edit */             code: "ae",
-/* do not edit */             name: "Ver. arab. Emirate"
+/* do not edit */             name: "Ver. arab. Emirate",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "af",
-/* do not edit */             name: "Afghanistan"
+/* do not edit */             name: "Afghanistan",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ao",
-/* do not edit */             name: "Angola"
+/* do not edit */             name: "Angola",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ar",
-/* do not edit */             name: "Argentinien"
+/* do not edit */             name: "Argentinien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "at",
-/* do not edit */             name: "Österreich"
+/* do not edit */             name: "Österreich",
 /* do not edit */         },
-/* do not edit */ 		{
+/* do not edit */         {
 /* do not edit */             code: "au",
-/* do not edit */             name: "Australien"
+/* do not edit */             name: "Australien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "az",
-/* do not edit */             name: "Aserbaidschan"
+/* do not edit */             name: "Aserbaidschan",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ba",
-/* do not edit */             name: "Bosnien-Herzegowina"
-/* do not edit */ 		},
+/* do not edit */             name: "Bosnien-Herzegowina",
+/* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "be",
-/* do not edit */             name: "Belgien"
-/* do not edit */ 		},
-/* do not edit */ 		{
+/* do not edit */             name: "Belgien",
+/* do not edit */         },
+/* do not edit */         {
 /* do not edit */             code: "bg",
-/* do not edit */             name: "Bulgarien"
+/* do not edit */             name: "Bulgarien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "bj",
-/* do not edit */             name: "Benin"
+/* do not edit */             name: "Benin",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "bn",
-/* do not edit */             name: "Brunei"
+/* do not edit */             name: "Brunei",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "bo",
-/* do not edit */             name: "Bolivien"
+/* do not edit */             name: "Bolivien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "br",
-/* do not edit */             name: "Brasilien"
+/* do not edit */             name: "Brasilien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "bt",
-/* do not edit */             name: "Bhutan"
+/* do not edit */             name: "Bhutan",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "by",
-/* do not edit */             name: "Weißrussland"
+/* do not edit */             name: "Weißrussland",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ca",
-/* do not edit */             name: "Kanada"
+/* do not edit */             name: "Kanada",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "cd",
-/* do not edit */             name: "D. R. Kongo"
+/* do not edit */             name: "D. R. Kongo",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "cd",
-/* do not edit */             name: "Demokratische Republik Kongo"
+/* do not edit */             name: "Demokratische Republik Kongo",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "cg",
-/* do not edit */             name: "Kongo"
+/* do not edit */             name: "Kongo",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ch",
-/* do not edit */             name: "Schweiz"
+/* do not edit */             name: "Schweiz",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ci",
-/* do not edit */             name: "Cote d`Ivoir"
+/* do not edit */             name: "Cote d`Ivoir",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ck",
-/* do not edit */             name: "Cookinseln"
+/* do not edit */             name: "Cookinseln",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "cl",
-/* do not edit */             name: "Chile"
+/* do not edit */             name: "Chile",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "cm",
-/* do not edit */             name: "Kamerun"
+/* do not edit */             name: "Kamerun",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "cn",
-/* do not edit */             name: "China"
+/* do not edit */             name: "China",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "cn",
-/* do not edit */             name: "Tibet"
+/* do not edit */             name: "Tibet",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "co",
-/* do not edit */             name: "Kolumbien"
+/* do not edit */             name: "Kolumbien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "cr",
-/* do not edit */             name: "Costa Rica"
+/* do not edit */             name: "Costa Rica",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "cu",
-/* do not edit */             name: "Kuba"
+/* do not edit */             name: "Kuba",
 /* do not edit */         },
-/* do not edit */ 		{
+/* do not edit */         {
 /* do not edit */             code: "cv",
-/* do not edit */             name: "Cabo Verde"
+/* do not edit */             name: "Cabo Verde",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "de",
-/* do not edit */             name: "Deutschland"
+/* do not edit */             name: "Deutschland",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "dj",
-/* do not edit */             name: "Dschibouti"
+/* do not edit */             name: "Dschibouti",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "dk",
-/* do not edit */             name: "Dänemark"
+/* do not edit */             name: "Dänemark",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "dz",
-/* do not edit */             name: "Algerien"
+/* do not edit */             name: "Algerien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ec",
-/* do not edit */             name: "Ecuador"
+/* do not edit */             name: "Ecuador",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "eh",
-/* do not edit */             name: "Westsahara"
+/* do not edit */             name: "Westsahara",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "es",
-/* do not edit */             name: "Spanien"
+/* do not edit */             name: "Spanien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "et",
-/* do not edit */             name: "Äthiopien"
+/* do not edit */             name: "Äthiopien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "fi",
-/* do not edit */             name: "Finnland"
+/* do not edit */             name: "Finnland",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "fj",
-/* do not edit */             name: "Fidschi"
+/* do not edit */             name: "Fidschi",
 /* do not edit */         },
-/* do not edit */ 		{
+/* do not edit */         {
 /* do not edit */             code: "fm",
-/* do not edit */             name: "Mikronesien"
+/* do not edit */             name: "Mikronesien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "fr",
-/* do not edit */             name: "Frankreich"
+/* do not edit */             name: "Frankreich",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ga",
-/* do not edit */             name: "Gabun"
+/* do not edit */             name: "Gabun",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "gb",
-/* do not edit */             name: "Großbritannien"
+/* do not edit */             name: "Großbritannien",
 /* do not edit */         },
-/* do not edit */ 		{
+/* do not edit */         {
 /* do not edit */             code: "ge",
-/* do not edit */             name: "Georgien"
+/* do not edit */             name: "Georgien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "gf",
-/* do not edit */             name: "Franz. Guyana"
+/* do not edit */             name: "Franz. Guyana",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "gh",
-/* do not edit */             name: "Ghana"
+/* do not edit */             name: "Ghana",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "gi",
-/* do not edit */             name: "Gibraltar"
+/* do not edit */             name: "Gibraltar",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "gl",
-/* do not edit */             name: "Grönland"
+/* do not edit */             name: "Grönland",
 /* do not edit */         },
-/* do not edit */ 		{
+/* do not edit */         {
 /* do not edit */             code: "gr",
-/* do not edit */             name: "Griechenland"
+/* do not edit */             name: "Griechenland",
 /* do not edit */         },
-/* do not edit */ 		{
+/* do not edit */         {
 /* do not edit */             code: "gn",
-/* do not edit */             name: "Guinea"
+/* do not edit */             name: "Guinea",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "gt",
-/* do not edit */             name: "Guatemala"
+/* do not edit */             name: "Guatemala",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "gy",
-/* do not edit */             name: "Guyana"
+/* do not edit */             name: "Guyana",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "hk",
-/* do not edit */             name: "Hongkong"
+/* do not edit */             name: "Hongkong",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "hn",
-/* do not edit */             name: "Honduras"
+/* do not edit */             name: "Honduras",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "hr",
-/* do not edit */             name: "Kroatien"
+/* do not edit */             name: "Kroatien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ht",
-/* do not edit */             name: "Haiti"
+/* do not edit */             name: "Haiti",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "id",
-/* do not edit */             name: "Indonesien"
+/* do not edit */             name: "Indonesien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "in",
-/* do not edit */             name: "Indien"
+/* do not edit */             name: "Indien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ir",
-/* do not edit */             name: "Iran"
+/* do not edit */             name: "Iran",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "is",
-/* do not edit */             name: "Island"
+/* do not edit */             name: "Island",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "it",
-/* do not edit */             name: "Italien"
+/* do not edit */             name: "Italien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "jp",
-/* do not edit */             name: "Japan"
+/* do not edit */             name: "Japan",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ke",
-/* do not edit */             name: "Kenia"
+/* do not edit */             name: "Kenia",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "kh",
-/* do not edit */             name: "Kambodscha"
+/* do not edit */             name: "Kambodscha",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "kr",
-/* do not edit */             name: "Südkorea"
+/* do not edit */             name: "Südkorea",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ma",
-/* do not edit */             name: "Marokko"
+/* do not edit */             name: "Marokko",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "mm",
-/* do not edit */             name: "Myanmar"
+/* do not edit */             name: "Myanmar",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "mw",
-/* do not edit */             name: "Malawi"
+/* do not edit */             name: "Malawi",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "mx",
-/* do not edit */             name: "Mexiko"
+/* do not edit */             name: "Mexiko",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "mz",
-/* do not edit */             name: "Mosambik"
+/* do not edit */             name: "Mosambik",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "na",
-/* do not edit */             name: "Namibia"
+/* do not edit */             name: "Namibia",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ne",
-/* do not edit */             name: "Niger"
+/* do not edit */             name: "Niger",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ng",
-/* do not edit */             name: "Nigeria"
+/* do not edit */             name: "Nigeria",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ni",
-/* do not edit */             name: "Nicaragua"
+/* do not edit */             name: "Nicaragua",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "no",
-/* do not edit */             name: "Norwegen"
+/* do not edit */             name: "Norwegen",
 /* do not edit */         },
-/* do not edit */ 		{
+/* do not edit */         {
 /* do not edit */             code: "nl",
-/* do not edit */             name: "Niederlande"
+/* do not edit */             name: "Niederlande",
 /* do not edit */         },
-/* do not edit */ 		{
+/* do not edit */         {
 /* do not edit */             code: "np",
-/* do not edit */             name: "Nepal"
+/* do not edit */             name: "Nepal",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "nz",
-/* do not edit */             name: "Neuseeland"
+/* do not edit */             name: "Neuseeland",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "om",
-/* do not edit */             name: "Oman"
+/* do not edit */             name: "Oman",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "pa",
-/* do not edit */             name: "Panama"
+/* do not edit */             name: "Panama",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "pe",
-/* do not edit */             name: "Peru"
+/* do not edit */             name: "Peru",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "pf",
-/* do not edit */             name: "Französisch-Polynesien"
+/* do not edit */             name: "Französisch-Polynesien",
 /* do not edit */         },
-/* do not edit */ 		{
+/* do not edit */         {
 /* do not edit */             code: "pg",
-/* do not edit */             name: "Papua Neuguinea"
+/* do not edit */             name: "Papua Neuguinea",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ph",
-/* do not edit */             name: "Philippinen"
+/* do not edit */             name: "Philippinen",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "pk",
-/* do not edit */             name: "Pakistan"
+/* do not edit */             name: "Pakistan",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "pl",
-/* do not edit */             name: "Polen"
+/* do not edit */             name: "Polen",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "pn",
-/* do not edit */             name: "Piticairninseln"
+/* do not edit */             name: "Piticairninseln",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "py",
-/* do not edit */             name: "Paraguay"
+/* do not edit */             name: "Paraguay",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "rs",
-/* do not edit */             name: "Serbien"
+/* do not edit */             name: "Serbien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ru",
-/* do not edit */             name: "Russland"
+/* do not edit */             name: "Russland",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "se",
-/* do not edit */             name: "Schweden"
+/* do not edit */             name: "Schweden",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "sh",
-/* do not edit */             name: "St. Helena"
+/* do not edit */             name: "St. Helena",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "sl",
-/* do not edit */             name: "Sierra Leone"
+/* do not edit */             name: "Sierra Leone",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "sn",
-/* do not edit */             name: "Senegal"
+/* do not edit */             name: "Senegal",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "sr",
-/* do not edit */             name: "Suriname"
+/* do not edit */             name: "Suriname",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ss",
-/* do not edit */             name: "Südsudan"
+/* do not edit */             name: "Südsudan",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "td",
-/* do not edit */             name: "Tschad"
+/* do not edit */             name: "Tschad",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "th",
-/* do not edit */             name: "Thailand"
+/* do not edit */             name: "Thailand",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "tl",
-/* do not edit */             name: "Osttimor"
+/* do not edit */             name: "Osttimor",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "tm",
-/* do not edit */             name: "Turkmenistan"
+/* do not edit */             name: "Turkmenistan",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "tn",
-/* do not edit */             name: "Tunesien"
+/* do not edit */             name: "Tunesien",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "to",
-/* do not edit */             name: "Tonga"
+/* do not edit */             name: "Tonga",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "tr",
-/* do not edit */             name: "Türkei"
+/* do not edit */             name: "Türkei",
 /* do not edit */         },
-/* do not edit */ 		{
+/* do not edit */         {
 /* do not edit */             code: "tv",
-/* do not edit */             name: "Tuvalu"
+/* do not edit */             name: "Tuvalu",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "tw",
-/* do not edit */             name: "Taiwan"
+/* do not edit */             name: "Taiwan",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "tz",
-/* do not edit */             name: "Tansania"
+/* do not edit */             name: "Tansania",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "us",
-/* do not edit */             name: "USA"
+/* do not edit */             name: "USA",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "uy",
-/* do not edit */             name: "Uruguay"
+/* do not edit */             name: "Uruguay",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ve",
-/* do not edit */             name: "Venezuela"
+/* do not edit */             name: "Venezuela",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "vn",
-/* do not edit */             name: "Vietnam"
+/* do not edit */             name: "Vietnam",
 /* do not edit */         },
-/* do not edit */ 		{
+/* do not edit */         {
 /* do not edit */             code: "vu",
-/* do not edit */             name: "Vanuatu"
+/* do not edit */             name: "Vanuatu",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "ws",
-/* do not edit */             name: "Samoa"
+/* do not edit */             name: "Samoa",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "za",
-/* do not edit */             name: "Südafrika"
+/* do not edit */             name: "Südafrika",
 /* do not edit */         },
 /* do not edit */         {
 /* do not edit */             code: "zw",
-/* do not edit */             name: "Simbabwe"
+/* do not edit */             name: "Simbabwe",
 /* do not edit */         },
 /* do not edit */     ];
 /* do not edit */ }

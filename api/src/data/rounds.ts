@@ -803,7 +803,7 @@
 /* do not edit */                     x: 2022,
 /* do not edit */                     y: 525,
 /* do not edit */                     year: 1964,
-/* do not edit */                     text: "In Tokio lauert die Bedrohung unter der Erde: Unter Japan treffen verschiedene Erdplatten aufeinander und immer wieder erschüttern Erdbeben auch die Regionen um Tokio. Das letzte schwere Beben ereignete sich im Jahr 1923, bei dem 140.000 Menschen durch einstürzende Gebäude oder Brände starben.  Da die großen Beben ungefähr alle 60 Jahren auftreten, erwarten viele Japaner in naher Zukunft die nächste Katastrophe und versuchen sich durch erdbebensichere Architektur und Katastrophenübungen vorzubereiten.",
+/* do not edit */                     text: "In Tokyo lauert die Bedrohung unter der Erde: Unter Japan treffen verschiedene Erdplatten aufeinander und immer wieder erschüttern Erdbeben auch die Regionen um Tokyo. Das letzte schwere Beben ereignete sich im Jahr 1923, bei dem 140.000 Menschen durch einstürzende Gebäude oder Brände starben.  Da die großen Beben ungefähr alle 60 Jahren auftreten, erwarten viele Japaner in naher Zukunft die nächste Katastrophe und versuchen sich durch erdbebensichere Architektur und Katastrophenübungen vorzubereiten.",
 /* do not edit */                     isSummer: true,
 /* do not edit */                 },
 /* do not edit */             ],

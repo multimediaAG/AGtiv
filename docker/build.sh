@@ -1,9 +1,8 @@
 cd ../AGtiv
 npm install
 npm run build -- --outputPath=../docker/frontend
-cd ../api
-npm install
-npx @zeit/ncc build src/index.ts -o ../docker/backend
+cd ../
+cp  ./api/* ../docker/backend
 cd ..
 cp ./container-env.json ./docker/container-env.json
 cd ./docker

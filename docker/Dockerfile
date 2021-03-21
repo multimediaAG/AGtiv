@@ -3,9 +3,10 @@ FROM tarampampam/node:13.1-alpine
 LABEL maintainer="Hannes Rüger"
 LABEL name="agtiv"
 
-RUN apk update && apk add --no-cache libc6-compat python make g++ build-base cairo-dev jpeg-dev pango-dev giflib-dev msttcorefonts-installer fontconfig && update-ms-fonts && fc-cache -f
+RUN apk update && apk add --no-cache npm libc6-compat python make g++ build-base cairo-dev jpeg-dev pango-dev giflib-dev msttcorefonts-installer fontconfig && update-ms-fonts && fc-cache -f
 RUN mkdir -p /app/config && mkdir /app/dist && mkdir /app/data
 COPY backend /app/dist
+RUN cd backend && npm i && cd ..
 COPY frontend /app/dist/frontend
 COPY container-env.json /container-env.json
 

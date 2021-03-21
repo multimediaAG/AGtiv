@@ -4,11 +4,11 @@
             <div class="text-center mb-3">
                 <h3>Bestenliste</h3>
             </div>
-            <ul class="nav nav-tabs mb-2">
+            <!--<ul class="nav nav-tabs mb-2">
                 <li class="nav-item" *ngFor="let r of rounds">
                     <a class="nav-link" [class.active]="currentViewRoundIdx == r" (click)="viewRound(r)" [routerLink]="">{{r + 1}}. Runde</a>
                 </li>
-            </ul>
+            </ul>-->
             <ul class="nav nav-tabs">
                 <li class="nav-item" *ngFor="let v of views">
                     <a class="nav-link" [class.active]="currentView.id == v.id" (click)="view(v)" [routerLink]="">{{v.name}}</a>

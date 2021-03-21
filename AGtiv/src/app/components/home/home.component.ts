@@ -1,19 +1,19 @@
-import { Component } from '@angular/core';
-import { AuthenticationService } from 'src/app/services/authentication.service';
-import { RemoteService } from 'src/app/services/remote.service';
-import { data } from 'src/app/data/rounds';
-import { getApiUrl } from 'src/app/helpers/apiUrl';
+import { Component } from "@angular/core";
+import { AuthenticationService } from "../../services/authentication.service";
+import { RemoteService } from "../../services/remote.service";
+import { data } from "../../data/rounds";
+import { getApiUrl } from "../../helpers/apiUrl";
 
 declare const window: any;
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+    selector: "app-home",
+    templateUrl: "./home.component.html",
+    styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent {
-    public currentDistanceLoaded: boolean = false;
-    public currentDistance: number = 0;
+    public currentDistanceLoaded = false;
+    public currentDistance = 0;
     public nextCity: any;
     public lastCity: any;
     public passedCities: any[] = [];
@@ -25,20 +25,21 @@ export class HomeComponent {
     public remainingDistance: number;
     public myDistance: number;
     public currentRoundIdx: number = parseInt(localStorage.getItem("currentRoundIdx2") ? localStorage.getItem("currentRoundIdx2") : "0", undefined);
-    public endCityName = data.rounds[this.currentRoundIdx].cities[data.rounds[this.currentRoundIdx].cities.length - 1].name;
-    public mapSrc: string = `${getApiUrl()}statistics/currentMap.png`
+    public endCityName = data.rounds[this.currentRoundIdx]
+        .cities[data.rounds[this.currentRoundIdx].cities.length - 1].name;
+    public mapSrc = `${getApiUrl()}statistics/currentMap.png`
     public confettiTimeout: number;
     public data = data;
     public canAddWays = false;
-    public showStadtradelnInfo: boolean =  new Date("2020-06-10") < new Date() && new Date() < new Date("2020-07-14");
+    public showStadtradelnInfo: boolean = new Date("2020-06-10") < new Date() && new Date() < new Date("2020-07-14");
 
-    constructor(public authenticationService: AuthenticationService, private remoteService: RemoteService) { }
+    constructor(public authenticationService: AuthenticationService,
+        private remoteService: RemoteService) { }
 
     public ngOnInit() {
         this.currentDistanceLoaded = false;
         this.remoteService.get("statistics/currentDistance").subscribe((d) => {
             if (d && (d.currentDistance || d.currentDistance === null)) {
-
                 localStorage.setItem("finished2", d.finished ? "true" : "false");
                 localStorage.setItem("canAddWays2", d.canAddWays ? "true" : "false");
                 localStorage.setItem("currentRoundIdx2", d.currentRoundIdx);
@@ -61,14 +62,16 @@ export class HomeComponent {
                 this.currentDistanceLoaded = true;
                 this.currentDistance = d.currentDistance;
                 this.myDistance = d.myDistance;
-                let distanceCounter: number = 0;
+                let distanceCounter = 0;
                 for (const city of data.rounds[this.currentRoundIdx].cities) {
-                    (city as any).countryName = data.countries.find((c) => c.code == city.country).name;
+                    (city as any).countryName = data.countries
+                        .find((c) => c.code == city.country).name;
                     if (this.lastCity) {
                         distanceCounter += city.distance;
                         if (this.currentDistance < distanceCounter) {
                             this.nextCity = city;
-                            this.currentStepDistance = this.currentDistance - (distanceCounter - city.distance);
+                            this.currentStepDistance = this.currentDistance - (
+                                distanceCounter - city.distance);
                             break;
                         }
                         if (!city.isExtraCity) this.passedCities.push(city);
@@ -107,17 +110,19 @@ export class HomeComponent {
             that.confettiTimeout = setTimeout(() => {
                 requestAnimationFrame(frame);
             }, 500) as unknown as number;
-        };
+        }
 
         function cannon(x) {
             const count = 200;
             const defaults = {
-                origin: { y: 0.9, x }
+                origin: { y: 0.9, x },
             };
-                function fire(particleRatio, opts) {
-                window.confetti(Object.assign({}, defaults, opts, {
-                    particleCount: Math.floor(count * particleRatio)
-                }));
+            function fire(particleRatio, opts) {
+                window.confetti({
+                    ...defaults,
+                    ...opts,
+                    particleCount: Math.floor(count * particleRatio),
+                });
             }
             fire(0.25, {
                 spread: 26,

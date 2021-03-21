@@ -1,25 +1,22 @@
-import { Component, Input, OnChanges} from '@angular/core';
+import { Component, Input, OnChanges } from "@angular/core";
 
-@Component({    
-    selector: 'read-more',
+@Component({
+    selector: "read-more",
     template: `
         <div [innerHTML]="currentText">
         </div>
         <button class="btn btn-link" *ngIf="!hideToggle" (click)="toggleView()">{{isCollapsed? 'Mehr':'Weniger'}}</button>
-    `
+    `,
 })
 
 export class ReadMoreComponent implements OnChanges {
     @Input() text: string;
-    @Input() maxLength: number = 200;
+    @Input() maxLength = 200;
     currentText: string;
-    hideToggle: boolean = true;
+    hideToggle = true;
 
-    public isCollapsed: boolean = true;
+    public isCollapsed = true;
 
-    constructor() {
-
-    }
     toggleView() {
         this.isCollapsed = !this.isCollapsed;
         this.determineView();
@@ -33,13 +30,12 @@ export class ReadMoreComponent implements OnChanges {
         }
         this.hideToggle = false;
         if (this.isCollapsed == true) {
-            this.currentText = this.text.substring(0, this.maxLength) + "...";
-        } else if(this.isCollapsed == false)  {
+            this.currentText = `${this.text.substring(0, this.maxLength)}...`;
+        } else if (this.isCollapsed == false) {
             this.currentText = this.text;
         }
-
     }
     ngOnChanges() {
-        this.determineView();       
+        this.determineView();
     }
 }

@@ -5,5 +5,5 @@ export function getApiUrl(): string {
         const match = (url as string).match(/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/g);
         return `http://${match ? match[0] : "localhost"}:${apiPortDev}/api/`;
     }
-    return `/api/`;
+    return "/api/";
 }

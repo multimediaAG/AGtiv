@@ -1,4 +1,4 @@
-// tslint:disable-next-line
+// eslint-disable-next-line
 export module data {
     export interface City {
         name: string;
@@ -36,7 +36,7 @@ export module data {
     export const rounds: Round[] = [
         {
             id: 1,
-            postText: `<div class="alert alert-warning">ToDo</div>`,
+            postText: "<div class=\"alert alert-warning\">ToDo</div>",
             startDate: new Date("2020-03-22"),
             text: `<p>- Das AG radelt und läuft gemeinsam mit dem Olympischen Feuer von Olympia nach Tokyo! -</p
             <p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>
@@ -69,7 +69,7 @@ export module data {
                     text: "Athen, die Hauptstadt Griechenlands, hat eine bewegte Geschichte hinter sich. Nicht nur der Ursprung des Marathons steht der Sage nach in engem Zusammenhang mit Athen, auch die ersten Olympischen Spiele der Neuzeit wurden 1896 hier abgehalten, damals aber noch in deutlich kleinerem Rahmen als heute.",
                     isSummer: true,
                 },
-				{
+                {
                     name: "Istanbul",
                     country: "tr",
                     distance: 1094,
@@ -79,7 +79,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Istanbul",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Samsun",
                     country: "tr",
                     distance: 731,
@@ -89,7 +89,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Samsun",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Sotschi",
                     country: "ru",
                     distance: 903,
@@ -100,7 +100,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2014",
                 },
-				{
+                {
                     name: "Rostow am Don",
                     country: "ru",
                     distance: 553,
@@ -109,7 +109,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Rostow_am_Don",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Woronesch",
                     country: "ru",
                     distance: 568,
@@ -118,7 +118,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Woronesch",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Moskau",
                     country: "ru",
                     distance: 515,
@@ -129,7 +129,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1980",
                 },
-				{
+                {
                     name: "Helsinki",
                     country: "fi",
                     distance: 1082,
@@ -140,7 +140,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1952",
                 },
-				{
+                {
                     name: "Stockholm",
                     country: "se",
                     distance: 524,
@@ -151,7 +151,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1912",
                 },
-				{
+                {
                     name: "Lillehammer",
                     country: "no",
                     distance: 614,
@@ -162,7 +162,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1994",
                 },
-				{
+                {
                     name: "Oslo",
                     country: "no",
                     distance: 186,
@@ -173,7 +173,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1952",
                 },
-				{
+                {
                     name: "Berlin",
                     country: "de",
                     distance: 990,
@@ -184,7 +184,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1936",
                 },
-				{
+                {
                     name: "Innsbruck",
                     country: "at",
                     distance: 753,
@@ -195,7 +195,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1976",
                 },
-				{
+                {
                     name: "Sarajevo",
                     country: "ba",
                     distance: 989,
@@ -206,7 +206,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1984",
                 },
-				{
+                {
                     name: "Garmisch-Patenkirchen",
                     country: "de",
                     distance: 985,
@@ -217,7 +217,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1936",
                 },
-				{
+                {
                     name: "Turin",
                     country: "it",
                     distance: 578,
@@ -229,7 +229,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2006",
                 },
-				{
+                {
                     name: "Rom",
                     country: "it",
                     distance: 692,
@@ -241,7 +241,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1960",
                 },
-				{
+                {
                     name: "Grenoble",
                     country: "fr",
                     distance: 921,
@@ -253,7 +253,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1968",
                 },
-				{
+                {
                     name: "Paris",
                     country: "fr",
                     distance: 576,
@@ -265,7 +265,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1924",
                 },
-				{
+                {
                     name: "London",
                     country: "gb",
                     distance: 459,
@@ -277,7 +277,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2012",
                 },
-				{
+                {
                     name: "Amsterdam",
                     country: "nl",
                     distance: 535,
@@ -289,7 +289,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1928",
                 },
-				{
+                {
                     name: "München",
                     country: "de",
                     distance: 827,
@@ -301,7 +301,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1972",
                 },
-				{
+                {
                     name: "Cortina d´ Ampezzo",
                     country: "it",
                     distance: 299,
@@ -313,7 +313,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1956",
                 },
-				{
+                {
                     name: "Chamonix",
                     country: "fr",
                     distance: 644,
@@ -325,7 +325,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1924",
                 },
-				{
+                {
                     name: "Antwerpen",
                     country: "be",
                     distance: 888,
@@ -337,7 +337,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1920",
                 },
-				{
+                {
                     name: "St. Moritz",
                     country: "ch",
                     distance: 936,
@@ -349,7 +349,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1948",
                 },
-				{
+                {
                     name: "Albertville",
                     country: "fr",
                     distance: 488,
@@ -361,7 +361,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1992",
                 },
-				{
+                {
                     name: "Barcelona",
                     country: "es",
                     distance: 713,
@@ -373,7 +373,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1992",
                 },
-				{
+                {
                     name: "Malaga",
                     country: "es",
                     distance: 954,
@@ -382,7 +382,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/M%C3%A1laga",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Casablanca",
                     country: "ma",
                     distance: 537,
@@ -391,7 +391,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Casablanca",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Fuerteventura",
                     country: "es",
                     distance: 826,
@@ -400,7 +400,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Fuerteventura",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Tarrafal",
                     country: "cv",
                     distance: 1732,
@@ -409,7 +409,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Kap_Verde",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Ilha Fernando de Noronha",
                     country: "br",
                     distance: 2396,
@@ -418,7 +418,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Fernando_de_Noronha",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Touros",
                     country: "br",
                     distance: 409,
@@ -428,7 +428,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Natal_(Brasilien)",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Salvador",
                     country: "br",
                     distance: 1182,
@@ -437,7 +437,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Salvador_(Bahia)",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Rio de Janeiro",
                     country: "br",
                     distance: 1626,
@@ -448,7 +448,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2016",
                 },
-				{
+                {
                     name: "Brasilia",
                     country: "br",
                     distance: 2713,
@@ -458,7 +458,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Bras%C3%ADlia",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Manaus",
                     country: "br",
                     distance: 957,
@@ -467,7 +467,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Manaus",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Bogota",
                     country: "co",
                     distance: 1782,
@@ -476,7 +476,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Bogot%C3%A1",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Panama City",
                     country: "pa",
                     distance: 816,
@@ -486,7 +486,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Panama_City",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Guatemala City",
                     country: "gt",
                     distance: 1866,
@@ -496,7 +496,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Guatemala-Stadt",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Mexico City",
                     country: "mx",
                     distance: 1396,
@@ -508,7 +508,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1968",
                 },
-				{
+                {
                     name: "Torreon",
                     country: "mx",
                     distance: 999,
@@ -517,7 +517,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Torre%C3%B3n",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Los Angeles",
                     country: "us",
                     distance: 600,
@@ -530,7 +530,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Phoenix_(Arizona)",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Phoenix",
                     country: "us",
                     distance: 1361,
@@ -539,7 +539,7 @@ export module data {
                     angleCCW: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1984",
                 },
-				{
+                {
                     name: "Albuquerque",
                     country: "us",
                     distance: 1259,
@@ -549,7 +549,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Albuquerque",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Oklahoma City",
                     country: "us",
                     distance: 868,
@@ -559,7 +559,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Oklahoma_City",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Memphis",
                     country: "us",
                     distance: 745,
@@ -569,7 +569,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Memphis_(Tennessee)",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Atlanta",
                     country: "us",
                     distance: 625,
@@ -580,7 +580,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1996",
                 },
-				{
+                {
                     name: "St. Louis",
                     country: "us",
                     distance: 889,
@@ -591,7 +591,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1904",
                 },
-				{
+                {
                     name: "Detroit",
                     country: "us",
                     distance: 864,
@@ -600,7 +600,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Detroit",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Lake Placid",
                     country: "us",
                     distance: 181,
@@ -611,7 +611,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1980",
                 },
-				{
+                {
                     name: "Montreal",
                     country: "ca",
                     distance: 899,
@@ -621,9 +621,9 @@ export module data {
                     angleCCW: false,
                     text: "Montreal ist die zweitgrößte Stadt Kanadas, die größte Stadt der Provinz Quebec und nach Paris die zweitgrößte französischsprachige Stadt der Welt. Ein Referendum um die Unabhängigkeit Quebecs von Kanada scheiterte 1995 nur äußerst knapp (49.42% zu 50,58%) und seit 2006 gelten die Einwohner Quebecs als eine eigene Nation innerhalb Kanadas.",
                     isSummer: true,
-                    wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1976"
+                    wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1976",
                 },
-				{
+                {
                     name: "Sault Ste. Marie",
                     country: "ca",
                     distance: 1008,
@@ -633,7 +633,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Sault_Ste._Marie_(Ontario)",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Devils Lake",
                     country: "us",
                     distance: 1240,
@@ -643,7 +643,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Devils_Lake_(North_Dakota)",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Calgary",
                     country: "ca",
                     distance: 1300,
@@ -655,7 +655,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1988",
                 },
-				{
+                {
                     name: "Vancouver",
                     country: "ca",
                     distance: 1007,
@@ -666,7 +666,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2010",
                 },
-				{
+                {
                     name: "Portland",
                     country: "us",
                     distance: 520,
@@ -676,7 +676,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Portland_(Oregon)",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Salt Lake City",
                     country: "us",
                     distance: 1309,
@@ -685,9 +685,9 @@ export module data {
                     year: 2002,
                     text: "Der \"Große Salzsee\", der der Hauptstadt der Mormonen seinen Namen gab, ist ca. 120km lang und hat einen Salzgehalt von bis zu 27%. Er ist damit 7x salzhaltiger als das Mittelmeer. Auf den ausgetrockneten Salzebenen rund um den See werden immer wieder Hochgeschwindigkeitsrennen ausgetragen – wenn es nicht ausnahmsweise einmal geregnet hat.",
                     isSummer: false,
-                    wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2002"
+                    wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2002",
                 },
-				{
+                {
                     name: "Squaw Valley",
                     country: "us",
                     distance: 1256,
@@ -699,7 +699,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1960",
                 },
-				{
+                {
                     name: "Hawaii",
                     country: "us",
                     distance: 4742,
@@ -709,7 +709,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Hawaii",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Howland Island",
                     country: "us",
                     distance: 3113,
@@ -720,7 +720,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Howlandinsel",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Lakena",
                     country: "tv",
                     distance: 1083,
@@ -729,7 +729,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Lakena",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Vanuatu",
                     country: "vu",
                     distance: 1464,
@@ -738,7 +738,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Vanuatu",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Brisbane",
                     country: "au",
                     distance: 1923,
@@ -747,7 +747,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Brisbane",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Sydney",
                     country: "au",
                     distance: 875,
@@ -758,7 +758,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2000",
                 },
-				{
+                {
                     name: "Melbourne",
                     country: "au",
                     distance: 1752,
@@ -769,7 +769,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1956",
                 },
-				{
+                {
                     name: "Mackay",
                     country: "au",
                     distance: 1427,
@@ -779,7 +779,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Mackay_(Queensland)",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Atape",
                     country: "pg",
                     distance: 2133,
@@ -788,7 +788,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Papua-Neuguinea",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Palau",
                     country: "fm",
                     distance: 1455,
@@ -797,7 +797,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Palau",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Nago-Okinawa",
                     country: "jp",
                     distance: 2238,
@@ -806,7 +806,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Nago",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Qingdao",
                     country: "cn",
                     distance: 1275,
@@ -816,7 +816,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Qingdao",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Peking",
                     country: "cn",
                     distance: 646,
@@ -828,7 +828,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2008",
                 },
-				{
+                {
                     name: "Huludao",
                     country: "cn",
                     distance: 462,
@@ -838,7 +838,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Liaoning",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Dandong",
                     country: "cn",
                     distance: 488,
@@ -848,7 +848,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Dangdong",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Pyeongchang",
                     country: "kr",
                     distance: 633,
@@ -858,9 +858,9 @@ export module data {
                     text: "Die bislang letzten Winterspiele fanden in der südkoreanischen Stadt Pyeongchang statt. Südkorea ist heute bekannt für Smartphones, Autos, Hightech, K-Pop und eben auch als Ausrichter von olympischen Spielen. Noch vor gut 60 Jahren war das Land jedoch ein verarmter Agrarstaat, der auf Wirtschaftshilfen, z.B. von Seiten der USA, angewiesen war.",
                     isSummer: false,
                     angleCCW: true,
-                    wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2018"
+                    wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2018",
                 },
-				{
+                {
                     name: "Seoul",
                     country: "kr",
                     distance: 242,
@@ -871,7 +871,7 @@ export module data {
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1988",
                 },
-				{
+                {
                     name: "Sapporo",
                     country: "jp",
                     distance: 2623,
@@ -882,7 +882,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1972",
                 },
-				{
+                {
                     name: "Sendai",
                     country: "jp",
                     distance: 747,
@@ -891,7 +891,7 @@ export module data {
                     wikiUrl: "https://de.wikipedia.org/wiki/Sendai",
                     isExtraCity: true,
                 },
-				{
+                {
                     name: "Nagano",
                     country: "jp",
                     distance: 472,
@@ -903,7 +903,7 @@ export module data {
                     isSummer: false,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1998",
                 },
-				{
+                {
                     name: "Tokyo",
                     country: "jp",
                     distance: 232,
@@ -912,476 +912,476 @@ export module data {
                     year: 1964,
                     text: "In Tokyo lauert die Bedrohung unter der Erde: Unter Japan treffen verschiedene Erdplatten aufeinander und immer wieder erschüttern Erdbeben auch die Regionen um Tokyo. Das letzte schwere Beben ereignete sich im Jahr 1923, bei dem 140.000 Menschen durch einstürzende Gebäude oder Brände starben.  Da die großen Beben ungefähr alle 60 Jahren auftreten, erwarten viele Japaner in naher Zukunft die nächste Katastrophe und versuchen sich durch erdbebensichere Architektur und Katastrophenübungen vorzubereiten.",
                     isSummer: true,
-                    wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2020"
+                    wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2020",
                 },
             ],
-        }
-    ]
+        },
+    ];
 
     export const countries: Country[] = [
         {
             code: "ae",
-            name: "Ver. arab. Emirate"
+            name: "Ver. arab. Emirate",
         },
         {
             code: "af",
-            name: "Afghanistan"
+            name: "Afghanistan",
         },
         {
             code: "ao",
-            name: "Angola"
+            name: "Angola",
         },
         {
             code: "ar",
-            name: "Argentinien"
+            name: "Argentinien",
         },
         {
             code: "at",
-            name: "Österreich"
+            name: "Österreich",
         },
-		{
+        {
             code: "au",
-            name: "Australien"
+            name: "Australien",
         },
         {
             code: "az",
-            name: "Aserbaidschan"
+            name: "Aserbaidschan",
         },
         {
             code: "ba",
-            name: "Bosnien-Herzegowina"
-		},
+            name: "Bosnien-Herzegowina",
+        },
         {
             code: "be",
-            name: "Belgien"
-		},
-		{
+            name: "Belgien",
+        },
+        {
             code: "bg",
-            name: "Bulgarien"
+            name: "Bulgarien",
         },
         {
             code: "bj",
-            name: "Benin"
+            name: "Benin",
         },
         {
             code: "bn",
-            name: "Brunei"
+            name: "Brunei",
         },
         {
             code: "bo",
-            name: "Bolivien"
+            name: "Bolivien",
         },
         {
             code: "br",
-            name: "Brasilien"
+            name: "Brasilien",
         },
         {
             code: "bt",
-            name: "Bhutan"
+            name: "Bhutan",
         },
         {
             code: "by",
-            name: "Weißrussland"
+            name: "Weißrussland",
         },
         {
             code: "ca",
-            name: "Kanada"
+            name: "Kanada",
         },
         {
             code: "cd",
-            name: "D. R. Kongo"
+            name: "D. R. Kongo",
         },
         {
             code: "cd",
-            name: "Demokratische Republik Kongo"
+            name: "Demokratische Republik Kongo",
         },
         {
             code: "cg",
-            name: "Kongo"
+            name: "Kongo",
         },
         {
             code: "ch",
-            name: "Schweiz"
+            name: "Schweiz",
         },
         {
             code: "ci",
-            name: "Cote d`Ivoir"
+            name: "Cote d`Ivoir",
         },
         {
             code: "ck",
-            name: "Cookinseln"
+            name: "Cookinseln",
         },
         {
             code: "cl",
-            name: "Chile"
+            name: "Chile",
         },
         {
             code: "cm",
-            name: "Kamerun"
+            name: "Kamerun",
         },
         {
             code: "cn",
-            name: "China"
+            name: "China",
         },
         {
             code: "cn",
-            name: "Tibet"
+            name: "Tibet",
         },
         {
             code: "co",
-            name: "Kolumbien"
+            name: "Kolumbien",
         },
         {
             code: "cr",
-            name: "Costa Rica"
+            name: "Costa Rica",
         },
         {
             code: "cu",
-            name: "Kuba"
+            name: "Kuba",
         },
-		{
+        {
             code: "cv",
-            name: "Cabo Verde"
+            name: "Cabo Verde",
         },
         {
             code: "de",
-            name: "Deutschland"
+            name: "Deutschland",
         },
         {
             code: "dj",
-            name: "Dschibouti"
+            name: "Dschibouti",
         },
         {
             code: "dk",
-            name: "Dänemark"
+            name: "Dänemark",
         },
         {
             code: "dz",
-            name: "Algerien"
+            name: "Algerien",
         },
         {
             code: "ec",
-            name: "Ecuador"
+            name: "Ecuador",
         },
         {
             code: "eh",
-            name: "Westsahara"
+            name: "Westsahara",
         },
         {
             code: "es",
-            name: "Spanien"
+            name: "Spanien",
         },
         {
             code: "et",
-            name: "Äthiopien"
+            name: "Äthiopien",
         },
         {
             code: "fi",
-            name: "Finnland"
+            name: "Finnland",
         },
         {
             code: "fj",
-            name: "Fidschi"
+            name: "Fidschi",
         },
-		{
+        {
             code: "fm",
-            name: "Mikronesien"
+            name: "Mikronesien",
         },
         {
             code: "fr",
-            name: "Frankreich"
+            name: "Frankreich",
         },
         {
             code: "ga",
-            name: "Gabun"
+            name: "Gabun",
         },
         {
             code: "gb",
-            name: "Großbritannien"
+            name: "Großbritannien",
         },
-		{
+        {
             code: "ge",
-            name: "Georgien"
+            name: "Georgien",
         },
         {
             code: "gf",
-            name: "Franz. Guyana"
+            name: "Franz. Guyana",
         },
         {
             code: "gh",
-            name: "Ghana"
+            name: "Ghana",
         },
         {
             code: "gi",
-            name: "Gibraltar"
+            name: "Gibraltar",
         },
         {
             code: "gl",
-            name: "Grönland"
+            name: "Grönland",
         },
-		{
+        {
             code: "gr",
-            name: "Griechenland"
+            name: "Griechenland",
         },
-		{
+        {
             code: "gn",
-            name: "Guinea"
+            name: "Guinea",
         },
         {
             code: "gt",
-            name: "Guatemala"
+            name: "Guatemala",
         },
         {
             code: "gy",
-            name: "Guyana"
+            name: "Guyana",
         },
         {
             code: "hk",
-            name: "Hongkong"
+            name: "Hongkong",
         },
         {
             code: "hn",
-            name: "Honduras"
+            name: "Honduras",
         },
         {
             code: "hr",
-            name: "Kroatien"
+            name: "Kroatien",
         },
         {
             code: "ht",
-            name: "Haiti"
+            name: "Haiti",
         },
         {
             code: "id",
-            name: "Indonesien"
+            name: "Indonesien",
         },
         {
             code: "in",
-            name: "Indien"
+            name: "Indien",
         },
         {
             code: "ir",
-            name: "Iran"
+            name: "Iran",
         },
         {
             code: "is",
-            name: "Island"
+            name: "Island",
         },
         {
             code: "it",
-            name: "Italien"
+            name: "Italien",
         },
         {
             code: "jp",
-            name: "Japan"
+            name: "Japan",
         },
         {
             code: "ke",
-            name: "Kenia"
+            name: "Kenia",
         },
         {
             code: "kh",
-            name: "Kambodscha"
+            name: "Kambodscha",
         },
         {
             code: "kr",
-            name: "Südkorea"
+            name: "Südkorea",
         },
         {
             code: "ma",
-            name: "Marokko"
+            name: "Marokko",
         },
         {
             code: "mm",
-            name: "Myanmar"
+            name: "Myanmar",
         },
         {
             code: "mw",
-            name: "Malawi"
+            name: "Malawi",
         },
         {
             code: "mx",
-            name: "Mexiko"
+            name: "Mexiko",
         },
         {
             code: "mz",
-            name: "Mosambik"
+            name: "Mosambik",
         },
         {
             code: "na",
-            name: "Namibia"
+            name: "Namibia",
         },
         {
             code: "ne",
-            name: "Niger"
+            name: "Niger",
         },
         {
             code: "ng",
-            name: "Nigeria"
+            name: "Nigeria",
         },
         {
             code: "ni",
-            name: "Nicaragua"
+            name: "Nicaragua",
         },
         {
             code: "no",
-            name: "Norwegen"
+            name: "Norwegen",
         },
-		{
+        {
             code: "nl",
-            name: "Niederlande"
+            name: "Niederlande",
         },
-		{
+        {
             code: "np",
-            name: "Nepal"
+            name: "Nepal",
         },
         {
             code: "nz",
-            name: "Neuseeland"
+            name: "Neuseeland",
         },
         {
             code: "om",
-            name: "Oman"
+            name: "Oman",
         },
         {
             code: "pa",
-            name: "Panama"
+            name: "Panama",
         },
         {
             code: "pe",
-            name: "Peru"
+            name: "Peru",
         },
         {
             code: "pf",
-            name: "Französisch-Polynesien"
+            name: "Französisch-Polynesien",
         },
-		{
+        {
             code: "pg",
-            name: "Papua Neuguinea"
+            name: "Papua Neuguinea",
         },
         {
             code: "ph",
-            name: "Philippinen"
+            name: "Philippinen",
         },
         {
             code: "pk",
-            name: "Pakistan"
+            name: "Pakistan",
         },
         {
             code: "pl",
-            name: "Polen"
+            name: "Polen",
         },
         {
             code: "pn",
-            name: "Piticairninseln"
+            name: "Piticairninseln",
         },
         {
             code: "py",
-            name: "Paraguay"
+            name: "Paraguay",
         },
         {
             code: "rs",
-            name: "Serbien"
+            name: "Serbien",
         },
         {
             code: "ru",
-            name: "Russland"
+            name: "Russland",
         },
         {
             code: "se",
-            name: "Schweden"
+            name: "Schweden",
         },
         {
             code: "sh",
-            name: "St. Helena"
+            name: "St. Helena",
         },
         {
             code: "sl",
-            name: "Sierra Leone"
+            name: "Sierra Leone",
         },
         {
             code: "sn",
-            name: "Senegal"
+            name: "Senegal",
         },
         {
             code: "sr",
-            name: "Suriname"
+            name: "Suriname",
         },
         {
             code: "ss",
-            name: "Südsudan"
+            name: "Südsudan",
         },
         {
             code: "td",
-            name: "Tschad"
+            name: "Tschad",
         },
         {
             code: "th",
-            name: "Thailand"
+            name: "Thailand",
         },
         {
             code: "tl",
-            name: "Osttimor"
+            name: "Osttimor",
         },
         {
             code: "tm",
-            name: "Turkmenistan"
+            name: "Turkmenistan",
         },
         {
             code: "tn",
-            name: "Tunesien"
+            name: "Tunesien",
         },
         {
             code: "to",
-            name: "Tonga"
+            name: "Tonga",
         },
         {
             code: "tr",
-            name: "Türkei"
+            name: "Türkei",
         },
-		{
+        {
             code: "tv",
-            name: "Tuvalu"
+            name: "Tuvalu",
         },
         {
             code: "tw",
-            name: "Taiwan"
+            name: "Taiwan",
         },
         {
             code: "tz",
-            name: "Tansania"
+            name: "Tansania",
         },
         {
             code: "us",
-            name: "USA"
+            name: "USA",
         },
         {
             code: "uy",
-            name: "Uruguay"
+            name: "Uruguay",
         },
         {
             code: "ve",
-            name: "Venezuela"
+            name: "Venezuela",
         },
         {
             code: "vn",
-            name: "Vietnam"
+            name: "Vietnam",
         },
-		{
+        {
             code: "vu",
-            name: "Vanuatu"
+            name: "Vanuatu",
         },
         {
             code: "ws",
-            name: "Samoa"
+            name: "Samoa",
         },
         {
             code: "za",
-            name: "Südafrika"
+            name: "Südafrika",
         },
         {
             code: "zw",
-            name: "Simbabwe"
+            name: "Simbabwe",
         },
     ];
 }

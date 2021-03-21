@@ -15,22 +15,22 @@ export class AlertService {
 
     public async success(message: string) {
         this.config();
-        this.toastr.success(message, `Erfolg!`, { timeOut: this.timeouts.success });
+        this.toastr.success(message, "Erfolg!", { timeOut: this.timeouts.success });
     }
 
     public async error(message: string) {
         this.config();
-        this.toastr.error(message, `Fehler!`, { timeOut: this.timeouts.error });
+        this.toastr.error(message, "Fehler!", { timeOut: this.timeouts.error });
     }
 
     public async info(message: string) {
         this.config();
-        this.toastr.info(message, `Info:`, { timeOut: this.timeouts.info });
+        this.toastr.info(message, "Info:", { timeOut: this.timeouts.info });
     }
 
     public async warning(message: string) {
         this.config();
-        this.toastr.warning(message, `Warnung!`, { timeOut: this.timeouts.warning });
+        this.toastr.warning(message, "Warnung!", { timeOut: this.timeouts.warning });
     }
 
     public config() {

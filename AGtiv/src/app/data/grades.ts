@@ -42,5 +42,5 @@ export const grades: string[] = [
     "10e",
     "10f",
     "Q11",
-    "Q12"
+    "Q12",
 ];

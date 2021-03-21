@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
-import { RemoteService } from './remote.service';
+import { Injectable } from "@angular/core";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { environment } from "src/environments/environment";
+import { Observable } from "rxjs";
+import { RemoteService } from "./remote.service";
 
 @Injectable({
-    providedIn: "root"
+    providedIn: "root",
 })
 export class AuthenticationService {
-    public isLoggedIn: boolean = false;
+    public isLoggedIn = false;
     public currentUser: any;
 
     constructor(private remoteService: RemoteService) {
@@ -25,8 +25,7 @@ export class AuthenticationService {
             {
                 password,
                 username,
-            }
-        );
+            });
     }
     public get loggedIn() {
         return this.isLoggedIn;

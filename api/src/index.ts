@@ -63,7 +63,13 @@ createConnection({
     // This sets up secure rules for CORS, see https://developer.mozilla.org/de/docs/Web/HTTP/CORS
     app.use(cors());
     // This secures the app with some http headers
-    app.use(helmet());
+    app.use(helmet({
+      contentSecurityPolicy: {
+        directives: {
+          "frame-source": ['https://www.youtube-nocookie.com'],
+        }
+      },
+    }));
     // This transforms the incoming JSON body into objects
     app.use(bodyParser.json());
 

@@ -546,6 +546,7 @@
 /* do not edit */                     y: 544,
 /* do not edit */                     angleCCW: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1984",
+/* do not edit */                     isExtraCity: true,
 /* do not edit */                 },
 /* do not edit */                 {
 /* do not edit */                     name: "Albuquerque",

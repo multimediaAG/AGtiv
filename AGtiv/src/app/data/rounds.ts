@@ -538,6 +538,7 @@ export module data {
                     y: 544,
                     angleCCW: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1984",
+                    isExtraCity: true,
                 },
                 {
                     name: "Albuquerque",

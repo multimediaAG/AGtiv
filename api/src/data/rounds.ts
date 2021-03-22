@@ -74,7 +74,7 @@
 /* do not edit */                     x: 1280,
 /* do not edit */                     y: 511,
 /* do not edit */                     year: 2004,
-/* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1896",
+/* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2004",
 /* do not edit */                     text: "Athen, die Hauptstadt Griechenlands, hat eine bewegte Geschichte hinter sich. Nicht nur der Ursprung des Marathons steht der Sage nach in engem Zusammenhang mit Athen, auch die ersten Olympischen Spiele der Neuzeit wurden 1896 hier abgehalten, damals aber noch in deutlich kleinerem Rahmen als heute.",
 /* do not edit */                     isSummer: true,
 /* do not edit */                 },

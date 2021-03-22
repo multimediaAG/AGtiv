@@ -169,7 +169,7 @@
                 <tbody>
                     <tr *ngFor="let city of passedCities">
                         <td><img [src]="getImg(city)" class="city city-small" alt="Stadt"></td>
-                        <td><a [href]="nextCity.wikiUrl" target="_blank">Olympische <b>{{city.isSummer ? 'Sommer' : 'Winter'}}spiele {{city.year}}</b></a></td>
+                        <td><a [href]="city.wikiUrl" target="_blank">Olympische <b>{{city.isSummer ? 'Sommer' : 'Winter'}}spiele {{city.year}}</b></a></td>
                         <td>in {{city.name }}, {{ city.countryName }} <flag-icon class="ml-1" [country]="city.country" squared></flag-icon></td>
                         <td>{{city.text}}</td>
                     </tr>

@@ -63,6 +63,7 @@
 /* do not edit */                     y: 514,
 /* do not edit */                     year: 0,
 /* do not edit */                     left: true,
+/* do not edit */                     isSummer: true,
 /* do not edit */                     wikiUrl: "https://de.wikipedia.org/wiki/Olympischer_Fackellauf",
 /* do not edit */                     text: "Die heute nicht mehr bewohnte Stadt Olympia ist – wie am Namen unschwer zu erkennen – der Ursprungsort der Olympischen Spiele. In der Antike flankiert von einer heiligen Waffenruhe, die bei den streitlustigen Griechen bitter nötig war, wurden sie im Laufe der Zeit zu einem Symbol der Einheit aller Griechen. Auch heute noch steht der friedensstiftende und der Völkerverständigung dienliche Charakter der Spiele zumindest offiziell im Mittelpunkt. ",
 /* do not edit */                 },

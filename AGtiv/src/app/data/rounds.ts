@@ -529,7 +529,6 @@ export module data {
                     text: "Los Angeles ist sehr erdbebengefährdet, weil dort Erdplatten aneinander entlangdriften oder sich sogar übereinander schieben. Deswegen wurden lange Zeit keine Hochhäuser gebaut. Dadurch ist die Stadt enorm gewachsen: Die Fläche ist viermal so groß wie die von München, aber auf einen Quadratkilometer leben nur gut halb so viele Menschen. Weil die so weite Wege zurücklegen müssen und meistens Auto fahren, herrscht sehr oft Smog. Olympische Spiele gab es in Los Angeles schon zweimal, 1932 und 1984. Aber 1984 haben die Länder des damaligen Ostblocks um die Sowjetunion nicht mitgemacht – in Moskau erfährst du warum! ",
                     isSummer: true,
                     wikiUrl: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1984",
-                    isExtraCity: true,
                 },
                 {
                     name: "Phoenix",

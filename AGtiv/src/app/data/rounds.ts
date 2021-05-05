@@ -36,7 +36,7 @@ export module data {
     export const rounds: Round[] = [
         {
             id: 1,
-            postText: "<div class=\"alert alert-warning\">ToDo</div>",
+            postText: "<div class=\"alert alert-success\">Schön, dass du so fleißig bei Road to Tokyo mitgemacht hast! Durch Deine Unterstützung konnten wir als Schulgemeinschaft die virtuelle Fackel über die Austragungsorte der olympischen Spiele bis nach Tokyo tragen. Du findest alle Leistungen und Ergebnisse in der Bestenliste.</div>",
             startDate: new Date("2021-03-22"),
             text: `<p>- Das AG radelt und läuft gemeinsam mit dem Olympischen Feuer von Olympia nach Tokyo! -</p
             <p>Ziel unseres Projekts <b><i>AG</i>tiv</b> ist es, eine Abwechslung zum momentan sehr bewegungsarmen Home School Alltag zu bieten und auch in Zeiten des social distancing den Gemeinschaftsgeist am Allgäu-Gymnasium zu pflegen. </p>

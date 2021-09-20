@@ -4,26 +4,8 @@
         <h1 class="mb-3 display-1 font-weight-bold headline d-none d-md-block"> Mach mit bei <i>AG</i>tiv!</h1>
         <h2 class="headline">Die interaktive Radel- und Lauf-Aktion des Allg&auml;u-Gymnasiums Kempten</h2>
     </div>
-    <div class="mb-3 alert alert-success d-block d-lg-none text-center" *ngIf="finished && !canAddWays">
+    <div class="mb-3 alert alert-success d-block d-lg-none text-center">
         <b>Sieger der Gesamtwertung</b> ist <b>{{bestUsers[0].username}} ({{bestUsers[0].grade}})</b> mit {{bestUsers[0].distance}} km.<br>Herzlichen Glückwunsch!
-    </div>
-    <div class="card mb-4 border-0 bg-transparent" *ngIf="finished">
-        <img src="assets/finished_{{currentRoundIdx}}.svg">
-        <div class="bg-white p-3 pt-0 stats-container text-center">
-            <div class="alert alert-success d-none d-lg-block" *ngIf="finished && !canAddWays">
-                <b>Sieger der Gesamtwertung</b> ist <b>{{bestUsers[0].username}} ({{bestUsers[0].grade}})</b> mit {{bestUsers[0].distance}} km.<br>Herzlichen Glückwunsch!
-            </div>
-            <div class="alert alert-primary">
-                <b>{{userCount}} Teilnehmer</b> haben
-                <b>{{currentDistance}} km</b> gesammelt!
-            </div>
-            <div class="alert alert-success" *ngIf="authenticationService.loggedIn">
-                Du hast davon <b>{{myDistance}} km</b> beigetragen!
-            </div>
-            <div class="alert alert-warning mb-1">
-                Weitere Statistiken gibt es unten <i class="fas fa-arrow-down"></i>.
-            </div>
-        </div>
     </div>
     <div class="alert alert-success" *ngIf="showStadtradelnInfo">
         <h4 class="text-center">Info zum STADTRADELN</h4>
@@ -54,8 +36,8 @@
                 <h3 class="text-center" *ngIf="authenticationService.loggedIn">
                     Hallo <i>{{authenticationService.currentUser.username}}!</i>
                 </h3>
-                <p class="p-2 alert alert-success" *ngIf="finished && canAddWays">Strecken können noch <b>bis heute um 23:59 Uhr</b> eingegeben werden.</p>
-                <div [innerHtml]="replaceVariables(data.rounds[currentRoundIdx][(finished ? 'postText' : 'text')]) | safe: 'html'">
+                <p class="p-2 alert alert-success" *ngIf="false">Strecken können noch <b>bis heute um 23:59 Uhr</b> eingegeben werden.</p>
+                <div [innerHtml]="replaceVariables(data.rounds[currentRoundIdx][('text')]) | safe: 'html'">
                 </div>
                 <p class="p-2 border-warning border bg-warning-light" *ngIf="!finished">Es sind <b>noch {{remainingDistance}}
                 km</b> bis nach {{endCityName}}.</p>
@@ -79,7 +61,7 @@
             </div>
         </div>
     </div>
-    <div class="card p-3 mb-4" *ngIf="!authenticationService.loggedIn && !finished">
+    <div class="card p-3 mb-4" *ngIf="!authenticationService.loggedIn">
         <h3 class="text-center">Jetzt mitmachen!</h3>
         <div class="embed-responsive mx-auto embed-responsive-16by9 my-3">
             <iframe class="d-block" src="https://www.youtube-nocookie.com/embed/WIb91TIoq9U" title="Offizieller Startschuss durch Alfons Hörmann | AGtiv - Road to Tokyo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -152,6 +134,25 @@
         </div>
         <div class="alert alert-primary" *ngIf="!currentDistanceLoaded">
             <i class="fas fa-spinner fa-spin"></i> Laden...
+        </div>
+    </div>
+    
+    <div class="card mb-4 border-0 bg-transparent">
+        <img src="assets/finished_{{currentRoundIdx}}.svg">
+        <div class="bg-white p-3 pt-0 stats-container text-center">
+            <div class="alert alert-success d-none d-lg-block">
+                <b>Sieger der Gesamtwertung</b> ist <b>{{bestUsers[0].username}} ({{bestUsers[0].grade}})</b> mit {{bestUsers[0].distance}} km.<br>Herzlichen Glückwunsch!
+            </div>
+            <div class="alert alert-primary">
+                <b>{{userCount}} Teilnehmer</b> haben
+                <b>{{currentDistance}} km</b> gesammelt!
+            </div>
+            <div class="alert alert-success" *ngIf="authenticationService.loggedIn">
+                Du hast davon <b>{{myDistance}} km</b> beigetragen!
+            </div>
+            <div class="alert alert-warning mb-1">
+                Weitere Statistiken gibt es unten <i class="fas fa-arrow-down"></i>.
+            </div>
         </div>
     </div>
     <div class="card p-3 mb-3" *ngIf="finished">
